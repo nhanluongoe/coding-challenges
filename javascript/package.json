@@ -1,0 +1,15 @@
+{
+  "name": "coding-challenges",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Solve challenge using Javascript",
+  "main": "250621-search-insert-position.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0"
+  }
+}
