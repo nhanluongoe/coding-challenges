@@ -5,17 +5,12 @@
  */
 
 const maxSubArray = (nums) => {
-  let max = -Number("Infinity");
-  let sum;
+  let max = nums[0]
+  let sum = 0
 
   nums.forEach((num, idx) => {
-    if (idx === 0) sum = num;
-    else {
-      if (sum + num < num) sum = num;
-      else sum = sum + num;
-    }
-
-    max = Math.max(max, sum);
+    sum = Math.max(num, sum + num)
+    max = Math.max(sum, max)
   });
 
   return max;
