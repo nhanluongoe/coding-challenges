@@ -1,0 +1,17 @@
+#
+# https://leetcode.com/problems/add-binary/
+#
+# @param {String} a
+# @param {String} b
+# @return {String}
+
+def add_binary(a, b)
+  (a.to_i(2) + b.to_i(2)).to_s(2)
+end
+
+puts add_binary('1001', '1010')
+puts add_binary('10110', '101')
+puts add_binary(
+       '1010101010101011100001101010110000011110001010010101010101010101010101010010101010101000101001011',
+       '111111111111111110000000000000000000011111111111111010101010111111111100000000000000000000000001'
+     )
