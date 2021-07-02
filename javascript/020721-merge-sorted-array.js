@@ -11,7 +11,7 @@
 const merge = (nums1, m, nums2, n) => {
   Array.from(Array(nums1.length - m)).forEach(() => nums1.pop());
 
-  nums2.forEach((elem) => nums1.push(elem));
+  nums2.forEach((num) => nums1.push(num));
 
   nums1.sort((a, b) => a - b)
 };
