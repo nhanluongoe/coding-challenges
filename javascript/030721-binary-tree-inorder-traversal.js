@@ -7,7 +7,7 @@ function TreeNode(val, left, right) {
 
 /**
  * https://leetcode.com/problems/binary-tree-inorder-traversal/
- * 
+ *
  * @param {TreeNode} root
  * @return {number[]}
  */
@@ -24,4 +24,13 @@ const inorderTraversal = (root) => {
   memoFunc(root);
 
   return res.filter((elem) => elem);
+};
+
+// Simpler method
+const inorderTraversal = (root) => {
+  if (!root) return [];
+
+  return inorderTraversal(root.left)
+    .concat(root.val)
+    .concat(inorderTraversal(root.right));
 };
