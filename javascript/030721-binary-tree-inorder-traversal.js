@@ -13,7 +13,7 @@ function TreeNode(val, left, right) {
  */
 
 const inorderTraversal = (root) => {
-  res = [];
+  let res = [];
 
   const memoFunc = (root) => {
     if (root?.left) memoFunc(root.left);
