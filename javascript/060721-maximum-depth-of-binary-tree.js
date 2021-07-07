@@ -17,5 +17,5 @@
 const maxDepth = (root) => {
   if (!root) return 0;
 
-  return Math.max(1 + maxDepth(root.left), 1 + maxDepth(root.right));
+  return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
 };
