@@ -29,3 +29,17 @@ const minDepthHelper = (root) => {
 const isLeaf = (node) => {
   return node && !(node.left || node.right);
 };
+
+// shorter solution
+const betterMinDepth = (root) => {
+  if (!root) return 0;
+
+  const leftHeight = betterMinDepth(root.left);
+  const rightHeight = betterMinDepth(root.right);
+
+  if (leftHeight === 0 || rightHeight === 0) {
+    return 1 + leftHeight + rightHeight;
+  }
+
+  return 1 + Math.min(leftHeight, rightHeight);
+};

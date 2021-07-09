@@ -28,3 +28,17 @@ end
 def leaf?(root)
   root && (root.left || root.right).nil?
 end
+
+# shorter solution
+def better_min_depth(root)
+  return 0 if root.nil?
+
+  left_height = better_min_depth(root.left)
+  right_height = better_min_depth(root.right)
+
+  if (left_height === 0 || right_height === 0)
+    return 1 + left_height + right_height
+  end
+
+  1 + [left_height, right_height].min
+end
