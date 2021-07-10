@@ -11,6 +11,8 @@
         "sourceType": "module"
     },
     "rules": {
-        "semi":"off"
+        "semi":"off",
+        "arrow-body-style": "off",
+        "allowForLoopAfterthoughts": true
     }
 }
