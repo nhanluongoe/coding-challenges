@@ -13,6 +13,8 @@
     },
     "rules": {
         "semi":"off",
-        "arrow-body-style": "off"
+        "arrow-body-style": "off",
+        "no-plusplus": "off",
+        "no-console": "off"
     }
 }
