@@ -5,7 +5,7 @@ class ListNode {
   constructor(val) {
     this.val = val
     this.next = null
-  } 
+  }
 }
 
 class SinglyLinkedList {
@@ -37,8 +37,8 @@ class SinglyLinkedList {
 
 /**
  * https://leetcode.com/problems/remove-duplicates-from-sorted-list/
- * 
- * @param {ListNode} head 
+ *
+ * @param {ListNode} head
  * @returns {ListNode}
  */
 
@@ -56,7 +56,6 @@ const deleteDuplicates = (head) => {
 
   return head
 }
-
 
 const list = new SinglyLinkedList()
 

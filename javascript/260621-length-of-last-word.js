@@ -4,12 +4,12 @@
  */
 
 const lengthOfLastWord = (s) => {
-    return (
-        s
-            .split(/\s+/)
-            .filter((word) => word)
-            .slice(-1)[0]?.length || 0
-    )
+  return (
+    s
+      .split(/\s+/)
+      .filter((word) => word)
+      .slice(-1)[0]?.length || 0
+  )
 }
 
 console.log(lengthOfLastWord(' '))
