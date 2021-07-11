@@ -12,7 +12,6 @@
     },
     "rules": {
         "semi":"off",
-        "arrow-body-style": "off",
-        "allowForLoopAfterthoughts": true
+        "arrow-body-style": "off"
     }
 }
