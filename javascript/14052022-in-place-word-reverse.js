@@ -1,3 +1,7 @@
+/**
+ * Time complexity: O(n)
+ * Space complexity: O(1)
+ */
 function reverseWords(message) {
   // First reverse the whole message
   reverseString(message, 0, message.length - 1)
