@@ -13,6 +13,9 @@
     "arrow-body-style": "off",
     "no-plusplus": "off",
     "no-console": "off",
-    "prefer-arrow-callback": "off"
+    "prefer-arrow-callback": "off",
+    "no-use-before-define": "off",
+    "no-bitwise": "off",
+    "no-param-reassign": "off"
   }
 }
