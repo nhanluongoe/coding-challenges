@@ -25,7 +25,7 @@ function mergeArrays(myArray, alicesArray) {
 }
 
 /**
- * Time complexity: O(logn)
+ * Time complexity: O(nlogn)
  * Space complexity: O(n)
  */
 function mergeArrays2(myArray, alicesArray) {
