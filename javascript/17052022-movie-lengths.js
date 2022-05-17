@@ -20,6 +20,25 @@ function canTwoMoviesFillFlight(movieLengths, flightLength) {
   return result
 }
 
+/**
+ * Time complexity: O(n)
+ * Space complexity: O(n)
+ */
+function canTwoMoviesFillFlight2(movieLengths, flightLength) {
+  const seenMoviesLength = new Set()
+
+  for (let i = 0; i < movieLengths.length; i++) {
+    const currentMovieLength = movieLengths[i]
+    const remainingLength = flightLength - currentMovieLength
+
+    if (seenMoviesLength.has(remainingLength)) return true
+
+    seenMoviesLength.add(currentMovieLength)
+  }
+
+  return false
+}
+
 // Tests
 
 let desc = 'short flight'
