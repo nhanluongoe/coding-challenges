@@ -16,6 +16,8 @@
     "prefer-arrow-callback": "off",
     "no-use-before-define": "off",
     "no-bitwise": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "no-restricted-syntax": "off",
+    "no-underscore-dangle": "off"
   }
 }
