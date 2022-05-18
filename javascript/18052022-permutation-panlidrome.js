@@ -19,6 +19,21 @@ function hasPalindromePermutation(theString) {
   return true
 }
 
+/**
+ * Time complexity: O(n)
+ * Space complexity: O(1)
+ */
+function hasPalindromePermutation2(theString) {
+  const unpairedChars = new Set()
+
+  for (const c of theString) {
+    if (unpairedChars.has(c)) unpairedChars.delete(c)
+    else unpairedChars.add(c)
+  }
+
+  return unpairedChars.size <= 1
+}
+
 // Tests
 
 let desc = 'permutation with odd number of chars'
