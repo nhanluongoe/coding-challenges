@@ -14,7 +14,7 @@ func main() {
 }
 
 func shuffle(slice *[]int) {
-	for i := 0; i < len(*slice); i++ {
+	for i := 0; i < len(*slice)-1; i++ {
 		randomPickIndex := getRandomNumber(i, len(*slice)-1)
 
 		if randomPickIndex != i {
