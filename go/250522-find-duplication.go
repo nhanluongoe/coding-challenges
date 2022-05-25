@@ -35,7 +35,7 @@ func findRepeat(numbers []int) int {
 		upperRangeFloor := midPoint + 1
 		upperRangeCeiling := ceiling
 
-		distinctPosiibleIntegersInLowerRange := lowerRangeCeiling - lowerRangeFloor + 1
+		distinctPossibleIntegersInLowerRange := lowerRangeCeiling - lowerRangeFloor + 1
 
 		integersInLowerRange := 0
 		for i := 0; i < len(numbers); i++ {
@@ -44,7 +44,7 @@ func findRepeat(numbers []int) int {
 			}
 		}
 
-		if integersInLowerRange > distinctPosiibleIntegersInLowerRange {
+		if integersInLowerRange > distinctPossibleIntegersInLowerRange {
 			floor = lowerRangeFloor
 			ceiling = lowerRangeCeiling
 		} else {
