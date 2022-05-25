@@ -22,6 +22,8 @@ func main() {
 	fmt.Println(result2)
 }
 
+// Time complexity: O(nlogn)
+// Space complexity: O(1)
 func findRepeat(numbers []int) int {
 	floor := 1
 	ceiling := len(numbers) - 1
@@ -56,6 +58,7 @@ func findRepeat(numbers []int) int {
 
 // Time complexity: O(nlogn)
 // Space complexity: O(n)
+// Constraint violated: mutating input
 func findRepeat2(slice []int) int {
 	coppiedSlice := make([]int, len(slice))
 	copy(coppiedSlice, slice)
