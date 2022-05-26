@@ -12,7 +12,7 @@ function sortScores(unorderedScores, highestPossibleScore) {
 
   const orderedScores = []
 
-  // higestPossibleScore is constant, so that this is not O(n^2)
+  // higestPossibleScore is a constant, so that this is not O(n^2)
   for (let score = highestPossibleScore; score >= 0; score--) {
     const count = scoreCounts[score]
 
