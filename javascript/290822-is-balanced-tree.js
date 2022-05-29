@@ -16,6 +16,12 @@ class BinaryTreeNode {
   }
 }
 
+/**
+ * A super balanced binary tree is a binary tree with the difference
+ * between the depths of any two-leaf nodes isn't greater than one
+ * Time complexity: O(n)
+ * Space complexity: O(n)
+ */
 function isBalanced(treeRoot) {
   if (!treeRoot) return true
 
