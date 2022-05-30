@@ -16,6 +16,10 @@ class BinaryTreeNode {
   }
 }
 
+/**
+ * Time complexity: O(n)
+ * Space complexity: O(n)
+ */
 function isBinarySearchTree(treeRoot) {
   if (!treeRoot) return true
 
