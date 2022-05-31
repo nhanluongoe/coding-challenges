@@ -1,11 +1,11 @@
 import java.util.*;
 
-// import org.junit.Test;
-// import org.junit.runner.JUnitCore;
-// import org.junit.runner.Result;
-// import org.junit.runner.notification.Failure;
+import org.junit.Test;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
 
-// import static org.junit.Assert.*;
+import static org.junit.Assert.*;
 
 public class BinarySearchTree {
 
