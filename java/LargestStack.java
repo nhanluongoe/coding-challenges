@@ -1,6 +1,10 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * Time complexity: O(n)
+ * Space complexity: O(n)
+ */
 public class LargestStack {
   private Deque<Integer> stack;
 
