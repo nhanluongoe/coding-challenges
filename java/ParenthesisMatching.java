@@ -32,14 +32,44 @@ public class ParenthesisMatching {
     throw new IllegalArgumentException("No closing parenthesis!");
   }
 
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
+  public static int getClosingParen2(String sentence, int openingParenIndex) {
+    int openNestedParens = 0;
+
+    for (int i = openingParenIndex + 1; i < sentence.length(); i++) {
+      char c = sentence.charAt(i);
+
+      if (c == '(') {
+        openNestedParens++;
+      } else {
+        if (openNestedParens == 0) {
+          return i;
+        } else {
+          openNestedParens--;
+        }
+      }
+    }
+
+    throw new IllegalArgumentException("No closing parenthesis!");
+  }
+
 
 
   public static void main(String[] args) {
+    // Method 1
     int result = getClosingParen("((((()))))", 2); // expect 7
     System.out.println(result);
-
     int result2 = getClosingParen("()()((()()))", 5); // expect 10
     System.out.println(result2);
+
+    // Method 2
+    int result3 = getClosingParen2("((((()))))", 2); // expect 7
+    System.out.println(result3);
+    int result4 = getClosingParen2("()()((()()))", 5); // expect 10
+    System.out.println(result4);
   }
 }
 
