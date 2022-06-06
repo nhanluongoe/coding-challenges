@@ -1,6 +1,10 @@
 import java.util.*;
 
 public class ParenthesisMatching {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(n)
+   */
   public static int getClosingParen(String sentence, int openingParenIndex) {
     Deque<ParenthesisAndIndex> pi = new ArrayDeque<>();
 
@@ -27,6 +31,8 @@ public class ParenthesisMatching {
 
     throw new IllegalArgumentException("No closing parenthesis!");
   }
+
+
 
   public static void main(String[] args) {
     int result = getClosingParen("((((()))))", 2); // expect 7
