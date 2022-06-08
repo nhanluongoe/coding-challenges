@@ -17,6 +17,10 @@ public class ReverseLinkedList {
     return current.next;
   }
 
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static LinkedListNode reverse(LinkedListNode head) {
     if (head == null) return head;
 
