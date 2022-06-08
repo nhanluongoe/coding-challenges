@@ -18,6 +18,10 @@ public class KthToLastNode {
     return current.next;
   }
 
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static LinkedListNode kthToLastNode(int k, LinkedListNode head) {
       int length = 0;
       LinkedListNode current = head;
