@@ -23,11 +23,20 @@ public class DeleteNode {
     }
   }
 
+  public static LinkedListNode append(final LinkedListNode head, int value) {
+    LinkedListNode currentNode = head;
+    while (currentNode.next != null) {
+      currentNode = currentNode.next;
+    }
+    currentNode.next = new LinkedListNode(value);
+    return currentNode.next;
+  }
+
   public static void main(String[] args) {
     LinkedListNode head = new LinkedListNode(1);
-    head.next = new LinkedListNode(2);
-    head.next.next = new LinkedListNode(3);
-    head.next.next.next = new LinkedListNode(4);
+    append(head, 2);
+    append(head, 3);
+    append(head, 4);
 
     deleteNode(head);
     LinkedListNode node = head;
