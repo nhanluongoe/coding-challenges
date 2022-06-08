@@ -10,6 +10,10 @@ public class DeleteNode {
     }
   }
 
+  /**
+   * Time complexity: O(1)
+   * Space complexity: O(1)
+   */
   public static void deleteNode(LinkedListNode nodeToDelete) {
     if (nodeToDelete.next != null) {
       nodeToDelete.value = nodeToDelete.next.value;
