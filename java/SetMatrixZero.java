@@ -2,6 +2,10 @@ import java.util.*;
 
 public class SetMatrixZero {
 
+  /**
+   * Time complexity: O(m*n)
+   * Space complexity: O(m + n)
+   */
   public static void setZeroes(int[][] matrix) {
     List<Integer> zeroX = new ArrayList<>();
     List<Integer> zeroY = new ArrayList<>();
