@@ -17,8 +17,26 @@ public class LinkedListCycle {
     return current.next;
   }
 
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static boolean containCycle(LinkedListNode head) {
-    return true;
+    if (head == null) {
+      return false;
+    }
+
+    LinkedListNode runner1 = head;
+    LinkedListNode runner2 = head;
+    while(runner1.next != null && runner2.next.next != null) {
+      runner1 = runner1.next;
+      runner2 = runner2.next.next;
+
+      if (runner1 == runner2) {
+        return true;
+      }
+    }
+    return false;
   }
 
   public static void main(String[] args) {
@@ -34,5 +52,8 @@ public class LinkedListCycle {
     append(head2, 3);
     append(head2, 4);
     System.out.println(containCycle(head2)); // expect false
+
+    LinkedListNode head3 = new LinkedListNode(1);
+    System.out.println(containCycle(head3)); // expect false
   }
 }
