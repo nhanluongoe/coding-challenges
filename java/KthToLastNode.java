@@ -30,7 +30,7 @@ public class KthToLastNode {
         length++;
       }
 
-      if (k > 4 || k == 0) {
+      if (k > length || k <= 0) {
         throw new IllegalArgumentException("K is greater than length");
       }
 
