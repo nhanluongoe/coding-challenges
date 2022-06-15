@@ -13,6 +13,10 @@ public class BinaryGap {
   
 }
 
+/**
+ * Time complexity: O(logn) + O(n) => O(n)
+ * Space complexity: O(1)
+ */
 class Solution {
   public int solution(int N) {
       String binaryN = Integer.toBinaryString(N);
