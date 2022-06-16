@@ -3,9 +3,9 @@ class AddTwoNumber {
   public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     ListNode traveller1 = l1;
     ListNode traveller2 = l2;
+    ListNode traveller3 = new ListNode();
     ListNode result = new ListNode();
-    ListNode temp = new ListNode();
-    result = temp;
+    result = traveller3;
 
     int c = 0;
     while (true) {
@@ -25,8 +25,8 @@ class AddTwoNumber {
         traveller1 = traveller1.next;
         traveller2 = traveller2.next;
 
-        temp.next = newNode;
-        temp = newNode;
+        traveller3.next = newNode;
+        traveller3 = newNode;
         continue;
       }
 
@@ -42,8 +42,8 @@ class AddTwoNumber {
 
         traveller2 = traveller2.next;
 
-        temp.next = newNode;
-        temp = newNode;
+        traveller3.next = newNode;
+        traveller3 = newNode;
         continue;
       }
 
@@ -59,13 +59,13 @@ class AddTwoNumber {
 
         traveller1 = traveller1.next;
 
-        temp.next = newNode;
-        temp = newNode;
+        traveller3.next = newNode;
+        traveller3 = newNode;
         continue;
       }
 
       if (c == 1) {
-        temp.next = new ListNode(1);
+        traveller3.next = new ListNode(1);
       }
 
       break;
