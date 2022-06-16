@@ -1,5 +1,4 @@
 
-
 class AddTwoNumber {
   public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     ListNode traveller1 = l1;
@@ -28,10 +27,13 @@ class AddTwoNumber {
 
         temp.next = newNode;
         temp = newNode;
-      } else if (traveller1 == null && traveller2 != null) {
-        int a = traveller2.val;
-        if (a + c >= 10) {
-          newNode.val = a + c - 10;
+        continue;
+      }
+
+      if (traveller1 == null && traveller2 != null) {
+        int b = traveller2.val;
+        if (b + c >= 10) {
+          newNode.val = b + c - 10;
           c = 1;
         } else {
           newNode.val = traveller2.val + c;
@@ -42,10 +44,13 @@ class AddTwoNumber {
 
         temp.next = newNode;
         temp = newNode;
-      } else if (traveller1 != null && traveller2 == null) {
-        int b = traveller1.val;
-        if (b + c >= 10) {
-          newNode.val = b + c - 10;
+        continue;
+      }
+
+      if (traveller1 != null && traveller2 == null) {
+        int a = traveller1.val;
+        if (a + c >= 10) {
+          newNode.val = a + c - 10;
           c = 1;
         } else {
           newNode.val = traveller1.val + c;
@@ -56,12 +61,14 @@ class AddTwoNumber {
 
         temp.next = newNode;
         temp = newNode;
-      } else {
-        if (c == 1) {
-          temp.next = new ListNode(1);
-        }
-        break;
+        continue;
       }
+
+      if (c == 1) {
+        temp.next = new ListNode(1);
+      }
+
+      break;
     }
 
     return result.next;
@@ -106,6 +113,3 @@ class ListNode {
     return sb.toString();
   }
 }
-
-
-
