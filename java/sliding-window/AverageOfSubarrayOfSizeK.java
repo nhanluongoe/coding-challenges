@@ -1,6 +1,10 @@
 import java.util.*;
 
 class AverageOfSubarrayOfSizeK {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(n)
+   */
   public static double[] findAverages(int K, int[] arr) {
     double[] result = new double[arr.length - K + 1];
     double windowSum = 0;
