@@ -1,4 +1,8 @@
 public class MinSizeSubArraySum {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static int findMinSubArray(int S, int[] arr) {
     int windowStartIndex = 0;
     int minSize = Integer.MAX_VALUE;
