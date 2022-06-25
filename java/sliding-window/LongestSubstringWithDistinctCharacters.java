@@ -1,6 +1,10 @@
 import java.util.*;
 
 public class LongestSubstringWithDistinctCharacters {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static int findLengthBetter(String string) {
     int windowStart = 0, maxLength = 0;
 
