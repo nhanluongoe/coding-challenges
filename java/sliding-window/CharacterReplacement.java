@@ -7,6 +7,10 @@ import java.util.Map;
  * find the length of the longest substring having the same letters after replacement.
  */
 public class CharacterReplacement {
+  /**
+   * Time complexity: O(n), n is the length of the string
+   * Space complexity: O(26) -> O(1), 26 lowercase letters
+   */
   public static int findLength(String string, int K) {
     int windowStart = 0, maxRepeatLetterCount = 0, maxLength = 0;
 
