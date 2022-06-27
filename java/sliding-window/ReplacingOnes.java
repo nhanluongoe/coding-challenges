@@ -1,3 +1,5 @@
+import java.util.*;
+
 /**
  * Given an array containing 0s and 1s, if you are allowed to replace no more
  * than ‘k’ 0s with 1s,
@@ -5,8 +7,26 @@
  */
 public class ReplacingOnes {
   public static int findLength(int[] array, int K) {
+    int windowStart = 0, maxLength = 0;
 
-    return 0;
+    Map<Integer, Integer> charFreqMap = new HashMap<>();
+    for (int windowEnd = 0; windowEnd < array.length; windowEnd++) {
+      int rightNumber = array[windowEnd];
+      charFreqMap.put(rightNumber, charFreqMap.getOrDefault(rightNumber, 0) + 1);
+
+      if (windowEnd - windowStart + 1 - charFreqMap.getOrDefault(1, 0) > K) {
+        int leftNumber = array[windowStart];
+        charFreqMap.put(leftNumber, charFreqMap.get(leftNumber) - 1);
+        if (charFreqMap.get(leftNumber) == 0) {
+          charFreqMap.remove(leftNumber);
+        }
+        windowStart++;
+      }
+
+      maxLength = windowEnd - windowStart + 1;
+    }
+
+    return maxLength;
   }
 
   public static void main(String[] args) {
