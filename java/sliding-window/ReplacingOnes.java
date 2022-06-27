@@ -7,6 +7,32 @@ import java.util.*;
  */
 public class ReplacingOnes {
   /**
+   * Only need to keep tract of 1s so don't need to use map
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
+  public static int findLengthBetter(int[] array, int K) {
+    int windowStart = 0, maxOnesCount = 0, maxLength = 0;
+
+    for (int windowEnd = 0; windowEnd < array.length; windowEnd++) {
+      if (array[windowEnd] == 1) {
+        maxOnesCount++;
+      }
+
+      if (windowEnd - windowStart + 1 - maxOnesCount > K) {
+        if (array[windowStart] == 1) {
+          maxOnesCount--;
+        }
+        windowStart++;
+      }
+
+      maxLength = windowEnd - windowStart + 1;
+    }
+
+    return maxLength;
+  }
+
+  /**
    * Time complexity: O(n)
    * Space complexity: O(1)
    */
@@ -44,5 +70,16 @@ public class ReplacingOnes {
                                                                                            // longest contiguous
                                                                                            // subarray of 1s having
                                                                                            // length 9.
+
+    System.out.println(
+        ReplacingOnes.findLengthBetter(new int[] { 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1 }, 2)); // Replace the '0' at index 5 and 8
+                                                                                     // to have the longest contiguous
+                                                                                     // subarray of 1s having length 6.
+    System.out.println(
+        ReplacingOnes.findLengthBetter(new int[] { 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1 }, 3)); // Replace the '0' at index
+                                                                                           // 6, 9, and 10 to have the
+                                                                                           // longest contiguous
+                                                                                           // subarray of 1s having
+                                                                                           // length 9.ƒ
   }
 }
