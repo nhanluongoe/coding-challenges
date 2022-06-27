@@ -6,6 +6,10 @@ import java.util.*;
  * find the length of the longest contiguous subarray having all 1s.
  */
 public class ReplacingOnes {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static int findLength(int[] array, int K) {
     int windowStart = 0, maxLength = 0;
 
