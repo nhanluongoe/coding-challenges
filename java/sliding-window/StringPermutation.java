@@ -1,6 +1,10 @@
 import java.util.*;
 
 public class StringPermutation {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static boolean findPermutation(String string, String pattern) {
     int windowStart = 0, numberOfMatched = 0;
     Map<Character, Integer> charFreqMap = new HashMap<>();
