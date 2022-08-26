@@ -30,6 +30,8 @@ public class StringAnagrams {
       if (windowEnd >= pattern.length() - 1) {
         char leftChar = str.charAt(windowStart);
         if (charFreqMap.containsKey(leftChar)) {
+          // We need check whether number of match should be decreased
+          // before putting back the element into map
           if (charFreqMap.get(leftChar) == 0) {
             numberOfMatch--;
           }
