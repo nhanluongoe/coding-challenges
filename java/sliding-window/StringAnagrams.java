@@ -43,8 +43,8 @@ public class StringAnagrams {
   }
 
   public static void main(String[] args) {
-    System.out.println(StringAnagrams.findStringAnagrams("ppqp", "pq"));
-    System.out.println(StringAnagrams.findStringAnagrams("abbcabc", "abc"));
+    System.out.println(StringAnagrams.findStringAnagrams("ppqp", "pq")); // [1, 2]
+    System.out.println(StringAnagrams.findStringAnagrams("abbcabc", "abc")); // [2, 3, 4]
   }
 
 }
