@@ -4,6 +4,10 @@ import java.util.List;
 import java.util.Map;
 
 public class StringAnagrams {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static List<Integer> findStringAnagrams(String str, String pattern) {
     Map<Character, Integer> charFreqMap = new HashMap<>();
     for (Character ch : pattern.toCharArray()) {
