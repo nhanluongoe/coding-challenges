@@ -2,6 +2,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 class MinimumWindowSubstring {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static String findSubstring(String str, String pattern) {
     Map<Character, Integer> charFreqMap = new HashMap<>();
     for (char ch : pattern.toCharArray()) {
