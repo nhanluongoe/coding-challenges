@@ -4,6 +4,11 @@ import java.util.List;
 import java.util.Map;
 
 public class WordConcatenation {
+  /**
+   * Time complexity: O(n * m * l), where n is number of characters in given
+   * string, m is total numbers of words, l is the length of a word
+   * Space complexity: O(m + n)
+   */
   public static List<Integer> findWordConcatenation(String str, String[] words) {
     Map<String, Integer> wordFrequencyMap = new HashMap<>();
     for (String word : words) {
