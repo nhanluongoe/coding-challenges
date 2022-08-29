@@ -4,6 +4,10 @@ import java.util.Arrays;
  * Constraint: input array is sorted
  */
 public class SortedArraySquares {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(n)
+   */
   public static int[] makeSquares(int[] arr) {
     int[] resultArray = new int[arr.length];
     int higherSquareIndex = arr.length - 1;
