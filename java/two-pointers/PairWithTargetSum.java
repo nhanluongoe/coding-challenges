@@ -1,7 +1,14 @@
 import java.util.Arrays;
 
+/**
+ * Constraint: input array is sorted
+ */
 public class PairWithTargetSum {
 
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static int[] search(int[] arr, int targetSum) {
     int startIndex = 0, endIndex = arr.length - 1;
 
