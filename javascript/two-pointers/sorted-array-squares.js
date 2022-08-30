@@ -1,5 +1,7 @@
 /**
  * Constraint: input array is sorted
+ * Time complexity: O(n)
+ * Space complexity: O(n)
  */
 function sortArraySquares(arr) {
   let left = 0;
