@@ -1,6 +1,10 @@
 import java.util.*;
 
 public class TripletSumToZero {
+  /**
+   * Time complexity: O(n*logn + n^2) => O(n^2)
+   * Space complexity: O(n) for sorting
+   */
   public static List<List<Integer>> searchTriplets(int[] arr) {
     Arrays.sort(arr);
     List<List<Integer>> triplets = new ArrayList<>();
