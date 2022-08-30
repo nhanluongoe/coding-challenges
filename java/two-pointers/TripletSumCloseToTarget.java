@@ -2,6 +2,8 @@ import java.util.Arrays;
 
 /**
  * Constraint: If there're more than one such triplets, return the triplet with smallest sum
+ * Time complexity: O(n*logn + n^2)
+ * Space complexity: O(n) required for sorting
  */
 public class TripletSumCloseToTarget {
   public static int searchTriplet(int[] arr, int targetSum) {
