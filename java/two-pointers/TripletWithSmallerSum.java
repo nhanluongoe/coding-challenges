@@ -1,5 +1,9 @@
 import java.util.Arrays;
 
+/**
+ * Time complexity: O(n*logn + n^2)
+ * Space complexity: O(n) required for sorting
+ */
 public class TripletWithSmallerSum {
   public static int searchTriplets(int[] arr, int target) {
     Arrays.sort(arr);
