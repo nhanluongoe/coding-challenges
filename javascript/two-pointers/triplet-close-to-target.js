@@ -1,5 +1,7 @@
 /**
  * Constraint: If there're more than one such triplets, return the triplet with smallest sum
+ * Time complexity: O(n*logn + n^2) => O(n^2)
+ * Space complexity: O(n) required for sorting
  */
 function searchTriplet(arr, target) {
   let minDiff = Number.MAX_SAFE_INTEGER
