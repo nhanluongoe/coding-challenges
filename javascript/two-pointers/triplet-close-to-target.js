@@ -1,8 +1,27 @@
 /**
  * Constraint: If there're more than one such triplets, return the triplet with smallest sum
  */
-function searchTriplet() {
+function searchTriplet(arr, target) {
+  let minDiff = Number.MAX_SAFE_INTEGER
+  arr.sort()
 
+  for (let i = 0; i < arr.length - 2; i++) {
+    let left = i + 1
+    let right = arr.length - 1
+
+    while (left < right) {
+      const targetDiff = target - (arr[i] + arr[left] + arr[right])
+
+      if (targetDiff === 0) return target - targetDiff
+
+      if (Math.abs(targetDiff) < minDiff) minDiff = Math.abs(targetDiff)
+
+      if (targetDiff < 0) right--
+      else left++
+    }
+  }
+
+  return target - minDiff
 }
 
 console.log(searchTriplet([-2, 0, 1, 2], 2)) // -2, 1, 2 => 1
