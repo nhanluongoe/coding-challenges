@@ -19,6 +19,7 @@
     "no-param-reassign": "off",
     "no-restricted-syntax": "off",
     "no-underscore-dangle": "off",
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "no-continue": "off"
   }
 }
