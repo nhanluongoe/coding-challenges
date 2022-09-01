@@ -1,5 +1,9 @@
 import java.util.*;
 
+/**
+ * Time complexity: O(n)
+ * Space complexity: O(1)
+ */
 public class DutchFlag {
   public static void sort(int[] arr) {
     int low = 0, high = arr.length - 1;
