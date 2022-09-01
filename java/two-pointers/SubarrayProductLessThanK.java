@@ -13,6 +13,12 @@ public class SubarrayProductLessThanK {
     for (int right = 0; right < arr.length; right++) {
       product *= arr[right];
       while (product >= target && left < arr.length) product /= arr[left++];
+      /**
+       * 1. Since the product of all numbers from left to right is smaller than target
+       * therefore all subarrays from left to right will have product less than target too
+       * 2. To avoid duplicates, start with a subarray containing only arr[right] and then extend
+       * it to the left
+       */
       List<Integer> tempList = new LinkedList<>();
       for (int i = right; i >= left; i--) {
         tempList.add(0, arr[i]);
