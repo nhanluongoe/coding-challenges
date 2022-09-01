@@ -2,6 +2,8 @@ import java.util.*;
 
 /**
  * Constraint: subarray must be contiguous
+ * Time complexity: O(n^3)
+ * Space complexity: O(n) for the temp list
  */
 public class SubarrayProductLessThanK {
   public static List<List<Integer>> findSubarrays(int[] arr, int target) {
