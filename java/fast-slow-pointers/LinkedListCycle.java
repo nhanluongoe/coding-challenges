@@ -16,7 +16,7 @@ public class LinkedListCycle {
     ListNode fast = node;
     ListNode slow = node;
 
-    while (fast.next != null && slow != null) {
+    while (fast != null && fast.next != null) {
       fast = fast.next.next;
       slow = slow.next;
       if (fast == slow)
@@ -25,6 +25,27 @@ public class LinkedListCycle {
 
     return false;
   }
+
+  // public static int findCycleLength(ListNode head) {
+  //   ListNode fast = head;
+  //   ListNode slow = head;
+    
+  //   while(fast.next != null && slow != null) {
+  //     fast = fast.next.next;
+  //     slow = slow.next;
+  //     if (fast == slow) {
+  //       int length = 0;
+  //       ListNode current = slow.next;
+  //       while (current != slow) {
+  //         length++;
+  //         current = current.next;
+  //       }
+  //       return length;
+  //     }
+  //   }
+
+  //   return 0; // no cycle found
+  // }
 
   public static void main(String[] args) {
     ListNode head = new ListNode(1);
@@ -38,8 +59,10 @@ public class LinkedListCycle {
 
     head.next.next.next.next.next.next = head.next.next;
     System.out.println(hasCycle(head));
+    // System.out.println("Cyclic length: " + findCycleLength(head));
 
     head.next.next.next.next.next.next = head.next.next.next;
     System.out.println(hasCycle(head));
+    // System.out.println("Cyclic length: " + findCycleLength(head));
   }
 }
