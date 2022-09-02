@@ -52,8 +52,20 @@ public class LinkedListCycle {
   }
 
   public static ListNode findCycleStart(ListNode head) {
+    ListNode pointer1 = head;
+    ListNode pointer2 = head;
 
-    return head;
+    int cycleLength = findCycleLength(head);
+    for (int i = 0; i < cycleLength; i++) {
+      pointer2 = pointer2.next;
+    }
+
+    while (pointer1 != pointer2) {
+      pointer1 = pointer1.next;
+      pointer2 = pointer2.next;
+    }
+
+    return pointer1;
   }
 
   public static void main(String[] args) {
