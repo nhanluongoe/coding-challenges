@@ -1,3 +1,7 @@
+/**
+ * Time complexity: O(n^3)
+ * Space complexity: O(n) for temp array
+ */
 function findSubarrays(arr, target) {
   const subarrays = []
   let product = 1;
