@@ -8,6 +8,10 @@ class ListNode {
 }
 
 public class LinkedListCycle {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static boolean hasCycle(ListNode node) {
     ListNode fast = node;
     ListNode slow = node;
