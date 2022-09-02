@@ -26,6 +26,10 @@ public class LinkedListCycle {
     return false;
   }
 
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static int findCycleLength(ListNode head) {
     ListNode fast = head;
     ListNode slow = head;
