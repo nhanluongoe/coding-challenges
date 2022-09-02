@@ -51,6 +51,11 @@ public class LinkedListCycle {
     return 0; // no cycle found
   }
 
+  public static ListNode findCycleStart(ListNode head) {
+
+    return head;
+  }
+
   public static void main(String[] args) {
     ListNode head = new ListNode(1);
     head.next = new ListNode(2);
@@ -64,9 +69,15 @@ public class LinkedListCycle {
     head.next.next.next.next.next.next = head.next.next;
     System.out.println(hasCycle(head));
     System.out.println("Cyclic length: " + findCycleLength(head));
+    System.out.println("Linkedlist cycle start: " + findCycleStart(head).value);
 
     head.next.next.next.next.next.next = head.next.next.next;
     System.out.println(hasCycle(head));
     System.out.println("Cyclic length: " + findCycleLength(head));
+    System.out.println("Linkedlist cycle start: " + findCycleStart(head).value);
+
+
+    head.next.next.next.next.next.next = head;
+    System.out.println("Linkedlist cycle start: " + findCycleStart(head).value);
   }
 }
