@@ -1,15 +1,26 @@
 class ListNode {
   int value = 0;
   ListNode next;
+
   public ListNode(int value) {
-    this.value = value; 
+    this.value = value;
   }
 }
+
 public class LinkedListCycle {
   public static boolean hasCycle(ListNode node) {
+    ListNode fast = node;
+    ListNode slow = node;
+
+    while (fast.next != null && slow != null) {
+      fast = fast.next.next;
+      slow = slow.next;
+      if (fast == slow)
+        return true;
+    }
 
     return false;
-  }  
+  }
 
   public static void main(String[] args) {
     ListNode head = new ListNode(1);
@@ -23,7 +34,6 @@ public class LinkedListCycle {
 
     head.next.next.next.next.next.next = head.next.next;
     System.out.println(hasCycle(head));
-
 
     head.next.next.next.next.next.next = head.next.next.next;
     System.out.println(hasCycle(head));
