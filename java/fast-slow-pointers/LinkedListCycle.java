@@ -51,6 +51,10 @@ public class LinkedListCycle {
     return 0; // no cycle found
   }
 
+  /**
+   * Time complexity: O(n + n) => O(n)
+   * Space complexity: O(1)
+   */
   public static ListNode findCycleStart(ListNode head) {
     ListNode pointer1 = head;
     ListNode pointer2 = head;
