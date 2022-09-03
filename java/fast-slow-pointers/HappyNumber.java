@@ -1,4 +1,8 @@
 public class HappyNumber {
+  /**
+   * Time complexity: O(logn)
+   * Space complexity: O(1)
+   */
   public static boolean find(int number) {
     int slow = number, fast = number;
 
