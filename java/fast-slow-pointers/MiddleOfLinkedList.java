@@ -8,6 +8,10 @@ class ListNode {
 }
 
 public class MiddleOfLinkedList {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static ListNode findMiddle(ListNode head) {
     ListNode slow = head, fast = head;
 
