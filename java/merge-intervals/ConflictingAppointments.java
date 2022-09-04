@@ -11,8 +11,14 @@ class Interval {
 }
 public class ConflictingAppointments {
   public static boolean canAttendAllAppointments(Interval[] intervals) {
+    Arrays.sort(intervals, (interval1, interval2) -> Integer.compare(interval1.start, interval2.start));
+    for (int i = 0; i < intervals.length - 1; i++) {
+      Interval currentInterval = intervals[i];
+      Interval nextInterval = intervals[i + 1];
+      if (currentInterval.end > nextInterval.start) return false;
+    }
 
-    return false;
+    return true;
   }
 
   public static void main(String[] args) {
