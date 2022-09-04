@@ -12,6 +12,10 @@ class Interval {
 }
 
 public class MergeIntervals {
+  /**
+   * Time complexity: O(n*logn)
+   * Space complexity: O(n)
+   */
   public static List<Interval> merge(List<Interval> input) {
     List<Interval> sortedInput = input.stream().sorted((interval1, interval2) -> interval1.start - interval2.start)
         .collect(Collectors.toList());
