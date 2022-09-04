@@ -10,6 +10,10 @@ class Interval {
   }
 }
 public class ConflictingAppointments {
+  /**
+   * Time complexity: O(n*logn)
+   * Space complexity: O(n)
+   */
   public static boolean canAttendAllAppointments(Interval[] intervals) {
     Arrays.sort(intervals, (interval1, interval2) -> Integer.compare(interval1.start, interval2.start));
     for (int i = 0; i < intervals.length - 1; i++) {
