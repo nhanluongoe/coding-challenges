@@ -14,6 +14,10 @@ class Interval {
  * Constraint: intervals is non-overlapping and sorted
  */
 public class InsertInterval {
+  /**
+   * Time complexity: O(n*logn)
+   * Space complexity: O(n)
+   */
   public static List<Interval> insert(List<Interval> intervals, Interval newInterval) {
     intervals.add(newInterval);
     return merge(intervals);
