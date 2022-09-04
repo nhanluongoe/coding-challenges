@@ -14,6 +14,10 @@ class Interval {
  * Constraint: intervals is non-overlapping and sorted
  */
 public class InsertInterval {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(n)
+   */
   public static List<Interval> betterInsert(List<Interval> intervals, Interval newInterval) {
     if (intervals == null || intervals.isEmpty()) {
       return Arrays.asList(newInterval);
