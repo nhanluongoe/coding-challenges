@@ -10,6 +10,9 @@ class Interval {
   }
 }
 
+/**
+ * Constraint: intervals is non-overlapping and sorted
+ */
 public class InsertInterval {
   public static List<Interval> insert(List<Interval> intervals, Interval newInterval) {
 
