@@ -7,8 +7,33 @@ import java.util.*;
  */
 public class MissingNumber {
   public static int findMissingNumber(int[] nums) {
+    sort(nums);
 
-    return -1;
+    int i = 0;
+    while(i < nums.length) {
+      if (nums[i] != i) return i;
+      i++;
+    }
+
+    return i + 1;
+  }
+
+  public static void sort(int[] nums) {
+    int i = 0;
+    while (i < nums.length) {
+      int j = nums[i]; 
+      if (nums[i] < nums.length && nums[i] != nums[j]) {
+        swap(nums, i, j);
+      } else {
+        i++;
+      }
+    }
+  }
+
+  public static void swap(int[] arr, int i, int j) {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
   }
 
   public static void main(String[] args) {
