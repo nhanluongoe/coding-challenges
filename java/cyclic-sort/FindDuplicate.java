@@ -8,8 +8,27 @@ import java.util.*;
  */
 public class FindDuplicate {
   public static int findNumber(int[] nums) {
+    int i = 0;
+    while (i < nums.length) {
+      int j = nums[i] - 1;
+      if (nums[i] != nums[j]) {
+        swap(nums, i, j);
+      } else {
+        i++;
+      }
+    }
 
-    return -1;
+    for (int j = 0; j < nums.length; j++) {
+      if (nums[j] != j + 1) return nums[j];
+    }
+
+    return nums.length;
+  }
+
+  public static void swap(int[] arr, int i, int j) {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
   }
 
   public static void main(String[] args) {
