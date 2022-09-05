@@ -4,9 +4,19 @@ import java.util.*;
  * Constraints: O(n) time and without any extra space
  */
 public class CyclicSort {
-  public static void sort(int[] arr) {
-
+  public static void sort(int[] nums) {
+    for (int i = 0; i < nums.length; i++) {
+      if (nums[i] != i + 1) {
+        swap(nums, i, nums[i] - 1);
+      }
+    }
   }  
+
+  public static void swap(int[] arr, int i, int j) {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp; 
+  }
 
   public static void main(String[] args) {
     int[] arr1 = {3, 1, 5, 4, 2};
