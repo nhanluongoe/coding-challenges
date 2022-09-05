@@ -7,6 +7,10 @@ import java.util.*;
  * space. You are, however, allowed to modify the input array.
  */
 public class FindDuplicate {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static int findNumber(int[] nums) {
     int i = 0;
     while (i < nums.length) {
