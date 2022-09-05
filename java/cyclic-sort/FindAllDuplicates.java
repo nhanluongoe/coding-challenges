@@ -6,6 +6,10 @@ import java.util.*;
  * duplicate numbers without using any extra space.
  */
 public class FindAllDuplicates {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1), the space used for output doesn't count
+   */
   public static List<Integer> findNumbers(int[] nums) {
     List<Integer> result = new ArrayList<>();
 
