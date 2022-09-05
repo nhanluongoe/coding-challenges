@@ -4,6 +4,10 @@ import java.util.*;
  * Constraints: O(n) time and without any extra space
  */
 public class CyclicSort {
+  /**
+   * Time complexity: O(n)
+   * Space compolexity: O(1)
+   */
   public static void sort(int[] nums) {
     for (int i = 0; i < nums.length; i++) {
       if (nums[i] != i + 1) {
