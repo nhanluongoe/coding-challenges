@@ -16,6 +16,22 @@ public class CyclicSort {
     }
   }  
 
+  /**
+   * Time complexity: O(n + n+1) => O(n)
+   * Space compolexity: O(1)
+   */
+  public static void sort2(int[] nums) {
+    int i = 0;
+    while (i < nums.length) {
+      int j = nums[i] - 1;
+      if (nums[i] != i + 1) {
+        swap(nums, i, j);
+      } else {
+        i++;
+      }
+    }
+  }
+
   public static void swap(int[] arr, int i, int j) {
     int temp = arr[i];
     arr[i] = arr[j];
@@ -24,15 +40,15 @@ public class CyclicSort {
 
   public static void main(String[] args) {
     int[] arr1 = {3, 1, 5, 4, 2};
-    sort(arr1);
+    sort2(arr1);
     System.out.println("After sorting: " + Arrays.toString(arr1));
 
     int[] arr2 = {1, 5, 6, 4, 3, 2};
-    sort(arr2);
+    sort2(arr2);
     System.out.println("After sorting: " + Arrays.toString(arr2));
 
     int[] arr3 = {2, 6, 4, 3, 1, 5};
-    sort(arr3);
+    sort2(arr3);
     System.out.println("After sorting: " + Arrays.toString(arr3));
   }
 }
