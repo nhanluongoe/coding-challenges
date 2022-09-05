@@ -6,6 +6,10 @@ import java.util.*;
  * the total ‘n+1’ numbers, find the missing number.
  */
 public class MissingNumber {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static int findMissingNumber(int[] nums) {
     sort(nums);
 
