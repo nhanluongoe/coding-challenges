@@ -7,6 +7,10 @@ class ListNode {
   }
 }
 
+/**
+ * Problem statement: Given the head of a LinkedList and two positions ‘p’ and
+ * ‘q’, reverse the LinkedList from position ‘p’ to ‘q’.
+ */
 public class ReverseSubList {
   public static ListNode reverse(ListNode head, int p, int q) {
 
