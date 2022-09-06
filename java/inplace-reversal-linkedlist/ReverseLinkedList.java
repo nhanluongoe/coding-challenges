@@ -9,6 +9,11 @@ class ListNode {
   }
 }
 
+/**
+ * Problem statement: Given the head of a Singly LinkedList, reverse the
+ * LinkedList. Write a function to return the new head of the reversed
+ * LinkedList.
+ */
 public class ReverseLinkedList {
   public static ListNode reverse(ListNode head) {
 
@@ -26,5 +31,5 @@ public class ReverseLinkedList {
       System.out.print(result.value + " ");
       result = result.next;
     }
-  } 
+  }
 }
