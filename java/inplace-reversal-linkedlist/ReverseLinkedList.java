@@ -15,6 +15,10 @@ class ListNode {
  * LinkedList.
  */
 public class ReverseLinkedList {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static ListNode reverse(ListNode head) {
     ListNode current = head;
     ListNode previous = null;
