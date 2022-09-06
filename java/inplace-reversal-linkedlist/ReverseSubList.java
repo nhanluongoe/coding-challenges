@@ -12,6 +12,10 @@ class ListNode {
  * ‘q’, reverse the LinkedList from position ‘p’ to ‘q’.
  */
 public class ReverseSubList {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static ListNode reverse(ListNode head, int p, int q) {
     if (p == q) return head;
 
@@ -42,7 +46,6 @@ public class ReverseSubList {
 
     // connect to the second second part 
     LastNodeOfSubList.next = current;
-
 
     return head;
   }
