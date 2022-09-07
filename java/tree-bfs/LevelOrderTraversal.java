@@ -16,6 +16,10 @@ class TreeNode {
  * level from left to right in separate sub-arrays.
  */
 public class LevelOrderTraversal {
+  /**
+   * Time complexity: O(n) we have "n" nodes
+   * Space complexity: O(n)
+   */
   public static List<List<Integer>> traverse(TreeNode root) {
     List<List<Integer>> result = new ArrayList<>();
 
