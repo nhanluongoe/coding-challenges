@@ -49,6 +49,11 @@ public class LevelOrderTraversal {
    * first. You should populate the values of all nodes in each level from left to
    * right in separate sub-arrays.
    */
+
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static List<List<Integer>> reverseTraverse(TreeNode root) {
     List<List<Integer>> result = new LinkedList<>();
 
