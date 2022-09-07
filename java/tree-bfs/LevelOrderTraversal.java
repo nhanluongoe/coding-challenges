@@ -80,6 +80,11 @@ public class LevelOrderTraversal {
    * Problem statement: Given a binary tree, populate an array to represent the
    * averages of all of its levels.
    */
+
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(n)
+   */
   public static List<Double> findLevelAverages(TreeNode root) {
     List<Double> result = new ArrayList<>();
 
