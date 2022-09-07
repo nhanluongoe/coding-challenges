@@ -83,6 +83,23 @@ public class LevelOrderTraversal {
   public static List<Double> findLevelAverages(TreeNode root) {
     List<Double> result = new ArrayList<>();
 
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.offer(root);
+    while (!queue.isEmpty()) {
+      int levelSize = queue.size();
+      double levelSum = 0;
+      for (int i = 0; i < levelSize; i++) {
+        TreeNode currentNode = queue.poll();
+        levelSum += currentNode.value;
+        if (currentNode.left != null)
+          queue.offer(currentNode.left);
+        if (currentNode.right != null)
+          queue.offer(currentNode.right);
+      }
+      double levelAverage = levelSum / levelSize;
+      result.add(levelAverage);
+    }
+
     return result;
   }
 
@@ -99,6 +116,7 @@ public class LevelOrderTraversal {
     List<List<Integer>> reverseResult = reverseTraverse(root);
     System.out.println(reverseResult);
 
+    root.left.right = new TreeNode(2);
     List<Double> levelAverages = findLevelAverages(root);
     System.out.println("Level average: " + levelAverages);
   }
