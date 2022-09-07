@@ -42,6 +42,12 @@ public class LevelOrderTraversal {
     return result;
   }
 
+  public static List<List<Integer>> reverseTraverse(TreeNode root) {
+    List<List<Integer>> result = new ArrayList<>();
+
+    return result;
+  }
+
   public static void main(String[] args) {
     TreeNode root = new TreeNode(12);
     root.left = new TreeNode(7);
@@ -51,5 +57,8 @@ public class LevelOrderTraversal {
     root.right.right = new TreeNode(5);
     List<List<Integer>> result = traverse(root);
     System.out.println(result);
+
+    List<List<Integer>> reverseResult = reverseTraverse(root);
+    System.out.println(reverseResult);
   }
 }
