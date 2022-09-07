@@ -50,7 +50,23 @@ public class LevelOrderTraversal {
    * right in separate sub-arrays.
    */
   public static List<List<Integer>> reverseTraverse(TreeNode root) {
-    List<List<Integer>> result = new ArrayList<>();
+    List<List<Integer>> result = new LinkedList<>();
+
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.offer(root);
+    while (!queue.isEmpty()) {
+      int levelSize = queue.size();
+      List<Integer> currentLevel = new ArrayList<>();
+      for (int i = 0; i < levelSize; i++) {
+        TreeNode currentNode = queue.poll();
+        currentLevel.add(currentNode.value);
+        if (currentNode.left != null)
+          queue.offer(currentNode.left);
+        if (currentNode.right != null)
+          queue.offer(currentNode.right);
+      }
+      result.add(0, currentLevel);
+    }
 
     return result;
   }
