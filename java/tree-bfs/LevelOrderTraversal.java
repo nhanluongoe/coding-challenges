@@ -76,6 +76,16 @@ public class LevelOrderTraversal {
     return result;
   }
 
+  /**
+   * Problem statement: Given a binary tree, populate an array to represent the
+   * averages of all of its levels.
+   */
+  public static List<Double> findLevelAverages(TreeNode root) {
+    List<Double> result = new ArrayList<>();
+
+    return result;
+  }
+
   public static void main(String[] args) {
     TreeNode root = new TreeNode(12);
     root.left = new TreeNode(7);
@@ -88,5 +98,8 @@ public class LevelOrderTraversal {
 
     List<List<Integer>> reverseResult = reverseTraverse(root);
     System.out.println(reverseResult);
+
+    List<Double> levelAverages = findLevelAverages(root);
+    System.out.println("Level average: " + levelAverages);
   }
 }
