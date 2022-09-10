@@ -15,6 +15,10 @@ class TreeNode {
  * node that appears right after the given node in the level order traversal.
  */
 public class LevelOrderSuccessor {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(n)
+   */
   public static TreeNode findSuccessor(TreeNode root, int key) {
     Queue<TreeNode> queue = new LinkedList<>();
     queue.offer(root);
