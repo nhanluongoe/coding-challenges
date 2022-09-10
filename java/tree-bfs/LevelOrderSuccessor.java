@@ -16,6 +16,24 @@ class TreeNode {
  */
 public class LevelOrderSuccessor {
   public static TreeNode findSuccessor(TreeNode root, int key) {
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.offer(root);
+    boolean theResultIsNext = false;
+    while (!queue.isEmpty()) {
+      int levelSize = queue.size();
+      for (int i = 0; i < levelSize; i++) {
+        TreeNode currentNode = queue.poll();
+        if (theResultIsNext)
+          return currentNode;
+        if (currentNode.value == key)
+          theResultIsNext = true;
+        if (currentNode.left != null)
+          queue.offer(currentNode.left);
+        if (currentNode.right != null)
+          queue.offer(currentNode.right);
+      }
+    }
+
     return null;
   }
 
