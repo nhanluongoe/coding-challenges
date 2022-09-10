@@ -19,6 +19,30 @@ public class ZigZagTraversal {
   public static List<List<Integer>> traverse(TreeNode root) {
     List<List<Integer>> result = new ArrayList<>();
 
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.offer(root);
+    boolean leftToRight = true;
+    while (!queue.isEmpty()) {
+      int levelSize = queue.size();
+      List<Integer> currentLevel = new ArrayList<>();
+      for (int i = 0; i < levelSize; i++) {
+        TreeNode currentNode = queue.poll();
+        if (leftToRight)
+          currentLevel.add(currentNode.value);
+        else
+          currentLevel.add(0, currentNode.value);
+
+        if (currentNode.left != null)
+          queue.offer(currentNode.left);
+
+        if (currentNode.right != null)
+          queue.offer(currentNode.right);
+
+      }
+      result.add(currentLevel);
+      leftToRight = !leftToRight;
+    }
+
     return result;
   }
 
