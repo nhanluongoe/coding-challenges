@@ -33,6 +33,10 @@ class TreeNode {
  * order successor. The last node of each level should point to a null node.
  */
 public class ConnectLevelOrderSiblings {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(n)
+   */
   public static void connect(TreeNode root) {
     if (root == null)
       return;
