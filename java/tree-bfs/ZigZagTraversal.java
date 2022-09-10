@@ -16,6 +16,10 @@ class TreeNode {
  * keep alternating in the same manner for the following levels.
  */
 public class ZigZagTraversal {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(n)
+   */
   public static List<List<Integer>> traverse(TreeNode root) {
     List<List<Integer>> result = new ArrayList<>();
 
