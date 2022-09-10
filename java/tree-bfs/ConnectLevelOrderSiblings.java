@@ -14,7 +14,7 @@ class TreeNode {
       TreeNode currentNode = nextLevelRoot;
       nextLevelRoot = null;
       while (currentNode != null) {
-        System.out.println(currentNode.value + " ");
+        System.out.print(currentNode.value + " ");
         if (nextLevelRoot == null) {
           if (currentNode.left != null)
             nextLevelRoot = currentNode.left;
@@ -34,6 +34,26 @@ class TreeNode {
  */
 public class ConnectLevelOrderSiblings {
   public static void connect(TreeNode root) {
+    if (root == null)
+      return;
+
+    Queue<TreeNode> queue = new LinkedList<>();
+    queue.offer(root);
+    while (!queue.isEmpty()) {
+      int levelSize = queue.size();
+      TreeNode previousNode = null;
+      for (int i = 0; i < levelSize; i++) {
+        TreeNode currentNode = queue.poll();
+        if (previousNode != null)
+          previousNode.next = currentNode;
+        previousNode = currentNode;
+
+        if (currentNode.left != null)
+          queue.offer(currentNode.left);
+        if (currentNode.right != null)
+          queue.offer(currentNode.right);
+      }
+    }
 
   }
 
