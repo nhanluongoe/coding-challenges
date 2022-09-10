@@ -15,6 +15,10 @@ class TreeNode {
  * nearest leaf node.
  */
 public class MiniMumBinaryTreeDepth {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(n)
+   */
   public static int findDepth(TreeNode root) {
     if (root == null)
       return 0;
