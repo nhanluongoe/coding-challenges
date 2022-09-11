@@ -17,10 +17,25 @@ class TreeNode {
  */
 public class SumOfPathNumbers {
   public static int findSumOfPathNumbers(TreeNode root) {
+    return sumOfPathRecursive(root, 0);
+  }
 
+  public static int sumOfPathRecursive(TreeNode currentNode, int pathSum) {
+    if (currentNode == null)
+      return 0;
+
+    pathSum = 10 * pathSum + currentNode.value;
+
+    if (currentNode.left == null && currentNode.right == null)
+      return pathSum;
+
+    return sumOfPathRecursive(currentNode.left, pathSum) + sumOfPathRecursive(currentNode.right, pathSum);
+  }
+
+  public static int findSumOfPathNumbers1(TreeNode root) {
     List<List<Integer>> allPaths = new ArrayList<>();
     List<Integer> currentPath = new ArrayList<>();
-    findPathRecursive(root, currentPath, allPaths);
+    findPathRecursive1(root, currentPath, allPaths);
 
     int sum = 0;
     for (List<Integer> path : allPaths) {
@@ -29,12 +44,10 @@ public class SumOfPathNumbers {
       }
     }
 
-    System.out.println(allPaths);
-
     return sum;
   }
 
-  public static void findPathRecursive(TreeNode currentNode, List<Integer> currentPath, List<List<Integer>> allPaths) {
+  public static void findPathRecursive1(TreeNode currentNode, List<Integer> currentPath, List<List<Integer>> allPaths) {
     if (currentNode == null)
       return;
 
@@ -43,8 +56,8 @@ public class SumOfPathNumbers {
     if (currentNode.left == null && currentNode.right == null) {
       allPaths.add(new ArrayList<>(currentPath));
     } else {
-      findPathRecursive(currentNode.left, currentPath, allPaths);
-      findPathRecursive(currentNode.right, currentPath, allPaths);
+      findPathRecursive1(currentNode.left, currentPath, allPaths);
+      findPathRecursive1(currentNode.right, currentPath, allPaths);
     }
 
     currentPath.remove(currentPath.size() - 1);
@@ -58,5 +71,6 @@ public class SumOfPathNumbers {
     root.right.left = new TreeNode(6);
     root.right.right = new TreeNode(5);
     System.out.println("Total Sum of Path Numbers: " + findSumOfPathNumbers(root));
+    System.out.println("Total Sum of Path Numbers: " + findSumOfPathNumbers1(root));
   }
 }
