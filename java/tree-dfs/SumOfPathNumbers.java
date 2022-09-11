@@ -37,7 +37,7 @@ public class SumOfPathNumbers {
 
   /**
    * Time complexity: O(n*n + n/2 * logn) = O(n^2)
-   * Space complexity: O(n)
+   * Space complexity: O(n*logn)
    */
   public static int findSumOfPathNumbers1(TreeNode root) {
     List<List<Integer>> allPaths = new ArrayList<>();
