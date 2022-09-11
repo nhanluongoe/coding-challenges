@@ -16,6 +16,10 @@ class TreeNode {
  * path equals ‘S’.
  */
 public class TreePathSum {
+  /**
+   * Time complexity: O(n) visit n nodes
+   * Space complexity: O(n) store the recursion stack
+   */
   public static boolean hasPath(TreeNode root, int sum) {
     if (root == null)
       return false;
