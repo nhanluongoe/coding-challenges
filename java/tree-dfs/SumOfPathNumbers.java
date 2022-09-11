@@ -16,10 +16,13 @@ class TreeNode {
  * sum of all the numbers represented by all paths.
  */
 public class SumOfPathNumbers {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(n)
+   */
   public static int findSumOfPathNumbers(TreeNode root) {
     return sumOfPathRecursive(root, 0);
   }
-
   public static int sumOfPathRecursive(TreeNode currentNode, int pathSum) {
     if (currentNode == null)
       return 0;
@@ -32,6 +35,10 @@ public class SumOfPathNumbers {
     return sumOfPathRecursive(currentNode.left, pathSum) + sumOfPathRecursive(currentNode.right, pathSum);
   }
 
+  /**
+   * Time complexity: O(n*n + n/2 * logn) = O(n^2)
+   * Space complexity: O(n)
+   */
   public static int findSumOfPathNumbers1(TreeNode root) {
     List<List<Integer>> allPaths = new ArrayList<>();
     List<Integer> currentPath = new ArrayList<>();
@@ -46,7 +53,6 @@ public class SumOfPathNumbers {
 
     return sum;
   }
-
   public static void findPathRecursive1(TreeNode currentNode, List<Integer> currentPath, List<List<Integer>> allPaths) {
     if (currentNode == null)
       return;
