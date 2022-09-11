@@ -18,15 +18,33 @@ class TreeNode {
 public class AllTreePath {
   public static List<List<Integer>> findPaths(TreeNode root, int sum) {
     List<List<Integer>> allPaths = new ArrayList<>();
-
+    List<Integer> currentPath = new ArrayList<>();
+    findPathsRecursive(root, currentPath, allPaths, sum);
     return allPaths;
+  }
+
+  public static void findPathsRecursive(TreeNode currentNode, List<Integer> currentPath, List<List<Integer>> allPaths,
+      int sum) {
+    if (currentNode == null)
+      return;
+
+    currentPath.add(currentNode.value);
+
+    if (currentNode.value == sum && currentNode.right == null && currentNode.left == null) {
+      allPaths.add(new ArrayList<>(currentPath));
+    } else {
+      findPathsRecursive(currentNode.left, currentPath, allPaths, sum - currentNode.value);
+      findPathsRecursive(currentNode.right, currentPath, allPaths, sum - currentNode.value);
+    }
+
+    currentPath.remove(currentPath.size() - 1);
   }
 
   public static void main(String[] args) {
     TreeNode root = new TreeNode(12);
     root.left = new TreeNode(7);
     root.right = new TreeNode(1);
-    root.left.left = new TreeNode(9);
+    root.left.left = new TreeNode(4);
     root.right.left = new TreeNode(10);
     root.right.right = new TreeNode(5);
     int sum = 23;
