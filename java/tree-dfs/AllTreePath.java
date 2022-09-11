@@ -16,6 +16,14 @@ class TreeNode {
  * ‘S’.
  */
 public class AllTreePath {
+  /**
+   * ||Time complexity: O(N^2) Where ‘N’ is the total number of nodes in the tree.
+   * This is due to the
+   * fact that we traverse each node once (which will take O(N), and for
+   * every leaf node we might have to store its path which will take O(N).
+   * || Space complexity: O(N * logN). Maximum leaves is N/2 => Maximum paths
+   * O(N/2) = O(N). Each path can have at most logN nodes
+   */
   public static List<List<Integer>> findPaths(TreeNode root, int sum) {
     List<List<Integer>> allPaths = new ArrayList<>();
     List<Integer> currentPath = new ArrayList<>();
