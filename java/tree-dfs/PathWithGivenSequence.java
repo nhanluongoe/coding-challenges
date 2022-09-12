@@ -13,6 +13,10 @@ class TreeNode {
  * sequence is present as a root-to-leaf path in the given tree.
  */
 public class PathWithGivenSequence {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(n)
+   */
   public static boolean hasPath(TreeNode root, int[] sequence) {
     if (root == null)
       return sequence.length == 0;
