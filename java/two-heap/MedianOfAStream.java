@@ -31,6 +31,10 @@ public class MedianOfAStream {
     }
   }
 
+  /**
+   * Time complexity: O(logn)
+   * Space complexity: O(n)
+   */
   public double findMedian() {
     if (this.maxHeap.size() == this.minHeap.size())
       return (this.maxHeap.peek() + this.minHeap.peek()) / 2.0;
