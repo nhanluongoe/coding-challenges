@@ -9,13 +9,32 @@ import java.util.*;
  * the average of the middle two numbers.
  */
 public class MedianOfAStream {
-  public void insertNum(int num) {
+  PriorityQueue<Integer> maxHeap;
+  PriorityQueue<Integer> minHeap;
 
+  public MedianOfAStream() {
+    this.maxHeap = new PriorityQueue<>((a, b) -> b - a);
+    this.minHeap = new PriorityQueue<>((a, b) -> a - b);
+  }
+
+  public void insertNum(int num) {
+    if (this.maxHeap.isEmpty() || num <= this.maxHeap.peek()) {
+      this.maxHeap.add(num);
+    } else {
+      this.minHeap.add(num);
+    }
+
+    if (this.maxHeap.size() > this.minHeap.size() + 1) {
+      this.minHeap.add(this.maxHeap.poll());
+    } else if (this.maxHeap.size() < this.minHeap.size()) {
+      this.maxHeap.add(this.minHeap.poll());
+    }
   }
 
   public double findMedian() {
-
-    return -1;
+    if (this.maxHeap.size() == this.minHeap.size())
+      return (this.maxHeap.peek() + this.minHeap.peek()) / 2.0;
+    return this.maxHeap.peek();
   }
 
   public static void main(String[] args) {
