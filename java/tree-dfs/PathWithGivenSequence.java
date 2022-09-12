@@ -14,28 +14,25 @@ class TreeNode {
  */
 public class PathWithGivenSequence {
   public static boolean hasPath(TreeNode root, int[] sequence) {
-    // if (root == null)
-    // return sequence.length == 0;
+    if (root == null)
+      return sequence.length == 0;
 
-    // return findPathRecursive(root, sequence, 0);
-    // }
+    return findPathRecursive(root, sequence, 0);
+  }
 
-    // public static boolean findPathRecursive(TreeNode currentNode, int[] sequence,
-    // int sequenceIndex) {
-    // if (currentNode == null)
-    // return false;
+  public static boolean findPathRecursive(TreeNode currentNode, int[] sequence,
+      int sequenceIndex) {
+    if (currentNode == null)
+      return false;
 
-    // if (sequenceIndex >= sequence.length || currentNode.value !=
-    // sequence[sequenceIndex])
-    // return false;
+    if (sequenceIndex >= sequence.length || currentNode.value != sequence[sequenceIndex])
+      return false;
 
-    // if (currentNode.left == null && currentNode.right == null && sequenceIndex ==
-    // sequence.length - 1)
-    // return true;
+    if (currentNode.left == null && currentNode.right == null && sequenceIndex == sequence.length - 1)
+      return true;
 
-    // return findPathRecursive(currentNode.left, sequence, sequenceIndex + 1)
-    // || findPathRecursive(currentNode.right, sequence, sequenceIndex + 1);
-
+    return findPathRecursive(currentNode.left, sequence, sequenceIndex + 1)
+        || findPathRecursive(currentNode.right, sequence, sequenceIndex + 1);
   }
 
   public static void main(String[] args) {
