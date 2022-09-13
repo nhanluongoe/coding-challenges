@@ -11,6 +11,10 @@ import java.util.*;
  * capital.
  */
 public class MaximizeCapital {
+  /**
+   * Time complexity: O(n*logn + k*logn), 'n' is the number of total projects, k is the numbers
+   * of projects selected
+   */
   public static int findMaximumCapital(int[] capital, int[] profits, int numberOfProjects, int initialCapital) {
     int n = profits.length;
 
