@@ -51,6 +51,10 @@ public class SlidingWindowMedian {
     return maxHeap.peek();
   }
 
+  /**
+   * Time complexity:O(n * k)
+   * Space complexity: O(k)
+   */
   public double[] findSlidingWindowMedian1(int[] nums, int k) {
     double[] result = new double[nums.length - k + 1];
     for (int i = 0; i < nums.length; i++) {
