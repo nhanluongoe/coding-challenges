@@ -12,8 +12,33 @@ import java.util.*;
  */
 public class MaximizeCapital {
   public static int findMaximumCapital(int[] capital, int[] profits, int numberOfProjects, int initialCapital) {
+    int n = profits.length;
 
-    return -1;
+    // These heaps will store the index from original array
+    PriorityQueue<Integer> minCapitalHeap = new PriorityQueue<>(n, (i1, i2) -> capital[i1] - capital[i2]);
+    PriorityQueue<Integer> maxProfitHeap = new PriorityQueue<>(n, (i1, i2) -> profits[i2] - profits[i1]);
+
+    // Add all profits to min heap
+    for (int i = 0; i < n; i++)
+      minCapitalHeap.offer(i);
+
+    int availableCapital = initialCapital;
+    // find totals of 'numberOfProjects' best projects
+    for (int i = 0; i < numberOfProjects; i++) {
+      // find all the projects that can be selected within available capacity
+      while (!minCapitalHeap.isEmpty() && capital[minCapitalHeap.peek()] <= availableCapital) {
+        // insert them into max heap
+        maxProfitHeap.add(minCapitalHeap.poll());
+      }
+
+      // terminate if there's no project that can be selected within available capacity
+      if (maxProfitHeap.isEmpty())
+        break;
+
+      availableCapital += profits[maxProfitHeap.poll()];
+    }
+
+    return availableCapital;
   }
 
   public static void main(String[] args) {
