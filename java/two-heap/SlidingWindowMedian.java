@@ -13,6 +13,10 @@ public class SlidingWindowMedian {
     this.minHeap = new PriorityQueue<>((a, b) -> a - b);
   }
 
+  /**
+   * Time complexity: O(n*logn)
+   * Space complexity: O(n)
+   */
   public double[] findSlidingWindowMedian(int[] nums, int k) {
     double[] result = new double[nums.length - k + 1];
 
