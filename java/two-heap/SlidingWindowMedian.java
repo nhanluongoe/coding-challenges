@@ -51,6 +51,44 @@ public class SlidingWindowMedian {
     return this.maxHeap.peek();
   }
 
+  public double[] findSlidingWindowMedian1(int[] nums, int k) {
+    double[] result = new double[nums.length - k + 1];
+    for (int i = 0; i < nums.length; i++) {
+      if (this.maxHeap.isEmpty() || this.maxHeap.peek() >= nums[i])
+        this.maxHeap.offer(nums[i]);
+      else
+        this.minHeap.offer(nums[i]);
+      rebalanceHeap();
+
+      if (i - k + 1 >= 0) {
+        if (this.maxHeap.size() == this.minHeap.size())
+          result[i - k + 1] = (this.maxHeap.peek() + this.minHeap.peek()) / 2.0;
+        else
+          result[i - k + 1] = this.maxHeap.peek();
+
+        int elementToBeRemoved = nums[i - k + 1];
+        if (elementToBeRemoved <= this.maxHeap.peek())
+          this.maxHeap.remove(elementToBeRemoved);
+        else
+          this.minHeap.remove(elementToBeRemoved);
+
+        rebalanceHeap();
+
+      }
+
+    }
+
+    return result;
+  }
+
+  public void rebalanceHeap() {
+    if (this.maxHeap.size() > this.minHeap.size() + 1)
+      this.minHeap.offer(this.maxHeap.poll());
+    else if (this.minHeap.size() > this.maxHeap.size())
+      this.maxHeap.offer(this.minHeap.poll());
+
+  }
+
   public static void main(String[] args) {
     SlidingWindowMedian slidingWindowMedian = new SlidingWindowMedian();
     double[] result = slidingWindowMedian.findSlidingWindowMedian(new int[] { 1, 2, -1, 3, 5 }, 2);
@@ -60,7 +98,7 @@ public class SlidingWindowMedian {
     System.out.println();
 
     slidingWindowMedian = new SlidingWindowMedian();
-    result = slidingWindowMedian.findSlidingWindowMedian(new int[] { 1, 2, -1, 3, 5 }, 3);
+    result = slidingWindowMedian.findSlidingWindowMedian1(new int[] { 1, 2, -1, 3, 5 }, 3);
     System.out.print("Sliding win medians are: ");
     for (double num : result)
       System.out.print(num + " ");
