@@ -22,12 +22,12 @@ public class MaximizeCapital {
     PriorityQueue<Integer> minCapitalHeap = new PriorityQueue<>(n, (i1, i2) -> capital[i1] - capital[i2]);
     PriorityQueue<Integer> maxProfitHeap = new PriorityQueue<>(n, (i1, i2) -> profits[i2] - profits[i1]);
 
-    // Add all profits to min heap
+    // Add all profits to min heap, O(n*logn)
     for (int i = 0; i < n; i++)
       minCapitalHeap.offer(i);
 
     int availableCapital = initialCapital;
-    // find totals of 'numberOfProjects' best projects
+    // find totals of 'numberOfProjects' best projects, O(k*logn)
     for (int i = 0; i < numberOfProjects; i++) {
       // find all the projects that can be selected within available capacity
       while (!minCapitalHeap.isEmpty() && capital[minCapitalHeap.peek()] <= availableCapital) {
