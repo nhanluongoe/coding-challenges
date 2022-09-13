@@ -64,12 +64,14 @@ public class SlidingWindowMedian {
         minHeap.offer(nums[i]);
       rebalanceHeap();
 
-      if (i - k + 1 >= 0) {
+      if (i - k + 1 >= 0) { // if having at least 'k' elements in the sliding window
+        // add the median to the array
         if (maxHeap.size() == minHeap.size())
           result[i - k + 1] = (maxHeap.peek() + minHeap.peek()) / 2.0;
         else
           result[i - k + 1] = maxHeap.peek();
 
+        // remove the element going out of the sliding window
         int elementToBeRemoved = nums[i - k + 1];
         if (elementToBeRemoved <= maxHeap.peek())
           maxHeap.remove(elementToBeRemoved);
