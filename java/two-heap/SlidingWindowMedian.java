@@ -14,7 +14,7 @@ public class SlidingWindowMedian {
   }
 
   /**
-   * Time complexity: O(n*logk)
+   * Time complexity: O(n*k)
    * Space complexity: O(k)
    */
   public double[] findSlidingWindowMedian(int[] nums, int k) {
