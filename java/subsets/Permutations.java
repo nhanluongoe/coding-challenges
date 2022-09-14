@@ -14,18 +14,24 @@ public class Permutations {
   public static List<List<Integer>> findPermutations(int[] nums) {
     List<List<Integer>> result = new ArrayList<>();
     Queue<List<Integer>> permutations = new LinkedList<>();
+    // add an empty set to permutations to the queue
     permutations.offer(new ArrayList<>());
     for (int num : nums) {
       int n = permutations.size();
+      // for each permutation in the queue
       for (int i = 0; i < n; i++) {
-        List<Integer> oldPermutations = permutations.poll();
-        for (int j = 0; j <= oldPermutations.size(); j++) {
-          List<Integer> newPermutations = new ArrayList<>(oldPermutations);
-          newPermutations.add(j, num);
-          if (newPermutations.size() == nums.length)
-            result.add(newPermutations);
+        // retrieve the old permutation of the queue
+        List<Integer> oldPermutation = permutations.poll();
+        for (int j = 0; j <= oldPermutation.size(); j++) {
+          // create new permutation from old permutation and add the current number to it
+          List<Integer> newPermutation = new ArrayList<>(oldPermutation);
+          newPermutation.add(j, num);
+          // if the set has enough elements => add to result
+          if (newPermutation.size() == nums.length)
+            result.add(newPermutation);
+          // else add permutation to the queue
           else
-            permutations.offer(newPermutations);
+            permutations.offer(newPermutation);
         }
       }
     }
