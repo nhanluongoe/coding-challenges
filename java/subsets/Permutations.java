@@ -5,6 +5,12 @@ import java.util.*;
  * permutations.
  */
 public class Permutations {
+  /**
+   * Time complexity: O(n * n!), "n!" permutations, take O(n) to insert a number
+   * into a permutation
+   * Space complexity: O(n * n!), "n!" permutations, each permutation contains "n"
+   * elements
+   */
   public static List<List<Integer>> findPermutations(int[] nums) {
     List<List<Integer>> result = new ArrayList<>();
     Queue<List<Integer>> permutations = new LinkedList<>();
