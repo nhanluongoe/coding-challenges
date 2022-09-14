@@ -22,8 +22,9 @@ public class Permutations {
       for (int i = 0; i < n; i++) {
         // retrieve the old permutation of the queue
         List<Integer> oldPermutation = permutations.poll();
+        // create new permutation from old permutation and add the current number to it
+        // at every position
         for (int j = 0; j <= oldPermutation.size(); j++) {
-          // create new permutation from old permutation and add the current number to it
           List<Integer> newPermutation = new ArrayList<>(oldPermutation);
           newPermutation.add(j, num);
           // if the set has enough elements => add to result
