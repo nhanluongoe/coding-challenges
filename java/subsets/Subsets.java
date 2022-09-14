@@ -5,6 +5,10 @@ import java.util.*;
  * distinct subsets.
  */
 public class Subsets {
+  /**
+   * Time complexity: O(2^n)
+   * Space complexity: O(2^n)
+   */
   public static List<List<Integer>> findSubsets(int[] nums) {
     List<List<Integer>> subsets = new ArrayList<>();
     subsets.add(new ArrayList<>());
