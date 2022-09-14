@@ -5,6 +5,10 @@ import java.util.*;
  * all of its distinct subsets.
  */
 public class SubsetWithDuplicates {
+  /**
+   * Time complexity: O(2^n)
+   * Space complexity: O(2^n)
+   */
   public static List<List<Integer>> findSubsets(int[] nums) {
     Arrays.sort(nums);
     List<List<Integer>> subsets = new ArrayList<>();
