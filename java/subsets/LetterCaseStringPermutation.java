@@ -5,6 +5,10 @@ import java.util.*;
  * the character sequence but changing case.
  */
 public class LetterCaseStringPermutation {
+  /**
+   * Time complexity: O(n * 2^n)
+   * Space complexity: O(n * 2^n)
+   */
   public static List<String> findLetterCaseStringPermutations(String str) {
     List<String> permutations = new ArrayList<>();
     if (str == null)
