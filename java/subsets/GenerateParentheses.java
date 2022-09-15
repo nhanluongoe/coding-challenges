@@ -2,29 +2,29 @@ import java.util.*;
 
 class Combination {
   private String combination;
-  private int numOfClosedParentheses;
-  private int numOfOpenParentheses;
+  private int closeCount;
+  private int openCount;
 
-  public Combination(String combination, int numOfOpenParentheses, int numOfClosedParentheses) {
+  public Combination(String combination, int openCount, int closeCount) {
     this.combination = combination;
-    this.numOfOpenParentheses = numOfOpenParentheses;
-    this.numOfClosedParentheses = numOfClosedParentheses;
+    this.openCount = openCount;
+    this.closeCount = closeCount;
   }
 
-  public int getNumOfClosedParentheses() {
-    return numOfClosedParentheses;
+  public int getCloseCount() {
+    return closeCount;
   }
 
-  public void setNumOfClosedParentheses(int numOfClosedParentheses) {
-    this.numOfClosedParentheses = numOfClosedParentheses;
+  public void setCloseCount(int closeCount) {
+    this.closeCount = closeCount;
   }
 
-  public int getNumOfOpenParentheses() {
-    return numOfOpenParentheses;
+  public int getOpenCount() {
+    return openCount;
   }
 
-  public void setNumOfOpenParentheses(int numOfOpenParentheses) {
-    this.numOfOpenParentheses = numOfOpenParentheses;
+  public void setOpenCount(int openCount) {
+    this.openCount = openCount;
   }
 
   public String getCombination() {
@@ -54,18 +54,18 @@ public class GenerateParentheses {
     combinations.offer(new Combination("", 0, 0));
     while (!combinations.isEmpty()) {
       Combination currentCombination = combinations.poll();
-      if (currentCombination.getNumOfOpenParentheses() == num
-          && currentCombination.getNumOfClosedParentheses() == num) {
+      if (currentCombination.getOpenCount() == num
+          && currentCombination.getCloseCount() == num) {
         result.add(currentCombination.getCombination());
       } else {
-        if (currentCombination.getNumOfOpenParentheses() < num) {
+        if (currentCombination.getOpenCount() < num) {
           Combination newCombination = new Combination(currentCombination.getCombination() + "(",
-              currentCombination.getNumOfOpenParentheses() + 1, currentCombination.getNumOfClosedParentheses());
+              currentCombination.getOpenCount() + 1, currentCombination.getCloseCount());
           combinations.offer(newCombination);
         }
-        if (currentCombination.getNumOfClosedParentheses() < currentCombination.getNumOfOpenParentheses()) {
+        if (currentCombination.getCloseCount() < currentCombination.getOpenCount()) {
           Combination newCombination = new Combination(currentCombination.getCombination() + ")",
-              currentCombination.getNumOfOpenParentheses(), currentCombination.getNumOfClosedParentheses() + 1);
+              currentCombination.getOpenCount(), currentCombination.getCloseCount() + 1);
           combinations.offer(newCombination);
         }
       }
