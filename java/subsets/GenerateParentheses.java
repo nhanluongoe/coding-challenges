@@ -42,7 +42,7 @@ class Combination {
  */
 public class GenerateParentheses {
   /**
-   * Time complexity: ?
+   * Time complexity: ? https://en.wikipedia.org/wiki/Central_binomial_coefficient
    * Space complexity: O(N * 2^n), since can't have more than 2^n combinations
    */
   public static List<String> generateValidParentheses(int num) {
