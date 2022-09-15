@@ -45,6 +45,10 @@ class Combination {
  * combination of ‘N’ pairs of balanced parentheses.
  */
 public class GenerateParentheses {
+  /**
+   * Time complexity: ?
+   * Space complexity: O(N * 2^n), since can't have more than 2^n combinations
+   */
   public static List<String> generateValidParentheses(int num) {
     List<String> result = new ArrayList<>();
     if (num == 0)
