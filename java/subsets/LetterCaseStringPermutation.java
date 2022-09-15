@@ -11,11 +11,16 @@ public class LetterCaseStringPermutation {
       return permutations;
 
     permutations.add(str);
+    // process each letter in the str
     for (int i = 0; i < str.length(); i++) {
-      if (Character.isLetter(str.charAt(i))) {
+      if (Character.isLetter(str.charAt(i))) { // only process letters, skip digits
         int n = permutations.size();
+        // for every existing permutations, change the letter case accordingly
         for (int j = 0; j < n; j++) {
+          // get the current permutation
           char[] chs = permutations.get(j).toCharArray();
+          // if current character of current permutation is in uppercase, change it to
+          // loser case and vice versa
           if (Character.isUpperCase(chs[i]))
             chs[i] = Character.toLowerCase(chs[i]);
           else
