@@ -7,6 +7,35 @@ import java.util.*;
 public class LetterCaseStringPermutation {
   public static List<String> findLetterCaseStringPermutations(String str) {
     List<String> permutations = new ArrayList<>();
+    if (str == null)
+      return permutations;
+
+    Queue<String> queue = new LinkedList<>();
+    queue.offer("");
+    for (char ch : str.toCharArray()) {
+      int n = queue.size();
+      for (int i = 0; i < n; i++) {
+        String oldPermutation = queue.poll();
+        if (Character.isDigit(ch)) {
+          String newPermutation = oldPermutation + Character.toString(ch);
+          if (newPermutation.length() == str.length())
+            permutations.add(newPermutation);
+          else
+            queue.add(newPermutation);
+        } else {
+          String newPermutation1 = oldPermutation + Character.toString(ch);
+          String newPermutation2 = oldPermutation + Character.toString(ch).toUpperCase();
+          if (newPermutation1.length() == str.length())
+            permutations.add(newPermutation1);
+          else
+            queue.add(newPermutation1);
+          if (newPermutation2.length() == str.length())
+            permutations.add(newPermutation2);
+          else
+            queue.add(newPermutation2);
+        }
+      }
+    }
 
     return permutations;
   }
