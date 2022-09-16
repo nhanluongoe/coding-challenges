@@ -17,6 +17,9 @@ public class GeneralizedAbbreviation {
    */
   public static List<String> generateGeneralizedAbbreviation(String word) {
     List<String> result = new ArrayList<>();
+
+    // Create combinations from original word
+    // ex: "ab" => "ab", "a_" "_b", "__"
     Queue<String> queue = new LinkedList<>();
     queue.offer(" ");
     queue.offer(Character.toString(word.charAt(0)));
@@ -29,6 +32,8 @@ public class GeneralizedAbbreviation {
       }
     }
 
+    // change combination to result
+    // ex: "ab" => 2, "a_" => "1b", ...
     for (String str : queue) {
       StringBuilder sb = new StringBuilder();
       int count = 0;
