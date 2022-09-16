@@ -13,9 +13,40 @@ import java.util.*;
 public class GeneralizedAbbreviation {
   public static List<String> generateGeneralizedAbbreviation(String word) {
     List<String> result = new ArrayList<>();
+    Queue<String> queue = new LinkedList<>();
+    queue.offer(" ");
+    queue.offer(Character.toString(word.charAt(0)));
+    for (int i = 1; i < word.length(); i++) {
+      int n = queue.size();
+      for (int j = 0; j < n; j++) {
+        String current = queue.poll();
+        queue.offer(current + Character.toString(word.charAt(i)));
+        queue.offer(current + " ");
+      }
+    }
+
+    for (String str : queue) {
+      StringBuilder sb = new StringBuilder();
+      int count = 0;
+      for (int i = 0; i < str.length(); i++) {
+        if (str.charAt(i) == ' ') {
+          if (count != 0) {
+            sb.append(1);
+            count = 0;
+          }
+          sb.append(Character.toString(word.charAt(i)));
+        } else {
+          count++;
+          if (i == str.length() - 1)
+            sb.append(count);
+        }
+      }
+      result.add(sb.toString());
+    }
 
     return result;
   }
+
   public static void main(String[] args) {
     List<String> result = generateGeneralizedAbbreviation("BAT");
     System.out.println("Generalized abbreviation are: " + result);
