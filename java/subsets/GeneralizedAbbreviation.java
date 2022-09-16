@@ -11,6 +11,10 @@ import java.util.*;
  * get all the generalized abbreviations: “ab”, “1b”, “a1”, and “2”.
  */
 public class GeneralizedAbbreviation {
+  /**
+   * Time complexity: O(n * 2^n), n is the length of the word
+   * Space complexity: O(n * 2^n)
+   */
   public static List<String> generateGeneralizedAbbreviation(String word) {
     List<String> result = new ArrayList<>();
     Queue<String> queue = new LinkedList<>();
