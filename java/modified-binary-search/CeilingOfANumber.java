@@ -27,6 +27,10 @@ public class CeilingOfANumber {
         start = middle + 1;
       }
     }
+
+    // at the end of the loop, 'start == end'
+    // and unable to find the given element, so the next number bigger than key is
+    // arr[start]
     return start;
   }
 
