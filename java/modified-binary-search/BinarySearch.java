@@ -8,6 +8,10 @@
  * array, otherwise return -1.
  */
 public class BinarySearch {
+  /**
+   * Time complexity: O(logn)
+   * Space complexity: O(1)
+   */
   public static int search(int[] arr, int key) {
     boolean isSortedAsc = arr[0] <= arr[arr.length - 1];
     int start = 0;
