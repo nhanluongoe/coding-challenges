@@ -32,6 +32,9 @@ public class CeilingOfANumber {
     // and unable to find the given element, so the next number bigger than key is
     // arr[start]
     return start;
+
+    // if we need to find the floor of a number, which means the largest element in
+    // the given array smaller than or equal to the 'key' => return 'end';
   }
 
   public static void main(String[] args) {
