@@ -7,6 +7,10 @@
  * isn’t any ceiling return -1.
  */
 public class CeilingOfANumber {
+  /**
+   * Time complexity: O(logn)
+   * Space complexity: O(1)
+   */
   public static int searchCeilingOfANumber(int[] arr, int key) {
     if (key > arr[arr.length - 1])
       return -1;
