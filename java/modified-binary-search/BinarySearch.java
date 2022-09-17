@@ -9,6 +9,25 @@
  */
 public class BinarySearch {
   public static int search(int[] arr, int key) {
+    boolean isSortedAsc = arr[0] <= arr[arr.length - 1];
+    int start = 0;
+    int end = arr.length - 1;
+    while (start <= end) {
+      int middle = start + (end - start) / 2;
+      if (arr[middle] == key)
+        return middle;
+      if (arr[middle] < key) {
+        if (isSortedAsc)
+          start = middle + 1;
+        else
+          end = middle - 1;
+      } else {
+        if (isSortedAsc)
+          end = middle - 1;
+        else
+          start = middle + 1;
+      }
+    }
 
     return -1;
   }
