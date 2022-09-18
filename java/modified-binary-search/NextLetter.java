@@ -11,6 +11,10 @@
  * Write a function to return the next letter of the given ‘key’.
  */
 public class NextLetter {
+  /**
+   * Time complexity: O(logn)
+   * Space complexity: O(1)
+   */
   public static char searchNextLetter(char[] letters, char key) {
     int start = 0;
     int end = letters.length - 1;
