@@ -17,6 +17,9 @@ public class NextLetter {
    */
   public static char searchNextLetter(char[] letters, char key) {
     int n = letters.length;
+    // Because the array is considered circular, so if the key is either smaller
+    // than the first letter or greater than the last letter of the given array,
+    // then the result will be the first letter of the array
     if (key < letters[0] || key > letters[n - 1])
       return letters[0];
 
@@ -25,6 +28,8 @@ public class NextLetter {
     while (start <= end) {
       int middle = start + (end - start) / 2;
 
+      // only find the letter greater than the key, so just increase "stat" when found
+      // the letter equal to the key
       if (letters[middle] <= key) {
         start = middle + 1;
       } else {
@@ -32,6 +37,8 @@ public class NextLetter {
       }
     }
 
+    // imagine the last letter of the given array is equal to key, the result will
+    // be the first letter of the given array
     return letters[start % n];
 
   }
