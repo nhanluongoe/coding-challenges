@@ -16,25 +16,24 @@ public class NextLetter {
    * Space complexity: O(1)
    */
   public static char searchNextLetter(char[] letters, char key) {
+    int n = letters.length;
+    if (key < letters[0] || key > letters[n - 1])
+      return letters[0];
+
     int start = 0;
-    int end = letters.length - 1;
+    int end = n - 1;
     while (start <= end) {
       int middle = start + (end - start) / 2;
 
-      if (letters[middle] < key) {
+      if (letters[middle] <= key) {
         start = middle + 1;
-      } else if (letters[middle] > key) {
-        end = middle - 1;
       } else {
-        if (middle + 1 > letters.length - 1)
-          return letters[0];
-        return letters[middle + 1];
+        end = middle - 1;
       }
     }
 
-    if (start + 1 > letters.length - 1)
-      return letters[0];
-    return letters[start];
+    return letters[start % n];
+
   }
 
   public static void main(String[] args) {
