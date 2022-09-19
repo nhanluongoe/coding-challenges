@@ -7,6 +7,10 @@
  * present return [-1, -1].
  */
 public class NumberRange {
+  /**
+   * Time complexity: O(n)
+   * Space complexity: O(1)
+   */
   public static int[] findRange(int[] arr, int key) {
     int[] result = { -1, -1 };
 
