@@ -46,6 +46,10 @@ public class NumberRange {
     return result;
   }
 
+  /**
+   * Time complexity: O(logn)
+   * Space complexity: o(n)
+   */
   public static int search(int[] arr, int key, boolean findMaxIndex) {
     int n = arr.length;
     int keyIndex = -1;
