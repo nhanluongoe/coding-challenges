@@ -24,6 +24,10 @@ class ArrayReader {
  * is smaller than the index, it will return Integer.MAX_VALUE.
  */
 public class SearchInfiniteSortedArray {
+  /**
+   * Time complexity: O(logn)
+   * Space complexity: O(1)
+   */
   public static int search(ArrayReader reader, int key) {
     int start = 0, end = 1;
     int boundSize = end - start + 1;
