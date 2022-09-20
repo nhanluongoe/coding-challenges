@@ -5,8 +5,27 @@
  */
 public class MinimumDifference {
   public static int search(int[] arr, int key) {
+    if (key > arr[arr.length - 1])
+      return arr[arr.length - 1];
+    if (key < arr[0])
+      return arr[0];
 
-    return -1;
+    int start = 0, end = arr.length - 1;
+    while (start <= end) {
+      int middle = start + (end - start) / 2;
+      if (key > arr[middle]) {
+        start = middle + 1;
+      } else if (key < arr[middle]) {
+        end = middle - 1;
+      } else {
+        return arr[middle];
+      }
+    }
+
+    if (Math.abs(key - arr[start]) > Math.abs(key - arr[end]))
+      return arr[end];
+    else
+      return arr[start];
   }
 
   public static void main(String[] args) {
