@@ -4,6 +4,10 @@
  * ‘key’.
  */
 public class MinimumDifference {
+  /**
+   * Time complexity: O(logn)
+   * Space complexity: O(1)
+   */
   public static int search(int[] arr, int key) {
     if (key > arr[arr.length - 1])
       return arr[arr.length - 1];
