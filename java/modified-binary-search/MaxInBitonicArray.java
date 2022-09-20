@@ -5,6 +5,10 @@
  * for any index i in the array arr[i] != arr[i+1].
  */
 public class MaxInBitonicArray {
+  /**
+   * Time complexity: O(logn)
+   * Space complexity: O(1)
+   */
   public static int findMax(int[] arr) {
     int start = 0, end = arr.length - 1;
     while (start < end) {
