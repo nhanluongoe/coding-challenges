@@ -23,7 +23,7 @@ public class KLargestNumbers {
       int num = nums[i];
       if (num > minHeap.peek()) { // retrieve smallest element from min heap will be O(1)
         minHeap.poll(); // delete element will take O(logk)
-        minHeap.offer(num); // insert element will take o(lolk)
+        minHeap.offer(num); // insert element will take O(logk)
       }
     }
 
