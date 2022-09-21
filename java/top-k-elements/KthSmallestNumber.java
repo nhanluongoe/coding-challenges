@@ -8,6 +8,10 @@ import java.util.*;
  * Kth distinct element.
  */
 public class KthSmallestNumber {
+  /**
+   * Time complexity: O(k*logk + (n - k)*logk)
+   * Space complexity: O(k)
+   */
   public static int findKthSmallestNumber(int[] nums, int k) {
     PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
 
