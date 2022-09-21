@@ -19,6 +19,10 @@ class Point {
  * closest points to the origin.
  */
 public class KClosetPointsToOrigin {
+  /**
+   * Time complexity: O(k*logk + (n - k)*logk)
+   * Space complexity: O(k)
+   */
   public static List<Point> findClosestPoints(Point[] points, int k) {
     PriorityQueue<Point> maxHeap = new PriorityQueue<>((a, b) -> b.distFromOrigin() - a.distFromOrigin());
 
