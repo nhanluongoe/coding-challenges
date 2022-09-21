@@ -9,8 +9,20 @@ import java.util.*;
  */
 public class KthSmallestNumber {
   public static int findKthSmallestNumber(int[] nums, int k) {
+    PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
 
-    return -1;
+    for (int i = 0; i < k; i++) {
+      maxHeap.offer(nums[i]);
+    }
+
+    for (int i = k; i < nums.length; i++) {
+      if (nums[i] < maxHeap.peek()) {
+        maxHeap.poll();
+        maxHeap.offer(nums[i]);
+      }
+    }
+
+    return maxHeap.peek();
   }
 
   public static void main(String[] args) {
