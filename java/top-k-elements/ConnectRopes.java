@@ -6,6 +6,10 @@ import java.util.*;
  * ropes is equal to the sum of their lengths.
  */
 public class ConnectRopes {
+  /**
+   * Time complexity: O(n*logn)
+   * Space complexity: O(n)
+   */
   public static int minimumCostToConnectRopes(int[] ropeLengths) {
     PriorityQueue<Integer> minHeap = new PriorityQueue<>((a, b) -> a - b);
 
