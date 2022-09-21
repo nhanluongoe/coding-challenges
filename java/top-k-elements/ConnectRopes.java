@@ -30,10 +30,10 @@ public class ConnectRopes {
     int result = minimumCostToConnectRopes(new int[] { 1, 3, 11, 5 });
     System.out.println("Minimum cost to connect ropes: " + result);
 
-    // result = minimumCostToConnectRopes(new int[] { 3, 4, 5, 6 });
-    // System.out.println("Minimum cost to connect ropes: " + result);
+    result = minimumCostToConnectRopes(new int[] { 3, 4, 5, 6 });
+    System.out.println("Minimum cost to connect ropes: " + result);
 
-    // result = minimumCostToConnectRopes(new int[] { 1, 3, 11, 5, 2 });
-    // System.out.println("Minimum cost to connect ropes: " + result);
+    result = minimumCostToConnectRopes(new int[] { 1, 3, 11, 5, 2 });
+    System.out.println("Minimum cost to connect ropes: " + result);
   }
 }
