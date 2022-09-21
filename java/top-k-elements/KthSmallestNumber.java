@@ -7,7 +7,7 @@ import java.util.*;
  * Please note that it is the Kth smallest number in the sorted order, not the
  * Kth distinct element.
  */
-public class KSmallestNumber {
+public class KthSmallestNumber {
   public static int findKthSmallestNumber(int[] nums, int k) {
 
     return -1;
