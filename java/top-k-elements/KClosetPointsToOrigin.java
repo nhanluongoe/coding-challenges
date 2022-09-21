@@ -20,9 +20,19 @@ class Point {
  */
 public class KClosetPointsToOrigin {
   public static List<Point> findClosestPoints(Point[] points, int k) {
-    ArrayList<Point> result = new ArrayList<>();
+    PriorityQueue<Point> maxHeap = new PriorityQueue<>((a, b) -> b.distFromOrigin() - a.distFromOrigin());
 
-    return result;
+    for (int i = 0; i < k; i++)
+      maxHeap.offer(points[i]);
+
+    for (int i = k; i < points.length; i++) {
+      if (points[i].distFromOrigin() < maxHeap.peek().distFromOrigin()) {
+        maxHeap.poll();
+        maxHeap.offer(points[i]);
+      }
+    }
+
+    return new ArrayList<>(maxHeap);
   }
 
   public static void main(String[] args) {
