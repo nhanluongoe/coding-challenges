@@ -25,6 +25,10 @@ public class KthLargestNumberInStream {
     }
   }
 
+  /**
+   * Time complexity: O(logk)
+   * Space complexity: O(k)
+   */
   public int add(int num) {
     if (num > minHeap.peek()) {
       minHeap.poll();
