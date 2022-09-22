@@ -5,8 +5,11 @@ import java.util.*;
  * frequently occurring numbers in it.
  */
 public class TopKFrequentNumbers {
+  /**
+   * Time complexity: O(n + n*logk)
+   * Space complexity: O(n)
+   */
   public static List<Integer> findTopKFrequentNumbers(int[] nums, int k) {
-
     Map<Integer, Integer> numberFrequencyMap = new HashMap<>();
     for (int num : nums) {
       numberFrequencyMap.put(num, numberFrequencyMap.getOrDefault(num, 0) + 1);
