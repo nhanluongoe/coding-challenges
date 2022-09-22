@@ -12,13 +12,26 @@ import java.util.*;
  * number and return the Kth largest number.
  */
 public class KthLargestNumberInStream {
-  public KthLargestNumberInStream(int[] nums, int k) {
+  PriorityQueue<Integer> minHeap = new PriorityQueue<>((a, b) -> a - b);
 
+  public KthLargestNumberInStream(int[] nums, int k) {
+    for (int i = 0; i < k; i++) {
+      minHeap.offer(nums[i]);
+    }
+
+    for (int i = k; i < nums.length; i++) {
+      if (nums[i] > minHeap.peek())
+        add(nums[i]);
+    }
   }
 
   public int add(int num) {
+    if (num > minHeap.peek()) {
+      minHeap.poll();
+      minHeap.offer(num);
+    }
 
-    return -1;
+    return minHeap.peek();
   }
 
   public static void main(String[] args) {
