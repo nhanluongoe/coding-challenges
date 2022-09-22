@@ -11,20 +11,20 @@ public class TopKFrequentNumbers {
    */
   public static List<Integer> findTopKFrequentNumbers(int[] nums, int k) {
     Map<Integer, Integer> numberFrequencyMap = new HashMap<>();
-    for (int num : nums) {
+    for (int num : nums) { // take O(n)
       numberFrequencyMap.put(num, numberFrequencyMap.getOrDefault(num, 0) + 1);
     }
 
     PriorityQueue<Map.Entry<Integer, Integer>> minHeap = new PriorityQueue<>((a, b) -> a.getValue() - b.getValue());
-    for (Map.Entry<Integer, Integer> entry : numberFrequencyMap.entrySet()) {
-      minHeap.offer(entry);
+    for (Map.Entry<Integer, Integer> entry : numberFrequencyMap.entrySet()) { // take O(n)
+      minHeap.offer(entry); // take O(logk)
       if (minHeap.size() > k)
-        minHeap.poll();
+        minHeap.poll(); // take O(logk)
     }
 
-    List<Integer> topNumbers = new ArrayList<>();
-    while (!minHeap.isEmpty()) {
-      topNumbers.add(minHeap.poll().getKey());
+    List<Integer> topNumbers = new ArrayList<>(k);
+    while (!minHeap.isEmpty()) { // take O(k)
+      topNumbers.add(minHeap.poll().getKey()); // take O(1) for ArrayList add and log(k) for Heap poll
     }
 
     return topNumbers;
