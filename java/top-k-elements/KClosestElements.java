@@ -25,7 +25,6 @@ public class KClosestElements {
     PriorityQueue<Entry> maxHeap = new PriorityQueue<>((a, b) -> b.value - a.value);
 
     for (int i = 0; i < K; i++) {
-
       maxHeap.offer(new Entry(arr[i], Math.abs(arr[i] - X)));
     }
 
