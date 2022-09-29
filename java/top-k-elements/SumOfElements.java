@@ -5,6 +5,10 @@ import java.util.*;
  * K1’th and K2’th smallest elements of that array.
  */
 public class SumOfElements {
+  /**
+   * Time complexity: O(k1*logk1 + (n-k1)*logk1 + k2*logk2 + (n-k2)*logk2 + n)
+   * Space complexity: O(k1 + k2)
+   */
   public static int findSumOfElements(int[] nums, int k1, int k2) {
     int k1thSmallestNumber = findKthSmallestNumber(nums, k1);
     int k2thSmallestNumber = findKthSmallestNumber(nums, k2);
