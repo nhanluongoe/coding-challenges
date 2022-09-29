@@ -6,8 +6,33 @@ import java.util.*;
  */
 public class SumOfElements {
   public static int findSumOfElements(int[] nums, int k1, int k2) {
+    int k1thSmallestNumber = findKthSmallestNumber(nums, k1);
+    int k2thSmallestNumber = findKthSmallestNumber(nums, k2);
 
-    return -1;
+    int sum = 0;
+    for (int num : nums) {
+      if (num < k2thSmallestNumber && num > k1thSmallestNumber)
+        sum += num;
+    }
+
+    return sum;
+  }
+
+  public static int findKthSmallestNumber(int[] nums, int k) {
+    PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
+
+    for (int i = 0; i < k; i++) {
+      maxHeap.offer(nums[i]);
+    }
+
+    for (int i = k; i < nums.length; i++) {
+      if (maxHeap.peek() > nums[i]) {
+        maxHeap.poll();
+        maxHeap.offer(nums[i]);
+      }
+    }
+
+    return maxHeap.peek();
   }
 
   public static void main(String[] args) {
