@@ -39,6 +39,10 @@ public class SumOfElements {
     return maxHeap.peek();
   }
 
+  /**
+   * Time complexity: O(n*logn)
+   * Space complexity: O(n)
+   */
   public static int findSumOfElementsBetter(int[] nums, int k1, int k2) {
     PriorityQueue<Integer> minHeap = new PriorityQueue<>((a, b) -> a - b);
 
