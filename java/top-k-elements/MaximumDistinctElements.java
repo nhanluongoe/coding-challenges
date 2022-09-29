@@ -6,6 +6,10 @@ import java.util.*;
  * numbers.
  */
 public class MaximumDistinctElements {
+  /**
+   * Time complexity: O(n*logn + k*logn)
+   * Space complexity: O(n)
+   */
   public static int findMaximumDistinctElements(int[] nums, int k) {
     Map<Integer, Integer> numberFrequencies = new HashMap<>();
     for (int num : nums) {
