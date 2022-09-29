@@ -7,8 +7,31 @@ import java.util.*;
  */
 public class MaximumDistinctElements {
   public static int findMaximumDistinctElements(int[] nums, int k) {
+    Map<Integer, Integer> numberFrequencies = new HashMap<>();
+    for (int num : nums) {
+      numberFrequencies.put(num, numberFrequencies.getOrDefault(num, 0) + 1);
+    }
 
-    return -1;
+    PriorityQueue<Map.Entry<Integer, Integer>> minHeap = new PriorityQueue<>((a, b) -> a.getValue() - b.getValue());
+    int maxDistinctElements = 0;
+    for (Map.Entry<Integer, Integer> entry : numberFrequencies.entrySet()) {
+      if (entry.getValue() > 1)
+        minHeap.offer(entry);
+      else
+        maxDistinctElements++;
+    }
+
+    while (!minHeap.isEmpty() && k > 0) {
+      k -= minHeap.poll().getValue() - 1;
+      if (k >= 0)
+        maxDistinctElements++;
+    }
+
+    if (k > 0)
+      maxDistinctElements -= k;
+
+    return maxDistinctElements;
+
   }
 
   public static void main(String[] args) {
