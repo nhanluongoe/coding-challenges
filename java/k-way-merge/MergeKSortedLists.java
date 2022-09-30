@@ -14,6 +14,11 @@ class ListNode {
  * one sorted list.
  */
 public class MergeKSortedLists {
+  /**
+   * Time complexity: O(n*logk), n is total numbers, k is the number of input
+   * arrays
+   * Space complexity: O(k)
+   */
   public static ListNode merge(ListNode[] lists) {
     PriorityQueue<ListNode> minHeap = new PriorityQueue<>((a, b) -> a.value - b.value);
     for (ListNode root : lists)
