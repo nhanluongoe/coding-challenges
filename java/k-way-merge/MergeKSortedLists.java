@@ -15,9 +15,27 @@ class ListNode {
  */
 public class MergeKSortedLists {
   public static ListNode merge(ListNode[] lists) {
-    ListNode result = new ListNode(-1);
+    PriorityQueue<ListNode> minHeap = new PriorityQueue<>((a, b) -> a.value - b.value);
+    for (ListNode root : lists)
+      minHeap.offer(root);
 
-    return 
+    ListNode resultHead = null, resultTail = null;
+    while (!minHeap.isEmpty()) {
+      ListNode node = minHeap.poll();
+      if (resultHead == null) {
+        resultHead = node;
+        resultTail = node;
+      } else {
+        resultTail.next = node;
+        resultTail = resultTail.next;
+      }
+
+      if (node.next != null) {
+        minHeap.offer(node.next);
+      }
+    }
+
+    return resultHead;
   }
 
   public static void main(String[] args) {
@@ -33,7 +51,7 @@ public class MergeKSortedLists {
     l3.next = new ListNode(3);
     l3.next.next = new ListNode(4);
 
-    ListNode result = merge(new ListNode[] { 11, 12, 13 });
+    ListNode result = merge(new ListNode[] { l1, l2, l3 });
     System.out.println("Result: ");
     while (result != null) {
       System.out.print(result.value + " ");
