@@ -5,8 +5,12 @@ import java.util.*;
  * such a way that no two same characters come next to each other.
  */
 public class RearrangeString {
-  // public static String rearrangeString(String str) {
-  //   Map<Character, Integer> charFrequency = new HashMap<>();
+  /**
+   * Time complexity: O(n*logn)
+   * Space complexity: O(n)
+   */
+  public static String rearrangeString(String str) {
+    Map<Character, Integer> charFrequency = new HashMap<>();
     for (char ch : str.toCharArray())
       charFrequency.put(ch, charFrequency.getOrDefault(ch, 0) + 1);
 
