@@ -1,5 +1,15 @@
 import java.util.*;
 
+class Node {
+  int arrayIndex;
+  int elementIndex;
+
+  public Node(int arrayIndex, int elementIndex) {
+    this.arrayIndex = arrayIndex;
+    this.elementIndex = elementIndex;
+  }
+}
+
 /**
  * Problem statement: Given ‘M’ sorted arrays, find the K’th smallest number
  * among all the arrays.
@@ -27,6 +37,30 @@ public class KthSmallestInMSortedArrays {
     return maxHeap.peek();
   }
 
+  public static int findKthSmallestBetter(List<Integer[]> lists, int k) {
+    PriorityQueue<Node> minHeap = new PriorityQueue<>(
+        (a, b) -> lists.get(a.arrayIndex)[a.elementIndex] - lists.get(b.arrayIndex)[b.elementIndex]);
+
+    for (int i = 0; i < lists.size(); i++)
+      if (lists.get(i) != null)
+        minHeap.offer(new Node(i, 0));
+
+    int elementCount = 0, result = -1;
+    while (!minHeap.isEmpty()) {
+      Node node = minHeap.poll();
+      result = lists.get(node.arrayIndex)[node.elementIndex];
+
+      if (++elementCount == k)
+        break;
+
+      node.elementIndex++;
+      if (node.elementIndex < lists.get(node.arrayIndex).length)
+        minHeap.offer(node);
+    }
+
+    return result;
+  }
+
   public static void main(String[] args) {
     Integer[] l1 = new Integer[] { 2, 6, 8 };
     Integer[] l2 = new Integer[] { 3, 6, 7 };
@@ -35,7 +69,7 @@ public class KthSmallestInMSortedArrays {
     lists.add(l1);
     lists.add(l2);
     lists.add(l3);
-    int result = findKthSmallest(lists, 5);
+    int result = findKthSmallestBetter(lists, 5);
     System.out.println("Kth smallest number is: " + result);
   }
 }
