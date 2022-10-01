@@ -37,6 +37,10 @@ public class KthSmallestInMSortedArrays {
     return maxHeap.peek();
   }
 
+  /**
+   * Time complexity: O(k*logm), m is the total number of input arrays
+   * Space complexity: O(m)
+   */
   public static int findKthSmallestBetter(List<Integer[]> lists, int k) {
     PriorityQueue<Node> minHeap = new PriorityQueue<>(
         (a, b) -> lists.get(a.arrayIndex)[a.elementIndex] - lists.get(b.arrayIndex)[b.elementIndex]);
