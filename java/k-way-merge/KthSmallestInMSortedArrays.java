@@ -5,6 +5,10 @@ import java.util.*;
  * among all the arrays.
  */
 public class KthSmallestInMSortedArrays {
+  /**
+   * Time complexity: O(n*logk), n is total numbers in arrays
+   * Space complexity: O(k)
+   */
   public static int findKthSmallest(List<Integer[]> lists, int k) {
     PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
     for (Integer[] arr : lists) {
