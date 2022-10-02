@@ -1,6 +1,10 @@
 import java.util.*;
 
 public class KthSmallestInSortedMatrix {
+  /**
+   * Problem statement: Given an N * NN∗N matrix where each row and column is
+   * sorted in ascending order, find the Kth smallest element in the matrix.
+   */
   public static int findKthSmallest(int[][] matrix, int k) {
 
     return -1;
