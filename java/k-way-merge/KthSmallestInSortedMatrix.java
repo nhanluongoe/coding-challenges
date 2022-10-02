@@ -10,10 +10,14 @@ class Node {
   }
 }
 
+/**
+ * Problem statement: Given an N * N matrix where each row and column is
+ * sorted in ascending order, find the Kth smallest element in the matrix.
+ */
 public class KthSmallestInSortedMatrix {
   /**
-   * Problem statement: Given an N * NN∗N matrix where each row and column is
-   * sorted in ascending order, find the Kth smallest element in the matrix.
+   * Time complexity:O(n*logk)
+   * Space complexity: O(k)
    */
   public static int findKthSmallest(int[][] matrix, int k) {
     PriorityQueue<Node> minHeap = new PriorityQueue<>(
