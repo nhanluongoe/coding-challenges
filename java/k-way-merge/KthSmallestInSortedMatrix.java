@@ -16,8 +16,8 @@ class Node {
  */
 public class KthSmallestInSortedMatrix {
   /**
-   * Time complexity:O(n*logk)
-   * Space complexity: O(k)
+   * Time complexity:O(k*logn)
+   * Space complexity: O(n)
    */
   public static int findKthSmallest(int[][] matrix, int k) {
     PriorityQueue<Node> minHeap = new PriorityQueue<>(
