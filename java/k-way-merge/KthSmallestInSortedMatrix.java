@@ -1,13 +1,41 @@
 import java.util.*;
 
+class Node {
+  int rowIndex;
+  int columnIndex;
+
+  public Node(int rowIndex, int columnIndex) {
+    this.rowIndex = rowIndex;
+    this.columnIndex = columnIndex;
+  }
+}
+
 public class KthSmallestInSortedMatrix {
   /**
    * Problem statement: Given an N * NN∗N matrix where each row and column is
    * sorted in ascending order, find the Kth smallest element in the matrix.
    */
   public static int findKthSmallest(int[][] matrix, int k) {
+    PriorityQueue<Node> minHeap = new PriorityQueue<>(
+        (a, b) -> matrix[a.rowIndex][a.columnIndex] - matrix[b.rowIndex][b.columnIndex]);
 
-    return -1;
+    for (int i = 0; i < matrix[0].length; i++)
+      minHeap.offer(new Node(i, 0));
+
+    int count = 0, result = 0;
+    while (!minHeap.isEmpty()) {
+      Node node = minHeap.poll();
+      result = matrix[node.rowIndex][node.columnIndex];
+
+      if (++count == k)
+        break;
+
+      node.columnIndex++;
+      if (node.columnIndex < matrix[node.rowIndex].length)
+        minHeap.offer(node);
+    }
+
+    return result;
   }
 
   public static void main(String[] args) {
