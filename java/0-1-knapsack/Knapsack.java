@@ -29,6 +29,10 @@ public class Knapsack {
     return Math.max(profit1, profit2);
   }
 
+  /**
+   * Time complexity: O(n*c)
+   * Space complexity: O(n + n*c) ~ O(n*c)
+   */
   public static int solveKnapsackDP(int[] profits, int[] weights, int capacity) {
     Integer[][] dp = new Integer[profits.length][capacity + 1];
     return knapsackRecursiveDP(profits, weights, capacity, 0, dp);
