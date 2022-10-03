@@ -85,7 +85,25 @@ public class Knapsack {
       }
     }
 
+    printSelectedElements(dp, weights, profits, capacity);
+
     return dp[profits.length - 1][capacity];
+  }
+
+  public static void printSelectedElements(int[][] dp, int[] weights, int[] profits, int capacity) {
+    System.out.print("Selected weights: ");
+    int totalProfit = dp[weights.length - 1][capacity];
+    for (int i = weights.length - 1; i > 0; i--) {
+      if (dp[i - 1][capacity] != totalProfit) {
+        System.out.print(weights[i] + " ");
+        totalProfit -= profits[i];
+        capacity -= weights[i];
+      }
+    }
+
+    if (totalProfit != 0)
+      System.out.print(weights[0]);
+    System.out.println();
   }
 
   public static void main(String[] args) {
@@ -103,7 +121,7 @@ public class Knapsack {
 
     maxProfit = solveKnapsackDPOnly(profits, weights, 7);
     System.out.println("Total knapsack profit: " + maxProfit);
-    // maxProfit = solveKnapsackDPOnly(profits, weights, 6);
-    // System.out.println("Total knapsack profit: " + maxProfit);
+    maxProfit = solveKnapsackDPOnly(profits, weights, 6);
+    System.out.println("Total knapsack profit: " + maxProfit);
   }
 }
