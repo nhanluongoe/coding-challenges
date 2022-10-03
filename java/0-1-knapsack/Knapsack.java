@@ -7,6 +7,10 @@
  * item in the knapsack or we skip it.
  */
 public class Knapsack {
+  /**
+   * Time complexity: O(2^n)
+   * Space complexity: O(n)
+   */
   public static int solveKnapsack(int[] profits, int[] weights, int capacity) {
     return knapsackRecursive(profits, weights, capacity, 0);
   }
