@@ -56,6 +56,10 @@ public class Knapsack {
     return dp[currentIndex][capacity];
   }
 
+  /**
+   * Time complexity: O(N*C)
+   * Space complexity: O(N*C)
+   */
   public static int solveKnapsackDPOnly(int[] profits, int[] weights, int capacity) {
     if (capacity <= 0 || profits.length == 0 || profits.length != weights.length)
       return 0;
