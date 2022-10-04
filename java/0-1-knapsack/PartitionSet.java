@@ -3,6 +3,10 @@
  * it into two subsets such that the sum of elements in both subsets is equal.
  */
 public class PartitionSet {
+  /**
+   * Time complexity: O(2^n), "n" is the total number
+   * Space complexity: O(n)
+   */
   public static boolean canPartition(int[] nums) {
     int sum = 0;
     for (int num : nums) {
