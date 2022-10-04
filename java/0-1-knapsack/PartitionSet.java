@@ -73,6 +73,11 @@ public class PartitionSet {
     return dp[currentIndex][sum];
   }
 
+  /**
+   * Time complexity: O(n*s), "n" is the total numbers, "s" is total sum of all
+   * the numbers
+   * Space complexity: O(n*s)
+   */
   public static boolean canPartitionDPOnly(int[] nums) {
     int sum = 0;
     for (int num : nums) {
