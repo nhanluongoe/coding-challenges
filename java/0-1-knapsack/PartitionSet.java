@@ -73,13 +73,51 @@ public class PartitionSet {
     return dp[currentIndex][sum];
   }
 
+  public static boolean canPartitionDPOnly(int[] nums) {
+    int sum = 0;
+    for (int num : nums) {
+      sum += num;
+    }
+    if (sum % 2 != 0)
+      return false;
+
+    Boolean[][] dp = new Boolean[nums.length][sum / 2 + 1];
+
+    for (int i = 0; i < nums.length; i++)
+      dp[i][0] = true;
+
+    for (int s = 1; s <= sum / 2; s++) {
+      if (s == nums[0])
+        dp[0][s] = true;
+      else
+        dp[0][s] = false;
+    }
+
+    for (int i = 1; i < nums.length; i++) {
+      for (int s = 1; s <= sum / 2; s++) {
+        if (dp[i - 1][s])
+          dp[i][s] = dp[i - 1][s];
+        else if (nums[i] <= s)
+          dp[i][s] = dp[i - 1][s - nums[i]];
+      }
+    }
+
+    return dp[nums.length - 1][sum / 2];
+  }
+
   public static void main(String[] args) {
     System.out.println(canPartition(new int[] { 1, 2, 3, 4 }));
     System.out.println(canPartition(new int[] { 1, 1, 3, 4, 7 }));
     System.out.println(canPartition(new int[] { 2, 3, 4, 6 }));
 
+    System.out.println();
     System.out.println(canPartitionDP(new int[] { 1, 2, 3, 4 }));
     System.out.println(canPartitionDP(new int[] { 1, 1, 3, 4, 7 }));
     System.out.println(canPartitionDP(new int[] { 2, 3, 4, 6 }));
+
+    System.out.println();
+    System.out.println(canPartitionDPOnly(new int[] { 1, 2, 3, 4 }));
+    System.out.println(canPartitionDPOnly(new int[] { 1, 1, 3, 4, 7 }));
+    System.out.println(canPartitionDPOnly(new int[] { 2, 3, 4, 6 }));
   }
 }
