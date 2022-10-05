@@ -1,13 +1,26 @@
 public class SubsetSum {
 
   public static boolean subsetExists(int[] nums, int sum) {
-
-    return false;
+    return subsetExistsRecursive(nums, sum, 0);
   }
 
-  // public boolean subsetExistsRecursive(int[] nums, int sum) {
+  public static boolean subsetExistsRecursive(int[] nums, int sum, int currentIndex) {
+    // base check
+    if (sum == 0)
+      return true;
 
-  // }
+    if (currentIndex >= nums.length || nums.length == 0)
+      return false;
+
+    // pick number at current index if current index <= sum
+    if (nums[currentIndex] <= sum) {
+      if (subsetExistsRecursive(nums, sum - nums[currentIndex], currentIndex + 1))
+        return true;
+    }
+
+    // don't pick number at current index
+    return subsetExistsRecursive(nums, sum, currentIndex + 1);
+  }
 
   public static void main(String[] args) {
     System.out.println(subsetExists(new int[] { 1, 2, 3, 7 }, 6));
