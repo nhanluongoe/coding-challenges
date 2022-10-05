@@ -26,6 +26,11 @@ public class SubsetSum {
     return subsetExistsRecursive(nums, sum, currentIndex + 1);
   }
 
+  /**
+   * Time complexity: O(n*s), "n" is the total number, "s" is the total sum of all
+   * the numbers
+   * Space complexity: O(n*s)
+   */
   public static boolean subsetExistsDPBottomUp(int[] nums, int sum) {
     boolean[][] dp = new boolean[nums.length][sum + 1];
 
