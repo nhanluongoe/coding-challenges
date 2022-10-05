@@ -4,6 +4,10 @@ public class SubsetSum {
     return subsetExistsRecursive(nums, sum, 0);
   }
 
+  /**
+   * Time complexity: O(2^n), "n" is the total number
+   * Space complexity: O(n)
+   */
   public static boolean subsetExistsRecursive(int[] nums, int sum, int currentIndex) {
     // base check
     if (sum == 0)
