@@ -3,6 +3,10 @@
  * two subsets with minimum difference between their subset sums.
  */
 public class PartitionSetWithMinimumDiff {
+  /**
+   * Time complexity: O(2^n), "n" is the total number
+   * Space complexity: O(n)
+   */
   public static int canPartition(int[] nums) {
     return canPartitionRecursive(nums, 0, 0, 0);
   }
