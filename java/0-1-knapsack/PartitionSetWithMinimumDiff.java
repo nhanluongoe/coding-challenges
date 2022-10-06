@@ -27,9 +27,45 @@ public class PartitionSetWithMinimumDiff {
     return Math.min(diff1, diff2);
   }
 
+  public static int canPartitionDPTopDown(int[] nums) {
+    int sum = 0;
+    for (int num : nums)
+      sum += num;
+
+    Integer[][] dp = new Integer[nums.length][sum + 1];
+
+    int result = canPartitionDPTopDownRecursive(nums, 0, 0, 0, dp);
+
+    return result;
+  }
+
+  public static int canPartitionDPTopDownRecursive(int[] nums, int sum1, int sum2, int currentIndex, Integer[][] dp) {
+    // base check
+    if (currentIndex == nums.length)
+      return Math.abs(sum1 - sum2);
+
+    // return if this sub-problem is already processed
+    if (dp[currentIndex][sum1] != null) {
+      return dp[currentIndex][sum1];
+    }
+
+    // process the sub-problem
+    int diff1 = canPartitionDPTopDownRecursive(nums, sum1 + nums[currentIndex],
+        sum2, currentIndex + 1, dp);
+    int diff2 = canPartitionDPTopDownRecursive(nums, sum1, sum2 +
+        nums[currentIndex], currentIndex + 1, dp);
+    dp[currentIndex][sum1] = Math.min(diff1, diff2);
+
+    return dp[currentIndex][sum1];
+  }
+
   public static void main(String[] args) {
     System.out.println(canPartition(new int[] { 1, 2, 3, 9 }));
     System.out.println(canPartition(new int[] { 1, 2, 7, 1, 5 }));
     System.out.println(canPartition(new int[] { 1, 3, 100, 4 }));
+    System.out.println();
+    System.out.println(canPartitionDPTopDown(new int[] { 1, 2, 3, 9 }));
+    System.out.println(canPartitionDPTopDown(new int[] { 1, 2, 7, 1, 5 }));
+    System.out.println(canPartitionDPTopDown(new int[] { 1, 3, 100, 4 }));
   }
 }
