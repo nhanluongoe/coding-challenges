@@ -66,22 +66,30 @@ public class PartitionSetWithMinimumDiff {
 
     boolean[][] dp = new boolean[nums.length][sum / 2 + 1];
 
+    // populate the sum = 0 column, as we can always '0' sum with an empty set
     for (int i = 0; i < nums.length; i++)
       dp[i][0] = true;
 
+    // with the first number, we can form a subset only when the required sum is
+    // equal to that number
     for (int s = 1; s <= sum / 2; s++)
       dp[0][s] = (s == nums[0] ? true : false);
 
+    // process all subsets for all sums
     for (int i = 1; i < nums.length; i++) {
       for (int s = 1; s <= sum / 2; s++) {
+        // if we can get the sum 's' without the number at index 'i'
         if (dp[i - 1][s])
           dp[i][s] = dp[i - 1][s];
+        // else we include the number at index 'i', then see if we can find a subset to
+        // get the remaining sum
         else if (nums[i] <= s)
           dp[i][s] = dp[i - 1][s - nums[i]];
       }
     }
 
     int sum1 = 0;
+    // find the largest index in the last row in dp which is true
     for (int s = sum / 2; s >= 0; s--) {
       if (dp[nums.length - 1][s]) {
         sum1 = s;
