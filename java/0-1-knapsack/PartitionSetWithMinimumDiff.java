@@ -59,6 +59,40 @@ public class PartitionSetWithMinimumDiff {
     return dp[currentIndex][sum1];
   }
 
+  public static int canPartitionDPBottomUp(int[] nums) {
+    int sum = 0;
+    for (int i = 0; i < nums.length; i++)
+      sum += nums[i];
+
+    boolean[][] dp = new boolean[nums.length][sum / 2 + 1];
+
+    for (int i = 0; i < nums.length; i++)
+      dp[i][0] = true;
+
+    for (int s = 1; s <= sum / 2; s++)
+      dp[0][s] = (s == nums[0] ? true : false);
+
+    for (int i = 1; i < nums.length; i++) {
+      for (int s = 1; s <= sum / 2; s++) {
+        if (dp[i - 1][s])
+          dp[i][s] = dp[i - 1][s];
+        else if (nums[i] <= s)
+          dp[i][s] = dp[i - 1][s - nums[i]];
+      }
+    }
+
+    int sum1 = 0;
+    for (int s = sum / 2; s >= 0; s--) {
+      if (dp[nums.length - 1][s]) {
+        sum1 = s;
+        break;
+      }
+    }
+
+    int sum2 = sum - sum1;
+    return Math.abs(sum2 - sum1);
+  }
+
   public static void main(String[] args) {
     System.out.println(canPartition(new int[] { 1, 2, 3, 9 }));
     System.out.println(canPartition(new int[] { 1, 2, 7, 1, 5 }));
@@ -67,5 +101,9 @@ public class PartitionSetWithMinimumDiff {
     System.out.println(canPartitionDPTopDown(new int[] { 1, 2, 3, 9 }));
     System.out.println(canPartitionDPTopDown(new int[] { 1, 2, 7, 1, 5 }));
     System.out.println(canPartitionDPTopDown(new int[] { 1, 3, 100, 4 }));
+    System.out.println();
+    System.out.println(canPartitionDPBottomUp(new int[] { 1, 2, 3, 9 }));
+    System.out.println(canPartitionDPBottomUp(new int[] { 1, 2, 7, 1, 5 }));
+    System.out.println(canPartitionDPBottomUp(new int[] { 1, 3, 100, 4 }));
   }
 }
