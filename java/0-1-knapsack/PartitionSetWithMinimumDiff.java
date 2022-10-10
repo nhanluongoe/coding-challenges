@@ -59,6 +59,11 @@ public class PartitionSetWithMinimumDiff {
     return dp[currentIndex][sum1];
   }
 
+  /**
+   * Time complexity: O(n*s), "n" is total numbers, "s" is the total sum of all
+   * numbers
+   * Space complexity: O(n*s)
+   */
   public static int canPartitionDPBottomUp(int[] nums) {
     int sum = 0;
     for (int i = 0; i < nums.length; i++)
