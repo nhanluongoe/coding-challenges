@@ -9,6 +9,11 @@ import java.util.*;
  * Given a directed graph, find the topological ordering of its vertices.
  */
 public class TopologicalSort {
+  /**
+   * Time complexity: O(V + E), V is the number of vertices, E is the number of
+   * edges
+   * Space complexity: O(V + E)
+   */
   public static List<Integer> sort(int vertices, int[][] edges) {
     List<Integer> sortedOrder = new ArrayList<>();
     if (vertices <= 0)
