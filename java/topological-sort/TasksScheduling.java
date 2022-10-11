@@ -50,10 +50,7 @@ public class TasksScheduling {
       }
     }
 
-    if (sortedList.size() != tasks)
-      return false;
-
-    return true;
+    return sortedList.size() == tasks;
   }
 
   public static void main(String[] args) {
