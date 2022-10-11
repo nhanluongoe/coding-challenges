@@ -7,6 +7,11 @@ import java.util.*;
  * out if it is possible to schedule all the tasks.
  */
 public class TasksScheduling {
+  /**
+   * Time complexity: O(V + E), "V" is the number of tasks, "E" is the number of
+   * prerequisites
+   * Space complexity: O(V + E)
+   */
   public static boolean isSchedulingPossible(int tasks, int[][] prerequisites) {
     // this problem can be transferred into topological sort problem
     // if there exists a topological sort => it is possible to schedule tasks
