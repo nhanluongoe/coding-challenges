@@ -7,6 +7,11 @@ import java.util.*;
  * a method to find the ordering of tasks we should pick to finish all tasks.
  */
 public class TaskSchedulingOrder {
+  /**
+   * Time complexity: O(E + V), "E" is the number of prerequisites and "V" is the
+   * number of tasks
+   * Space complexity: O(E + V)
+   */
   public static List<Integer> findOrder(int tasks, int[][] prerequisites) {
     List<Integer> sortedOrder = new ArrayList<>();
 
