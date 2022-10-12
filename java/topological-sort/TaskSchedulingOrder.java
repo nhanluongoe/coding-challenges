@@ -10,6 +10,47 @@ public class TaskSchedulingOrder {
   public static List<Integer> findOrder(int tasks, int[][] prerequisites) {
     List<Integer> sortedOrder = new ArrayList<>();
 
+    if (tasks <= 0)
+      return sortedOrder;
+
+    // 1. initialize graph
+    Map<Integer, Integer> inDegree = new HashMap<>();
+    Map<Integer, List<Integer>> graph = new HashMap<>();
+    for (int i = 0; i < tasks; i++) {
+      inDegree.put(i, 0);
+      graph.put(i, new ArrayList<>());
+    }
+
+    // 2. build graph
+    for (int i = 0; i < prerequisites.length; i++) {
+      int parent = prerequisites[i][0];
+      int child = prerequisites[i][1];
+      inDegree.put(child, inDegree.get(child) + 1);
+      graph.get(parent).add(child);
+    }
+
+    // 3. find all sources
+    Queue<Integer> sources = new LinkedList<>();
+    for (Map.Entry<Integer, Integer> entry : inDegree.entrySet()) {
+      if (entry.getValue() == 0)
+        sources.offer(entry.getKey());
+    }
+
+    // 4. sort
+    while (!sources.isEmpty()) {
+      int source = sources.poll();
+      sortedOrder.add(source);
+      List<Integer> children = graph.get(source);
+      for (Integer child : children) {
+        inDegree.put(child, inDegree.get(child) - 1);
+        if (inDegree.get(child) == 0)
+          sources.offer(child);
+      }
+    }
+
+    if (sortedOrder.size() != tasks)
+      return new ArrayList<>();
+
     return sortedOrder;
   }
 
