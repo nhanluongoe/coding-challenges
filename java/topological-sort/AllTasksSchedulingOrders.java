@@ -7,6 +7,11 @@ import java.util.*;
  * a method to print all possible ordering of tasks meeting all prerequisites.
  */
 public class AllTasksSchedulingOrders {
+  /**
+   * Time complexity: O(V! * E), "V" is the number of tasks, "E" is the number of
+   * prerequisites
+   * Space complexity: O(V! * E)
+   */
   public static void findOrders(int tasks, int[][] prerequisites) {
     List<Integer> sortedOrder = new ArrayList<>();
 
