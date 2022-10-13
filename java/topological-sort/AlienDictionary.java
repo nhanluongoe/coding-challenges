@@ -6,8 +6,12 @@ import java.util.*;
  * method to find the correct order of characters in the alien language.
  */
 public class AlienDictionary {
+  /**
+   * Time complexity: O(V+E), "V" is the number of distinct characters, "E" is the
+   * number of words
+   * Space complexity: O(V+E)
+   */
   public static String findOrder(String[] words) {
-
     if (words == null || words.length == 0)
       return "";
 
