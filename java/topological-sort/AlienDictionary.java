@@ -8,7 +8,61 @@ import java.util.*;
 public class AlienDictionary {
   public static String findOrder(String[] words) {
 
-    return "";
+    if (words == null || words.length == 0)
+      return "";
+
+    // initialize the graph
+    Map<Character, Integer> inDegree = new HashMap<>();
+    Map<Character, List<Character>> graph = new HashMap<>();
+    for (String word : words) {
+      for (char ch : word.toCharArray()) {
+        inDegree.put(ch, 0);
+        graph.put(ch, new ArrayList<>());
+      }
+    }
+
+    // build the graph
+    for (int i = 0; i < words.length - 1; i++) {
+      String currentWord = words[i];
+      String nextWord = words[i + 1];
+      int smallerLength = Math.min(currentWord.length(), nextWord.length());
+      for (int j = 0; j < smallerLength; j++) {
+        char parent = currentWord.charAt(j);
+        char child = nextWord.charAt(j);
+        if (parent != child) {
+          inDegree.put(child, inDegree.get(child) + 1);
+          graph.get(parent).add(child);
+          break; // only get the first different character
+        }
+      }
+    }
+
+    // find all sources
+    Queue<Character> sources = new LinkedList<>();
+    for (Map.Entry<Character, Integer> entry : inDegree.entrySet()) {
+      if (entry.getValue() == 0)
+        sources.offer(entry.getKey());
+    }
+
+    // sort
+    StringBuilder sb = new StringBuilder();
+    while (!sources.isEmpty()) {
+      char source = sources.poll();
+      sb.append(source);
+      List<Character> children = graph.get(source);
+      for (char child : children) {
+        inDegree.put(child, inDegree.get(child) - 1);
+        if (inDegree.get(child) == 0)
+          sources.offer(child);
+      }
+    }
+
+    // if sb doesn't contain all characters, there is a cyclic dependency between
+    // characters => will not be able to find correct ordering of characters
+    if (sb.length() != inDegree.size())
+      return "";
+
+    return sb.toString();
   }
 
   public static void main(String[] args) {
