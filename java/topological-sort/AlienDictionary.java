@@ -7,8 +7,9 @@ import java.util.*;
  */
 public class AlienDictionary {
   /**
-   * Time complexity: O(V+E), "V" is the number of distinct characters, "E" is the
-   * number of words
+   * Time complexity: O(V+E + E*L), "V" is the number of distinct characters, "E"
+   * is the
+   * number of words, "L" is the longest word in all words
    * Space complexity: O(V+E)
    */
   public static String findOrder(String[] words) {
