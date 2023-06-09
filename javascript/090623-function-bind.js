@@ -11,6 +11,8 @@ Function.prototype.myBind = function (thisArg, ...boundArgs) {
   }
 
   return function (...args) {
+    // Using Reflect to avoid there's a property "call" or "apply" in ...
+    // the originalMethod so we can't use originalMethod.apply(...) or originalMethod.call(...)
     return Reflect.apply(originalMethod, thisArg, [...boundArgs, ...args]);
   };
 };
