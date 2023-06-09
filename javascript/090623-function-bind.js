@@ -3,7 +3,6 @@
  * @param {...*} boundArgs
  */
 Function.prototype.myBind = function (thisArg, ...boundArgs) {
-  // throw 'Not implemented!';
   const originalMethod = this;
 
   if (typeof originalMethod !== 'function') {
