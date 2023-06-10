@@ -5,7 +5,7 @@ function throttle(fn, delay) {
   return (...args) => {
     if (wait) return;
 
-    fn(...args)
+    fn.apply(this, args);
     wait = true;
     
     setTimeout(() => {
