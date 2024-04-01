@@ -36,3 +36,11 @@ const cancel3 = cancellableSetInterval(
 setTimeout(() => {
   cancel3();
 }, 7000);
+
+function cancellableSetTimeout(callback, delay, ...args) {
+  const timeoutId = setTimeout(callback, delay, ...args);
+
+  return () => {
+    clearTimeout(timeoutId);
+  };
+}
