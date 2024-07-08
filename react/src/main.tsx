@@ -17,6 +17,14 @@ const router = createBrowserRouter([
       </Suspense>
     ),
   },
+  {
+    path: "/clock",
+    element: (
+      <Suspense>
+        {React.createElement(lazy(() => import("@/routes/clock")))}
+      </Suspense>
+    ),
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

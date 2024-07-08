@@ -1,0 +1,44 @@
+:root {
+  --clock-hand-color: #0f0f0f;
+  --clock-hand-width: 1px;
+  --second-hand-length: 45%;
+  --minute-hand-length: 35%;
+  --hour-hand-length: 25%;
+  --second-hand-color: red;
+  --minute-hand-color: blue;
+  --hour-hand-color: green;
+}
+
+.clock__wrapper {
+}
+
+.clock__frame {
+  border-radius: 9999px;
+  border: var(--clock-hand-width) solid var(--clock-hand-color);
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.clock__hand {
+  height: var(--clock-hand-width);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 0 0;
+}
+
+.clock__second-hand {
+  background-color: var(--second-hand-color);
+  width: var(--second-hand-length);
+}
+
+.clock__minute-hand {
+  background-color: var(--minute-hand-color);
+  width: var(--minute-hand-length);
+}
+
+.clock__hour-hand {
+  background-color: var(--hour-hand-color);
+  width: var(--hour-hand-length);
+}
