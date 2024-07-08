@@ -7,6 +7,14 @@ type HMS = {
   second: number;
 };
 
+const FULL_CIRCLE = 360;
+const FULL_HOUR = 12;
+const FULL_MINUTE = 60;
+const FULL_SECOND = 60;
+const DEGREE_PER_SECOND = FULL_CIRCLE / FULL_SECOND;
+const DEGREE_PER_MINUTE = FULL_CIRCLE / FULL_MINUTE;
+const DEGREE_PER_HOUR = FULL_CIRCLE / FULL_HOUR;
+
 export default function Clock() {
   const [time, setTime] = useState<HMS>({ hour: 0, minute: 0, second: 0 });
 
@@ -21,9 +29,14 @@ export default function Clock() {
     return () => clearInterval(interval);
   }, []);
 
-  const secondDeg = time.second * 6;
-  const minuteDeg = time.minute * 6 + time.second * 0.1;
-  const hourDeg = time.hour * 30 + time.minute * 0.5;
+  const secondDeg = time.second * DEGREE_PER_SECOND;
+  const minuteDeg =
+    time.minute * DEGREE_PER_MINUTE +
+    (time.second / FULL_SECOND) * DEGREE_PER_MINUTE;
+  const hourDeg =
+    time.hour * DEGREE_PER_HOUR + (time.minute / FULL_MINUTE) * DEGREE_PER_HOUR;
+
+  console.log(secondDeg, minuteDeg, hourDeg);
 
   return (
     <div className="clock__wrapper">
