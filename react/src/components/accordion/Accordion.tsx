@@ -1,4 +1,4 @@
-import { useId, useState } from "react";
+import { KeyboardEventHandler, useId, useState } from "react";
 import "./Accordion.css";
 
 interface Section {
@@ -38,23 +38,69 @@ export default function Accordion(props: AccordionProps) {
     setOpenSections(newOpenSections);
   };
 
+  const focusOnSection = (index: number) => {
+    document
+      .getElementById(getAccordionHeaderId(accordionId, sections[index].value))
+      ?.focus();
+  };
+
+  const handleA11yKeyPress: KeyboardEventHandler<HTMLDivElement> = (event) => {
+    const activeItemValue = document.activeElement?.getAttribute(
+      "data-accordion-value"
+    );
+
+    if (!activeItemValue) {
+      return;
+    }
+
+    const activeIndex = sections.findIndex(
+      (section) => section.value === activeItemValue
+    );
+    switch (event.key) {
+      case "ArrowDown":
+        focusOnSection((activeIndex + 1) % sections.length);
+        break;
+      case "ArrowUp":
+        focusOnSection((activeIndex - 1 + sections.length) % sections.length);
+        break;
+      case "Home":
+        focusOnSection(0);
+        break;
+      case "End":
+        focusOnSection(sections.length - 1);
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
-    <div className="accordion">
+    <div className="accordion" onKeyDown={handleA11yKeyPress}>
       {sections.map(({ value, title, contents }) => {
         const expanded = openSections.has(value);
         const headerId = getAccordionHeaderId(accordionId, value);
         const contentsId = getAccordionContentsId(accordionId, value);
         return (
-          <div className="accordion-item">
+          <div className="accordion-item" key={value}>
             <button
               aria-controls={contentsId}
               aria-expanded={expanded}
               id={headerId}
               type="button"
               className="accordion-item-title"
+              data-accordion-value={value}
               onClick={() => handleToggleSection(value)}
             >
-              {title}
+              {title}{" "}
+              <span
+                aria-hidden={true}
+                className={[
+                  "accordion-icon",
+                  expanded && "accordion-icon--rotated",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+              />
             </button>
             <div
               id={contentsId}
