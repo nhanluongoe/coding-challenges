@@ -1,6 +1,6 @@
-import Accordion from "./components/accordion/Accordion";
+import Accordion from "@/components/accordion/Accordion";
 
-function App() {
+export default function AccordionRoute() {
   return (
     <div>
       <Accordion
@@ -28,5 +28,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
