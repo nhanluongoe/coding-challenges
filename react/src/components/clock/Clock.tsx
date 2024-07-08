@@ -36,8 +36,6 @@ export default function Clock() {
   const hourDeg =
     time.hour * DEGREE_PER_HOUR + (time.minute / FULL_MINUTE) * DEGREE_PER_HOUR;
 
-  console.log(secondDeg, minuteDeg, hourDeg);
-
   return (
     <div className="clock__wrapper">
       <div className="clock__frame">
