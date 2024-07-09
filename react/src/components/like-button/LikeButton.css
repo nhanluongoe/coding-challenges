@@ -1,0 +1,25 @@
+.like-button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-width: 2px;
+    height: 32px;
+    border-radius: 32px;
+    padding: 4px 8px;
+}
+
+.like-button--default:hover {
+    border-color: red;
+    color: red;
+}
+
+.like-button--liked {
+    color: white;
+    background-color: red;
+    border: red;
+}
+
+.like-button--default {
+    border-color: gray;
+    color: gray;
+}

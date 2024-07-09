@@ -14,6 +14,10 @@ const COMPONENTS: Component[] = [
     id: "clock",
     name: "Clock",
   },
+  {
+    id: "like-button",
+    name: "Like Button",
+  },
 ];
 
 export default function Root() {

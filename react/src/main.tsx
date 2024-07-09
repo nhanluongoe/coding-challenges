@@ -25,10 +25,18 @@ const router = createBrowserRouter([
       </Suspense>
     ),
   },
+  {
+    path: "/like-button",
+    element: (
+      <Suspense>
+        {React.createElement(lazy(() => import("@/routes/like-button")))}
+      </Suspense>
+    ),
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
