@@ -15,6 +15,10 @@ const COMPONENTS: Component[] = [
     name: "Clock",
   },
   {
+    id: "digital-clock",
+    name: "Digital Clock",
+  },
+  {
     id: "like-button",
     name: "Like Button",
   },

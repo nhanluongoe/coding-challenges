@@ -33,6 +33,14 @@ const router = createBrowserRouter([
       </Suspense>
     ),
   },
+  {
+    path: "/digital-clock",
+    element: (
+      <Suspense>
+        {React.createElement(lazy(() => import("@/routes/digital-clock")))}
+      </Suspense>
+    ),
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
