@@ -5,7 +5,7 @@ function findAverageOfSubarrays(array, k) {
 
   for (let end = 0; end < array.length; end++) {
     sum += array[end];
-    if (end - start >= k - 1) {
+    if (end >= k - 1) {
       result.push(sum / k);
       sum -= array[start];
       start += 1;
