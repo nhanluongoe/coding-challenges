@@ -3,7 +3,6 @@ import { getLanguages } from "@/lib/problems";
 
 export default async function Home() {
   const languages = await getLanguages();
-  const currentYear = new Date().getFullYear();
   const totalProblems = languages.reduce(
     (total, language) => total + language.count,
     0,
@@ -14,7 +13,7 @@ export default async function Home() {
   );
 
   return (
-    <main className="grid min-h-screen grid-rows-[1fr_auto] overflow-hidden bg-[#f6f3eb] px-4 py-6 text-[#18201d] sm:px-6 sm:py-8">
+    <main className="grid min-h-[calc(100vh-8rem)] overflow-hidden">
       <section
         className="mx-auto grid w-full max-w-6xl self-center gap-10 py-8 lg:grid-cols-[minmax(0,1.04fr)_minmax(360px,0.7fr)] lg:items-center"
         aria-labelledby="page-title"
@@ -131,10 +130,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-
-      <footer className="mx-auto w-full max-w-6xl border-t border-[#ddd3c3] pt-5 text-sm font-semibold text-[#6d6358]">
-        Built by Nhan Luong - @ {currentYear}
-      </footer>
     </main>
   );
 }

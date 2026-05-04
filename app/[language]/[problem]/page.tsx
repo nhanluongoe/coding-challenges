@@ -61,15 +61,14 @@ export default async function ProblemPage({ params }: ProblemPageProps) {
   }
 
   const languageName = getLanguageName(language);
-  const currentYear = new Date().getFullYear();
   const highlightedCode = await codeToHtml(detail.code, {
     lang: detail.codeLanguage,
     theme: "github-dark",
   });
 
   return (
-    <main className="min-h-screen bg-[#f6f3eb] px-4 py-6 text-[#18201d] sm:px-6 sm:py-8">
-      <div className="mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-7xl flex-col">
+    <main>
+      <div className="mx-auto w-full max-w-7xl">
         <nav className="mb-8 flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap gap-2">
             <Link
@@ -134,10 +133,6 @@ export default async function ProblemPage({ params }: ProblemPageProps) {
             />
           </article>
         </section>
-
-        <footer className="mt-10 border-t border-[#ddd3c3] pt-5 text-sm font-semibold text-[#6d6358]">
-          Built by Nhan Luong - @ {currentYear}
-        </footer>
       </div>
     </main>
   );

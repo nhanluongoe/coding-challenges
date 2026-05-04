@@ -51,11 +51,10 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
   if (!languageSummary) notFound();
 
   const problems = await getProblemsForLanguage(language);
-  const currentYear = new Date().getFullYear();
 
   return (
-    <main className="min-h-screen bg-[#f6f3eb] px-4 py-6 text-[#18201d] sm:px-6 sm:py-8">
-      <div className="mx-auto flex min-h-[calc(100vh-4rem)] w-full max-w-6xl flex-col">
+    <main>
+      <div className="mx-auto w-full max-w-6xl">
         <nav className="mb-10 flex items-center justify-between gap-4">
           <Link
             className="inline-flex items-center rounded-full border border-[#d8d0c2] bg-white px-4 py-2 text-sm font-black text-[#19684b] shadow-sm transition hover:-translate-y-px hover:border-[#19684b] hover:bg-[#fbfff9] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#19684b]/25"
@@ -108,10 +107,6 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
           languageName={languageSummary.name}
           problems={problems}
         />
-
-        <footer className="mt-auto border-t border-[#ddd3c3] pt-5 text-sm font-semibold text-[#6d6358]">
-          Built by Nhan Luong - @ {currentYear}
-        </footer>
       </div>
     </main>
   );
