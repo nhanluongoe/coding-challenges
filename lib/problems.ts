@@ -1,4 +1,4 @@
-import { readFile, readdir } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 
 const problemsDirectory = path.join(process.cwd(), "problems");
@@ -91,8 +91,7 @@ export async function getProblemsForLanguage(
         "utf8",
       );
       const title = markdown.match(/^#\s+(.+)$/m)?.[1] ?? titleize(entry.name);
-      const solution =
-        markdown.match(/^- Solution:\s+`(.+)`$/m)?.[1] ?? "code";
+      const solution = markdown.match(/^- Solution:\s+`(.+)`$/m)?.[1] ?? "code";
 
       return {
         slug: entry.name,

@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ProblemList from "./ProblemList";
 import {
   getLanguageName,
   getLanguages,
   getProblemsForLanguage,
 } from "@/lib/problems";
+import ProblemList from "./ProblemList";
 
 const problemListConfig = {
   initialVisibleCount: 12,

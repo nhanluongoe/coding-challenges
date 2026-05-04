@@ -8,7 +8,8 @@ export default async function Home() {
     0,
   );
   const featuredLanguage = languages.reduce(
-    (largest, language) => (language.count > largest.count ? language : largest),
+    (largest, language) =>
+      language.count > largest.count ? language : largest,
     languages[0],
   );
 
@@ -62,7 +63,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <div
+          <section
             className="grid grid-cols-1 gap-3 sm:grid-cols-2"
             aria-label="Programming languages"
           >
@@ -85,7 +86,7 @@ export default async function Home() {
                 </span>
               </Link>
             ))}
-          </div>
+          </section>
         </div>
 
         <div className="rounded-lg border border-[var(--color-border-strong)] bg-[var(--color-background-surface)] p-5 shadow-[var(--shadow-panel)]">

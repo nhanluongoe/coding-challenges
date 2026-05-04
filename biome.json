@@ -1,0 +1,72 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.14/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "includes": [
+      "**",
+      "!node_modules",
+      "!.codex",
+      "!.next",
+      "!out",
+      "!coverage",
+      "!problems",
+      "!*.lock",
+      "!package-lock.json"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 80
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "semicolons": "always",
+      "trailingCommas": "all"
+    }
+  },
+  "json": {
+    "formatter": {
+      "trailingCommas": "none"
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "recommended": true
+      },
+      "complexity": {
+        "noForEach": "off"
+      },
+      "correctness": {
+        "noUnusedImports": "error",
+        "useExhaustiveDependencies": "warn"
+      },
+      "style": {
+        "noDefaultExport": "off",
+        "useFilenamingConvention": "off",
+        "useImportType": "error",
+        "useNamingConvention": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off"
+      }
+    }
+  }
+}

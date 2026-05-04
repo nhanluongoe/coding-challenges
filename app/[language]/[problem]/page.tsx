@@ -8,6 +8,7 @@ import {
   getLanguages,
   getProblemDetail,
   getProblemsForLanguage,
+  type ProblemDetail,
 } from "@/lib/problems";
 
 type ProblemPageProps = {
@@ -52,7 +53,7 @@ export async function generateMetadata({ params }: ProblemPageProps) {
 
 export default async function ProblemPage({ params }: ProblemPageProps) {
   const { language, problem } = await params;
-  let detail;
+  let detail: ProblemDetail;
 
   try {
     detail = await getProblemDetail(language, problem);
@@ -129,6 +130,7 @@ export default async function ProblemPage({ params }: ProblemPageProps) {
             </div>
             <div
               className="solution-code max-h-[72vh] overflow-auto"
+              // biome-ignore lint/security/noDangerouslySetInnerHtml: Shiki generates highlighted HTML from local repository source files.
               dangerouslySetInnerHTML={{ __html: highlightedCode }}
             />
           </article>
