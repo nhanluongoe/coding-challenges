@@ -57,25 +57,25 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
       <div className="mx-auto w-full max-w-6xl">
         <nav className="mb-10 flex items-center justify-between gap-4">
           <Link
-            className="inline-flex items-center rounded-full border border-[#d8d0c2] bg-white px-4 py-2 text-sm font-black text-[#19684b] shadow-sm transition hover:-translate-y-px hover:border-[#19684b] hover:bg-[#fbfff9] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#19684b]/25"
+            className="inline-flex items-center rounded-full border border-[var(--color-border-default)] bg-white px-4 py-2 text-sm font-black text-[var(--color-primary-500)] shadow-[var(--shadow-sm)] transition hover:-translate-y-px hover:border-[var(--color-primary-500)] hover:bg-[var(--color-background-surface-alt)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--color-primary-100)]"
             href="/"
           >
             Back home
           </Link>
-          <span className="rounded-full bg-[#202821] px-3 py-1 text-sm font-black text-white">
+          <span className="rounded-full bg-[var(--color-dark-800)] px-3 py-1 text-sm font-black text-white">
             {languageSummary.count} problems
           </span>
         </nav>
 
-        <header className="mb-8 grid gap-6 rounded-lg border border-[#d7cdbb] bg-[#fffdf8] p-6 shadow-[0_24px_70px_rgba(45,38,25,0.10)] sm:p-8 lg:grid-cols-[1fr_auto] lg:items-end">
+        <header className="mb-8 grid gap-6 rounded-lg border border-[var(--color-border-strong)] bg-[var(--color-background-surface)] p-6 shadow-[var(--shadow-panel)] sm:p-8 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
-            <p className="mb-4 inline-flex rounded-full border border-[#c9d7cd] bg-white px-4 py-2 text-sm font-bold text-[#19684b]">
+            <p className="mb-4 inline-flex rounded-full border border-[var(--color-border-default)] bg-white px-4 py-2 text-sm font-bold text-[var(--color-primary-500)]">
               {languageSummary.name} challenge set
             </p>
-            <h1 className="max-w-3xl text-[clamp(2.8rem,7vw,5.75rem)] font-black leading-[0.94] tracking-normal">
+            <h1 className="max-w-3xl text-[length:var(--font-size-language-title)] font-black leading-[var(--font-line-height-language-title)] tracking-normal">
               {languageSummary.name} problems
             </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-[#52625b]">
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-[var(--color-text-secondary)]">
               Browse every organized {languageSummary.name} challenge in this
               repo. Problem detail links are placeholders until the individual
               challenge pages are implemented.
@@ -83,17 +83,17 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:min-w-64">
-            <div className="rounded-lg border border-[#ded5c6] bg-white px-4 py-4">
+            <div className="rounded-lg border border-[var(--color-border-default)] bg-white px-4 py-4">
               <p className="text-3xl font-black">{languageSummary.count}</p>
-              <p className="mt-1 text-sm font-semibold text-[#6b5f52]">
+              <p className="mt-1 text-sm font-semibold text-[var(--color-text-warm-muted)]">
                 Problems
               </p>
             </div>
-            <div className="rounded-lg border border-[#cfdad3] bg-[#f8fffb] px-4 py-4">
+            <div className="rounded-lg border border-[var(--color-border-default)] bg-[var(--color-background-surface-alt)] px-4 py-4">
               <p className="text-3xl font-black">
                 {languageSummary.name.charAt(0)}
               </p>
-              <p className="mt-1 text-sm font-semibold text-[#53675e]">
+              <p className="mt-1 text-sm font-semibold text-[var(--color-text-secondary)]">
                 Language
               </p>
             </div>

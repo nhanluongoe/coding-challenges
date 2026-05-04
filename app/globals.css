@@ -1,5 +1,48 @@
 @import "tailwindcss";
 
+:root {
+  --color-background-canvas: #f6f3eb;
+  --color-background-surface: #fffdf8;
+  --color-background-surface-alt: #fbfff9;
+  --color-border-default: #d8d0c2;
+  --color-border-subtle: #eee5d6;
+  --color-border-strong: #d7cdbb;
+  --color-dark-900: #111713;
+  --color-dark-800: #202821;
+  --color-dark-text: #e5f2eb;
+  --color-dark-muted: #9fb2a8;
+  --color-primary-100: #e7f1eb;
+  --color-primary-500: #19684b;
+  --color-primary-600: #12573f;
+  --color-semantic-success: #19684b;
+  --color-semantic-warning: #b7791f;
+  --color-semantic-error: #b42318;
+  --color-semantic-info: #2563eb;
+  --color-text-primary: #18201d;
+  --color-text-secondary: #52625b;
+  --color-text-muted: #6b756f;
+  --color-text-warm-muted: #7a6c5b;
+  --font-size-display: clamp(3rem, 8vw, 6.6rem);
+  --font-size-page-title: clamp(2.4rem, 6vw, 5rem);
+  --font-size-language-title: clamp(2.8rem, 7vw, 5.75rem);
+  --font-line-height-display: 0.92;
+  --font-line-height-page-title: 0.95;
+  --font-line-height-language-title: 0.94;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 4px 14px rgba(45, 38, 25, 0.06);
+  --shadow-card: 0 10px 30px rgba(45, 38, 25, 0.06);
+  --shadow-card-hover: 0 16px 38px rgba(25, 104, 75, 0.14);
+  --shadow-panel: 0 24px 70px rgba(45, 38, 25, 0.12);
+  --shadow-code: 0 16px 44px rgba(17, 23, 19, 0.18);
+  --motion-duration-fast: 150ms;
+  --motion-duration-base: 200ms;
+  --motion-duration-slow: 320ms;
+  --motion-easing-standard: ease-out;
+  --motion-easing-emphasized: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
 html,
 body {
   min-height: 100%;
@@ -13,7 +56,7 @@ body {
 }
 
 .markdown-content {
-  color: #38463f;
+  color: var(--color-text-secondary);
   font-size: 1rem;
   line-height: 1.8;
 }
@@ -25,7 +68,7 @@ body {
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3 {
-  color: #18201d;
+  color: var(--color-text-primary);
   font-weight: 900;
   letter-spacing: 0;
   line-height: 1.1;
@@ -36,7 +79,7 @@ body {
 }
 
 .markdown-content h2 {
-  border-top: 1px solid #eee5d6;
+  border-top: 1px solid var(--color-border-subtle);
   font-size: 1.35rem;
   padding-top: 1rem;
 }
@@ -59,7 +102,7 @@ body {
 }
 
 .markdown-content a {
-  color: #19684b;
+  color: var(--color-primary-500);
   font-weight: 800;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -67,8 +110,8 @@ body {
 
 .markdown-content code {
   border-radius: 6px;
-  background: #e7f1eb;
-  color: #12573f;
+  background: var(--color-primary-100);
+  color: var(--color-primary-600);
   font-size: 0.92em;
   font-weight: 800;
   padding: 0.12rem 0.35rem;
@@ -77,8 +120,8 @@ body {
 .markdown-content pre {
   overflow: auto;
   border-radius: 8px;
-  background: #111713;
-  color: #e5f2eb;
+  background: var(--color-dark-900);
+  color: var(--color-dark-text);
   padding: 1rem;
 }
 
