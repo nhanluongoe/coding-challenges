@@ -16,10 +16,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="bg-[var(--color-background-canvas)] text-[var(--color-text-primary)]">
+      <body className="bg-(--color-background-canvas) text-(--color-text-primary)">
         <div className="flex min-h-screen flex-col px-4 py-6 sm:px-6 sm:py-8">
           <div className="flex-1">{children}</div>
-          <footer className="mx-auto mt-10 w-full max-w-7xl border-t border-[var(--color-border-default)] pt-5 text-sm font-semibold text-[var(--color-text-warm-muted)]">
+          <footer className="mx-auto mt-10 w-full max-w-7xl border-t border-(--color-border-default) pt-5 text-sm font-semibold text-(--color-text-warm-muted)">
             Built by Nhan Luong - @ {currentYear}
           </footer>
         </div>
