@@ -1,10 +1,16 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ProblemList from "./ProblemList";
 import {
   getLanguageName,
   getLanguages,
   getProblemsForLanguage,
 } from "@/lib/problems";
+
+const problemListConfig = {
+  initialVisibleCount: 12,
+  incrementBy: 12,
+};
 
 type LanguagePageProps = {
   params: Promise<{
@@ -95,33 +101,12 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
           </div>
         </header>
 
-        <section
-          className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3"
-          aria-label={`${languageSummary.name} problems`}
-        >
-          {problems.map((problem, index) => (
-            <Link
-              className="group flex min-h-36 flex-col justify-between rounded-lg border border-[#d8d0c2] bg-white p-5 shadow-[0_10px_30px_rgba(45,38,25,0.06)] transition duration-200 ease-out hover:-translate-y-1 hover:border-[#19684b] hover:bg-[#fbfff9] hover:shadow-[0_16px_38px_rgba(25,104,75,0.14)] focus-visible:-translate-y-1 focus-visible:border-[#19684b] focus-visible:bg-[#fbfff9] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#19684b]/25"
-              href="#"
-              key={problem.slug}
-            >
-              <span>
-                <span className="mb-4 inline-flex rounded-full bg-[#e7f1eb] px-3 py-1 text-xs font-black text-[#19684b]">
-                  #{String(index + 1).padStart(3, "0")}
-                </span>
-                <span className="block text-xl font-black leading-tight">
-                  {problem.title}
-                </span>
-              </span>
-              <span className="mt-6 flex items-center justify-between gap-4 border-t border-[#eee5d6] pt-4 text-sm font-bold text-[#6b756f]">
-                <span>{problem.solution}</span>
-                <span className="text-[#19684b] transition group-hover:translate-x-1">
-                  Open
-                </span>
-              </span>
-            </Link>
-          ))}
-        </section>
+        <ProblemList
+          initialVisibleCount={problemListConfig.initialVisibleCount}
+          incrementBy={problemListConfig.incrementBy}
+          languageName={languageSummary.name}
+          problems={problems}
+        />
 
         <footer className="mt-auto border-t border-[#ddd3c3] pt-5 text-sm font-semibold text-[#6d6358]">
           Built by Nhan Luong - @ {currentYear}
