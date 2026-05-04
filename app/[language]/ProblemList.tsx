@@ -7,6 +7,7 @@ import type { ProblemSummary } from "@/lib/problems";
 type ProblemListProps = {
   initialVisibleCount: number;
   incrementBy: number;
+  languageSlug: string;
   languageName: string;
   problems: ProblemSummary[];
 };
@@ -14,6 +15,7 @@ type ProblemListProps = {
 export default function ProblemList({
   initialVisibleCount,
   incrementBy,
+  languageSlug,
   languageName,
   problems,
 }: ProblemListProps) {
@@ -49,7 +51,7 @@ export default function ProblemList({
         {visibleProblems.map((problem, index) => (
           <Link
             className="group flex min-h-36 flex-col justify-between rounded-lg border border-[#d8d0c2] bg-white p-5 shadow-[0_10px_30px_rgba(45,38,25,0.06)] transition duration-200 ease-out hover:-translate-y-1 hover:border-[#19684b] hover:bg-[#fbfff9] hover:shadow-[0_16px_38px_rgba(25,104,75,0.14)] focus-visible:-translate-y-1 focus-visible:border-[#19684b] focus-visible:bg-[#fbfff9] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#19684b]/25"
-            href="#"
+            href={`/${languageSlug}/${problem.slug}`}
             key={problem.slug}
           >
             <span>

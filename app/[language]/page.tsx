@@ -104,6 +104,7 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
         <ProblemList
           initialVisibleCount={problemListConfig.initialVisibleCount}
           incrementBy={problemListConfig.incrementBy}
+          languageSlug={languageSummary.slug}
           languageName={languageSummary.name}
           problems={problems}
         />

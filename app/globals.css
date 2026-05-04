@@ -11,3 +11,96 @@ body {
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
 }
+
+.markdown-content {
+  color: #38463f;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.markdown-content > * + * {
+  margin-top: 1rem;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  color: #18201d;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+.markdown-content h1 {
+  font-size: 2rem;
+}
+
+.markdown-content h2 {
+  border-top: 1px solid #eee5d6;
+  font-size: 1.35rem;
+  padding-top: 1rem;
+}
+
+.markdown-content h3 {
+  font-size: 1rem;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 1.25rem;
+}
+
+.markdown-content ul {
+  list-style: disc;
+}
+
+.markdown-content ol {
+  list-style: decimal;
+}
+
+.markdown-content a {
+  color: #19684b;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.markdown-content code {
+  border-radius: 6px;
+  background: #e7f1eb;
+  color: #12573f;
+  font-size: 0.92em;
+  font-weight: 800;
+  padding: 0.12rem 0.35rem;
+}
+
+.markdown-content pre {
+  overflow: auto;
+  border-radius: 8px;
+  background: #111713;
+  color: #e5f2eb;
+  padding: 1rem;
+}
+
+.markdown-content pre code {
+  background: transparent;
+  color: inherit;
+  font-weight: 500;
+  padding: 0;
+}
+
+.solution-code pre {
+  min-height: 100%;
+  margin: 0;
+  overflow: visible;
+  background: transparent !important;
+  padding: 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.solution-code code {
+  display: block;
+  width: max-content;
+  min-width: 100%;
+}

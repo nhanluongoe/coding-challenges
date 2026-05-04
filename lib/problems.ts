@@ -23,11 +23,31 @@ export type ProblemSummary = {
   solution: string;
 };
 
+export type ProblemDetail = ProblemSummary & {
+  code: string;
+  codeLanguage: string;
+  codeLanguageLabel: string;
+  markdown: string;
+};
+
 function titleize(value: string) {
   return value
     .replace(/\.[^.]+$/, "")
     .replace(/-/g, " ")
     .replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
+function getCodeLanguage(solution: string, language: string) {
+  const extension = path.extname(solution).replace(".", "");
+  const languageByExtension: Record<string, string> = {
+    go: "go",
+    java: "java",
+    js: "javascript",
+    rb: "ruby",
+    ts: "typescript",
+  };
+
+  return languageByExtension[extension] ?? language;
 }
 
 export function getLanguageName(slug: string) {
@@ -84,4 +104,30 @@ export async function getProblemsForLanguage(
   return (await Promise.all(problems)).sort((a, b) =>
     a.title.localeCompare(b.title),
   );
+}
+
+export async function getProblemDetail(
+  language: string,
+  problem: string,
+): Promise<ProblemDetail> {
+  const problemDirectory = path.join(problemsDirectory, language, problem);
+  const markdown = await readFile(path.join(problemDirectory, "problem.md"), {
+    encoding: "utf8",
+  });
+  const title = markdown.match(/^#\s+(.+)$/m)?.[1] ?? titleize(problem);
+  const solution = markdown.match(/^- Solution:\s+`(.+)`$/m)?.[1] ?? "code";
+  const code = await readFile(path.join(problemDirectory, solution), {
+    encoding: "utf8",
+  });
+  const codeLanguage = getCodeLanguage(solution, language);
+
+  return {
+    slug: problem,
+    title,
+    solution,
+    code,
+    codeLanguage,
+    codeLanguageLabel: getLanguageName(codeLanguage),
+    markdown,
+  };
 }
