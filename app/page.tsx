@@ -1,44 +1,5 @@
 import Link from "next/link";
-import { readdir } from "node:fs/promises";
-import path from "node:path";
-
-const displayNames: Record<string, string> = {
-  go: "Go",
-  java: "Java",
-  javascript: "JavaScript",
-  ruby: "Ruby",
-  typescript: "TypeScript",
-};
-
-async function getLanguages() {
-  const problemsDirectory = path.join(process.cwd(), "problems");
-  const entries = await readdir(problemsDirectory, { withFileTypes: true });
-
-  const languages = entries
-    .filter((entry) => entry.isDirectory())
-    .map(async (entry) => {
-      const languageProblems = await readdir(
-        path.join(problemsDirectory, entry.name),
-        { withFileTypes: true },
-      );
-
-      return {
-        slug: entry.name,
-        count: languageProblems.filter((problem) => problem.isDirectory())
-          .length,
-        name:
-          displayNames[entry.name] ??
-          entry.name
-            .split("-")
-            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" "),
-      };
-    });
-
-  return (await Promise.all(languages)).sort((a, b) =>
-    a.name.localeCompare(b.name),
-  );
-}
+import { getLanguages } from "@/lib/problems";
 
 export default async function Home() {
   const languages = await getLanguages();
@@ -109,7 +70,7 @@ export default async function Home() {
             {languages.map((language) => (
               <Link
                 className="group flex min-h-24 items-center justify-between rounded-lg border border-[#d8d0c2] bg-white px-5 py-4 text-[#18201d] shadow-[0_10px_30px_rgba(45,38,25,0.06)] transition duration-200 ease-out hover:-translate-y-1 hover:border-[#19684b] hover:bg-[#fbfff9] hover:shadow-[0_16px_38px_rgba(25,104,75,0.14)] focus-visible:-translate-y-1 focus-visible:border-[#19684b] focus-visible:bg-[#fbfff9] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#19684b]/25"
-                href="#"
+                href={`/${language.slug}`}
                 key={language.slug}
               >
                 <span>
