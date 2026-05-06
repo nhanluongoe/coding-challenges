@@ -2,124 +2,21 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import type {
-  ActivityDashboard,
-  DailyActivity,
-  ProblemActivity,
-} from "@/lib/problems";
+import type { ActivityDashboard } from "@/lib/problems";
+import {
+  formatDate,
+  formatDateWithoutYear,
+  getActivityCells,
+  getActivityColor,
+  getDaysForYear,
+  getRecentResolvedProblems,
+  getSolvedLabel,
+  getYears,
+} from "@/lib/util";
 
 type ResolutionDashboardProps = {
   dashboard: ActivityDashboard;
 };
-
-type ActivityCell =
-  | {
-      date: string;
-      count: number;
-      problems: ProblemActivity[];
-      type: "day";
-    }
-  | {
-      key: string;
-      type: "blank";
-    };
-
-function parseDateKey(dateKey: string) {
-  const [year, month, day] = dateKey.split("-").map(Number);
-
-  return new Date(year, month - 1, day);
-}
-
-function toDateKey(date: Date) {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-
-  return `${year}-${month}-${day}`;
-}
-
-function formatDate(dateKey: string) {
-  return new Intl.DateTimeFormat("en", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  }).format(parseDateKey(dateKey));
-}
-
-function formatDateWithoutYear(dateKey: string) {
-  return new Intl.DateTimeFormat("en", {
-    month: "short",
-    day: "numeric",
-  }).format(parseDateKey(dateKey));
-}
-
-function getActivityColor(count: number) {
-  if (count >= 6) return "bg-(--color-primary-600)";
-  if (count >= 3) return "bg-(--color-primary-500)";
-  if (count >= 2) return "bg-[#64a47e]";
-  if (count === 1) return "bg-[#b7d7c2]";
-
-  return "bg-(--color-border-subtle)";
-}
-
-function getSolvedLabel(count: number, date: string) {
-  const noun = count === 1 ? "problem" : "problems";
-
-  return `${count} ${noun} solved on ${formatDate(date)}`;
-}
-
-function getYears(days: DailyActivity[]) {
-  const years = new Set(
-    days.map((day) => parseDateKey(day.date).getFullYear()),
-  );
-
-  return [...years].sort((a, b) => b - a);
-}
-
-function getDaysForYear(days: DailyActivity[], year: number) {
-  return days.filter((day) => parseDateKey(day.date).getFullYear() === year);
-}
-
-function getActivityCells(days: DailyActivity[], year: number): ActivityCell[] {
-  const activityByDate = new Map(days.map((day) => [day.date, day]));
-  const startDate = new Date(year, 0, 1);
-  const endDate = new Date(year, 11, 31);
-  const blanks = Array.from({ length: startDate.getDay() }, (_, index) => ({
-    key: `blank-${year}-${index}`,
-    type: "blank" as const,
-  }));
-  const dayCount =
-    Math.round(
-      (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24),
-    ) + 1;
-  const realDays = Array.from({ length: dayCount }, (_, index) => {
-    const date = new Date(year, 0, index + 1);
-    const dateKey = toDateKey(date);
-    const activity = activityByDate.get(dateKey);
-
-    return {
-      date: dateKey,
-      count: activity?.count ?? 0,
-      problems: activity?.problems ?? [],
-      type: "day" as const,
-    };
-  });
-
-  return [...blanks, ...realDays];
-}
-
-function getRecentResolvedProblems(days: DailyActivity[]) {
-  return days
-    .flatMap((day) => day.problems)
-    .sort((a, b) => {
-      const dateComparison = (b.resolvedAt ?? "").localeCompare(
-        a.resolvedAt ?? "",
-      );
-
-      return dateComparison || a.title.localeCompare(b.title);
-    })
-    .slice(0, 8);
-}
 
 export default function ResolutionDashboard({
   dashboard,
@@ -139,15 +36,6 @@ export default function ResolutionDashboard({
   const recentResolvedProblems = useMemo(
     () => getRecentResolvedProblems(selectedDays),
     [selectedDays],
-  );
-  const activeDayCount = selectedDays.length;
-  const resolvedCount = selectedDays.reduce(
-    (total, day) => total + day.count,
-    0,
-  );
-  const peakDay = selectedDays.reduce(
-    (largest, day) => (day.count > largest.count ? day : largest),
-    selectedDays[0] ?? { date: "", count: 0, problems: [] },
   );
   const startDate = `${selectedYear}-01-01`;
   const endDate = `${selectedYear}-12-31`;
@@ -172,27 +60,6 @@ export default function ResolutionDashboard({
       <div className="rounded-lg border border-(--color-border-strong) bg-(--color-background-surface) p-5 shadow-(--shadow-panel)">
         <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_120px]">
           <div>
-            <div className="mb-5 grid gap-3 sm:grid-cols-3">
-              <div className="rounded-lg border border-(--color-border-default) bg-white px-4 py-4">
-                <p className="text-3xl font-black">{resolvedCount}</p>
-                <p className="mt-1 text-sm font-semibold text-(--color-text-warm-muted)">
-                  Dated solves
-                </p>
-              </div>
-              <div className="rounded-lg border border-(--color-border-default) bg-white px-4 py-4">
-                <p className="text-3xl font-black">{activeDayCount}</p>
-                <p className="mt-1 text-sm font-semibold text-(--color-text-warm-muted)">
-                  Active days
-                </p>
-              </div>
-              <div className="rounded-lg border border-(--color-border-default) bg-(--color-background-surface-alt) px-4 py-4">
-                <p className="text-3xl font-black">{peakDay.count}</p>
-                <p className="mt-1 text-sm font-semibold text-(--color-text-secondary)">
-                  Peak day
-                </p>
-              </div>
-            </div>
-
             <div className="overflow-x-auto rounded-lg border border-(--color-border-default) bg-white p-4">
               <div
                 className="grid auto-cols-[14px] grid-flow-col grid-rows-7 gap-1"

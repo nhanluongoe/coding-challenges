@@ -1,5 +1,11 @@
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
+import {
+  getCodeLanguage,
+  getResolvedDateFromMarkdown,
+  stripFrontmatter,
+  titleize,
+} from "@/lib/util";
 
 const problemsDirectory = path.join(process.cwd(), "problems");
 
@@ -45,42 +51,6 @@ export type DailyActivity = {
 export type ActivityDashboard = {
   days: DailyActivity[];
 };
-
-function titleize(value: string) {
-  return value
-    .replace(/\.[^.]+$/, "")
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (char) => char.toUpperCase());
-}
-
-function getCodeLanguage(solution: string, language: string) {
-  const extension = path.extname(solution).replace(".", "");
-  const languageByExtension: Record<string, string> = {
-    go: "go",
-    java: "java",
-    js: "javascript",
-    rb: "ruby",
-    ts: "typescript",
-  };
-
-  return languageByExtension[extension] ?? language;
-}
-
-function getResolvedDateFromMarkdown(markdown: string) {
-  const frontmatterMatch = markdown.match(/^---\n([\s\S]*?)\n---/);
-  const frontmatterSolvedAt = frontmatterMatch?.[1].match(
-    /^solvedAt:\s*["']?(\d{4}-\d{2}-\d{2})["']?$/m,
-  )?.[1];
-  const listSolvedAt = markdown.match(
-    /^-\s*(?:Solved|Resolved|Completed):\s*`?(\d{4}-\d{2}-\d{2})`?$/im,
-  )?.[1];
-
-  return frontmatterSolvedAt ?? listSolvedAt ?? null;
-}
-
-function stripFrontmatter(markdown: string) {
-  return markdown.replace(/^---\n[\s\S]*?\n---\n*/, "");
-}
 
 async function readProblemSummary(
   problemDirectory: string,
