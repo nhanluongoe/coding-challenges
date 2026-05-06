@@ -21,6 +21,7 @@ export type ProblemSummary = {
   slug: string;
   title: string;
   solution: string;
+  resolvedAt: string | null;
 };
 
 export type ProblemDetail = ProblemSummary & {
@@ -28,6 +29,21 @@ export type ProblemDetail = ProblemSummary & {
   codeLanguage: string;
   codeLanguageLabel: string;
   markdown: string;
+};
+
+export type ProblemActivity = ProblemSummary & {
+  language: string;
+  languageName: string;
+};
+
+export type DailyActivity = {
+  date: string;
+  count: number;
+  problems: ProblemActivity[];
+};
+
+export type ActivityDashboard = {
+  days: DailyActivity[];
 };
 
 function titleize(value: string) {
@@ -48,6 +64,40 @@ function getCodeLanguage(solution: string, language: string) {
   };
 
   return languageByExtension[extension] ?? language;
+}
+
+function getResolvedDateFromMarkdown(markdown: string) {
+  const frontmatterMatch = markdown.match(/^---\n([\s\S]*?)\n---/);
+  const frontmatterSolvedAt = frontmatterMatch?.[1].match(
+    /^solvedAt:\s*["']?(\d{4}-\d{2}-\d{2})["']?$/m,
+  )?.[1];
+  const listSolvedAt = markdown.match(
+    /^-\s*(?:Solved|Resolved|Completed):\s*`?(\d{4}-\d{2}-\d{2})`?$/im,
+  )?.[1];
+
+  return frontmatterSolvedAt ?? listSolvedAt ?? null;
+}
+
+function stripFrontmatter(markdown: string) {
+  return markdown.replace(/^---\n[\s\S]*?\n---\n*/, "");
+}
+
+async function readProblemSummary(
+  problemDirectory: string,
+  slug: string,
+): Promise<ProblemSummary> {
+  const markdown = await readFile(path.join(problemDirectory, "problem.md"), {
+    encoding: "utf8",
+  });
+  const title = markdown.match(/^#\s+(.+)$/m)?.[1] ?? titleize(slug);
+  const solution = markdown.match(/^- Solution:\s+`(.+)`$/m)?.[1] ?? "code";
+
+  return {
+    slug,
+    title,
+    solution,
+    resolvedAt: getResolvedDateFromMarkdown(markdown),
+  };
 }
 
 export function getLanguageName(slug: string) {
@@ -86,18 +136,7 @@ export async function getProblemsForLanguage(
     .filter((entry) => entry.isDirectory())
     .map(async (entry) => {
       const problemDirectory = path.join(languageDirectory, entry.name);
-      const markdown = await readFile(
-        path.join(problemDirectory, "problem.md"),
-        "utf8",
-      );
-      const title = markdown.match(/^#\s+(.+)$/m)?.[1] ?? titleize(entry.name);
-      const solution = markdown.match(/^- Solution:\s+`(.+)`$/m)?.[1] ?? "code";
-
-      return {
-        slug: entry.name,
-        title,
-        solution,
-      };
+      return readProblemSummary(problemDirectory, entry.name);
     });
 
   return (await Promise.all(problems)).sort((a, b) =>
@@ -124,9 +163,47 @@ export async function getProblemDetail(
     slug: problem,
     title,
     solution,
+    resolvedAt: getResolvedDateFromMarkdown(markdown),
     code,
     codeLanguage,
     codeLanguageLabel: getLanguageName(codeLanguage),
-    markdown,
+    markdown: stripFrontmatter(markdown),
+  };
+}
+
+export async function getProblemActivityDashboard(): Promise<ActivityDashboard> {
+  const languages = await getLanguages();
+  const problemsByLanguage = await Promise.all(
+    languages.map(async (language) => {
+      const problems = await getProblemsForLanguage(language.slug);
+
+      return problems.map((problem) => ({
+        ...problem,
+        language: language.slug,
+        languageName: language.name,
+      }));
+    }),
+  );
+  const problems = problemsByLanguage.flat();
+  const resolvedProblems = problems.filter((problem) => problem.resolvedAt);
+  const problemsByDate = resolvedProblems.reduce<
+    Record<string, ProblemActivity[]>
+  >((dates, problem) => {
+    if (!problem.resolvedAt) return dates;
+
+    dates[problem.resolvedAt] = [...(dates[problem.resolvedAt] ?? []), problem];
+
+    return dates;
+  }, {});
+  const days = Object.entries(problemsByDate)
+    .map(([date, dailyProblems]) => ({
+      date,
+      count: dailyProblems.length,
+      problems: dailyProblems.sort((a, b) => a.title.localeCompare(b.title)),
+    }))
+    .sort((a, b) => a.date.localeCompare(b.date));
+
+  return {
+    days,
   };
 }

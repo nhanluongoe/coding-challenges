@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ProblemList from "@/components/ProblemList";
 import {
   getLanguageName,
   getLanguages,
   getProblemsForLanguage,
 } from "@/lib/problems";
-import ProblemList from "./ProblemList";
 
 const problemListConfig = {
   initialVisibleCount: 12,
@@ -77,8 +77,8 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-(--color-text-secondary)">
               Browse every organized {languageSummary.name} challenge in this
-              repo. Problem detail links are placeholders until the individual
-              challenge pages are implemented.
+              repo, with detail pages, solution code, and resolved-date metadata
+              where available.
             </p>
           </div>
 

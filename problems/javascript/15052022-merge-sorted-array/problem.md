@@ -1,3 +1,7 @@
+---
+solvedAt: "2022-05-15"
+---
+
 # Merge Sorted Array
 
 - Language: javascript

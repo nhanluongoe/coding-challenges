@@ -1,3 +1,7 @@
+---
+solvedAt: "2022-05-16"
+---
+
 # Check Fcfs
 
 - Language: javascript

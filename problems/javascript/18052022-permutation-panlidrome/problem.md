@@ -1,3 +1,7 @@
+---
+solvedAt: "2022-05-18"
+---
+
 # Permutation Panlidrome
 
 - Language: javascript

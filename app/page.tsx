@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { getLanguages } from "@/lib/problems";
+import ResolutionDashboard from "@/components/ResolutionDashboard";
+import { getLanguages, getProblemActivityDashboard } from "@/lib/problems";
 
 export default async function Home() {
   const languages = await getLanguages();
+  const dashboard = await getProblemActivityDashboard();
   const totalProblems = languages.reduce(
     (total, language) => total + language.count,
     0,
@@ -14,9 +16,9 @@ export default async function Home() {
   );
 
   return (
-    <main className="grid min-h-[calc(100vh-8rem)] overflow-hidden">
+    <main className="overflow-hidden">
       <section
-        className="mx-auto grid w-full max-w-6xl self-center gap-10 py-8 lg:grid-cols-[minmax(0,1.04fr)_minmax(360px,0.7fr)] lg:items-center"
+        className="mx-auto grid min-h-[calc(100vh-8rem)] w-full max-w-6xl gap-10 py-8 lg:grid-cols-[minmax(0,1.04fr)_minmax(360px,0.7fr)] lg:items-center"
         aria-labelledby="page-title"
       >
         <div>
@@ -131,6 +133,8 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      <ResolutionDashboard dashboard={dashboard} />
     </main>
   );
 }

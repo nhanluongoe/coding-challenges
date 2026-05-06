@@ -1,3 +1,7 @@
+---
+solvedAt: "2022-05-17"
+---
+
 # Movie Lengths
 
 - Language: javascript
