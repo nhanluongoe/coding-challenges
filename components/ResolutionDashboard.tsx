@@ -1,13 +1,14 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
+import ProblemActivityCard from "@/components/ProblemActivityCard";
+import SelectedDayProblems from "@/components/SelectedDayProblems";
 import type { ActivityDashboard } from "@/lib/problems";
 import {
-  formatDate,
   formatDateWithoutYear,
   getActivityCells,
   getActivityColor,
+  getDayActivityByDate,
   getDaysForYear,
   getRecentResolvedProblems,
   getSolvedLabel,
@@ -25,6 +26,7 @@ export default function ResolutionDashboard({
   const [selectedYear, setSelectedYear] = useState(
     years[0] ?? new Date().getFullYear(),
   );
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const selectedDays = useMemo(
     () => getDaysForYear(dashboard.days, selectedYear),
     [dashboard.days, selectedYear],
@@ -36,6 +38,10 @@ export default function ResolutionDashboard({
   const recentResolvedProblems = useMemo(
     () => getRecentResolvedProblems(selectedDays),
     [selectedDays],
+  );
+  const selectedDayActivity = useMemo(
+    () => getDayActivityByDate(selectedDays, selectedDate),
+    [selectedDays, selectedDate],
   );
   const startDate = `${selectedYear}-01-01`;
   const endDate = `${selectedYear}-12-31`;
@@ -73,20 +79,26 @@ export default function ResolutionDashboard({
                       key={cell.key}
                     />
                   ) : (
-                    <span
+                    <button
                       aria-label={getSolvedLabel(cell.count, cell.date)}
-                      className="group relative inline-flex size-3"
+                      aria-pressed={selectedDate === cell.date}
+                      className="group relative inline-flex size-3 cursor-pointer rounded-[3px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--color-primary-500)"
                       key={cell.date}
-                      role="img"
+                      onClick={() => setSelectedDate(cell.date)}
                       title={getSolvedLabel(cell.count, cell.date)}
+                      type="button"
                     >
                       <span
-                        className={`size-3 rounded-[3px] ${getActivityColor(cell.count)}`}
+                        className={`size-3 rounded-[3px] ${getActivityColor(cell.count)} ${
+                          selectedDate === cell.date
+                            ? "ring-2 ring-(--color-dark-900) ring-offset-2"
+                            : ""
+                        }`}
                       />
                       <span className="-translate-x-1/2 pointer-events-none absolute top-5 left-1/2 z-20 hidden w-max rounded-md bg-(--color-dark-900) px-2 py-1 text-xs font-black whitespace-nowrap text-white shadow-(--shadow-sm) group-hover:block group-focus:block">
                         {getSolvedLabel(cell.count, cell.date)}
                       </span>
-                    </span>
+                    </button>
                   ),
                 )}
               </div>
@@ -112,7 +124,10 @@ export default function ResolutionDashboard({
                     : "bg-white text-(--color-text-muted) hover:bg-(--color-background-surface-alt) hover:text-(--color-primary-500)"
                 }`}
                 key={year}
-                onClick={() => setSelectedYear(year)}
+                onClick={() => {
+                  setSelectedYear(year);
+                  setSelectedDate(null);
+                }}
                 role="tab"
                 type="button"
               >
@@ -121,6 +136,13 @@ export default function ResolutionDashboard({
             ))}
           </div>
         </div>
+
+        {selectedDate ? (
+          <SelectedDayProblems
+            selectedDate={selectedDate}
+            selectedDayActivity={selectedDayActivity}
+          />
+        ) : null}
 
         <section className="mt-6" aria-labelledby="recent-resolved-title">
           <div className="mb-4 border-b border-(--color-border-subtle) pb-4">
@@ -137,21 +159,10 @@ export default function ResolutionDashboard({
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {recentResolvedProblems.map((problem) => (
-              <Link
-                className="block rounded-lg border border-(--color-border-default) bg-white px-4 py-3 transition hover:-translate-y-px hover:border-(--color-primary-500) hover:bg-(--color-background-surface-alt) focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-(--color-primary-100)"
-                href={`/${problem.language}/${problem.slug}`}
+              <ProblemActivityCard
                 key={`${problem.language}/${problem.slug}`}
-              >
-                <span className="block text-sm font-black text-(--color-primary-500)">
-                  {formatDate(problem.resolvedAt ?? "")}
-                </span>
-                <span className="mt-1 block font-black leading-tight">
-                  {problem.title}
-                </span>
-                <span className="mt-2 block text-xs font-bold uppercase text-(--color-text-muted)">
-                  {problem.languageName}
-                </span>
-              </Link>
+                problem={problem}
+              />
             ))}
           </div>
         </section>

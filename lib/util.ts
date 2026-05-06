@@ -162,6 +162,15 @@ export function getRecentResolvedProblems(days: DailyActivity[]) {
     .slice(0, 8);
 }
 
+export function getDayActivityByDate(
+  days: DailyActivity[],
+  selectedDate: string | null,
+) {
+  if (!selectedDate) return null;
+
+  return days.find((day) => day.date === selectedDate) ?? null;
+}
+
 export function getTotalProblemCount(languages: LanguageSummary[]) {
   return languages.reduce((total, language) => total + language.count, 0);
 }
