@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { getCurrentYear } from "@/lib/util";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
-  const currentYear = new Date().getFullYear();
+  const currentYear = getCurrentYear();
 
   return (
     <html lang="en">

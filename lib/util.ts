@@ -1,4 +1,8 @@
-import type { DailyActivity, ProblemActivity } from "@/lib/problems";
+import type {
+  DailyActivity,
+  LanguageSummary,
+  ProblemActivity,
+} from "@/lib/problems";
 
 export type ActivityCell =
   | {
@@ -48,6 +52,14 @@ export function getResolvedDateFromMarkdown(markdown: string) {
 
 export function stripFrontmatter(markdown: string) {
   return markdown.replace(/^---\n[\s\S]*?\n---\n*/, "");
+}
+
+export function getProblemTitle(markdown: string, fallback: string) {
+  return markdown.match(/^#\s+(.+)$/m)?.[1] ?? titleize(fallback);
+}
+
+export function getProblemSolution(markdown: string) {
+  return markdown.match(/^- Solution:\s+`(.+)`$/m)?.[1] ?? "code";
 }
 
 export function parseDateKey(dateKey: string) {
@@ -148,4 +160,24 @@ export function getRecentResolvedProblems(days: DailyActivity[]) {
       return dateComparison || a.title.localeCompare(b.title);
     })
     .slice(0, 8);
+}
+
+export function getTotalProblemCount(languages: LanguageSummary[]) {
+  return languages.reduce((total, language) => total + language.count, 0);
+}
+
+export function getFeaturedLanguage(languages: LanguageSummary[]) {
+  return languages.reduce(
+    (largest, language) =>
+      language.count > largest.count ? language : largest,
+    languages[0],
+  );
+}
+
+export function getPracticeSharePercentage(count: number, total: number) {
+  return Math.max(8, Math.round((count / total) * 100));
+}
+
+export function getCurrentYear() {
+  return new Date().getFullYear();
 }

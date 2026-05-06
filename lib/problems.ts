@@ -2,6 +2,8 @@ import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import {
   getCodeLanguage,
+  getProblemSolution,
+  getProblemTitle,
   getResolvedDateFromMarkdown,
   stripFrontmatter,
   titleize,
@@ -52,24 +54,6 @@ export type ActivityDashboard = {
   days: DailyActivity[];
 };
 
-async function readProblemSummary(
-  problemDirectory: string,
-  slug: string,
-): Promise<ProblemSummary> {
-  const markdown = await readFile(path.join(problemDirectory, "problem.md"), {
-    encoding: "utf8",
-  });
-  const title = markdown.match(/^#\s+(.+)$/m)?.[1] ?? titleize(slug);
-  const solution = markdown.match(/^- Solution:\s+`(.+)`$/m)?.[1] ?? "code";
-
-  return {
-    slug,
-    title,
-    solution,
-    resolvedAt: getResolvedDateFromMarkdown(markdown),
-  };
-}
-
 export function getLanguageName(slug: string) {
   return displayNames[slug] ?? titleize(slug);
 }
@@ -106,7 +90,19 @@ export async function getProblemsForLanguage(
     .filter((entry) => entry.isDirectory())
     .map(async (entry) => {
       const problemDirectory = path.join(languageDirectory, entry.name);
-      return readProblemSummary(problemDirectory, entry.name);
+      const markdown = await readFile(
+        path.join(problemDirectory, "problem.md"),
+        {
+          encoding: "utf8",
+        },
+      );
+
+      return {
+        slug: entry.name,
+        title: getProblemTitle(markdown, entry.name),
+        solution: getProblemSolution(markdown),
+        resolvedAt: getResolvedDateFromMarkdown(markdown),
+      };
     });
 
   return (await Promise.all(problems)).sort((a, b) =>
@@ -122,8 +118,8 @@ export async function getProblemDetail(
   const markdown = await readFile(path.join(problemDirectory, "problem.md"), {
     encoding: "utf8",
   });
-  const title = markdown.match(/^#\s+(.+)$/m)?.[1] ?? titleize(problem);
-  const solution = markdown.match(/^- Solution:\s+`(.+)`$/m)?.[1] ?? "code";
+  const title = getProblemTitle(markdown, problem);
+  const solution = getProblemSolution(markdown);
   const code = await readFile(path.join(problemDirectory, solution), {
     encoding: "utf8",
   });

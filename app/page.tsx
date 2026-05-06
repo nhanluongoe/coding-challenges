@@ -1,19 +1,17 @@
 import Link from "next/link";
 import ResolutionDashboard from "@/components/ResolutionDashboard";
 import { getLanguages, getProblemActivityDashboard } from "@/lib/problems";
+import {
+  getFeaturedLanguage,
+  getPracticeSharePercentage,
+  getTotalProblemCount,
+} from "@/lib/util";
 
 export default async function Home() {
   const languages = await getLanguages();
   const dashboard = await getProblemActivityDashboard();
-  const totalProblems = languages.reduce(
-    (total, language) => total + language.count,
-    0,
-  );
-  const featuredLanguage = languages.reduce(
-    (largest, language) =>
-      language.count > largest.count ? language : largest,
-    languages[0],
-  );
+  const totalProblems = getTotalProblemCount(languages);
+  const featuredLanguage = getFeaturedLanguage(languages);
 
   return (
     <main className="overflow-hidden">
@@ -121,9 +119,9 @@ export default async function Home() {
                   <div
                     className="h-full rounded-full bg-(--color-primary-500)"
                     style={{
-                      width: `${Math.max(
-                        8,
-                        Math.round((language.count / totalProblems) * 100),
+                      width: `${getPracticeSharePercentage(
+                        language.count,
+                        totalProblems,
                       )}%`,
                     }}
                   />
