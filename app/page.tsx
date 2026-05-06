@@ -36,9 +36,9 @@ export default async function Home() {
             collection is organized straight from the local problem directory.
           </p>
 
-          <div className="mb-8 grid grid-cols-3 gap-3">
+          <div className="mb-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
             <div className="rounded-lg border border-(--color-border-default) bg-(--color-background-surface) px-4 py-4">
-              <p className="text-2xl font-black text-(--color-text-primary)">
+              <p className="break-words text-2xl font-black text-(--color-text-primary)">
                 {totalProblems}
               </p>
               <p className="mt-1 text-sm font-semibold text-(--color-text-warm-muted)">
@@ -46,7 +46,7 @@ export default async function Home() {
               </p>
             </div>
             <div className="rounded-lg border border-(--color-border-default) bg-(--color-background-surface-alt) px-4 py-4">
-              <p className="text-2xl font-black text-(--color-text-primary)">
+              <p className="break-words text-2xl font-black text-(--color-text-primary)">
                 {languages.length}
               </p>
               <p className="mt-1 text-sm font-semibold text-(--color-text-secondary)">
@@ -54,7 +54,7 @@ export default async function Home() {
               </p>
             </div>
             <div className="rounded-lg border border-(--color-border-default) bg-(--color-background-surface) px-4 py-4">
-              <p className="text-2xl font-black text-(--color-text-primary)">
+              <p className="break-words text-2xl font-black text-(--color-text-primary)">
                 {featuredLanguage.name}
               </p>
               <p className="mt-1 text-sm font-semibold text-(--color-text-warm-muted)">
@@ -69,19 +69,19 @@ export default async function Home() {
           >
             {languages.map((language) => (
               <Link
-                className="group flex min-h-24 items-center justify-between rounded-lg border border-(--color-border-default) bg-white px-5 py-4 text-(--color-text-primary) shadow-(--shadow-card) transition duration-(--motion-duration-base) ease-out hover:-translate-y-1 hover:border-(--color-primary-500) hover:bg-(--color-background-surface-alt) hover:shadow-(--shadow-card-hover) focus-visible:-translate-y-1 focus-visible:border-(--color-primary-500) focus-visible:bg-(--color-background-surface-alt) focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-(--color-primary-100)"
+                className="group flex min-h-24 items-center justify-between gap-4 rounded-lg border border-(--color-border-default) bg-white px-5 py-4 text-(--color-text-primary) shadow-(--shadow-card) transition duration-(--motion-duration-base) ease-out hover:-translate-y-1 hover:border-(--color-primary-500) hover:bg-(--color-background-surface-alt) hover:shadow-(--shadow-card-hover) focus-visible:-translate-y-1 focus-visible:border-(--color-primary-500) focus-visible:bg-(--color-background-surface-alt) focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-(--color-primary-100)"
                 href={`/${language.slug}`}
                 key={language.slug}
               >
-                <span>
-                  <span className="block text-xl font-black">
+                <span className="min-w-0">
+                  <span className="block break-words text-xl font-black">
                     {language.name}
                   </span>
                   <span className="mt-1 block text-sm font-semibold text-(--color-text-muted)">
                     {language.count} challenges
                   </span>
                 </span>
-                <span className="flex size-10 items-center justify-center rounded-full bg-(--color-primary-100) text-lg font-black text-(--color-primary-500) transition group-hover:bg-(--color-primary-500) group-hover:text-white">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-(--color-primary-100) text-lg font-black text-(--color-primary-500) transition group-hover:bg-(--color-primary-500) group-hover:text-white">
                   {language.name.charAt(0)}
                 </span>
               </Link>

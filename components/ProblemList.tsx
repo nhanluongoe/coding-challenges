@@ -58,12 +58,12 @@ export default function ProblemList({
               <span className="mb-4 inline-flex rounded-full bg-(--color-primary-100) px-3 py-1 text-xs font-black text-(--color-primary-500)">
                 #{String(index + 1).padStart(3, "0")}
               </span>
-              <span className="block text-xl font-black leading-tight">
+              <span className="block break-words text-xl font-black leading-tight">
                 {problem.title}
               </span>
             </span>
             <span className="mt-6 flex items-center justify-between gap-4 border-t border-(--color-border-subtle) pt-4 text-sm font-bold text-(--color-text-muted)">
-              <span>{problem.solution}</span>
+              <span className="min-w-0 break-all">{problem.solution}</span>
               <span className="text-(--color-primary-500) transition group-hover:translate-x-1">
                 Open
               </span>

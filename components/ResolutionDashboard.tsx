@@ -63,9 +63,9 @@ export default function ResolutionDashboard({
         </h2>
       </div>
 
-      <div className="rounded-lg border border-(--color-border-strong) bg-(--color-background-surface) p-5 shadow-(--shadow-panel)">
+      <div className="rounded-lg border border-(--color-border-strong) bg-(--color-background-surface) p-3 shadow-(--shadow-panel) sm:p-5">
         <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_120px]">
-          <div>
+          <div className="min-w-0">
             <div className="overflow-x-auto rounded-lg border border-(--color-border-default) bg-white p-4">
               <div
                 className="grid auto-cols-[14px] grid-flow-col grid-rows-7 gap-1"
@@ -111,7 +111,7 @@ export default function ResolutionDashboard({
           </div>
 
           <div
-            className="flex gap-2 overflow-x-auto lg:flex-col lg:overflow-visible"
+            className="flex min-w-0 gap-2 overflow-x-auto lg:flex-col lg:overflow-visible"
             aria-label="Resolution years"
             role="tablist"
           >

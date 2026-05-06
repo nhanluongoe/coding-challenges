@@ -59,6 +59,7 @@ body {
   color: var(--color-text-secondary);
   font-size: 1rem;
   line-height: 1.8;
+  overflow-wrap: anywhere;
 }
 
 .markdown-content > * + * {
@@ -137,7 +138,7 @@ body {
   margin: 0;
   overflow: visible;
   padding: 1.25rem;
-  font-size: 0.9rem;
+  font-size: 0.86rem;
   line-height: 1.7;
 }
 
@@ -145,4 +146,12 @@ body {
   display: block;
   width: max-content;
   min-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .solution-code pre {
+    padding: 1rem;
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
 }

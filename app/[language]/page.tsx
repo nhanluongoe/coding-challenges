@@ -55,7 +55,7 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
   return (
     <main>
       <div className="mx-auto w-full max-w-6xl">
-        <nav className="mb-10 flex items-center justify-between gap-4">
+        <nav className="mb-10 flex flex-wrap items-center justify-between gap-3">
           <Link
             className="inline-flex items-center rounded-full border border-(--color-border-default) bg-white px-4 py-2 text-sm font-black text-(--color-primary-500) shadow-(--shadow-sm) transition hover:-translate-y-px hover:border-(--color-primary-500) hover:bg-(--color-background-surface-alt) focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-(--color-primary-100)"
             href="/"
@@ -67,12 +67,12 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
           </span>
         </nav>
 
-        <header className="mb-8 grid gap-6 rounded-lg border border-(--color-border-strong) bg-(--color-background-surface) p-6 shadow-(--shadow-panel) sm:p-8 lg:grid-cols-[1fr_auto] lg:items-end">
-          <div>
+        <header className="mb-8 grid gap-6 rounded-lg border border-(--color-border-strong) bg-(--color-background-surface) p-5 shadow-(--shadow-panel) sm:p-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+          <div className="min-w-0">
             <p className="mb-4 inline-flex rounded-full border border-(--color-border-default) bg-white px-4 py-2 text-sm font-bold text-(--color-primary-500)">
               {languageSummary.name} challenge set
             </p>
-            <h1 className="max-w-3xl text-(length:--font-size-language-title) font-black leading-(--font-line-height-language-title) tracking-normal">
+            <h1 className="max-w-3xl break-words text-(length:--font-size-language-title) font-black leading-(--font-line-height-language-title) tracking-normal">
               {languageSummary.name} problems
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-(--color-text-secondary)">
@@ -82,7 +82,7 @@ export default async function LanguagePage({ params }: LanguagePageProps) {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 sm:min-w-64">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:min-w-64">
             <div className="rounded-lg border border-(--color-border-default) bg-white px-4 py-4">
               <p className="text-3xl font-black">{languageSummary.count}</p>
               <p className="mt-1 text-sm font-semibold text-(--color-text-warm-muted)">
