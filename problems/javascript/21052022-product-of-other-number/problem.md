@@ -1,21 +1,25 @@
 ---
 solvedAt: "2022-05-21"
 ---
-
-# Product Of Other Number
+# Product of Other Numbers
 
 - Language: javascript
 - Original path: `javascript/210522-product-of-other-number.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+For each index, return the product of all numbers in the input except the number at that index.
 
-Requirement: cannot use division
+# Solutions
+
+Build prefix products from the left and suffix products from the right, multiplying them without using division.
 Time complexity: O(n)
 Space complexity: O(n)
 
-### Note 2
+# Edge cases
 
-Tests
+- One or more zeros.
+- Negative numbers.
+- Arrays with fewer than two numbers.

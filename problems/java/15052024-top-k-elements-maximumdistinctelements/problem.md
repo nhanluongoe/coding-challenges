@@ -1,22 +1,25 @@
 ---
 solvedAt: "2024-05-15"
 ---
-
-# Top K Elements Maximumdistinctelements
+# Maximum Distinct Elements
 
 - Language: java
 - Original path: `java/top-k-elements/MaximumDistinctElements.java`
+- Source: Algorithm practice
 - Solution: `MaximumDistinctElements.java`
 
-## Notes
+# Problems
 
-### Note 1
+Use priority ordering to select, combine, or rearrange items according to a top-k, closest, kth, or minimum-cost rule.
 
-Problem statement: Given an array of numbers and a number ‘K’, we need to
-remove ‘K’ numbers from the array such that we are left with maximum distinct
-numbers.
+# Solutions
 
-### Note 2
-
+Maintain a heap sized to the useful frontier so the next best candidate can be selected efficiently.
 Time complexity: O(n*logn + k*logn)
 Space complexity: O(n)
+
+# Edge cases
+
+- `k` is zero or equals the input size.
+- Duplicate priorities.
+- Input smaller than the requested count.

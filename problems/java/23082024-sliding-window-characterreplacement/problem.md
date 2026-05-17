@@ -1,22 +1,25 @@
 ---
 solvedAt: "2024-08-23"
 ---
-
-# Sliding Window Characterreplacement
+# Character Replacement
 
 - Language: java
 - Original path: `java/sliding-window/CharacterReplacement.java`
+- Source: Algorithm practice
 - Solution: `CharacterReplacement.java`
 
-## Notes
+# Problems
 
-### Note 1
+Find the longest window that can be made uniform by replacing at most `k` characters or zeros.
 
-Given a string with lowercase letters only,
-if you are allowed to replace no more than ‘k’ letters with any letter,
-find the length of the longest substring having the same letters after replacement.
+# Solutions
 
-### Note 2
-
+Use a sliding window and keep the count of the dominant value; shrink when replacements needed exceed `k`.
 Time complexity: O(n), n is the length of the string
 Space complexity: O(26) -> O(1), 26 lowercase letters
+
+# Edge cases
+
+- `k` is zero.
+- `k` covers the whole input.
+- Multiple values tie for most frequent.

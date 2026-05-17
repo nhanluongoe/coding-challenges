@@ -1,28 +1,25 @@
 ---
 solvedAt: "2024-04-17"
 ---
-
-# Top K Elements Kthlargestnumberinstream
+# Kth Largest Number in a Stream
 
 - Language: java
 - Original path: `java/top-k-elements/KthLargestNumberInStream.java`
+- Source: Algorithm practice
 - Solution: `KthLargestNumberInStream.java`
 
-## Notes
+# Problems
 
-### Note 1
+Use priority ordering to select, combine, or rearrange items according to a top-k, closest, kth, or minimum-cost rule.
 
-Problem statement: Design a class to efficiently find the Kth largest element
-in a stream of numbers.
+# Solutions
 
-The class should have the following two things:
-
-The constructor of the class should accept an integer array containing
-initial numbers from the stream and an integer ‘K’.
-The class should expose a function add(int num) which will store the given
-number and return the Kth largest number.
-
-### Note 2
-
+Maintain a heap sized to the useful frontier so the next best candidate can be selected efficiently.
 Time complexity: O(logk)
 Space complexity: O(k)
+
+# Edge cases
+
+- `k` is zero or equals the input size.
+- Duplicate priorities.
+- Input smaller than the requested count.

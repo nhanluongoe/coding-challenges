@@ -1,22 +1,25 @@
 ---
 solvedAt: "2024-09-19"
 ---
-
-# K Way Merge Mergeksortedlists
+# Merge K Sorted Lists
 
 - Language: java
 - Original path: `java/k-way-merge/MergeKSortedLists.java`
+- Source: Algorithm practice
 - Solution: `MergeKSortedLists.java`
 
-## Notes
+# Problems
 
-### Note 1
+Combine or search across multiple sorted lists while preserving sorted order or coverage requirements.
 
-Problem statement: Given an array of ‘K’ sorted LinkedLists, merge them into
-one sorted list.
+# Solutions
 
-### Note 2
-
+Use a min-heap containing one current item from each list, advancing only the list that contributed the smallest item.
 Time complexity: O(n*logk), n is total numbers, k is the number of input
-arrays
 Space complexity: O(k)
+
+# Edge cases
+
+- One list is empty.
+- Lists have different lengths.
+- Duplicate values across lists.

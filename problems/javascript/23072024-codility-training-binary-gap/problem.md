@@ -1,23 +1,23 @@
 ---
 solvedAt: "2024-07-23"
 ---
-
-# Codility Training Binary Gap
+# Binary Gap
 
 - Language: javascript
 - Original path: `javascript/codility-training/binary-gap.ts`
+- Source: Codility-style
 - Solution: `code.ts`
 
-## Notes
+# Problems
 
-### Note 1
+Given a positive integer, find the longest run of zeros surrounded by ones in its binary representation.
 
-you can write to stdout for debugging purposes, e.g.
+# Solutions
 
-### Note 2
+Convert or scan bits, counting zeros only after the first one and resetting the best count at each closing one.
 
-console.log('this is a debug message');
+# Edge cases
 
-### Note 3
-
-Implement your solution here
+- No closed gap.
+- Trailing zeros.
+- Multiple gaps with different lengths.

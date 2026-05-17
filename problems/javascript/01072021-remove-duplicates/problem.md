@@ -1,26 +1,23 @@
 ---
 solvedAt: "2021-07-01"
 ---
-
 # Remove Duplicates
 
 - Language: javascript
 - Original path: `javascript/010721-remove-duplicates.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+Remove duplicates from a sorted array in place and return the new logical length.
 
-## Notes
+# Solutions
 
-### Note 1
+Use a slow pointer for the next unique slot and a fast pointer to scan the array.
 
-Singly linked list definition
+# Edge cases
 
-### Note 2
-
-https://leetcode.com/problems/remove-duplicates-from-sorted-list/
-
-@param {ListNode} head
-@returns {ListNode}
+- Empty input.
+- All values are duplicates.
+- No duplicates.

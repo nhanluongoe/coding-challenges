@@ -1,56 +1,25 @@
 ---
 solvedAt: "2024-07-04"
 ---
-
-# Sliding Window Stringpermutation
+# String Permutation
 
 - Language: java
 - Original path: `java/sliding-window/StringPermutation.java`
+- Source: Algorithm practice
 - Solution: `StringPermutation.java`
 
-## Notes
+# Problems
 
-### Note 1
+Determine where a string contains a permutation or anagram of a given pattern.
 
+# Solutions
+
+Use a fixed-size sliding window with character counts and track when all pattern requirements are matched.
 Time complexity: O(n)
 Space complexity: O(1)
 
-### Note 2
+# Edge cases
 
-permutation of
-
-### Note 3
-
-the given pattern.
-
-### Note 4
-
-of the pattern is present in the
-
-### Note 5
-
-given
-
-### Note 6
-
-string as a substring.
-
-### Note 7
-
-the string and the pattern are a
-
-### Note 8
-
-permutation of each other.
-
-### Note 9
-
-contains "acb" which is a permutation
-
-### Note 10
-
-of the
-
-### Note 11
-
-given pattern.
+- Pattern longer than the string.
+- Repeated pattern characters.
+- Match starts at index zero or at the final possible index.

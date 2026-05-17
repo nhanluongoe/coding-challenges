@@ -1,24 +1,25 @@
 ---
 solvedAt: "2024-04-07"
 ---
-
-# Top K Elements Kthsmallestnumber
+# Kth Smallest Number
 
 - Language: java
 - Original path: `java/top-k-elements/KthSmallestNumber.java`
+- Source: Algorithm practice
 - Solution: `KthSmallestNumber.java`
 
-## Notes
+# Problems
 
-### Note 1
+Use priority ordering to select, combine, or rearrange items according to a top-k, closest, kth, or minimum-cost rule.
 
-Problem statement: Given an unsorted array of numbers, find Kth smallest
-number in it.
+# Solutions
 
-Please note that it is the Kth smallest number in the sorted order, not the
-Kth distinct element.
-
-### Note 2
-
+Maintain a heap sized to the useful frontier so the next best candidate can be selected efficiently.
 Time complexity: O(k*logk + (n - k)*logk)
 Space complexity: O(k)
+
+# Edge cases
+
+- `k` is zero or equals the input size.
+- Duplicate priorities.
+- Input smaller than the requested count.

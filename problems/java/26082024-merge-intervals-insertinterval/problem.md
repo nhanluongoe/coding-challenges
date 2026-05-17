@@ -1,29 +1,25 @@
 ---
 solvedAt: "2024-08-26"
 ---
-
-# Merge Intervals Insertinterval
+# Insert Interval
 
 - Language: java
 - Original path: `java/merge-intervals/InsertInterval.java`
+- Source: Algorithm practice
 - Solution: `InsertInterval.java`
 
-## Notes
+# Problems
 
-### Note 1
+Insert a new interval into an existing sorted list of non-overlapping intervals and merge any overlaps.
 
-Constraint: intervals is non-overlapping and sorted
+# Solutions
 
-### Note 2
-
+Copy intervals ending before the new interval, merge all overlapping intervals into it, then append the remaining intervals.
 Time complexity: O(n)
 Space complexity: O(n)
 
-### Note 3
+# Edge cases
 
-Time complexity: O(n*logn)
-Space complexity: O(n)
-
-### Note 4
-
-Add the last interval
+- New interval belongs before all or after all intervals.
+- New interval overlaps several intervals.
+- Empty interval list.

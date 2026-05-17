@@ -1,20 +1,23 @@
 ---
 solvedAt: "2024-07-02"
 ---
-
 # Promise Resolve
 
 - Language: javascript
 - Original path: `javascript/020724-promise-resolve.js`
+- Source: JavaScript utility
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Implement promise resolution behavior for plain values, thenables, and existing promises.
 
-@param {*} value
-@returns Promise
+# Solutions
 
-### Note 2
+Return existing promises unchanged, assimilate thenables by calling `then`, and otherwise fulfill with the provided value.
 
-Test
+# Edge cases
+
+- Value is already a promise.
+- Thenable calls resolve asynchronously.
+- Thenable throws while being read or called.

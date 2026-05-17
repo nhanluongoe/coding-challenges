@@ -1,20 +1,23 @@
 ---
 solvedAt: "2021-07-15"
 ---
-
-# Valid Panlidrome
+# Valid Palindrome
 
 - Language: javascript
 - Original path: `javascript/150721-valid-panlidrome.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/valid-palindrome/
+Determine whether the input can form or already is a palindrome under the problem's normalization rules.
 
-## Notes
+# Solutions
 
-https://leetcode.com/problems/valid-palindrome/
+Normalize ignored characters, then compare characters from both ends.
 
-@param {string} s
-@return {boolean}
+# Edge cases
+
+- Mixed case and punctuation.
+- Empty or one-character strings.
+- Exactly one odd character count.

@@ -1,15 +1,25 @@
 ---
 solvedAt: "2024-07-24"
 ---
-
-# Two Pointers Tripletsumclosetotarget
+# Triplet Sum Close to Target
 
 - Language: java
 - Original path: `java/two-pointers/TripletSumCloseToTarget.java`
+- Source: JavaScript utility
 - Solution: `TripletSumCloseToTarget.java`
 
-## Notes
+# Problems
 
-Constraint: If there're more than one such triplets, return the triplet with smallest sum
+Implement `class TripletSumCloseToTarget` for the Triplet Sum Close to Target challenge using the behavior implied by the existing solution and tests.
+
+# Solutions
+
+Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.
 Time complexity: O(n*logn + n^2)
 Space complexity: O(n) required for sorting
+
+# Edge cases
+
+- Empty or minimal input.
+- Duplicate or repeated values.
+- Boundary values at the start or end of the structure.

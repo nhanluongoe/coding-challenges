@@ -1,31 +1,23 @@
 ---
 solvedAt: "2021-07-28"
 ---
-
-# Intersection Of Two Linked List
+# Intersection of Two Linked List
 
 - Language: javascript
 - Original path: `javascript/280721-intersection-of-two-linked-list.js`
+- Source: JavaScript utility
 - Solution: `code.js`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/intersection-of-two-linked-lists/
+Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
 
-## Notes
+# Solutions
 
-### Note 1
+Use pointer techniques that preserve node identity and adjust links without copying node values.
 
-https://leetcode.com/problems/intersection-of-two-linked-lists/
+# Edge cases
 
-Definition for singly-linked list.
-function ListNode(val) {
-    this.val = val;
-    this.next = null;
-}
-
-### Note 2
-
-@param {ListNode} headA
-@param {ListNode} headB
-@return {ListNode}
+- Empty list.
+- Single-node list.
+- Cycle or target node at the head.

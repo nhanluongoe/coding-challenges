@@ -1,47 +1,23 @@
 ---
 solvedAt: "2024-02-13"
 ---
-
 # Lucky Wheel
 
 - Language: javascript
 - Original path: `javascript/lucky-wheel.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Randomly choose a gift according to configured probabilities.
 
-Test result
+# Solutions
 
-### Note 2
+Convert weights into cumulative ranges and pick the first range containing a generated random number.
 
-Calculate the total quantity of all gifts.
+# Edge cases
 
-### Note 3
-
-Generate a random number between 0 and the total quantity.
-
-### Note 4
-
-Find the gift based on the random number and the gift probabilities.
-
-### Note 5
-
-let loopCount = 0
-
-### Note 6
-
-loopCount++
-
-### Note 7
-
-console.log('loop count ', loopCount)
-
-### Note 8
-
-Pick gift <loop> times
-
-### Note 9
-
-Calculate distribution for <loop> times
+- Probabilities do not sum cleanly.
+- Zero-probability gifts.
+- Random value at a boundary.

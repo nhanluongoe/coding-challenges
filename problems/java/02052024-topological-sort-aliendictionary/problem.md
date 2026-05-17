@@ -1,48 +1,25 @@
 ---
 solvedAt: "2024-05-02"
 ---
-
-# Topological Sort Aliendictionary
+# Alien Dictionary
 
 - Language: java
 - Original path: `java/topological-sort/AlienDictionary.java`
+- Source: Algorithm practice
 - Solution: `AlienDictionary.java`
 
-## Notes
+# Problems
 
-### Note 1
+Given dependency rules, determine whether an ordering exists and return one or all valid orderings as required.
 
-Problem statement: There is a dictionary containing words from an alien
-language for which we don’t know the ordering of the characters. Write a
-method to find the correct order of characters in the alien language.
+# Solutions
 
-### Note 2
-
+Build a graph and in-degree counts, then apply Kahn's BFS topological sort; branch recursively when all possible orders are needed.
 Time complexity: O(V+E + E*L), "V" is the number of distinct characters, "E"
-is the
-number of words, "L" is the longest word in all words
 Space complexity: O(V+E)
 
-### Note 3
+# Edge cases
 
-initialize the graph
-
-### Note 4
-
-build the graph
-
-### Note 5
-
-find all sources
-
-### Note 6
-
-sort
-
-### Note 7
-
-if sb doesn't contain all characters, there is a cyclic dependency between
-
-### Note 8
-
-characters => will not be able to find correct ordering of characters
+- Cycle in dependencies.
+- Disconnected tasks.
+- Multiple valid orders.

@@ -1,59 +1,23 @@
 ---
 solvedAt: "2021-07-17"
 ---
-
 # Linked List Cycle
 
 - Language: ruby
 - Original path: `ruby/170721-linked-list-cycle.rb`
+- Source: Algorithm practice
 - Solution: `code.rb`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/linked-list-cycle/
+Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
 
-## Notes
+# Solutions
 
-### Note 1
+Use fast and slow pointers; if they meet, the list contains a cycle.
 
-Definition for singly-linked list.
+# Edge cases
 
-### Note 2
-
-class ListNode
-
-### Note 3
-
-attr_accessor :val, :next
-
-### Note 4
-
-def initialize(val)
-
-### Note 5
-
-@val = val
-
-### Note 6
-
-@next = nil
-
-### Note 7
-
-end
-
-### Note 8
-
-end
-
-### Note 9
-
-https://leetcode.com/problems/linked-list-cycle/
-
-### Note 10
-
-# @param {ListNode} head
-
-### Note 11
-
-@return {Boolean}
+- Empty list.
+- Single-node list.
+- Cycle or target node at the head.

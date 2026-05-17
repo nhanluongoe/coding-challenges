@@ -1,15 +1,23 @@
 ---
 solvedAt: "2023-06-12"
 ---
-
 # Deep Equal
 
 - Language: javascript
 - Original path: `javascript/120623-deep-equal.js`
+- Source: JavaScript utility
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-@param {*} valueA
-@param {*} valueB
-@return {boolean}
+Compare two values for deep structural equality.
+
+# Solutions
+
+Check primitive equality first, then recursively compare arrays and object keys/values.
+
+# Edge cases
+
+- Different key order.
+- Arrays versus objects.
+- `null`, `NaN`, and primitive edge cases.

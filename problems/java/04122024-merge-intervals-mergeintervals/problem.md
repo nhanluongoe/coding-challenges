@@ -1,14 +1,25 @@
 ---
 solvedAt: "2024-12-04"
 ---
-
-# Merge Intervals Mergeintervals
+# Merge Intervals
 
 - Language: java
 - Original path: `java/merge-intervals/MergeIntervals.java`
+- Source: Algorithm practice
 - Solution: `MergeIntervals.java`
 
-## Notes
+# Problems
 
+Given time intervals, combine every overlapping or touching interval and return the condensed schedule.
+
+# Solutions
+
+Sort intervals by start time, then scan once while extending the current interval whenever the next interval overlaps.
 Time complexity: O(n*logn)
 Space complexity: O(n)
+
+# Edge cases
+
+- Empty or single-interval input.
+- Intervals that only touch at an endpoint.
+- Input intervals arriving out of order.

@@ -1,21 +1,25 @@
 ---
 solvedAt: "2024-12-30"
 ---
-
-# Largeststack
+# Largest Stack
 
 - Language: java
 - Original path: `java/LargestStack.java`
+- Source: Algorithm practice
 - Solution: `LargestStack.java`
 
-## Notes
+# Problems
 
-### Note 1
+Implement a stack that can return the current minimum or maximum in constant time.
 
+# Solutions
+
+Store each pushed value with the best value seen so far, or maintain an auxiliary stack of extrema.
 Time complexity: O(n)
 Space complexity: O(n)
 
-### Note 2
+# Edge cases
 
-Time Complexity: O(1)
-Space complexity: O(n)
+- Pop from an empty stack, if the API allows it.
+- Duplicate extrema.
+- Extremum changes after pop.

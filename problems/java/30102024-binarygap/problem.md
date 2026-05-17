@@ -1,14 +1,25 @@
 ---
 solvedAt: "2024-10-30"
 ---
-
-# Binarygap
+# Binary Gap
 
 - Language: java
 - Original path: `java/BinaryGap.java`
+- Source: Algorithm practice
 - Solution: `BinaryGap.java`
 
-## Notes
+# Problems
 
+Given a positive integer, find the longest run of zeros surrounded by ones in its binary representation.
+
+# Solutions
+
+Convert or scan bits, counting zeros only after the first one and resetting the best count at each closing one.
 Time complexity: O(logn) + O(n) => O(n)
 Space complexity: O(1)
+
+# Edge cases
+
+- No closed gap.
+- Trailing zeros.
+- Multiple gaps with different lengths.

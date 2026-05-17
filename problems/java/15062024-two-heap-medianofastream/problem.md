@@ -1,25 +1,25 @@
 ---
 solvedAt: "2024-06-15"
 ---
-
-# Two Heap Medianofastream
+# Median of a Stream
 
 - Language: java
 - Original path: `java/two-heap/MedianOfAStream.java`
+- Source: Algorithm practice
 - Solution: `MedianOfAStream.java`
 
-## Notes
+# Problems
 
-### Note 1
+Maintain medians while values stream in or while a fixed-size window moves across an array.
 
-Design a class to calculate the median of a number stream. The class should
-have the following two methods:
-1. insertNum(int num): stores the number in the class
-2. findMedian(): returns the median of all numbers inserted in the class
-If the count of numbers inserted in the class is even, the median will be
-the average of the middle two numbers.
+# Solutions
 
-### Note 2
-
+Keep a max-heap for the lower half and a min-heap for the upper half, rebalancing after inserts and removals.
 Time complexity: O(logn)
 Space complexity: O(n)
+
+# Edge cases
+
+- Even versus odd counts.
+- Duplicate values.
+- Removing values as the sliding window advances.

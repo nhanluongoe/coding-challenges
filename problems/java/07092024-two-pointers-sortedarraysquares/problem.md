@@ -1,20 +1,25 @@
 ---
 solvedAt: "2024-09-07"
 ---
-
-# Two Pointers Sortedarraysquares
+# Sorted Array Squares
 
 - Language: java
 - Original path: `java/two-pointers/SortedArraySquares.java`
+- Source: Algorithm practice
 - Solution: `SortedArraySquares.java`
 
-## Notes
+# Problems
 
-### Note 1
+Given a sorted array that may contain negatives, return the squares in sorted order.
 
-Constraint: input array is sorted
+# Solutions
 
-### Note 2
-
+Compare absolute values from both ends and fill the result from right to left.
 Time complexity: O(n)
 Space complexity: O(n)
+
+# Edge cases
+
+- All negative values.
+- All non-negative values.
+- Zeros and duplicate absolute values.

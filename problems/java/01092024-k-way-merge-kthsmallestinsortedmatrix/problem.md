@@ -1,21 +1,25 @@
 ---
 solvedAt: "2024-09-01"
 ---
-
-# K Way Merge Kthsmallestinsortedmatrix
+# Kth Smallest in Sorted Matrix
 
 - Language: java
 - Original path: `java/k-way-merge/KthSmallestInSortedMatrix.java`
+- Source: Algorithm practice
 - Solution: `KthSmallestInSortedMatrix.java`
 
-## Notes
+# Problems
 
-### Note 1
+Use priority ordering to select, combine, or rearrange items according to a top-k, closest, kth, or minimum-cost rule.
 
-Problem statement: Given an N * N matrix where each row and column is
-sorted in ascending order, find the Kth smallest element in the matrix.
+# Solutions
 
-### Note 2
-
-Time complexity:O(k*logn)
+Maintain a heap sized to the useful frontier so the next best candidate can be selected efficiently.
+Time complexity: O(k*logn)
 Space complexity: O(n)
+
+# Edge cases
+
+- `k` is zero or equals the input size.
+- Duplicate priorities.
+- Input smaller than the requested count.

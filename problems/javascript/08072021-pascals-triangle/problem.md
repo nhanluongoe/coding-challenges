@@ -1,20 +1,23 @@
 ---
 solvedAt: "2021-07-08"
 ---
-
 # Pascals Triangle
 
 - Language: javascript
 - Original path: `javascript/080721-pascals-triangle.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/pascals-triangle/
+Generate Pascal's Triangle rows or return the requested row.
 
-## Notes
+# Solutions
 
-https://leetcode.com/problems/pascals-triangle/
+Build each row from the previous row, using `1` at both ends and adjacent sums in the middle.
 
-@param {number} numRows
-@return {number[][]}
+# Edge cases
+
+- Zero or one requested row.
+- Requested row index zero.
+- Large row index.

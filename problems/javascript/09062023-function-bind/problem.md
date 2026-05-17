@@ -1,36 +1,23 @@
 ---
 solvedAt: "2023-06-09"
 ---
-
 # Function Bind
 
 - Language: javascript
 - Original path: `javascript/090623-function-bind.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Implement function binding with a fixed `this` value and optional preset arguments.
 
-@param {any} thisArg
-@param {...*} boundArgs
+# Solutions
 
-### Note 2
+Return a wrapper that calls the original function with the bound context and concatenated arguments.
 
-Using Reflect to avoid there's a property "call" or "apply" in ...
+# Edge cases
 
-### Note 3
-
-the originalMethod so we can't use originalMethod.apply(...) or originalMethod.call(...)
-
-### Note 4
-
-console.log(unboundGetX()); // The function gets invoked at the global scope
-
-### Note 5
-
-Expected output: undefined
-
-### Note 6
-
-Expected output: 42
+- Partial application.
+- Calling with additional arguments.
+- Constructor behavior if required.

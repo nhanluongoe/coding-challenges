@@ -1,26 +1,25 @@
 ---
 solvedAt: "2024-03-08"
 ---
-
-# Tree Dfs Alltreepath
+# All Tree Paths
 
 - Language: java
 - Original path: `java/tree-dfs/AllTreePath.java`
+- Source: Algorithm practice
 - Solution: `AllTreePath.java`
 
-## Notes
+# Problems
 
-### Note 1
+Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
 
-Problem statement: Given a binary tree and a number ‘S’, find all paths from
-root-to-leaf such that the sum of all the node values of each path equals
-‘S’.
+# Solutions
 
-### Note 2
+Use recursive depth-first traversal, returning the information each parent needs from its children.
+Time complexity: O(N^2) Where ‘N’ is the total number of nodes in the tree.
+Space complexity: O(N * logN). Maximum leaves is N/2 => Maximum paths
 
-||Time complexity: O(N^2) Where ‘N’ is the total number of nodes in the tree.
-This is due to the
-fact that we traverse each node once (which will take O(N), and for
-every leaf node we might have to store its path which will take O(N).
-|| Space complexity: O(N * logN). Maximum leaves is N/2 => Maximum paths
-O(N/2) = O(N). Each path can have at most logN nodes
+# Edge cases
+
+- Empty tree.
+- Single-node tree.
+- Skewed tree that stresses recursion depth or balance checks.

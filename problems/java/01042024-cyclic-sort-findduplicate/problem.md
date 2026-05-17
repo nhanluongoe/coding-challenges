@@ -1,23 +1,25 @@
 ---
 solvedAt: "2024-04-01"
 ---
-
-# Cyclic Sort Findduplicate
+# Find Duplicate
 
 - Language: java
 - Original path: `java/cyclic-sort/FindDuplicate.java`
+- Source: Algorithm practice
 - Solution: `FindDuplicate.java`
 
-## Notes
+# Problems
 
-### Note 1
+Find a repeated value in an array whose values are constrained to a known range.
 
-Problem statement: We are given an unsorted array containing ‘n+1’ numbers
-taken from the range 1 to ‘n’. The array has only one duplicate but it can be
-repeated multiple times. Find that duplicate number without using any extra
-space. You are, however, allowed to modify the input array.
+# Solutions
 
-### Note 2
-
+Place each value at its matching index with cyclic sort; the value that cannot be placed uniquely is the duplicate.
 Time complexity: O(n)
 Space complexity: O(1)
+
+# Edge cases
+
+- Duplicate appears more than twice.
+- Smallest or largest allowed value is duplicated.
+- Input has the minimum valid length.

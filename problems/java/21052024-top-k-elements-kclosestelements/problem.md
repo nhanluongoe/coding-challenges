@@ -1,22 +1,25 @@
 ---
 solvedAt: "2024-05-21"
 ---
-
-# Top K Elements Kclosestelements
+# K Closest Elements
 
 - Language: java
 - Original path: `java/top-k-elements/KClosestElements.java`
+- Source: Algorithm practice
 - Solution: `KClosestElements.java`
 
-## Notes
+# Problems
 
-### Note 1
+Use priority ordering to select, combine, or rearrange items according to a top-k, closest, kth, or minimum-cost rule.
 
-Problem statement: Given a sorted number array and two integers ‘K’ and ‘X’,
-find ‘K’ closest numbers to ‘X’ in the array. Return the numbers in the
-sorted order. ‘X’ is not necessarily present in the array.
+# Solutions
 
-### Note 2
-
+Maintain a heap sized to the useful frontier so the next best candidate can be selected efficiently.
 Time complexity: O(K*logK + (n - K)*logK)
 Space complexity: O(K)
+
+# Edge cases
+
+- `k` is zero or equals the input size.
+- Duplicate priorities.
+- Input smaller than the requested count.

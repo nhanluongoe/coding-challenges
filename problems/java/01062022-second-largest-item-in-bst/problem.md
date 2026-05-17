@@ -1,19 +1,23 @@
 ---
 solvedAt: "2022-06-01"
 ---
-
-# Second Largest Item In Bst
+# Second Largest Item in BST
 
 - Language: java
 - Original path: `java/010622-second-largest-item-in-bst.java`
+- Source: Algorithm practice
 - Solution: `010622-second-largest-item-in-bst.java`
 
-## Notes
+# Problems
 
-### Note 1
+Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
 
-TODO: handle exception here, haven't gotten this yet
+# Solutions
 
-### Note 2
+Use recursive depth-first traversal, returning the information each parent needs from its children.
 
-tests
+# Edge cases
+
+- Empty tree.
+- Single-node tree.
+- Skewed tree that stresses recursion depth or balance checks.

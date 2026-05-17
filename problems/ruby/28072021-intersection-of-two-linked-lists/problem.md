@@ -1,63 +1,23 @@
 ---
 solvedAt: "2021-07-28"
 ---
-
-# Intersection Of Two Linked Lists
+# Intersection of Two Linked Lists
 
 - Language: ruby
 - Original path: `ruby/280721-intersection-of-two-linked-lists.rb`
+- Source: JavaScript utility
 - Solution: `code.rb`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/intersection-of-two-linked-lists/
+Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
 
-## Notes
+# Solutions
 
-### Note 1
+Use pointer techniques that preserve node identity and adjust links without copying node values.
 
-Definition for singly-linked list.
+# Edge cases
 
-### Note 2
-
-class ListNode
-
-### Note 3
-
-attr_accessor :val, :next
-
-### Note 4
-
-def initialize(val)
-
-### Note 5
-
-@val = val
-
-### Note 6
-
-@next = nil
-
-### Note 7
-
-end
-
-### Note 8
-
-end
-
-### Note 9
-
-https://leetcode.com/problems/intersection-of-two-linked-lists/
-
-### Note 10
-
-# @param {ListNode} headA
-
-### Note 11
-
-@param {ListNode} headB
-
-### Note 12
-
-@return {ListNode}
+- Empty list.
+- Single-node list.
+- Cycle or target node at the head.

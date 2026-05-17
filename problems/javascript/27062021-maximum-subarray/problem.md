@@ -1,19 +1,23 @@
 ---
 solvedAt: "2021-06-27"
 ---
-
 # Maximum Subarray
 
 - Language: javascript
 - Original path: `javascript/270621-maximum-subarray.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/maximum-subarray/
+Find the maximum possible sum of any contiguous subarray.
 
-## Notes
+# Solutions
 
-https://leetcode.com/problems/maximum-subarray/
+Use Kadane's algorithm, extending the current sum when helpful and restarting when the current prefix hurts the result.
 
-O(n)
+# Edge cases
+
+- All numbers are negative.
+- Single-element input.
+- Zeros mixed with positive and negative values.

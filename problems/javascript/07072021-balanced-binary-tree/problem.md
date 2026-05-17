@@ -1,26 +1,23 @@
 ---
 solvedAt: "2021-07-07"
 ---
-
 # Balanced Binary Tree
 
 - Language: javascript
 - Original path: `javascript/070721-balanced-binary-tree.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/balanced-binary-tree/
+Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
 
-## Notes
+# Solutions
 
-### Note 1
+Use recursive depth-first traversal, returning the information each parent needs from its children.
 
-https://leetcode.com/problems/balanced-binary-tree/
+# Edge cases
 
-@param {TreeNode} root
-@return {boolean}
-
-### Note 2
-
-Definition for a binary tree node.
+- Empty tree.
+- Single-node tree.
+- Skewed tree that stresses recursion depth or balance checks.

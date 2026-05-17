@@ -1,26 +1,25 @@
 ---
 solvedAt: "2024-11-21"
 ---
-
-# Top K Elements Sumofelements
+# Sum of Elements
 
 - Language: java
 - Original path: `java/top-k-elements/SumOfElements.java`
+- Source: Algorithm practice
 - Solution: `SumOfElements.java`
 
-## Notes
+# Problems
 
-### Note 1
+Use priority ordering to select, combine, or rearrange items according to a top-k, closest, kth, or minimum-cost rule.
 
-Problem statement: Given an array, find the sum of all numbers between the
-K1’th and K2’th smallest elements of that array.
+# Solutions
 
-### Note 2
-
+Maintain a heap sized to the useful frontier so the next best candidate can be selected efficiently.
 Time complexity: O(k1*logk1 + (n-k1)*logk1 + k2*logk2 + (n-k2)*logk2 + n)
 Space complexity: O(k1 + k2)
 
-### Note 3
+# Edge cases
 
-Time complexity: O(n*logn)
-Space complexity: O(n)
+- `k` is zero or equals the input size.
+- Duplicate priorities.
+- Input smaller than the requested count.

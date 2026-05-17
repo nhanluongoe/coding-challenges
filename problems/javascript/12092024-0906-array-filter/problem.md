@@ -1,27 +1,23 @@
 ---
 solvedAt: "2024-09-12"
 ---
-
 # Array Filter
 
 - Language: javascript
 - Original path: `javascript/0906-array-filter.js`
+- Source: JavaScript utility
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Implement array filtering with callback arguments matching the native API.
 
-cache the length of the array to avoid the array being modified
+# Solutions
 
-### Note 2
+Iterate over present indexes, call the predicate with value, index, and array, and collect values whose predicate is truthy.
 
-ignore the index if value is not defined (spare array ex: [1, 2,, 3])
+# Edge cases
 
-### Note 3
-
-Sparse arrays have `undefined` as the values. Use === undefined to
-
-### Note 4
-
-include them even after filtering.
+- Empty arrays.
+- `thisArg` binding.
+- Sparse arrays.

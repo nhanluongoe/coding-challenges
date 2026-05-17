@@ -1,29 +1,25 @@
 ---
 solvedAt: "2024-05-01"
 ---
-
-# Parenthesismatching
+# Parenthesis Matching
 
 - Language: java
 - Original path: `java/ParenthesisMatching.java`
+- Source: Algorithm practice
 - Solution: `ParenthesisMatching.java`
 
-## Notes
+# Problems
 
-### Note 1
+Implement `class ParenthesisMatching` for the Parenthesis Matching challenge using the behavior implied by the existing solution and tests.
 
+# Solutions
+
+Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.
 Time complexity: O(n)
 Space complexity: O(n)
 
-### Note 2
+# Edge cases
 
-Time complexity: O(n)
-Space complexity: O(1)
-
-### Note 3
-
-Method 1
-
-### Note 4
-
-Method 2
+- Empty or minimal input.
+- Duplicate or repeated values.
+- Boundary values at the start or end of the structure.

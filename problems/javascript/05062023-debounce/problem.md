@@ -1,27 +1,23 @@
 ---
 solvedAt: "2023-06-05"
 ---
-
 # Debounce
 
 - Language: javascript
 - Original path: `javascript/050623-debounce.js`
+- Source: JavaScript utility
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Create a debounced function that delays execution until calls stop for the specified delay.
 
-Implement a debounce function
+# Solutions
 
-### Note 2
+Keep the latest timer id, clear it on every call, and invoke the original function with the latest arguments after the timer expires.
 
-Test
+# Edge cases
 
-### Note 3
-
-Normal case
-
-### Note 4
-
-Edge case: callback can access "this"
+- Rapid repeated calls.
+- `this` context.
+- Arguments from the final call.

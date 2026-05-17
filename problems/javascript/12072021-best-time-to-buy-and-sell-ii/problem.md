@@ -1,20 +1,23 @@
 ---
 solvedAt: "2021-07-12"
 ---
-
-# Best Time To Buy And Sell Ii
+# Best Time to Buy and Sell II
 
 - Language: javascript
 - Original path: `javascript/120721-best-time-to-buy-and-sell-ii.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
+Given daily prices, compute the best profit from buying before selling under the variant's transaction rule.
 
-## Notes
+# Solutions
 
-https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
+Accumulate every positive day-to-day price increase to model unlimited profitable transactions.
 
-@param {number[]} prices
-@return {number}
+# Edge cases
+
+- Prices always decrease.
+- Only one or no price.
+- Repeated equal prices.

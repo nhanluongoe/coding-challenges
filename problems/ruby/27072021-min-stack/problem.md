@@ -1,35 +1,23 @@
 ---
 solvedAt: "2021-07-27"
 ---
-
 # Min Stack
 
 - Language: ruby
 - Original path: `ruby/270721-min-stack.rb`
+- Source: Algorithm practice
 - Solution: `code.rb`
 
-## Notes
+# Problems
 
-### Note 1
+Implement a stack that can return the current minimum or maximum in constant time.
 
-Your MinStack object will be instantiated and called as such:
+# Solutions
 
-### Note 2
+Store each pushed value with the best value seen so far, or maintain an auxiliary stack of extrema.
 
-obj = MinStack.new()
+# Edge cases
 
-### Note 3
-
-obj.push(val)
-
-### Note 4
-
-obj.pop()
-
-### Note 5
-
-param_3 = obj.top()
-
-### Note 6
-
-param_4 = obj.get_min()
+- Pop from an empty stack, if the API allows it.
+- Duplicate extrema.
+- Extremum changes after pop.

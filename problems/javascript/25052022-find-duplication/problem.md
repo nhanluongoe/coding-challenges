@@ -1,31 +1,25 @@
 ---
 solvedAt: "2022-05-25"
 ---
-
-# Find Duplication
+# Find Duplicate
 
 - Language: javascript
 - Original path: `javascript/250522-find-duplication.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Find a repeated value in an array whose values are constrained to a known range.
 
-Note that:
-1. The integers are in the range 1..n
-2. The length of array is n + 1
+# Solutions
 
-### Note 2
-
+Use either a seen set or a cycle-detection/counting approach depending on the space constraint.
 Time complexity: O(nlogn)
 Space complexity: O(n)
 
-### Note 3
+# Edge cases
 
-Time complexity: O(nlogn)
-Space complexity: O(1)
-
-### Note 4
-
-Tests
+- Duplicate appears more than twice.
+- Smallest or largest allowed value is duplicated.
+- Input has the minimum valid length.

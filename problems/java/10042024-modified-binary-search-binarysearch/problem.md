@@ -1,26 +1,25 @@
 ---
 solvedAt: "2024-04-10"
 ---
-
-# Modified Binary Search Binarysearch
+# Binary Search
 
 - Language: java
 - Original path: `java/modified-binary-search/BinarySearch.java`
+- Source: Algorithm practice
 - Solution: `BinarySearch.java`
 
-## Notes
+# Problems
 
-### Note 1
+Search a sorted or specially ordered collection for the requested target, range, boundary, or closest value.
 
-Problem statement: Given a sorted array of numbers, find if a given number
-‘key’ is present in the array. Though we know that the array is sorted, we
-don’t know if it’s sorted in ascending or descending order. You should assume
-that the array can have duplicates.
+# Solutions
 
-Write a function to return the index of the ‘key’ if it is present in the
-array, otherwise return -1.
-
-### Note 2
-
+Use binary search, adjusting the boundaries according to whether the target lies left or right of the midpoint.
 Time complexity: O(logn)
 Space complexity: O(1)
+
+# Edge cases
+
+- Target smaller than the first item or larger than the last.
+- Duplicate target values.
+- One-element input.

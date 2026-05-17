@@ -1,31 +1,23 @@
 ---
 solvedAt: "2021-07-16"
 ---
-
 # Single Number
 
 - Language: ruby
 - Original path: `ruby/160721-single-number.rb`
+- Source: Algorithm practice
 - Solution: `code.rb`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/single-number/
+Find the value that appears once when every other value appears twice.
 
-## Notes
+# Solutions
 
-### Note 1
+XOR all values; duplicate pairs cancel out and the single value remains.
 
-https://leetcode.com/problems/single-number/
+# Edge cases
 
-### Note 2
-
-# @param {Integer[]} nums
-
-### Note 3
-
-@return {Integer}
-
-### Note 4
-
-There is a trick with XOR: x ^ x = 0 and x ^ 0 = x
+- Single-element array.
+- Negative numbers.
+- The unique value is zero.

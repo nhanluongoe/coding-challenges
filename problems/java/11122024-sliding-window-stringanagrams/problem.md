@@ -1,24 +1,25 @@
 ---
 solvedAt: "2024-12-11"
 ---
-
-# Sliding Window Stringanagrams
+# String Anagrams
 
 - Language: java
 - Original path: `java/sliding-window/StringAnagrams.java`
+- Source: Algorithm practice
 - Solution: `StringAnagrams.java`
 
-## Notes
+# Problems
 
-### Note 1
+Determine where a string contains a permutation or anagram of a given pattern.
 
+# Solutions
+
+Use a fixed-size sliding window with character counts and track when all pattern requirements are matched.
 Time complexity: O(n)
 Space complexity: O(1)
 
-### Note 2
+# Edge cases
 
-We need check whether number of match should be decreased
-
-### Note 3
-
-before putting back the element into map
+- Pattern longer than the string.
+- Repeated pattern characters.
+- Match starts at index zero or at the final possible index.

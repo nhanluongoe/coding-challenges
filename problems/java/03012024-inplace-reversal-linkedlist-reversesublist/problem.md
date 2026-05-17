@@ -1,37 +1,25 @@
 ---
 solvedAt: "2024-01-03"
 ---
-
-# Inplace Reversal Linkedlist Reversesublist
+# Reverse Sub List
 
 - Language: java
 - Original path: `java/inplace-reversal-linkedlist/ReverseSubList.java`
+- Source: Algorithm practice
 - Solution: `ReverseSubList.java`
 
-## Notes
+# Problems
 
-### Note 1
+Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
 
-Problem statement: Given the head of a LinkedList and two positions ‘p’ and
-‘q’, reverse the LinkedList from position ‘p’ to ‘q’.
+# Solutions
 
-### Note 2
-
+Use pointer techniques that preserve node identity and adjust links without copying node values.
 Time complexity: O(n)
 Space complexity: O(1)
 
-### Note 3
+# Edge cases
 
-skipping (p - 1) first nodes, current will point to "p-th" node
-
-### Note 4
-
-reverse node between p and q
-
-### Note 5
-
-connect to the first part
-
-### Note 6
-
-connect to the second second part
+- Empty list.
+- Single-node list.
+- Cycle or target node at the head.

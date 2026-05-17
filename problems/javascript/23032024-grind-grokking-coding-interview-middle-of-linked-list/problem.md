@@ -1,13 +1,23 @@
 ---
 solvedAt: "2024-03-23"
 ---
-
-# Grind Grokking Coding Interview Middle Of Linked List
+# Middle of Linked List
 
 - Language: javascript
 - Original path: `javascript/grind-grokking-coding-interview/middle-of-linked-list.js`
+- Source: Grokking-pattern
 - Solution: `code.js`
 
-## Requirements
+# Problems
 
-No standalone requirement text was found in the original source file. The problem title and sample usage are preserved with the solution code.
+Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
+
+# Solutions
+
+Use pointer techniques that preserve node identity and adjust links without copying node values.
+
+# Edge cases
+
+- Empty list.
+- Single-node list.
+- Cycle or target node at the head.

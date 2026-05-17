@@ -1,23 +1,23 @@
 ---
 solvedAt: "2024-01-04"
 ---
-
-# Codility Training Passing Cars
+# Passing Cars
 
 - Language: javascript
 - Original path: `javascript/codility-training/passing-cars.ts`
+- Source: Codility-style
 - Solution: `code.ts`
 
-## Notes
+# Problems
 
-### Note 1
+Given eastbound and westbound cars in order, count all passing pairs subject to the required limit.
 
-you can write to stdout for debugging purposes, e.g.
+# Solutions
 
-### Note 2
+Scan once, count eastbound cars seen so far, and add that count whenever a westbound car appears.
 
-console.log('this is a debug message');
+# Edge cases
 
-### Note 3
-
-Implement your solution here
+- All cars travel the same direction.
+- Pair count exceeds the allowed limit.
+- Empty or single-car input.

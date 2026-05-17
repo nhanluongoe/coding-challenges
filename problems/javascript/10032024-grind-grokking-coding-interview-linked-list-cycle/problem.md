@@ -1,27 +1,23 @@
 ---
 solvedAt: "2024-03-10"
 ---
-
-# Grind Grokking Coding Interview Linked List Cycle
+# Linked List Cycle
 
 - Language: javascript
 - Original path: `javascript/grind-grokking-coding-interview/linked-list-cycle.js`
+- Source: Grokking-pattern
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
 
-Given the head of a Singly LinkedList, write a function to determine if the LinkedList has a cycle in it or not.
+# Solutions
 
-### Note 2
+Use fast and slow pointers; if they meet, the list contains a cycle.
 
-1 -> 2 -> 3 -> 4 -> 5 -> 6
+# Edge cases
 
-### Note 3
-
-|              |
-
-### Note 4
-
-- - - - - - - -
+- Empty list.
+- Single-node list.
+- Cycle or target node at the head.

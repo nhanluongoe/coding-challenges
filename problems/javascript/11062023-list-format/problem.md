@@ -1,41 +1,23 @@
 ---
 solvedAt: "2023-06-11"
 ---
-
 # List Format
 
 - Language: javascript
 - Original path: `javascript/110623-list-format.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Implement `function listFormat that returns the items concatenated into a single string. A common use case would be in summarizing the reactions for social media posts.` for the List Format challenge using the behavior implied by the existing solution and tests.
 
-@param {Array<string>} items
-@param {{sorted?: boolean, length?: number, unique?: boolean}} [options]
-@return {string}
+# Solutions
 
-### Note 2
+Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.
 
-Given a list of strings, implement a function listFormat that returns the items concatenated into a single string. A common use case would be in summarizing the reactions for social media posts.
+# Edge cases
 
-### Note 3
-
-// The function should support a few options as the second parameter:
-
-### Note 4
-
-// sorted: Sorts the items by alphabetical order.
-
-### Note 5
-
-length: Show only the first length items, using "and X other(s)" for the remaining. Ignore invalid values (negative, 0, etc).
-
-### Note 6
-
-unique: Remove duplicate items.
-
-### Note 7
-
-'Bob, Ben, Tim, Jane and John'
+- Empty or minimal input.
+- Duplicate or repeated values.
+- Boundary values at the start or end of the structure.

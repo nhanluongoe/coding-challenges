@@ -1,27 +1,23 @@
 ---
 solvedAt: "2021-08-01"
 ---
-
 # Excel Sheet Column Title
 
 - Language: ruby
 - Original path: `ruby/010821-excel-sheet-column-title.rb`
+- Source: Algorithm practice
 - Solution: `code.rb`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/excel-sheet-column-title/
+Convert a positive column number to its spreadsheet-style column title.
 
-## Notes
+# Solutions
 
-### Note 1
+Repeatedly convert to a zero-based modulo-26 digit and prepend the matching uppercase letter.
 
-https://leetcode.com/problems/excel-sheet-column-title/
+# Edge cases
 
-### Note 2
-
-# @param {Integer} column_number
-
-### Note 3
-
-@return {String}
+- Column numbers at letter boundaries such as 26 and 27.
+- Large column numbers.
+- Single-letter columns.

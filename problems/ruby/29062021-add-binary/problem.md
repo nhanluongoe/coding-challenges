@@ -1,31 +1,23 @@
 ---
 solvedAt: "2021-06-29"
 ---
-
 # Add Binary
 
 - Language: ruby
 - Original path: `ruby/290621-add-binary.rb`
+- Source: Algorithm practice
 - Solution: `code.rb`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/add-binary/
+Add two binary strings and return the binary sum as a string.
 
-## Notes
+# Solutions
 
-### Note 1
+Walk both strings from right to left, adding bits and carry just like manual addition.
 
-# https://leetcode.com/problems/add-binary/
+# Edge cases
 
-### Note 2
-
-# @param {String} a
-
-### Note 3
-
-@param {String} b
-
-### Note 4
-
-@return {String}
+- Different string lengths.
+- Final carry remains.
+- Inputs containing only zero.

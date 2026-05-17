@@ -1,63 +1,23 @@
 ---
 solvedAt: "2021-07-07"
 ---
-
 # Balanced Binary Tree
 
 - Language: ruby
 - Original path: `ruby/070721-balanced-binary-tree.rb`
+- Source: Algorithm practice
 - Solution: `code.rb`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/balanced-binary-tree/
+Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
 
-## Notes
+# Solutions
 
-### Note 1
+Use recursive depth-first traversal, returning the information each parent needs from its children.
 
-Definition for a binary tree node.
+# Edge cases
 
-### Note 2
-
-class TreeNode
-
-### Note 3
-
-attr_accessor :val, :left, :right
-
-### Note 4
-
-def initialize(val = 0, left = nil, right = nil)
-
-### Note 5
-
-@val = val
-
-### Note 6
-
-@left = left
-
-### Note 7
-
-@right = right
-
-### Note 8
-
-end
-
-### Note 9
-
-end
-
-### Note 10
-
-https://leetcode.com/problems/balanced-binary-tree/
-
-### Note 11
-
-# @param {TreeNode} root
-
-### Note 12
-
-@return {Boolean}
+- Empty tree.
+- Single-node tree.
+- Skewed tree that stresses recursion depth or balance checks.

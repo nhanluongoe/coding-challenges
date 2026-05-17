@@ -1,27 +1,25 @@
 ---
 solvedAt: "2024-03-26"
 ---
-
-# Tree Bfs Levelordersuccessor
+# Level Order Successor
 
 - Language: java
 - Original path: `java/tree-bfs/LevelOrderSuccessor.java`
+- Source: Algorithm practice
 - Solution: `LevelOrderSuccessor.java`
 
-## Notes
+# Problems
 
-### Note 1
+Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
 
-Problem statement: Given a binary tree and a node, find the level order
-successor of the given node in the tree. The level order successor is the
-node that appears right after the given node in the level order traversal.
+# Solutions
 
-### Note 2
-
+Use breadth-first traversal with a queue, processing one level at a time when level boundaries matter.
 Time complexity: O(n)
 Space complexity: O(n)
 
-### Note 3
+# Edge cases
 
-Time complexity: O(n)
-Space complexity: O(n)
+- Empty tree.
+- Single-node tree.
+- Skewed tree that stresses recursion depth or balance checks.

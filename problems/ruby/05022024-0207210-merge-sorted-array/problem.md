@@ -1,31 +1,23 @@
 ---
 solvedAt: "2024-02-05"
 ---
-
 # Merge Sorted Array
 
 - Language: ruby
 - Original path: `ruby/0207210-merge-sorted-array.rb`
+- Source: Algorithm practice
 - Solution: `code.rb`
 
-## Notes
+# Problems
 
-### Note 1
+Implement `def merge(nums1, m, nums2, n)` for the Merge Sorted Array challenge using the behavior implied by the existing solution and tests.
 
-@param {Integer[]} nums1
+# Solutions
 
-### Note 2
+Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.
 
-@param {Integer} m
+# Edge cases
 
-### Note 3
-
-@param {Integer[]} nums2
-
-### Note 4
-
-@param {Integer} n
-
-### Note 5
-
-@return {Void} Do not return anything, modify nums1 in-place instead.
+- Empty or minimal input.
+- Duplicate or repeated values.
+- Boundary values at the start or end of the structure.

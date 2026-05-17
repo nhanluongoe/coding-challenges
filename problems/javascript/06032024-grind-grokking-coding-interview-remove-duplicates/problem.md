@@ -1,13 +1,23 @@
 ---
 solvedAt: "2024-03-06"
 ---
-
-# Grind Grokking Coding Interview Remove Duplicates
+# Remove Duplicates
 
 - Language: javascript
 - Original path: `javascript/grind-grokking-coding-interview/remove-duplicates.js`
+- Source: Grokking-pattern
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-Given an array of sorted numbers, remove all duplicates from it. You should not use any extra space; after removing the duplicates in-place return the new length of the array.
+Remove duplicates from a sorted array in place and return the new logical length.
+
+# Solutions
+
+Use a slow pointer for the next unique slot and a fast pointer to scan the array.
+
+# Edge cases
+
+- Empty input.
+- All values are duplicates.
+- No duplicates.

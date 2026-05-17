@@ -1,22 +1,25 @@
 ---
 solvedAt: "2024-10-18"
 ---
-
-# Cyclic Sort Findallduplicates
+# Find All Duplicates
 
 - Language: java
 - Original path: `java/cyclic-sort/FindAllDuplicates.java`
+- Source: Algorithm practice
 - Solution: `FindAllDuplicates.java`
 
-## Notes
+# Problems
 
-### Note 1
+Rearrange values that belong to a fixed numeric range to discover missing, duplicate, or misplaced numbers.
 
-Problem statement: We are given an unsorted array containing ‘n’ numbers
-taken from the range 1 to ‘n’. The array has some duplicates, find all the
-duplicate numbers without using any extra space.
+# Solutions
 
-### Note 2
-
+Use cyclic sort: repeatedly swap each value into its correct index, then scan for positions that still contain the wrong value.
 Time complexity: O(n)
 Space complexity: O(1), the space used for output doesn't count
+
+# Edge cases
+
+- Values already in order.
+- Duplicate values block placement.
+- Missing value is at the beginning or end of the range.

@@ -1,44 +1,25 @@
 ---
 solvedAt: "2024-03-14"
 ---
-
-# Tree Bfs Levelordertraversal
+# Level Order Traversal
 
 - Language: java
 - Original path: `java/tree-bfs/LevelOrderTraversal.java`
+- Source: Algorithm practice
 - Solution: `LevelOrderTraversal.java`
 
-## Notes
+# Problems
 
-### Note 1
+Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
 
-Problem statement: Given a binary tree, populate an array to represent its
-level-by-level traversal. You should populate the values of all nodes of each
-level from left to right in separate sub-arrays.
+# Solutions
 
-### Note 2
-
+Use breadth-first traversal with a queue, processing one level at a time when level boundaries matter.
 Time complexity: O(n) we have "n" nodes
 Space complexity: O(n)
 
-### Note 3
+# Edge cases
 
-Problem statement: Given a binary tree, populate an array to represent its
-level-by-level traversal in reverse order, i.e., the lowest level comes
-first. You should populate the values of all nodes in each level from left to
-right in separate sub-arrays.
-
-### Note 4
-
-Time complexity: O(n)
-Space complexity: O(1)
-
-### Note 5
-
-Problem statement: Given a binary tree, populate an array to represent the
-averages of all of its levels.
-
-### Note 6
-
-Time complexity: O(n)
-Space complexity: O(n)
+- Empty tree.
+- Single-node tree.
+- Skewed tree that stresses recursion depth or balance checks.

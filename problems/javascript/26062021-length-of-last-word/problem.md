@@ -1,17 +1,23 @@
 ---
 solvedAt: "2021-06-26"
 ---
-
-# Length Of Last Word
+# Length of Last Word
 
 - Language: javascript
 - Original path: `javascript/260621-length-of-last-word.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/length-of-last-word/submissions/
+Return the length of the last word in a string.
 
-## Notes
+# Solutions
 
-https://leetcode.com/problems/length-of-last-word/submissions/
+Trim trailing spaces, then count characters backward until the previous space or the start of the string.
+
+# Edge cases
+
+- Trailing spaces.
+- Single word.
+- Multiple spaces between words.

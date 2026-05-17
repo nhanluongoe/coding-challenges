@@ -1,13 +1,23 @@
 ---
 solvedAt: "2022-05-24"
 ---
-
 # Rotation Point
 
 - Language: go
 - Original path: `go/240522-rotation-point.go`
+- Source: Algorithm practice
 - Solution: `code.go`
 
-## Requirements
+# Problems
 
-No standalone requirement text was found in the original source file. The problem title and sample usage are preserved with the solution code.
+Given a sorted array that has been rotated, find the index where the rotation starts.
+
+# Solutions
+
+Binary-search against the first element to locate the first item that belongs to the lower sorted half.
+
+# Edge cases
+
+- Array rotated by one position.
+- Array with two elements.
+- Already sorted input, if allowed.

@@ -1,27 +1,23 @@
 ---
 solvedAt: "2021-07-15"
 ---
-
 # Valid Palindrome
 
 - Language: ruby
 - Original path: `ruby/150721-valid-palindrome.rb`
+- Source: Algorithm practice
 - Solution: `code.rb`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/valid-palindrome/
+Determine whether the input can form or already is a palindrome under the problem's normalization rules.
 
-## Notes
+# Solutions
 
-### Note 1
+Normalize ignored characters, then compare characters from both ends.
 
-https://leetcode.com/problems/valid-palindrome/
+# Edge cases
 
-### Note 2
-
-# @param {String} s
-
-### Note 3
-
-@return {Boolean}
+- Mixed case and punctuation.
+- Empty or one-character strings.
+- Exactly one odd character count.

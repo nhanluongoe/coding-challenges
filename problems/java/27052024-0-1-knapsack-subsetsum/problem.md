@@ -1,54 +1,25 @@
 ---
 solvedAt: "2024-05-27"
 ---
-
-# 0 1 Knapsack Subsetsum
+# Subset Sum
 
 - Language: java
 - Original path: `java/0-1-knapsack/SubsetSum.java`
+- Source: Algorithm practice
 - Solution: `SubsetSum.java`
 
-## Notes
+# Problems
 
-### Note 1
+Generate every valid combination, subset, permutation, abbreviation, or parenthesized string requested by the input.
 
+# Solutions
+
+Use iterative breadth expansion or backtracking, adding choices one position at a time and pruning invalid states.
 Time complexity: O(2^n), "n" is the total number
 Space complexity: O(n)
 
-### Note 2
+# Edge cases
 
-Time complexity: O(n*s), "n" is the total number, "s" is the total sum of all
-the numbers
-Space complexity: O(n*s)
-
-### Note 3
-
-base check
-
-### Note 4
-
-pick number at current index if current index <= sum
-
-### Note 5
-
-don't pick number at current index
-
-### Note 6
-
-all subsets can make up a sum of "0"
-
-### Note 7
-
-for the first subset, only the number equal to sum can make up the sum
-
-### Note 8
-
-don't pick the number at the index
-
-### Note 9
-
-pick the number at the index if its value is less than or qual to the sum
-
-### Note 10
-
-then find a subset to get the remaining sum
+- Empty input.
+- Duplicate input values.
+- Maximum branching depth for the input size.

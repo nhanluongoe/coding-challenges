@@ -1,51 +1,25 @@
 ---
 solvedAt: "2024-03-24"
 ---
-
-# Subsets Permutations
+# Permutations
 
 - Language: java
 - Original path: `java/subsets/Permutations.java`
+- Source: Algorithm practice
 - Solution: `Permutations.java`
 
-## Notes
+# Problems
 
-### Note 1
+Generate every valid combination, subset, permutation, abbreviation, or parenthesized string requested by the input.
 
-Problem statement: Given a set of distinct numbers, find all of its
-permutations.
+# Solutions
 
-### Note 2
-
+Use iterative breadth expansion or backtracking, adding choices one position at a time and pruning invalid states.
 Time complexity: O(n * n!), "n!" permutations, take O(n) to insert a number
-into a permutation
 Space complexity: O(n * n!), "n!" permutations, each permutation contains "n"
-elements
 
-### Note 3
+# Edge cases
 
-add an empty set to permutations to the queue
-
-### Note 4
-
-for each permutation in the queue
-
-### Note 5
-
-retrieve the old permutation of the queue
-
-### Note 6
-
-create new permutation from old permutation and add the current number to it
-
-### Note 7
-
-at every position
-
-### Note 8
-
-if the set has enough elements => add to result
-
-### Note 9
-
-else add permutation to the queue
+- Empty input.
+- Duplicate input values.
+- Maximum branching depth for the input size.

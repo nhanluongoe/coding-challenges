@@ -1,25 +1,25 @@
 ---
 solvedAt: "2022-05-18"
 ---
-
-# Permutation Panlidrome
+# Permutation Palindrome
 
 - Language: javascript
 - Original path: `javascript/18052022-permutation-panlidrome.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Generate every valid combination, subset, permutation, abbreviation, or parenthesized string requested by the input.
 
+# Solutions
+
+Use iterative breadth expansion or backtracking, adding choices one position at a time and pruning invalid states.
 Time complexity: O(n)
 Space complexity: O(n)
 
-### Note 2
+# Edge cases
 
-Time complexity: O(n)
-Space complexity: O(1)
-
-### Note 3
-
-Tests
+- Empty input.
+- Duplicate input values.
+- Maximum branching depth for the input size.

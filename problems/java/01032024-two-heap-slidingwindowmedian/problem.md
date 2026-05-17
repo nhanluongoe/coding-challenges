@@ -1,34 +1,25 @@
 ---
 solvedAt: "2024-03-01"
 ---
-
-# Two Heap Slidingwindowmedian
+# Sliding Window Median
 
 - Language: java
 - Original path: `java/two-heap/SlidingWindowMedian.java`
+- Source: Algorithm practice
 - Solution: `SlidingWindowMedian.java`
 
-## Notes
+# Problems
 
-### Note 1
+Maintain medians while values stream in or while a fixed-size window moves across an array.
 
-Problem statement: Given an array of numbers and a number ‘k’, find the
-median of all the ‘k’ sized sub-arrays (or windows) of the array.
+# Solutions
 
-### Note 2
-
+Keep a max-heap for the lower half and a min-heap for the upper half, rebalancing after inserts and removals.
 Time complexity: O(n*k)
 Space complexity: O(k)
 
-### Note 3
+# Edge cases
 
-Time complexity:O(n * k)
-Space complexity: O(k)
-
-### Note 4
-
-add the median to the array
-
-### Note 5
-
-remove the element going out of the sliding window
+- Even versus odd counts.
+- Duplicate values.
+- Removing values as the sliding window advances.

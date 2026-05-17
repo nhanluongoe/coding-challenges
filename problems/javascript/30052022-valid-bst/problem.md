@@ -1,20 +1,25 @@
 ---
 solvedAt: "2022-05-30"
 ---
-
-# Valid Bst
+# Valid BST
 
 - Language: javascript
 - Original path: `javascript/300522-valid-bst.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
 
+# Solutions
+
+Use recursive depth-first traversal, returning the information each parent needs from its children.
 Time complexity: O(n)
 Space complexity: O(n)
 
-### Note 2
+# Edge cases
 
-Tests
+- Empty tree.
+- Single-node tree.
+- Skewed tree that stresses recursion depth or balance checks.

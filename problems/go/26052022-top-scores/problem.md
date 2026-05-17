@@ -1,23 +1,25 @@
 ---
 solvedAt: "2022-05-26"
 ---
-
 # Top Scores
 
 - Language: go
 - Original path: `go/260522-top-scores.go`
+- Source: Algorithm practice
 - Solution: `code.go`
 
-## Notes
+# Problems
 
-### Note 1
+Sort numeric scores in descending order when the highest possible score is known.
 
-Constraints: Must sort in O(n) time
+# Solutions
 
-### Note 2
-
+Count occurrences of each score, then emit scores from highest to lowest according to their counts.
 Time complexity: O(n)
-
-### Note 3
-
 Space complexity: O(n)
+
+# Edge cases
+
+- No scores.
+- All scores equal.
+- Scores at zero and at the maximum.

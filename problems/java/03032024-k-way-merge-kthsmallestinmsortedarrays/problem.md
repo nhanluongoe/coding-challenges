@@ -1,26 +1,25 @@
 ---
 solvedAt: "2024-03-03"
 ---
-
-# K Way Merge Kthsmallestinmsortedarrays
+# Kth Smallest in M Sorted Arrays
 
 - Language: java
 - Original path: `java/k-way-merge/KthSmallestInMSortedArrays.java`
+- Source: Algorithm practice
 - Solution: `KthSmallestInMSortedArrays.java`
 
-## Notes
+# Problems
 
-### Note 1
+Use priority ordering to select, combine, or rearrange items according to a top-k, closest, kth, or minimum-cost rule.
 
-Problem statement: Given ‘M’ sorted arrays, find the K’th smallest number
-among all the arrays.
+# Solutions
 
-### Note 2
-
+Maintain a heap sized to the useful frontier so the next best candidate can be selected efficiently.
 Time complexity: O(n*logk), n is total numbers in arrays
 Space complexity: O(k)
 
-### Note 3
+# Edge cases
 
-Time complexity: O(k*logm), m is the total number of input arrays
-Space complexity: O(m)
+- `k` is zero or equals the input size.
+- Duplicate priorities.
+- Input smaller than the requested count.

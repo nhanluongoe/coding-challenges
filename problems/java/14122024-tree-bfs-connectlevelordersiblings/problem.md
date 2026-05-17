@@ -1,21 +1,25 @@
 ---
 solvedAt: "2024-12-14"
 ---
-
-# Tree Bfs Connectlevelordersiblings
+# Connect Level Order Siblings
 
 - Language: java
 - Original path: `java/tree-bfs/ConnectLevelOrderSiblings.java`
+- Source: Algorithm practice
 - Solution: `ConnectLevelOrderSiblings.java`
 
-## Notes
+# Problems
 
-### Note 1
+Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
 
-Problem statement: Given a binary tree, connect each node with its level
-order successor. The last node of each level should point to a null node.
+# Solutions
 
-### Note 2
-
+Use breadth-first traversal with a queue, processing one level at a time when level boundaries matter.
 Time complexity: O(n)
 Space complexity: O(n)
+
+# Edge cases
+
+- Empty tree.
+- Single-node tree.
+- Skewed tree that stresses recursion depth or balance checks.

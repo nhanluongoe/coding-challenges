@@ -1,13 +1,23 @@
 ---
 solvedAt: "2024-06-24"
 ---
-
-# Intersection With
+# Intersection with
 
 - Language: javascript
 - Original path: `javascript/240624-intersection-with.js`
+- Source: JavaScript utility
 - Solution: `code.js`
 
-## Requirements
+# Problems
 
-No standalone requirement text was found in the original source file. The problem title and sample usage are preserved with the solution code.
+Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
+
+# Solutions
+
+Use pointer techniques that preserve node identity and adjust links without copying node values.
+
+# Edge cases
+
+- Empty list.
+- Single-node list.
+- Cycle or target node at the head.

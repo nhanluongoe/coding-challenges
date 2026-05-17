@@ -1,24 +1,25 @@
 ---
 solvedAt: "2024-03-02"
 ---
-
-# Two Pointers Subarrayproductlessthank
+# Subarray Product Less Than K
 
 - Language: java
 - Original path: `java/two-pointers/SubarrayProductLessThanK.java`
+- Source: Algorithm practice
 - Solution: `SubarrayProductLessThanK.java`
 
-## Notes
+# Problems
 
-### Note 1
+Find all contiguous subarrays whose product is less than a target value.
 
-Constraint: subarray must be contiguous
+# Solutions
+
+Use a sliding window product, shrinking from the left whenever the product reaches or exceeds the target.
 Time complexity: O(n^3)
 Space complexity: O(n) for the temp list
 
-### Note 2
+# Edge cases
 
-1. Since the product of all numbers from left to right is smaller than target
-therefore all subarrays from left to right will have product less than target too
-2. To avoid duplicates, start with a subarray containing only arr[right] and then extend
-it to the left
+- Target less than or equal to one.
+- Single-element matches.
+- Products that require repeated shrinking.

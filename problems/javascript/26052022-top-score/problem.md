@@ -1,25 +1,25 @@
 ---
 solvedAt: "2022-05-26"
 ---
-
-# Top Score
+# Top Scores
 
 - Language: javascript
 - Original path: `javascript/260522-top-score.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Sort numeric scores in descending order when the highest possible score is known.
 
-Constraints: must sort in O(n) time
+# Solutions
+
+Count occurrences of each score, then emit scores from highest to lowest according to their counts.
 Time complexity: O(n)
 Space complexity: O(n)
 
-### Note 2
+# Edge cases
 
-higestPossibleScore is a constant, so that this is not O(n^2)
-
-### Note 3
-
-Tests
+- No scores.
+- All scores equal.
+- Scores at zero and at the maximum.

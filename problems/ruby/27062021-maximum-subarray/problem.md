@@ -1,23 +1,23 @@
 ---
 solvedAt: "2021-06-27"
 ---
-
 # Maximum Subarray
 
 - Language: ruby
 - Original path: `ruby/270621-maximum-subarray.rb`
+- Source: Algorithm practice
 - Solution: `code.rb`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/maximum-subarray/
+Find the maximum possible sum of any contiguous subarray.
 
-## Notes
+# Solutions
 
-### Note 1
+Use Kadane's algorithm, extending the current sum when helpful and restarting when the current prefix hurts the result.
 
-# https://leetcode.com/problems/maximum-subarray/
+# Edge cases
 
-### Note 2
-
-# O(n)
+- All numbers are negative.
+- Single-element input.
+- Zeros mixed with positive and negative values.

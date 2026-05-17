@@ -1,26 +1,25 @@
 ---
 solvedAt: "2024-09-28"
 ---
-
-# Fast Slow Pointers Linkedlistcycle
+# Linked List Cycle
 
 - Language: java
 - Original path: `java/fast-slow-pointers/LinkedListCycle.java`
+- Source: Algorithm practice
 - Solution: `LinkedListCycle.java`
 
-## Notes
+# Problems
 
-### Note 1
+Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
 
+# Solutions
+
+Use fast and slow pointers; if they meet, the list contains a cycle.
 Time complexity: O(n)
 Space complexity: O(1)
 
-### Note 2
+# Edge cases
 
-Time complexity: O(n)
-Space complexity: O(1)
-
-### Note 3
-
-Time complexity: O(n + n) => O(n)
-Space complexity: O(1)
+- Empty list.
+- Single-node list.
+- Cycle or target node at the head.

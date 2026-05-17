@@ -1,21 +1,23 @@
 ---
 solvedAt: "2024-04-02"
 ---
-
 # Count By
 
 - Language: javascript
 - Original path: `javascript/020424-count-by.js`
+- Source: JavaScript utility
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Group or count array items by a key produced from each item.
 
-@param {Array} array The array to iterate over.
-@param {Function} iteratee The function invoked per iteration.
-@returns {Object} Returns the composed aggregate object.
+# Solutions
 
-### Note 2
+Evaluate the iteratee for each item and store either a count or an array of items under that computed key.
 
-Test cases
+# Edge cases
+
+- Empty input.
+- Keys produced as numbers or strings.
+- Items mapping to the same key.

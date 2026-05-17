@@ -1,27 +1,23 @@
 ---
 solvedAt: "2024-05-22"
 ---
-
 # Group By
 
 - Language: javascript
 - Original path: `javascript/220524-group-by.js`
+- Source: JavaScript utility
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Group or count array items by a key produced from each item.
 
-Implement a function groupBy(array, iteratee) that takes a array and an iteratee function, and groups the values in the array based on the iteratee.
+# Solutions
 
-### Note 2
+Evaluate the iteratee for each item and store either a count or an array of items under that computed key.
 
-=> {}
+# Edge cases
 
-### Note 3
-
-=> { '4': [4.2], '6': [6.1, 6.3] }
-
-### Note 4
-
-=> { '3': [{ n: 3 }, { n: 3 }], '5': { n: 5 } }
+- Empty input.
+- Keys produced as numbers or strings.
+- Items mapping to the same key.

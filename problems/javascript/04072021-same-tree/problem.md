@@ -1,27 +1,23 @@
 ---
 solvedAt: "2021-07-04"
 ---
-
 # Same Tree
 
 - Language: javascript
 - Original path: `javascript/040721-same-tree.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/same-tree/
+Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
 
-## Notes
+# Solutions
 
-### Note 1
+Use recursive depth-first traversal, returning the information each parent needs from its children.
 
-https://leetcode.com/problems/same-tree/
+# Edge cases
 
-@param {TreeNode} p
-@param {TreeNode} q
-@return {boolean}
-
-### Note 2
-
-Definition for a binary tree node.
+- Empty tree.
+- Single-node tree.
+- Skewed tree that stresses recursion depth or balance checks.

@@ -1,25 +1,25 @@
 ---
 solvedAt: "2022-05-17"
 ---
-
 # Movie Lengths
 
 - Language: javascript
 - Original path: `javascript/17052022-movie-lengths.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Determine whether two movie lengths exactly fill a flight length.
 
+# Solutions
+
+Scan lengths while storing complements in a set, returning true when the current length completes a pair.
 Time complexity: O(n)
 Space complexity: O(n)
 
-### Note 2
+# Edge cases
 
-Time complexity: O(n)
-Space complexity: O(n)
-
-### Note 3
-
-Tests
+- Two identical lengths are needed.
+- No pair exists.
+- Very short flight length.

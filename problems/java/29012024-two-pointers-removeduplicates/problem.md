@@ -1,20 +1,25 @@
 ---
 solvedAt: "2024-01-29"
 ---
-
-# Two Pointers Removeduplicates
+# Remove Duplicates
 
 - Language: java
 - Original path: `java/two-pointers/RemoveDuplicates.java`
+- Source: Algorithm practice
 - Solution: `RemoveDuplicates.java`
 
-## Notes
+# Problems
 
-### Note 1
+Remove duplicates from a sorted array in place and return the new logical length.
 
-Constraint: not use any extra space, and input array is already sorted
+# Solutions
 
-### Note 2
-
+Use a slow pointer for the next unique slot and a fast pointer to scan the array.
 Time complexity: O(n)
 Space complexity: O(1)
+
+# Edge cases
+
+- Empty input.
+- All values are duplicates.
+- No duplicates.

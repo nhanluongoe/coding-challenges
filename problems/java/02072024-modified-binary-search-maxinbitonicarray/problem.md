@@ -1,23 +1,25 @@
 ---
 solvedAt: "2024-07-02"
 ---
-
-# Modified Binary Search Maxinbitonicarray
+# Maximum in Bitonic Array
 
 - Language: java
 - Original path: `java/modified-binary-search/MaxInBitonicArray.java`
+- Source: Algorithm practice
 - Solution: `MaxInBitonicArray.java`
 
-## Notes
+# Problems
 
-### Note 1
+Search a sorted or specially ordered collection for the requested target, range, boundary, or closest value.
 
-Problem statement: Find the maximum value in a given Bitonic array. An array
-is considered bitonic if it is monotonically increasing and then
-monotonically decreasing. Monotonically increasing or decreasing means that
-for any index i in the array arr[i] != arr[i+1].
+# Solutions
 
-### Note 2
-
+Use binary search, adjusting the boundaries according to whether the target lies left or right of the midpoint.
 Time complexity: O(logn)
 Space complexity: O(1)
+
+# Edge cases
+
+- Target smaller than the first item or larger than the last.
+- Duplicate target values.
+- One-element input.

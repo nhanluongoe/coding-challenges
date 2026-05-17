@@ -1,35 +1,23 @@
 ---
 solvedAt: "2023-06-06"
 ---
-
 # Deep Clone
 
 - Language: javascript
 - Original path: `javascript/060623-deep-clone.js`
+- Source: JavaScript utility
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Create a deep copy so nested objects and arrays no longer share references with the original.
 
-Solution 1: Easiest but flawed
+# Solutions
 
-### Note 2
+Recursively clone arrays and plain objects while returning primitive values directly.
 
-- JSON doesn't support non-symbo-keyed properties
+# Edge cases
 
-### Note 3
-
-- JSON has some suprising behaviors such as converting Date obj to ISO string
-
-### Note 4
-
-return JSON.parse(JSON.stringify(value));
-
-### Note 5
-
-Solution 2: More correct way
-
-### Note 6
-
-Test
+- Nested arrays and objects.
+- Primitive values.
+- Circular references, if supported by the variant.

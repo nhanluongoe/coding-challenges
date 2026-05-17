@@ -1,25 +1,24 @@
 ---
 solvedAt: "2024-01-17"
 ---
-
-# Cyclic Sort Cyclicsort
+# Cyclic Sort
 
 - Language: java
 - Original path: `java/cyclic-sort/CyclicSort.java`
+- Source: Algorithm practice
 - Solution: `CyclicSort.java`
 
-## Notes
+# Problems
 
-### Note 1
+Rearrange values that belong to a fixed numeric range to discover missing, duplicate, or misplaced numbers.
 
-Constraints: O(n) time and without any extra space
+# Solutions
 
-### Note 2
-
+Use cyclic sort: repeatedly swap each value into its correct index, then scan for positions that still contain the wrong value.
 Time complexity: O(n)
-Space compolexity: O(1)
 
-### Note 3
+# Edge cases
 
-Time complexity: O(n + n+1) => O(n)
-Space compolexity: O(1)
+- Values already in order.
+- Duplicate values block placement.
+- Missing value is at the beginning or end of the range.

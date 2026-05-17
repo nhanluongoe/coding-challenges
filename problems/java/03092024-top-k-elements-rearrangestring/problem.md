@@ -1,21 +1,25 @@
 ---
 solvedAt: "2024-09-03"
 ---
-
-# Top K Elements Rearrangestring
+# Rearrange String
 
 - Language: java
 - Original path: `java/top-k-elements/RearrangeString.java`
+- Source: Algorithm practice
 - Solution: `RearrangeString.java`
 
-## Notes
+# Problems
 
-### Note 1
+Use priority ordering to select, combine, or rearrange items according to a top-k, closest, kth, or minimum-cost rule.
 
-Problem statement: Given a string, find if its letters can be rearranged in
-such a way that no two same characters come next to each other.
+# Solutions
 
-### Note 2
-
+Maintain a heap sized to the useful frontier so the next best candidate can be selected efficiently.
 Time complexity: O(n*logn)
 Space complexity: O(n)
+
+# Edge cases
+
+- `k` is zero or equals the input size.
+- Duplicate priorities.
+- Input smaller than the requested count.

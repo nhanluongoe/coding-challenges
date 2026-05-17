@@ -1,22 +1,23 @@
 ---
 solvedAt: "2023-06-06"
 ---
-
 # Get
 
 - Language: javascript
 - Original path: `javascript/060623-get.js`
+- Source: JavaScript utility
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Implement `function get(object, path, defaultValue)` for the Get challenge using the behavior implied by the existing solution and tests.
 
-@param {Object} object
-@param {string|Array<string>} path
-@param {*} [defaultValue]
-@return {*}
+# Solutions
 
-### Note 2
+Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.
 
-Test
+# Edge cases
+
+- Empty or minimal input.
+- Duplicate or repeated values.
+- Boundary values at the start or end of the structure.

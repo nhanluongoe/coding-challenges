@@ -1,76 +1,25 @@
 ---
 solvedAt: "2024-01-31"
 ---
-
-# Sliding Window Replacingones
+# Replacing Ones
 
 - Language: java
 - Original path: `java/sliding-window/ReplacingOnes.java`
+- Source: Algorithm practice
 - Solution: `ReplacingOnes.java`
 
-## Notes
+# Problems
 
-### Note 1
+Find the longest window that can be made uniform by replacing at most `k` characters or zeros.
 
-Given an array containing 0s and 1s, if you are allowed to replace no more
-than ‘k’ 0s with 1s,
-find the length of the longest contiguous subarray having all 1s.
+# Solutions
 
-### Note 2
-
-Only need to keep tract of 1s so don't need to use map
+Use a sliding window and keep the count of the dominant value; shrink when replacements needed exceed `k`.
 Time complexity: O(n)
 Space complexity: O(1)
 
-### Note 3
+# Edge cases
 
-Time complexity: O(n)
-Space complexity: O(1)
-
-### Note 4
-
-to have the longest contiguous
-
-### Note 5
-
-subarray of 1s having length 6.
-
-### Note 6
-
-6, 9, and 10 to have the
-
-### Note 7
-
-longest contiguous
-
-### Note 8
-
-subarray of 1s having
-
-### Note 9
-
-length 9.
-
-### Note 10
-
-to have the longest contiguous
-
-### Note 11
-
-subarray of 1s having length 6.
-
-### Note 12
-
-6, 9, and 10 to have the
-
-### Note 13
-
-longest contiguous
-
-### Note 14
-
-subarray of 1s having
-
-### Note 15
-
-length 9.ƒ
+- `k` is zero.
+- `k` covers the whole input.
+- Multiple values tie for most frequent.

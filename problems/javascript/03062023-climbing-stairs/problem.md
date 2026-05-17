@@ -1,26 +1,23 @@
 ---
 solvedAt: "2023-06-03"
 ---
-
 # Climbing Stairs
 
 - Language: javascript
 - Original path: `javascript/030623-climbing-stairs.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Count the number of distinct ways to climb `n` stairs when each move can climb one or two steps.
 
-Explaination
+# Solutions
 
-stairs: 5 4 3 2 1 0
-ways:   0 1 2 3 5 8
+Use Fibonacci-style dynamic programming or memoized recursion where ways(n) equals ways(n - 1) plus ways(n - 2).
 
-### Note 2
+# Edge cases
 
-base case
-
-### Note 3
-
-bottom up DP
+- `n` is zero or one.
+- Small base cases.
+- Large `n` where naive recursion is too slow.

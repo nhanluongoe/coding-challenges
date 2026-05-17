@@ -1,27 +1,25 @@
 ---
 solvedAt: "2024-04-16"
 ---
-
-# Tree Dfs Sumofpathnumbers
+# Sum of Path Numbers
 
 - Language: java
 - Original path: `java/tree-dfs/SumOfPathNumbers.java`
+- Source: Algorithm practice
 - Solution: `SumOfPathNumbers.java`
 
-## Notes
+# Problems
 
-### Note 1
+Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
 
-Problem statement: Given a binary tree where each node can only have a digit
-(0-9) value, each root-to-leaf path will represent a number. Find the total
-sum of all the numbers represented by all paths.
+# Solutions
 
-### Note 2
-
+Use recursive depth-first traversal, returning the information each parent needs from its children.
 Time complexity: O(n)
 Space complexity: O(n)
 
-### Note 3
+# Edge cases
 
-Time complexity: O(n*n + n/2 * logn) = O(n^2)
-Space complexity: O(n*logn)
+- Empty tree.
+- Single-node tree.
+- Skewed tree that stresses recursion depth or balance checks.

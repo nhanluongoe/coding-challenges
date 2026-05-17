@@ -1,41 +1,23 @@
 ---
 solvedAt: "2021-07-27"
 ---
-
 # Min Stack
 
 - Language: javascript
 - Original path: `javascript/270721-min-stack.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Implement a stack that can return the current minimum or maximum in constant time.
 
-initialize your data structure here.
+# Solutions
 
-### Note 2
+Store each pushed value with the best value seen so far, or maintain an auxiliary stack of extrema.
 
-@param {number} val
-@return {void}
+# Edge cases
 
-### Note 3
-
-@return {void}
-
-### Note 4
-
-@return {number}
-
-### Note 5
-
-@return {number}
-
-### Note 6
-
-Your MinStack object will be instantiated and called as such:
-var obj = new MinStack()
-obj.push(val)
-obj.pop()
-var param_3 = obj.top()
-var param_4 = obj.getMin()
+- Pop from an empty stack, if the API allows it.
+- Duplicate extrema.
+- Extremum changes after pop.

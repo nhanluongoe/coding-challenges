@@ -1,14 +1,23 @@
 ---
 solvedAt: "2024-08-27"
 ---
-
-# Grind Grokking Coding Interview Pair With Target Sum
+# Pair with Target Sum
 
 - Language: javascript
 - Original path: `javascript/grind-grokking-coding-interview/pair_with_target_sum.js`
+- Source: Grokking-pattern
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-Given an array of sorted numbers and a target sum, find a pair in the array whose sum is equal to the given target.
-Write a function to return the indices of the two numbers (i.e. the pair) such that they add up to the given target.
+Given a sorted array and a target value, return the indices or values that form a pair whose sum equals the target.
+
+# Solutions
+
+Use two pointers from both ends of the sorted array, moving the left pointer when the sum is too small and the right pointer when it is too large.
+
+# Edge cases
+
+- No matching pair.
+- Duplicate values that can form the same sum.
+- The pair appears at the beginning or end of the array.

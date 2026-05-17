@@ -1,28 +1,23 @@
 ---
 solvedAt: "2021-07-16"
 ---
-
 # Single Number
 
 - Language: javascript
 - Original path: `javascript/160721-single-number.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/single-number/
+Find the value that appears once when every other value appears twice.
 
-## Notes
+# Solutions
 
-### Note 1
+XOR all values; duplicate pairs cancel out and the single value remains.
 
-https://leetcode.com/problems/single-number/
+# Edge cases
 
-@param {number[]} nums
-@return {number}
-
-### Note 2
-
-Better solution using XOR trick
-x ^ x = 0
-x ^ 0 = x
+- Single-element array.
+- Negative numbers.
+- The unique value is zero.

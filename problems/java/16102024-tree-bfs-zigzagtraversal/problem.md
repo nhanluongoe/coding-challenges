@@ -1,23 +1,25 @@
 ---
 solvedAt: "2024-10-16"
 ---
-
-# Tree Bfs Zigzagtraversal
+# Zigzag Traversal
 
 - Language: java
 - Original path: `java/tree-bfs/ZigZagTraversal.java`
+- Source: Algorithm practice
 - Solution: `ZigZagTraversal.java`
 
-## Notes
+# Problems
 
-### Note 1
+Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
 
-Problem statement: Given a binary tree, populate an array to represent its
-zigzag level order traversal. You should populate the values of all nodes of
-the first level from left to right, then right to left for the next level and
-keep alternating in the same manner for the following levels.
+# Solutions
 
-### Note 2
-
+Use breadth-first traversal with a queue, processing one level at a time when level boundaries matter.
 Time complexity: O(n)
 Space complexity: O(n)
+
+# Edge cases
+
+- Empty tree.
+- Single-node tree.
+- Skewed tree that stresses recursion depth or balance checks.

@@ -1,30 +1,25 @@
 ---
 solvedAt: "2024-10-06"
 ---
-
-# Modified Binary Search Numberrange
+# Number Range
 
 - Language: java
 - Original path: `java/modified-binary-search/NumberRange.java`
+- Source: Algorithm practice
 - Solution: `NumberRange.java`
 
-## Notes
+# Problems
 
-### Note 1
+Search a sorted or specially ordered collection for the requested target, range, boundary, or closest value.
 
-Problem statement: Given an array of numbers sorted in ascending order, find
-the range of a given number ‘key’. The range of the ‘key’ will be the first
-and last position of the ‘key’ in the array.
+# Solutions
 
-Write a function to return the range of the ‘key’. If the ‘key’ is not
-present return [-1, -1].
-
-### Note 2
-
+Use binary search, adjusting the boundaries according to whether the target lies left or right of the midpoint.
 Time complexity: O(n)
 Space complexity: O(1)
 
-### Note 3
+# Edge cases
 
-Time complexity: O(logn)
-Space complexity: o(n)
+- Target smaller than the first item or larger than the last.
+- Duplicate target values.
+- One-element input.

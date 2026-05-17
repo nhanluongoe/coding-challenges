@@ -1,33 +1,25 @@
 ---
 solvedAt: "2024-01-09"
 ---
-
-# 0 1 Knapsack Partitionset
+# Partition Set
 
 - Language: java
 - Original path: `java/0-1-knapsack/PartitionSet.java`
+- Source: Algorithm practice
 - Solution: `PartitionSet.java`
 
-## Notes
+# Problems
 
-### Note 1
+Decide or optimize a subset selection under capacity, target-sum, or equal-partition constraints.
 
-Problem statement: Given a set of positive numbers, find if we can partition
-it into two subsets such that the sum of elements in both subsets is equal.
+# Solutions
 
-### Note 2
-
+Use dynamic programming over items and reachable sums/capacities, carrying forward include/exclude decisions.
 Time complexity: O(2^n), "n" is the total number
 Space complexity: O(n)
 
-### Note 3
+# Edge cases
 
-Time complexity: O(n*s), "n" is the total numbers, "s" is the total sum of
-all the numbers
-Space complexity: O(n*s)
-
-### Note 4
-
-Time complexity: O(n*s), "n" is the total numbers, "s" is total sum of all
-the numbers
-Space complexity: O(n*s)
+- Target sum is zero.
+- Total sum is odd for equal partition.
+- Items larger than the capacity or target.

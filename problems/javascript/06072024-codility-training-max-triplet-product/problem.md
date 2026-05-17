@@ -1,19 +1,23 @@
 ---
 solvedAt: "2024-07-06"
 ---
-
-# Codility Training Max Triplet Product
+# Max Triplet Product
 
 - Language: javascript
 - Original path: `javascript/codility-training/max-triplet-product.ts`
+- Source: Codility-style
 - Solution: `code.ts`
 
-## Notes
+# Problems
 
-### Note 1
+Given integers, find the maximum product obtainable from any three numbers.
 
-you can write to stdout for debugging purposes, e.g.
+# Solutions
 
-### Note 2
+Track the largest and smallest values/products while scanning, because two negative numbers can produce the best positive product.
 
-console.log('this is a debug message');
+# Edge cases
+
+- Negative numbers.
+- Zeros.
+- Exactly three values.

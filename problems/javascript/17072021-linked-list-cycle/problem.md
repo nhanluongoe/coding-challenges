@@ -1,30 +1,23 @@
 ---
 solvedAt: "2021-07-17"
 ---
-
 # Linked List Cycle
 
 - Language: javascript
 - Original path: `javascript/170721-linked-list-cycle.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/linked-list-cycle/
+Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
 
-## Notes
+# Solutions
 
-### Note 1
+Use fast and slow pointers; if they meet, the list contains a cycle.
 
-Definition for singly-linked list.
-function ListNode(val) {
-    this.val = val;
-    this.next = null;
-}
+# Edge cases
 
-### Note 2
-
-https://leetcode.com/problems/linked-list-cycle/
-
-@param {ListNode} head
-@return {boolean}
+- Empty list.
+- Single-node list.
+- Cycle or target node at the head.

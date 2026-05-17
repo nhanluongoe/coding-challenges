@@ -1,23 +1,23 @@
 ---
 solvedAt: "2022-05-14"
 ---
-
-# Merge Meeting
+# Merge Meetings
 
 - Language: typescript
 - Original path: `typescript/140522-merge-meeting.ts`
+- Source: Algorithm practice
 - Solution: `code.ts`
 
-## Notes
+# Problems
 
-### Note 1
+Given time intervals, combine every overlapping or touching interval and return the condensed schedule.
 
-Tests
+# Solutions
 
-### Note 2
+Sort intervals by start time, then scan once while extending the current interval whenever the next interval overlaps.
 
-Sort the keys in each meeting to avoid
+# Edge cases
 
-### Note 3
-
-failing based on differences in key order.
+- Empty or single-interval input.
+- Intervals that only touch at an endpoint.
+- Input intervals arriving out of order.

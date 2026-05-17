@@ -1,13 +1,23 @@
 ---
 solvedAt: "2024-04-20"
 ---
-
 # Fibonacci Closure
 
 - Language: go
 - Original path: `go/fibonacci-closure.go`
+- Source: Algorithm practice
 - Solution: `code.go`
 
-## Requirements
+# Problems
 
-No standalone requirement text was found in the original source file. The problem title and sample usage are preserved with the solution code.
+Return a closure that yields the next Fibonacci number on each call.
+
+# Solutions
+
+Keep the previous two numbers in closure state and update them after each call.
+
+# Edge cases
+
+- First two Fibonacci values.
+- Stopping a goroutine cleanly.
+- Buffered channel capacity.

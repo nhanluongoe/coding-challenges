@@ -1,22 +1,25 @@
 ---
 solvedAt: "2024-10-15"
 ---
-
-# Cyclic Sort Missingnumber
+# Missing Number
 
 - Language: java
 - Original path: `java/cyclic-sort/MissingNumber.java`
+- Source: Algorithm practice
 - Solution: `MissingNumber.java`
 
-## Notes
+# Problems
 
-### Note 1
+Rearrange values that belong to a fixed numeric range to discover missing, duplicate, or misplaced numbers.
 
-Problem statement: We are given an array containing ‘n’ distinct numbers
-taken from the range 0 to ‘n’. Since the array has only ‘n’ numbers out of
-the total ‘n+1’ numbers, find the missing number.
+# Solutions
 
-### Note 2
-
+Use cyclic sort: repeatedly swap each value into its correct index, then scan for positions that still contain the wrong value.
 Time complexity: O(n)
 Space complexity: O(1)
+
+# Edge cases
+
+- Values already in order.
+- Duplicate values block placement.
+- Missing value is at the beginning or end of the range.

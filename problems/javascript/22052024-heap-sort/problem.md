@@ -1,13 +1,23 @@
 ---
 solvedAt: "2024-05-22"
 ---
-
 # Heap Sort
 
 - Language: javascript
 - Original path: `javascript/220524-heap-sort.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-Implement a function that performs a heap sort. The function should take in an array of integers and return an array with the integers sorted in ascending order. The input array is modified in-place.
+Sort an array in place using heap sort.
+
+# Solutions
+
+Build a max heap, repeatedly swap the root with the end of the unsorted range, and heapify the reduced heap.
+
+# Edge cases
+
+- Empty array.
+- Duplicate values.
+- Already sorted input.

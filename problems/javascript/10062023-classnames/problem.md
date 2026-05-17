@@ -1,72 +1,23 @@
 ---
 solvedAt: "2023-06-10"
 ---
-
 # Classnames
 
 - Language: javascript
 - Original path: `javascript/100623-classnames.js`
+- Source: JavaScript utility
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Build a helper that composes class name values from strings, arrays, and objects.
 
-@param {...(string|Object|Array<string|Object>)} args
-@return {string}
+# Solutions
 
-### Note 2
+Flatten supported arguments, include strings directly, and include object keys whose values are truthy.
 
-classNames({ 'foo-bar': false }); // ''
+# Edge cases
 
-### Note 3
-
-classNames({ foo: true }, { bar: true }); // 'foo bar'
-
-### Note 4
-
-classNames({ foo: true, bar: true }); // 'foo bar'
-
-### Note 5
-
-classNames({ foo: true, bar: false, qux: true }); // 'foo qux'
-
-### Note 6
-
-classNames(
-
-### Note 7
-
-'foo',
-
-### Note 8
-
-{
-
-### Note 9
-
-bar: true,
-
-### Note 10
-
-duck: false,
-
-### Note 11
-
-},
-
-### Note 12
-
-'baz',
-
-### Note 13
-
-{ quux: true },
-
-### Note 14
-
-); // 'foo bar baz quux'
-
-### Note 15
-
-classNames(null, false, 'bar', undefined, 0, 1, { baz: null }, ''); // 'bar 1'
+- Falsy values.
+- Nested arrays.
+- Duplicate class names.

@@ -1,46 +1,25 @@
 ---
 solvedAt: "2024-06-24"
 ---
-
-# Subsets Lettercasestringpermutation
+# Letter Case String Permutation
 
 - Language: java
 - Original path: `java/subsets/LetterCaseStringPermutation.java`
+- Source: Algorithm practice
 - Solution: `LetterCaseStringPermutation.java`
 
-## Notes
+# Problems
 
-### Note 1
+Determine where a string contains a permutation or anagram of a given pattern.
 
-Problem statement: Given a string, find all of its permutations preserving
-the character sequence but changing case.
+# Solutions
 
-### Note 2
-
+Use a fixed-size sliding window with character counts and track when all pattern requirements are matched.
 Time complexity: O(n * 2^n)
 Space complexity: O(n * 2^n)
 
-### Note 3
+# Edge cases
 
-Time complexity: O(n * 2^n)
-Space complexity: o(n * 2^n)
-
-### Note 4
-
-process each letter in the str
-
-### Note 5
-
-for every existing permutations, change the letter case accordingly
-
-### Note 6
-
-get the current permutation
-
-### Note 7
-
-if current character of current permutation is in uppercase, change it to
-
-### Note 8
-
-loser case and vice versa
+- Pattern longer than the string.
+- Repeated pattern characters.
+- Match starts at index zero or at the final possible index.

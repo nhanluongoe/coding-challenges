@@ -1,23 +1,23 @@
 ---
 solvedAt: "2021-07-02"
 ---
-
 # Merge Sorted Array
 
 - Language: javascript
 - Original path: `javascript/020721-merge-sorted-array.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/merge-sorted-array/
+Implement `the provided function or class` for the Merge Sorted Array challenge using the behavior implied by the existing solution and tests.
 
-## Notes
+# Solutions
 
-https://leetcode.com/problems/merge-sorted-array/
+Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.
 
-@param {number[]} nums1
-@param {number} m
-@param {number[]} nums2
-@param {number} n
-@return {void} Do not return anything, modify nums1 in-place instead.
+# Edge cases
+
+- Empty or minimal input.
+- Duplicate or repeated values.
+- Boundary values at the start or end of the structure.

@@ -1,35 +1,23 @@
 ---
 solvedAt: "2021-06-30"
 ---
-
 # Climbing Stairs
 
 - Language: ruby
 - Original path: `ruby/300621-climbing-stairs.rb`
+- Source: Algorithm practice
 - Solution: `code.rb`
 
-## References
+# Problems
 
-- https://leetcode.com/problems/climbing-stairs/
+Count the number of distinct ways to climb `n` stairs when each move can climb one or two steps.
 
-## Notes
+# Solutions
 
-### Note 1
+Use Fibonacci-style dynamic programming or memoized recursion where ways(n) equals ways(n - 1) plus ways(n - 2).
 
-# https://leetcode.com/problems/climbing-stairs/
+# Edge cases
 
-### Note 2
-
-# @param {Integer} n
-
-### Note 3
-
-@return {Integer}
-
-### Note 4
-
-Memoization-based method
-
-### Note 5
-
-Other method - O(n)
+- `n` is zero or one.
+- Small base cases.
+- Large `n` where naive recursion is too slow.

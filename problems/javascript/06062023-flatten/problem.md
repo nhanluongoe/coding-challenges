@@ -1,29 +1,23 @@
 ---
 solvedAt: "2023-06-06"
 ---
-
 # Flatten
 
 - Language: javascript
 - Original path: `javascript/060623-flatten.js`
+- Source: JavaScript utility
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Flatten nested arrays according to the required depth or full-recursion behavior.
 
-Flatten the given array
-@param {Array<*|Array>} value
-@return {Array}
+# Solutions
 
-### Note 2
+Use recursion or an explicit stack to append non-array values and expand arrays.
 
-First solution: Iterative
+# Edge cases
 
-### Note 3
-
-Second solution: Iterative using some()
-
-### Note 4
-
-Thid solution: Using reduce()
+- Empty nested arrays.
+- Deeply nested structures.
+- Non-array values.

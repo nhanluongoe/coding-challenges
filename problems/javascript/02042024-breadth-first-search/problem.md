@@ -1,36 +1,23 @@
 ---
 solvedAt: "2024-04-02"
 ---
-
 # Breadth First Search
 
 - Language: javascript
 - Original path: `javascript/020424-breadth-first-search.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Implement `function breadthFirstSearch(graph, source)` for the Breadth First Search challenge using the behavior implied by the existing solution and tests.
 
-Auxiliary classes
+# Solutions
 
-### Note 2
+Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.
 
-A Queue class with O(1) enqueue and dequeue operations.
+# Edge cases
 
-Example usage:
-const q = new Queue();
-q.enqueue('a');
-q.enqueue('b');
-q.dequeue(); //'a'
-q.isEmpty(); // False
-
-### Note 3
-
-@param {Record<string, Array<string>} graph The adjacency list representing the graph.
-@param {string} source The source node to start traversal from. Has to be a valid node if graph is non-empty.
-@return {Array<string>} A BFS-traversed order of nodes.
-
-### Note 4
-
-Test cases
+- Empty or minimal input.
+- Duplicate or repeated values.
+- Boundary values at the start or end of the structure.

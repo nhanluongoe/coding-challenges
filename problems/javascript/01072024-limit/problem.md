@@ -1,13 +1,23 @@
 ---
 solvedAt: "2024-07-01"
 ---
-
 # Limit
 
 - Language: javascript
 - Original path: `javascript/010724-limit.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-Test
+Limit how many times a wrapped function may be executed.
+
+# Solutions
+
+Keep an invocation counter in closure state and only call the original function while the count is below the limit.
+
+# Edge cases
+
+- Limit is zero.
+- Return value after the limit is reached.
+- `this` and arguments.

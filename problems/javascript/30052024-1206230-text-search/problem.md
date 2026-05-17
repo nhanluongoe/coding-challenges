@@ -1,49 +1,23 @@
 ---
 solvedAt: "2024-05-30"
 ---
-
 # Text Search
 
 - Language: javascript
 - Original path: `javascript/1206230-text-search.js`
+- Source: Algorithm practice
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-### Note 1
+Search text records and return entries that match the requested query.
 
-@param {string} string
-@param {string} query
-@return {string}
+# Solutions
 
-### Note 2
+Normalize searchable text and query terms, then filter records that satisfy the match rule.
 
-Phase 1: create an array that maps the characters that should be bolded
+# Edge cases
 
-### Note 3
-
-Phase 2: insert <b> and </b> tag
-
-### Note 4
-
-'The Quick Brown <b>Fox</b> Jumps Over The Lazy Dog'
-
-### Note 5
-
-'The hardworking <b>Dog</b> overtakes the lazy <b>dog</b>'
-
-### Note 6
-
-Correct: '<b>aaaa</b>'
-
-### Note 7
-
-Wrong: '<b>aa</b><b>aa</b>'
-
-### Note 8
-
-'<b>aa</b>a'
-
-### Note 9
-
-This is because the second character cannot be used as a match again.
+- Empty query.
+- Case differences.
+- No matching records.

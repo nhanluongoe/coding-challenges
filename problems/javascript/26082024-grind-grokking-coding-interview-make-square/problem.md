@@ -1,13 +1,23 @@
 ---
 solvedAt: "2024-08-26"
 ---
-
-# Grind Grokking Coding Interview Make Square
+# Make Square
 
 - Language: javascript
 - Original path: `javascript/grind-grokking-coding-interview/make_square.js`
+- Source: Grokking-pattern
 - Solution: `code.js`
 
-## Notes
+# Problems
 
-Given a sorted array, create a new array containing squares of all the number of the input array in the sorted order.
+Implement `function makeSquare(arr)` for the Make Square challenge using the behavior implied by the existing solution and tests.
+
+# Solutions
+
+Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.
+
+# Edge cases
+
+- Empty or minimal input.
+- Duplicate or repeated values.
+- Boundary values at the start or end of the structure.

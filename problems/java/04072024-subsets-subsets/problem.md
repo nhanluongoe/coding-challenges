@@ -1,33 +1,25 @@
 ---
 solvedAt: "2024-07-04"
 ---
-
-# Subsets Subsets
+# Subsets
 
 - Language: java
 - Original path: `java/subsets/Subsets.java`
+- Source: Algorithm practice
 - Solution: `Subsets.java`
 
-## Notes
+# Problems
 
-### Note 1
+Generate every valid combination, subset, permutation, abbreviation, or parenthesized string requested by the input.
 
-Problem statement: Given a set with distinct elements, find all of its
-distinct subsets.
+# Solutions
 
-### Note 2
-
+Use iterative breadth expansion or backtracking, adding choices one position at a time and pruning invalid states.
 Time complexity: O(2^n)
 Space complexity: O(2^n)
 
-### Note 3
+# Edge cases
 
-start by adding an empty subset
-
-### Note 4
-
-insert new number to all existing subsets to create new subsets
-
-### Note 5
-
-create new subset from the existing subset and insert the current number to it
+- Empty input.
+- Duplicate input values.
+- Maximum branching depth for the input size.

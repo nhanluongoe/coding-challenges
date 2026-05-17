@@ -1,22 +1,25 @@
 ---
 solvedAt: "2024-09-20"
 ---
-
-# Inplace Reversal Linkedlist Reverselinkedlist
+# Reverse Linked List
 
 - Language: java
 - Original path: `java/inplace-reversal-linkedlist/ReverseLinkedList.java`
+- Source: Algorithm practice
 - Solution: `ReverseLinkedList.java`
 
-## Notes
+# Problems
 
-### Note 1
+Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
 
-Problem statement: Given the head of a Singly LinkedList, reverse the
-LinkedList. Write a function to return the new head of the reversed
-LinkedList.
+# Solutions
 
-### Note 2
-
+Use pointer techniques that preserve node identity and adjust links without copying node values.
 Time complexity: O(n)
 Space complexity: O(1)
+
+# Edge cases
+
+- Empty list.
+- Single-node list.
+- Cycle or target node at the head.
