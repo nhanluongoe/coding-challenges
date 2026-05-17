@@ -10,7 +10,7 @@ solvedAt: "2024-03-12"
 
 # Problems
 
-Create a throttled function that invokes at most once per delay interval.
+Implement throttling for a function. The returned wrapper should limit how often the original function can execute during repeated calls, allowing at most one execution per delay window. Calls that happen during the cooldown should be ignored or deferred according to the variant. The implementation should be clear about leading/trailing behavior and should preserve arguments and `this` for the call that executes.
 
 ## Examples
 

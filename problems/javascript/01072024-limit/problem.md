@@ -10,7 +10,7 @@ solvedAt: "2024-07-01"
 
 # Problems
 
-Limit how many times a wrapped function may be executed.
+Create a wrapper that limits how many times a function can be executed. The wrapper should call the original function only while the remaining-call count is positive. After the limit is reached, later calls should be ignored or return the variant's fallback value. Each wrapper instance should track its own call count.
 
 ## Examples
 

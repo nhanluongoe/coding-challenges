@@ -10,7 +10,7 @@ solvedAt: "2024-04-01"
 
 # Problems
 
-Implement array concatenation over one or more values or arrays.
+Implement array concatenation. Given a base array and additional values, return a new array containing the base elements followed by each argument. Array arguments should contribute their top-level elements, while non-array values should be appended as single values. The original inputs should not be mutated.
 
 ## Examples
 

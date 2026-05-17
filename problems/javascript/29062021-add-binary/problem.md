@@ -10,7 +10,7 @@ solvedAt: "2021-06-29"
 
 # Problems
 
-Add two binary strings and return the binary sum as a string.
+Given two binary strings, add them and return the sum as a binary string. The strings may have different lengths, and the addition should proceed from right to left with a carry just like manual arithmetic. The result should not contain unnecessary leading zeros except when the sum itself is zero.
 
 ## Examples
 

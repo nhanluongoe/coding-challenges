@@ -10,7 +10,7 @@ solvedAt: "2023-06-06"
 
 # Problems
 
-Implement `function get(object, path, defaultValue)` for the Get challenge using the behavior implied by the existing solution and tests.
+Given an object, a property path, and an optional default value, read the nested value at that path. The path may use dot notation, bracket notation, or an array of keys depending on the implementation. If any part of the path is missing, return the default value instead of throwing. Existing falsy values should still be returned when they are present.
 
 ## Examples
 

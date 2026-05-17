@@ -10,7 +10,7 @@ solvedAt: "2021-07-16"
 
 # Problems
 
-Find the value that appears once when every other value appears twice.
+Given an array where every value appears exactly twice except for one value that appears once, find the unique value. The function should return that single value. The input may contain zero or negative numbers, and the position of the unique value can be anywhere in the array.
 
 ## Examples
 

@@ -10,22 +10,20 @@ solvedAt: "2024-09-20"
 
 # Problems
 
-Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
+Given the head of a singly linked list, reverse the list so every node points to its previous node. Return the new head after reversal. The operation should preserve all existing nodes and should not create a separate list unless the variant allows it. Empty and single-node lists should be valid base cases.
 
 ## Examples
 
-- Empty list -> `null` or `false`, depending on the operation.
-- Single-node cycle check with no cycle -> `false`.
-- Two lists sharing the same tail node -> return the shared node for intersection.
+- `1 -> 2 -> 3` -> `3 -> 2 -> 1`.
+- Empty list -> `null`.
+- Single-node list -> same node.
 
 # Solutions
 
-Use pointer techniques that preserve node identity and adjust links without copying node values.
-Time complexity: O(n)
-Space complexity: O(1)
+Iterate through the list while redirecting each node's `next` pointer to the previous node, then return the last processed node as the new head.
 
 # Edge cases
 
 - Empty list.
 - Single-node list.
-- Cycle or target node at the head.
+- Long list with all links reversed.

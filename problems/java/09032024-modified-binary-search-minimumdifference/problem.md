@@ -10,7 +10,7 @@ solvedAt: "2024-03-09"
 
 # Problems
 
-Search a sorted or specially ordered collection for the requested target, range, boundary, or closest value.
+Given a sorted or specially ordered collection, locate a target value or the boundary position related to that target. Depending on the variant, return the exact index, insertion index, ceiling, closest value, first and last occurrence, or maximum point in a bitonic array. The solution should repeatedly discard half of the remaining search space whenever the ordering rules make that safe.
 
 ## Examples
 

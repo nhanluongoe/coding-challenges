@@ -10,7 +10,7 @@ solvedAt: "2024-04-01"
 
 # Problems
 
-Create a counter object or function that can increment, decrement, and reset around an initial value.
+Create a counter abstraction initialized with a starting value. It should expose operations such as increment, decrement, and reset, each updating or returning the current count according to the API. The counter's state should be private to that instance so separate counters do not affect one another.
 
 ## Examples
 

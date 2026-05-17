@@ -10,7 +10,7 @@ solvedAt: "2021-06-30"
 
 # Problems
 
-Count the number of distinct ways to climb `n` stairs when each move can climb one or two steps.
+Given a staircase with `n` steps, count how many distinct ways there are to reach the top when each move can climb either one or two steps. Different sequences of moves count as different ways. The answer follows a Fibonacci-style recurrence because the final move must come from step `n - 1` or step `n - 2`. Return the number of possible sequences.
 
 ## Examples
 

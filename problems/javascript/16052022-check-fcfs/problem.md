@@ -10,7 +10,7 @@ solvedAt: "2022-05-16"
 
 # Problems
 
-Verify that served orders preserve the relative order from take-out and dine-in queues.
+Given take-out orders, dine-in orders, and the final served order sequence, verify whether orders were served first-come, first-served while preserving the relative order within each source queue. The served list may interleave the two queues, but it cannot reorder either queue internally. Return `true` only when the served sequence uses every order exactly as a valid merge of the two source sequences.
 
 ## Examples
 

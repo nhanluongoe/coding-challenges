@@ -10,22 +10,20 @@ solvedAt: "2024-10-22"
 
 # Problems
 
-Search a sorted or specially ordered collection for the requested target, range, boundary, or closest value.
+Given a set of positive numbers, partition it into two subsets so the absolute difference between their sums is as small as possible. Every number must belong to exactly one of the two subsets. Return the minimum achievable difference, not necessarily the subsets themselves. The solution should consider subset sums up to half of the total sum because the other subset is implied.
 
 ## Examples
 
-- `[1, 3, 8, 10]`, target `8` -> found at index `2`.
-- `[1, 3, 8, 10]`, target `7` -> boundary-style variants return closest or ceiling index `2`.
-- One-element input -> either index `0` or not found based on the target.
+- `[1, 2, 3, 9]` -> minimum difference `3`.
+- `[1, 2, 7, 1, 5]` -> minimum difference `0`.
+- Single number -> difference equals that number.
 
 # Solutions
 
-Use binary search, adjusting the boundaries according to whether the target lies left or right of the midpoint.
-Time complexity: O(2^n), "n" is the total number
-Space complexity: O(n)
+Use dynamic programming to find reachable subset sums up to half of the total sum, then choose the reachable sum that minimizes `total - 2 * sum`.
 
 # Edge cases
 
-- Target smaller than the first item or larger than the last.
-- Duplicate target values.
-- One-element input.
+- Single-element input.
+- Total sum can be split evenly.
+- Large sums that affect DP table size.

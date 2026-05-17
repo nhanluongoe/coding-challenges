@@ -10,7 +10,7 @@ solvedAt: "2021-07-27"
 
 # Problems
 
-Implement a stack that can return the current minimum or maximum in constant time.
+Design a stack that supports normal stack operations while also returning the current minimum or maximum value efficiently. Each push or pop should update the stack state so the extreme value can be read without scanning the whole stack. Duplicate extreme values must be handled correctly because removing one copy should not remove the other from consideration.
 
 ## Examples
 

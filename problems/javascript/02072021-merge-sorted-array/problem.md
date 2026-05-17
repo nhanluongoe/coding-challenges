@@ -10,7 +10,7 @@ solvedAt: "2021-07-02"
 
 # Problems
 
-Implement `the provided function or class` for the Merge Sorted Array challenge using the behavior implied by the existing solution and tests.
+Given two sorted integer arrays where the first array has enough trailing space to hold the second, merge them so the first array becomes one sorted array containing every value. Only the first `m` values of the first array are meaningful before the merge; the remaining positions are placeholders. Duplicates should be preserved. The result should be stored in the first array when the implementation is in-place.
 
 ## Examples
 

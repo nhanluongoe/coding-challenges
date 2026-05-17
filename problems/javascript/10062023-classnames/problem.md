@@ -10,7 +10,7 @@ solvedAt: "2023-06-10"
 
 # Problems
 
-Build a helper that composes class name values from strings, arrays, and objects.
+Build a utility that converts mixed class-name inputs into a single space-separated string. Strings should be included directly, arrays should be flattened recursively, and object keys should be included when their values are truthy. Falsy inputs such as `null`, `undefined`, `false`, and empty strings should be ignored. Preserve a predictable order based on the input order.
 
 ## Examples
 

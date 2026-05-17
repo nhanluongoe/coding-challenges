@@ -10,7 +10,7 @@ solvedAt: "2024-07-05"
 
 # Problems
 
-Implement set-style array operations using either an iteratee or comparator to decide equality.
+Implement a set-style operation over arrays using either an iteratee or comparator to decide when values are equivalent. Intersection variants should return values that appear in every input according to that equivalence rule. Union variants should return one representative for each distinct equivalence key across all inputs. Preserve the expected order from the source arrays.
 
 ## Examples
 

@@ -10,7 +10,7 @@ solvedAt: "2024-02-15"
 
 # Problems
 
-Generate Fibonacci values through Go channels, using either buffered or unbuffered communication.
+Generate Fibonacci numbers using Go channels. The generator should produce the sequence in order and communicate values through the channel setup used by the implementation. Buffered and unbuffered variants should demonstrate the appropriate channel behavior. The program should also have a way to stop or finish cleanly instead of leaving goroutines blocked forever.
 
 ## Examples
 

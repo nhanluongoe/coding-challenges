@@ -10,7 +10,7 @@ solvedAt: "2024-03-29"
 
 # Problems
 
-Create an interval helper that returns a function capable of cancelling future executions.
+Create an interval helper that behaves like `setInterval` but returns a cancellation function. The helper should call the provided callback repeatedly after the requested delay, forwarding any extra arguments. Calling the returned cancel function should stop all future executions. Multiple intervals should be independent.
 
 ## Examples
 

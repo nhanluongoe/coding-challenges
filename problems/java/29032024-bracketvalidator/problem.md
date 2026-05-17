@@ -10,7 +10,7 @@ solvedAt: "2024-03-29"
 
 # Problems
 
-Implement `class BracketValidator` for the Bracket Validator challenge using the behavior implied by the existing solution and tests.
+Given a string containing brackets, determine whether every opening bracket is closed by the correct type of bracket in the correct order. The supported bracket pairs are typically `()`, `[]`, and `{}`. A valid string may contain nested or adjacent bracket groups. Return `false` for mismatched, extra closing, or unclosed opening brackets.
 
 ## Examples
 

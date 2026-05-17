@@ -10,7 +10,7 @@ solvedAt: "2024-07-31"
 
 # Problems
 
-Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
+Given a source string and a pattern string, find the shortest substring of the source that contains every character required by the pattern. Character multiplicity matters, so a pattern containing two copies of a character requires two copies in the window. If several windows contain the pattern, return the shortest one; if no window qualifies, return an empty string or the variant's no-result value.
 
 ## Examples
 

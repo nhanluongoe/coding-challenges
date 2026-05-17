@@ -10,7 +10,7 @@ solvedAt: "2022-05-03"
 
 # Problems
 
-Given an array of numbers and a target value, find two distinct elements whose sum equals the target.
+Given an array of numbers and a target value, find two different positions whose values add up exactly to the target. The same array element cannot be reused twice, although duplicate values at different positions are valid. Return the indices or values in the format expected by the current solution. The implementation should handle negative numbers, zero, and repeated values.
 
 ## Examples
 

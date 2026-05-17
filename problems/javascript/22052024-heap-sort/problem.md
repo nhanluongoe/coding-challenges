@@ -10,7 +10,7 @@ solvedAt: "2024-05-22"
 
 # Problems
 
-Sort an array in place using heap sort.
+Sort an array in place using heap sort. The algorithm should first arrange the input into a heap, then repeatedly move the largest remaining value into its final position and restore the heap property for the unsorted prefix. The final array should be sorted in ascending order without relying on the language's built-in sort.
 
 ## Examples
 

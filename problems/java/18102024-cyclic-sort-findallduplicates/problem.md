@@ -10,7 +10,7 @@ solvedAt: "2024-10-18"
 
 # Problems
 
-Rearrange values that belong to a fixed numeric range to discover missing, duplicate, or misplaced numbers.
+Given an array whose values belong to a known numeric range, use the relationship between values and indices to detect misplaced, missing, or duplicated numbers. The task may ask for a sorted arrangement, one missing value, one duplicate, or all duplicates. The solution should avoid unnecessary extra space by swapping each number toward its correct index when the value range allows it.
 
 ## Examples
 

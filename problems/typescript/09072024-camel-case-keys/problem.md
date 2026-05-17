@@ -10,7 +10,7 @@ solvedAt: "2024-07-09"
 
 # Problems
 
-Implement `function camelCaseKeys(object: Object): Object` for the Camel Case Keys challenge using the behavior implied by the existing solution and tests.
+Given an object, return a new object whose keys are converted to camelCase. Keys may contain separators such as underscores or hyphens. The original values should be preserved, and nested objects or arrays should be handled according to the implementation's intended depth. The original object should not be mutated if the function is expected to be pure.
 
 ## Examples
 

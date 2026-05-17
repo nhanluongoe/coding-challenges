@@ -10,7 +10,7 @@ solvedAt: "2024-04-23"
 
 # Problems
 
-Implement `class HappyNumber` for the Happy Number challenge using the behavior implied by the existing solution and tests.
+Given a positive integer, determine whether repeatedly replacing the number with the sum of the squares of its digits eventually reaches `1`. If the process reaches `1`, the number is happy. If it falls into a cycle that never reaches `1`, the number is not happy. Return a boolean result.
 
 ## Examples
 

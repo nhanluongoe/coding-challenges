@@ -10,7 +10,7 @@ solvedAt: "2024-12-11"
 
 # Problems
 
-Determine where a string contains a permutation or anagram of a given pattern.
+Given a string and a pattern, determine whether the string contains a contiguous substring that is a permutation of the pattern, or return all starting indices for such substrings depending on the variant. The substring length must equal the pattern length and must match the pattern's character counts exactly. Repeated characters in the pattern must be respected. Return the boolean or list required by the current solution.
 
 ## Examples
 

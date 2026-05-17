@@ -10,7 +10,7 @@ solvedAt: "2024-09-03"
 
 # Problems
 
-Use priority ordering to select, combine, or rearrange items according to a top-k, closest, kth, or minimum-cost rule.
+Given a collection of values, select or arrange items according to a priority rule such as top `k`, kth smallest, closest to a target, minimum connection cost, or maximum distinct count. The output should include only the requested items or final value, not a fully sorted copy unless that is part of the problem. Priority queues are useful because only a limited frontier of candidates matters at any time.
 
 ## Examples
 

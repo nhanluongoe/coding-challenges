@@ -10,7 +10,7 @@ solvedAt: "2024-04-02"
 
 # Problems
 
-Group or count array items by a key produced from each item.
+Given an array and an iteratee, organize items by the key produced for each item. For `countBy`, store how many items map to each key. For `groupBy`, store the original items under their computed key. The iteratee may be a function or shorthand depending on the implementation. Return an object-like mapping from keys to counts or grouped arrays.
 
 ## Examples
 

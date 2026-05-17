@@ -10,7 +10,7 @@ solvedAt: "2023-06-16"
 
 # Problems
 
-Select and aggregate session data according to filtering and grouping options.
+Given session-like records and selection options, filter, group, and summarize the data according to those options. The function should ignore records that do not match the requested criteria, preserve useful fields for selected sessions, and compute any requested aggregates. Missing optional fields should be handled defensively.
 
 ## Examples
 

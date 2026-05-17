@@ -10,7 +10,7 @@ solvedAt: "2024-08-06"
 
 # Problems
 
-Given appointments with start and end times, determine whether any appointments overlap.
+Given a list of appointment intervals, determine whether a person can attend all of them. Two appointments conflict if their time ranges overlap in a way that requires being in two places at once. Appointments may not be sorted initially, so compare them in chronological order. Back-to-back appointments should be treated according to the interval boundary convention, usually as non-conflicting when one ends exactly as the next starts.
 
 ## Examples
 

@@ -10,7 +10,7 @@ solvedAt: "2022-05-30"
 
 # Problems
 
-Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
+Given a binary tree or binary search tree, compute or validate the requested property using the tree's node structure. The task may ask for traversal order, maximum or minimum depth, balance, symmetry, path sums, level-order links, BST validity, or a specific ranked node. The solution should handle empty trees and single-node trees and should preserve the meaning of left and right child relationships.
 
 ## Examples
 

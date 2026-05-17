@@ -10,7 +10,7 @@ solvedAt: "2024-04-30"
 
 # Problems
 
-Generate every valid combination, subset, permutation, abbreviation, or parenthesized string requested by the input.
+Generate every valid arrangement described by the input: subsets, permutations, letter-case variants, generalized abbreviations, or balanced parentheses. The result should include all valid combinations without missing any and should avoid duplicates when the input contains repeated values. Build candidates step by step, only keeping states that can still lead to valid output.
 
 ## Examples
 

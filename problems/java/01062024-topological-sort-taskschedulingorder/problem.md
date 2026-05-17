@@ -10,7 +10,7 @@ solvedAt: "2024-06-01"
 
 # Problems
 
-Given dependency rules, determine whether an ordering exists and return one or all valid orderings as required.
+Given items with dependency rules, determine an ordering that respects every prerequisite. Each dependency means one item must appear before another. If the dependency graph contains a cycle, no valid ordering exists. Some variants ask whether scheduling is possible, one valid order, all valid orders, or an inferred character ordering from sorted words.
 
 ## Examples
 

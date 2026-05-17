@@ -10,7 +10,7 @@ solvedAt: "2021-06-25"
 
 # Problems
 
-Implement `def search_insert(nums, target)` for the Search Insert Position challenge using the behavior implied by the existing solution and tests.
+Given a sorted or specially ordered collection, locate a target value or the boundary position related to that target. Depending on the variant, return the exact index, insertion index, ceiling, closest value, first and last occurrence, or maximum point in a bitonic array. The solution should repeatedly discard half of the remaining search space whenever the ordering rules make that safe.
 
 ## Examples
 

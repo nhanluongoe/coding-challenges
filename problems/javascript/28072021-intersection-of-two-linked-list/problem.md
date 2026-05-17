@@ -10,7 +10,7 @@ solvedAt: "2021-07-28"
 
 # Problems
 
-Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
+Given the heads of two singly linked lists, find the node where the lists intersect by reference. Intersection means the two lists share the exact same node object, not merely equal values. If they intersect, return that shared node; otherwise return `null`. The lists should not be modified.
 
 ## Examples
 

@@ -10,20 +10,20 @@ solvedAt: "2024-05-21"
 
 # Problems
 
-Search a sorted or specially ordered collection for the requested target, range, boundary, or closest value.
+Implement or exercise a binary search tree. Each node stores a value, values smaller than a node belong in its left subtree, and values greater than or equal to it follow the insertion rule used by the implementation. Operations such as insertion, search, or traversal should preserve the BST ordering invariant. The tree should handle an initially empty root and progressively added values.
 
 ## Examples
 
-- `[1, 3, 8, 10]`, target `8` -> found at index `2`.
-- `[1, 3, 8, 10]`, target `7` -> boundary-style variants return closest or ceiling index `2`.
-- One-element input -> either index `0` or not found based on the target.
+- Insert `5`, `3`, `7` -> `3` is in the left subtree and `7` is in the right subtree.
+- Searching for an inserted value -> found.
+- Searching for a value that was never inserted -> not found.
 
 # Solutions
 
-Use binary search, adjusting the boundaries according to whether the target lies left or right of the midpoint.
+Compare each value with the current node and move left or right until the insertion, lookup, or traversal step is complete.
 
 # Edge cases
 
-- Target smaller than the first item or larger than the last.
-- Duplicate target values.
-- One-element input.
+- Empty tree.
+- Duplicate values.
+- Highly unbalanced insertion order.

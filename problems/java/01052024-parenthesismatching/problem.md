@@ -10,7 +10,7 @@ solvedAt: "2024-05-01"
 
 # Problems
 
-Implement `class ParenthesisMatching` for the Parenthesis Matching challenge using the behavior implied by the existing solution and tests.
+Given a string containing parentheses and the index of an opening parenthesis, find the index of its matching closing parenthesis. Nested parentheses must be counted correctly, so the first closing parenthesis after the opening index is not always the answer. If the opening parenthesis has no matching close, the function should signal an error according to the implementation.
 
 ## Examples
 

@@ -10,7 +10,7 @@ solvedAt: "2024-06-24"
 
 # Problems
 
-Implement `function isEmpty(value)` for the Is Empty challenge using the behavior implied by the existing solution and tests.
+Given a value, determine whether it should be considered empty. Empty values include `null`, `undefined`, empty arrays, empty strings, empty maps, empty sets, and objects with no own enumerable keys. Non-empty containers should return `false`. Primitive values follow the behavior defined by the implementation.
 
 ## Examples
 

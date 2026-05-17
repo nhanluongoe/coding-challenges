@@ -10,7 +10,7 @@ solvedAt: "2024-11-20"
 
 # Problems
 
-Return all unique triplets whose values sum to zero.
+Given an array of integers, find all unique triplets whose values add up to zero. Each triplet must use three different indices from the array. The result should avoid duplicate triplets even when the input contains repeated values. Return the collection of triplets in the format used by the solution.
 
 ## Examples
 

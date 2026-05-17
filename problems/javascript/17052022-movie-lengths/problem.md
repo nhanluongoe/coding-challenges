@@ -10,7 +10,7 @@ solvedAt: "2022-05-17"
 
 # Problems
 
-Determine whether two movie lengths exactly fill a flight length.
+Given a flight length and a list of movie lengths, determine whether two different movies exactly fill the flight time. Each movie can be used at most once, so a pair of identical durations requires two separate entries. Return a boolean result. The solution should handle cases where no pair exists without scanning every pair unnecessarily.
 
 ## Examples
 

@@ -10,7 +10,7 @@ solvedAt: "2024-01-31"
 
 # Problems
 
-Find the longest window that can be made uniform by replacing at most `k` characters or zeros.
+Given a string or binary array and a replacement budget `k`, find the longest contiguous window that can be made uniform by replacing at most `k` characters or flipping at most `k` zeros. The window is valid when all non-dominant values inside it can be covered by the budget. Return the maximum valid window length.
 
 ## Examples
 

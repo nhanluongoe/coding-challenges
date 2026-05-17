@@ -10,7 +10,7 @@ solvedAt: "2022-05-15"
 
 # Problems
 
-Implement `function mergeArrays(myArray, alicesArray)` for the Merge Sorted Array challenge using the behavior implied by the existing solution and tests.
+Given two already sorted arrays, return a new sorted array containing all values from both inputs. The input arrays may be empty and may have different lengths. Duplicates should remain in the output. The function should merge by comparing the next available values from each array rather than sorting everything again after concatenation.
 
 ## Examples
 

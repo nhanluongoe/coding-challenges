@@ -10,7 +10,7 @@ solvedAt: "2023-06-12"
 
 # Problems
 
-Implement `Promise.any`: resolve with the first fulfilled value, or reject after every input rejects.
+Implement a function with the behavior of `Promise.any`. It receives an iterable of promises or values and returns a promise that fulfills as soon as the first input fulfills. Rejections should be collected while there are still pending inputs, because one later fulfillment is enough to succeed. Only when every input rejects should the returned promise reject. Plain values count as already fulfilled values.
 
 ## Examples
 

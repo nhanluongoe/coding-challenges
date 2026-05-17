@@ -10,7 +10,7 @@ solvedAt: "2024-09-06"
 
 # Problems
 
-Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
+Given the head of a linked list, determine whether the list contains a cycle. A cycle exists when following `next` pointers eventually reaches a previously visited node instead of `null`. The function should return a boolean and should not modify the list. It must handle empty lists, one-node lists, and cycles that begin at the head or later in the list.
 
 ## Examples
 

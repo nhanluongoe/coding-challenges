@@ -10,7 +10,7 @@ solvedAt: "2022-05-25"
 
 # Problems
 
-Find a repeated value in an array whose values are constrained to a known range.
+Given an array containing numbers from a constrained range, find a value that appears more than once. The important detail is that the value range and array length guarantee or imply a duplicate. Depending on the solution, this can be solved by tracking seen values, rearranging values into their expected positions, or treating the array as a cycle. Return the duplicate value, not merely whether one exists.
 
 ## Examples
 

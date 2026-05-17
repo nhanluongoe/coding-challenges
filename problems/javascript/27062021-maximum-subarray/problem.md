@@ -10,7 +10,7 @@ solvedAt: "2021-06-27"
 
 # Problems
 
-Find the maximum possible sum of any contiguous subarray.
+Given an array of integers, find the largest possible sum of a contiguous subarray. The chosen subarray must use adjacent elements from the original order and must contain at least one number unless the variant says otherwise. Negative values are allowed, so the answer may be negative when every value is negative. Return the maximum sum, not the subarray itself unless the solution asks for it.
 
 ## Examples
 

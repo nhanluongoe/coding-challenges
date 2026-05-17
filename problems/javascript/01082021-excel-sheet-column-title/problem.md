@@ -10,7 +10,7 @@ solvedAt: "2021-08-01"
 
 # Problems
 
-Convert a positive column number to its spreadsheet-style column title.
+Given a positive integer column number, convert it to the spreadsheet column title format used by Excel. The mapping is one-indexed: `1` maps to `A`, `26` maps to `Z`, and `27` maps to `AA`. Because there is no zero digit in this alphabetic numbering system, boundary values around multiples of 26 require special handling.
 
 ## Examples
 

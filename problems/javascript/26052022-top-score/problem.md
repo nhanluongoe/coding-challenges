@@ -10,7 +10,7 @@ solvedAt: "2022-05-26"
 
 # Problems
 
-Sort numeric scores in descending order when the highest possible score is known.
+Given unordered scores and the highest possible score, return the scores sorted from highest to lowest. Scores are bounded integers, so the solution can count how many times each score appears instead of using comparison sorting. Duplicate scores must appear the same number of times in the output. Empty input should produce an empty sorted list.
 
 ## Examples
 

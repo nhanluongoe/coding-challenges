@@ -10,7 +10,7 @@ solvedAt: "2024-06-15"
 
 # Problems
 
-Maintain medians while values stream in or while a fixed-size window moves across an array.
+Process numbers while repeatedly reporting the median. In the stream version, insert one number at a time and return the median after each insertion. In the sliding-window version, report the median for every contiguous window of size `k` as the window moves through the array. The median is the middle value for odd counts and the average of the two middle values for even counts.
 
 ## Examples
 

@@ -10,7 +10,7 @@ solvedAt: "2024-12-04"
 
 # Problems
 
-Remove duplicates from a sorted array in place and return the new logical length.
+Given a sorted array, remove duplicate values in place so each unique value appears once at the front of the array. Return the new logical length or the compacted array format used by the solution. Values beyond the returned length do not matter. The relative order of the unique values should be preserved.
 
 ## Examples
 

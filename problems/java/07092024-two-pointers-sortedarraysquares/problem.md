@@ -10,7 +10,7 @@ solvedAt: "2024-09-07"
 
 # Problems
 
-Given a sorted array that may contain negatives, return the squares in sorted order.
+Given a sorted array that may contain negative numbers, return a new array containing the squares of each number in sorted order. Squaring negative numbers can produce large positive values, so simply squaring from left to right may not preserve order. The output should contain one square for each input value.
 
 ## Examples
 

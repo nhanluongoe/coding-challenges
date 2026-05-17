@@ -10,7 +10,7 @@ solvedAt: "2024-02-13"
 
 # Problems
 
-Randomly choose a gift according to configured probabilities.
+Given a set of gifts and their probabilities or weights, randomly select one gift according to that distribution. Gifts with larger weights should be selected more often over many runs, while zero-weight gifts should never be selected. Convert the weights into non-overlapping ranges so each random value maps to exactly one gift.
 
 ## Examples
 

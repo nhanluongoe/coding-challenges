@@ -10,7 +10,7 @@ solvedAt: "2024-07-24"
 
 # Problems
 
-Implement `class DeleteNode` for the Delete Node challenge using the behavior implied by the existing solution and tests.
+Given direct access to a node inside a singly linked list, delete that node without being given the list head. Because the previous node is unavailable, copy the next node's value into the current node and bypass the next node. This technique works only when the node to delete is not the tail. If the target is the last node, the implementation should reject the operation.
 
 ## Examples
 

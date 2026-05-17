@@ -10,7 +10,7 @@ solvedAt: "2024-10-30"
 
 # Problems
 
-Given a positive integer, find the longest run of zeros surrounded by ones in its binary representation.
+Given a positive integer, inspect its binary representation and find the longest consecutive run of zeros that is surrounded by ones on both sides. Zeros before the first one or after the final one do not count because they are not closed gaps. The function should return the length of the longest valid gap, or zero when no such gap exists.
 
 ## Examples
 

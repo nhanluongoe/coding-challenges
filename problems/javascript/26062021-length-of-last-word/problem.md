@@ -10,7 +10,7 @@ solvedAt: "2021-06-26"
 
 # Problems
 
-Return the length of the last word in a string.
+Given a string containing words and spaces, return the length of the final word. A word is the last contiguous group of non-space characters after ignoring trailing spaces. The function should not count spaces after the last word and should handle strings with one word or multiple spaces between words.
 
 ## Examples
 

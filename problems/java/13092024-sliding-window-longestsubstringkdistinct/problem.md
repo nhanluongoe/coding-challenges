@@ -10,7 +10,7 @@ solvedAt: "2024-09-13"
 
 # Problems
 
-Find the longest substring containing no more than `k` distinct characters.
+Given a string and a number `k`, find the length of the longest contiguous substring containing at most `k` distinct characters. The window may include repeated characters as long as the number of different characters stays within the limit. If the string has fewer than `k` distinct characters, the entire string may be valid. A `k` value of zero should produce a zero-length result.
 
 ## Examples
 

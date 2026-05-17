@@ -10,7 +10,7 @@ solvedAt: "2024-03-02"
 
 # Problems
 
-Find all contiguous subarrays whose product is less than a target value.
+Given an array of positive numbers and a target product, find every contiguous subarray whose product is strictly less than the target. A subarray must consist of neighboring elements in their original order. Because products grow and shrink predictably for positive values, the solution should maintain a moving window rather than recomputing products for every range. Return the count or list required by the existing solution.
 
 ## Examples
 

@@ -10,7 +10,7 @@ solvedAt: "2024-10-25"
 
 # Problems
 
-Find starting indices of substrings formed by concatenating every word from a list exactly once.
+Given a string and a list of words with equal length, find every starting index where a substring is made by concatenating all words exactly once and without extra characters. The words may appear in any order, but each required word must be used the correct number of times. Return all valid starting positions in ascending order. If no complete concatenation appears, return an empty list.
 
 ## Examples
 

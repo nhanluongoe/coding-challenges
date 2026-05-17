@@ -10,7 +10,7 @@ solvedAt: "2024-04-02"
 
 # Problems
 
-Implement `function breadthFirstSearch(graph, source)` for the Breadth First Search challenge using the behavior implied by the existing solution and tests.
+Given a graph and a starting node, traverse the graph in breadth-first order. Visit the starting node first, then all of its immediate neighbors, then nodes at distance two, and so on. Track visited nodes so cycles or repeated edges do not cause infinite traversal. Return or record the visited order in the format used by the implementation.
 
 ## Examples
 

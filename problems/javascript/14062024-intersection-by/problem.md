@@ -10,20 +10,20 @@ solvedAt: "2024-06-14"
 
 # Problems
 
-Operate on linked-list structure to detect a cycle, locate a node, reverse links, or find an intersection.
+Given two or more arrays and an iteratee, return the values from the first array whose transformed key appears in every other array. The iteratee defines how values are compared, so objects or numbers can be matched by derived values. Preserve the order of the first array and return only the intersecting representatives expected by the implementation.
 
 ## Examples
 
-- Empty list -> `null` or `false`, depending on the operation.
-- Single-node cycle check with no cycle -> `false`.
-- Two lists sharing the same tail node -> return the shared node for intersection.
+- `intersectionBy(Math.floor, [1.2, 2.4], [2.1, 3.2])` -> `[2.4]`.
+- Values are compared by their iteratee result, not strict equality.
+- If any input array is empty -> `[]`.
 
 # Solutions
 
-Use pointer techniques that preserve node identity and adjust links without copying node values.
+Compute comparison keys with the iteratee and keep values from the first array whose key appears in every other array.
 
 # Edge cases
 
-- Empty list.
-- Single-node list.
-- Cycle or target node at the head.
+- Empty arrays.
+- Duplicate transformed keys.
+- Objects or numbers compared by derived keys.

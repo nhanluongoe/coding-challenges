@@ -10,7 +10,7 @@ solvedAt: "2023-06-09"
 
 # Problems
 
-Implement array reduction with optional initial value.
+Implement the behavior of array reduction. Given an array, a reducer callback, and optionally an initial accumulator, combine the array values into one result. When no initial value is provided, the first present element becomes the initial accumulator and reduction starts at the next element. Empty arrays without an initial value should follow native error behavior.
 
 ## Examples
 

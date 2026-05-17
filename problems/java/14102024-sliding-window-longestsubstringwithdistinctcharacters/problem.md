@@ -10,7 +10,7 @@ solvedAt: "2024-10-14"
 
 # Problems
 
-Find the length of the longest substring with no repeated characters.
+Given a string, find the length of the longest contiguous substring that contains no repeated characters. The substring must preserve the original order and use adjacent characters. When a repeated character appears, the valid window must move past the earlier occurrence. Return the maximum length, not necessarily the substring itself.
 
 ## Examples
 

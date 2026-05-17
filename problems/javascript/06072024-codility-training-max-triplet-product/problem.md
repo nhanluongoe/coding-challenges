@@ -10,7 +10,7 @@ solvedAt: "2024-07-06"
 
 # Problems
 
-Given integers, find the maximum product obtainable from any three numbers.
+Given an array of integers, find the largest product obtainable by multiplying any three distinct numbers from the array. The best product is not always formed by the three largest positive values because two negative numbers can create a large positive product. The implementation should consider positive values, negative values, and zero. Inputs should contain at least three numbers unless the surrounding code explicitly handles invalid input.
 
 ## Examples
 

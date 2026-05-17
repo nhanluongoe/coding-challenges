@@ -10,7 +10,7 @@ solvedAt: "2022-05-21"
 
 # Problems
 
-For each index, return the product of all numbers in the input except the number at that index.
+Given an array of integers, build a new array where each output position contains the product of every input value except the one at that same index. The current value must be excluded from its own product. Avoid division unless the variant explicitly allows it, because zeros make division-based approaches fragile. The result should preserve the original order and contain one product per input value.
 
 ## Examples
 

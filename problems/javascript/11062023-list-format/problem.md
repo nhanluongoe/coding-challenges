@@ -10,7 +10,7 @@ solvedAt: "2023-06-11"
 
 # Problems
 
-Implement `function listFormat that returns the items concatenated into a single string. A common use case would be in summarizing the reactions for social media posts.` for the List Format challenge using the behavior implied by the existing solution and tests.
+Given a list of names or labels, format them into a human-readable phrase. The function should join two items with `and`, join longer lists with commas and a final `and`, and support options such as sorting, limiting the visible item count, and removing duplicates. Empty or missing inputs should produce an empty string.
 
 ## Examples
 

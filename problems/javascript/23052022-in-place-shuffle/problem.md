@@ -10,7 +10,7 @@ solvedAt: "2022-05-23"
 
 # Problems
 
-Randomly shuffle an array in place so every permutation is equally likely.
+Randomly reorder the elements of an array in place. Every possible permutation should be equally likely, so each position must choose uniformly from the remaining unshuffled portion of the array. The function should not lose, duplicate, or create elements. Empty arrays, single-element arrays, and arrays with repeated values should still be valid inputs.
 
 ## Examples
 

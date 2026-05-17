@@ -10,7 +10,7 @@ solvedAt: "2024-03-12"
 
 # Problems
 
-Combine or search across multiple sorted lists while preserving sorted order or coverage requirements.
+Given multiple sorted lists, combine them or search across them while preserving their sorted structure. The task may ask for one merged sorted list, the kth smallest value across all lists, or the smallest range containing at least one value from each list. At any point, only the current smallest candidate from each list is needed to decide the next move.
 
 ## Examples
 

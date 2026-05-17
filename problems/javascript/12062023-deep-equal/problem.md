@@ -10,7 +10,7 @@ solvedAt: "2023-06-12"
 
 # Problems
 
-Compare two values for deep structural equality.
+Given two values, determine whether they are deeply equal. Primitive values should compare by value, while arrays and objects should compare by structure and recursively equal contents. Object key order should not matter, but arrays should remain order-sensitive. The result should be a boolean.
 
 ## Examples
 

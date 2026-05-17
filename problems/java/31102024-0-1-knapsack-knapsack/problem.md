@@ -10,7 +10,7 @@ solvedAt: "2024-10-31"
 
 # Problems
 
-Decide or optimize a subset selection under capacity, target-sum, or equal-partition constraints.
+Given item values, weights, profits, or target sums, decide whether a subset can satisfy a condition or compute the best achievable value. Each item can usually be chosen at most once in these 0-1 style variants. The output may be a boolean, minimum difference, maximum profit, or reachable target result. The solution should account for include/exclude choices across the input items.
 
 ## Examples
 

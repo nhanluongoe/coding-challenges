@@ -10,7 +10,7 @@ solvedAt: "2024-07-01"
 
 # Problems
 
-Resolve two promises and deeply merge their fulfilled object values.
+Resolve two promises and merge their fulfilled values. Both inputs are expected to produce mergeable data, usually plain objects. When both promises fulfill, combine their properties into one result, recursively merging nested plain objects where appropriate and letting later values replace incompatible values. If either promise rejects, the merged promise should reject instead of returning a partial result.
 
 ## Examples
 

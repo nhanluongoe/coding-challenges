@@ -10,7 +10,7 @@ solvedAt: "2024-12-21"
 
 # Problems
 
-Find the longest contiguous stretch containing at most two fruit types.
+Given an array representing fruit types along a row of trees, find the longest contiguous stretch that can be collected using two baskets. Each basket can hold only one fruit type, so the valid window may contain at most two distinct values. Return the maximum number of fruits that can be collected from one continuous segment.
 
 ## Examples
 

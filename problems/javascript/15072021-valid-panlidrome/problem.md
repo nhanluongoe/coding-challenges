@@ -10,7 +10,7 @@ solvedAt: "2021-07-15"
 
 # Problems
 
-Determine whether the input can form or already is a palindrome under the problem's normalization rules.
+Given a string, determine whether it reads the same forward and backward after applying the problem's normalization rules. Typical normalization ignores punctuation and spaces and compares letters case-insensitively. Return `true` when the cleaned sequence is symmetric and `false` otherwise.
 
 ## Examples
 

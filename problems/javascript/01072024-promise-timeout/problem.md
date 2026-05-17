@@ -10,7 +10,7 @@ solvedAt: "2024-07-01"
 
 # Problems
 
-Wrap a promise so it rejects or times out if it does not settle within the requested duration.
+Create a wrapper that races a promise against a time limit. If the original promise fulfills or rejects before the duration expires, the wrapper should settle the same way. If the timeout fires first, the wrapper should reject or otherwise signal a timeout according to the implementation contract. Timer cleanup matters so a completed promise does not leave unnecessary scheduled work behind.
 
 ## Examples
 

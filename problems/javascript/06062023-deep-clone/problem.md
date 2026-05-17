@@ -10,7 +10,7 @@ solvedAt: "2023-06-06"
 
 # Problems
 
-Create a deep copy so nested objects and arrays no longer share references with the original.
+Given a value, create a deep copy so nested arrays and objects in the result do not share references with the original. Primitive values can be returned directly. Arrays and objects should be copied recursively, preserving their contained values. If circular references or special object types are in scope for the variant, handle them according to the implementation contract.
 
 ## Examples
 

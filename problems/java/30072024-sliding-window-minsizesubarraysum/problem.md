@@ -10,7 +10,7 @@ solvedAt: "2024-07-30"
 
 # Problems
 
-Find the shortest contiguous subarray whose sum is at least the requested target.
+Given an array of positive numbers and a target sum, find the length of the shortest contiguous subarray whose sum is at least the target. The subarray must use adjacent values and cannot skip over elements. If more than one valid subarray exists, return the smallest length. If no subarray reaches the target, return the problem's no-result value, often `0`.
 
 ## Examples
 

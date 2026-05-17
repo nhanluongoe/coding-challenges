@@ -10,7 +10,7 @@ solvedAt: "2022-05-14"
 
 # Problems
 
-Reverse the order of words in a message while preserving the characters within each word.
+Given a message represented as characters or words, reverse the order of the words while keeping the letters inside each word in the correct order. The solution should work in place when the input is a mutable character array. Spacing rules should follow the implementation contract, but the main requirement is that the word sequence is reversed.
 
 ## Examples
 

@@ -10,7 +10,7 @@ solvedAt: "2024-04-01"
 
 # Problems
 
-Split an array into consecutive chunks of a requested size.
+Given an array and a chunk size, split the array into consecutive groups of that size. Chunks should preserve the original order of the elements. The final chunk may contain fewer than `size` elements when the array length is not divisible by the chunk size. Return an array of chunk arrays.
 
 ## Examples
 

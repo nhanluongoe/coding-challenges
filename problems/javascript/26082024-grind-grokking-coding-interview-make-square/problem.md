@@ -10,7 +10,7 @@ solvedAt: "2024-08-26"
 
 # Problems
 
-Implement `function makeSquare(arr)` for the Make Square challenge using the behavior implied by the existing solution and tests.
+Given a sorted array that may contain negative numbers, return a new array containing the squares of each number in sorted order. Squaring negative numbers can produce large positive values, so simply squaring from left to right may not preserve order. The output should contain one square for each input value.
 
 ## Examples
 

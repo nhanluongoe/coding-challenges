@@ -10,7 +10,7 @@ solvedAt: "2023-06-06"
 
 # Problems
 
-Flatten nested arrays according to the required depth or full-recursion behavior.
+Given a nested array structure, return a flattened array according to the depth rules of the implementation. Deep-flatten variants should recursively expand every nested array until only non-array values remain. The order of values should match a left-to-right traversal of the original structure. Empty nested arrays should not add values to the result.
 
 ## Examples
 

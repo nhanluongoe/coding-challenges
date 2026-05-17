@@ -10,7 +10,7 @@ solvedAt: "2024-05-25"
 
 # Problems
 
-Count or list triplets whose sum is smaller than a target.
+Given an array of integers and a target value, count or return triplets whose sum is strictly smaller than the target. A valid triplet uses three distinct indices. Sorting can help identify groups of valid triplets without checking every combination individually. The output should match the variant: either the count of valid triplets or the triplets themselves.
 
 ## Examples
 

@@ -10,7 +10,7 @@ solvedAt: "2024-09-12"
 
 # Problems
 
-Implement array filtering with callback arguments matching the native API.
+Implement the behavior of array filtering. Given an array and a predicate callback, return a new array containing only the elements for which the callback returns a truthy value. The callback should receive the current element, index, and source array, and should use the provided `this` binding if the variant supports it. The original array should remain unchanged.
 
 ## Examples
 

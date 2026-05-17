@@ -10,7 +10,7 @@ solvedAt: "2022-06-14"
 
 # Problems
 
-Given time intervals, combine every overlapping or touching interval and return the condensed schedule.
+Given a collection of intervals with start and end values, return a condensed list where every overlapping interval has been combined. Intervals may arrive unsorted, so the solution must compare them by start time before merging. If one interval ends exactly when another starts, treat that boundary according to the local convention used by the solution, commonly as a merge for meeting ranges. Preserve only the minimal set of intervals needed to represent the same covered time.
 
 ## Examples
 

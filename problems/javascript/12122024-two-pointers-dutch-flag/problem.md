@@ -10,7 +10,7 @@ solvedAt: "2024-12-12"
 
 # Problems
 
-Sort an array containing only three categories, usually `0`, `1`, and `2`, in place.
+Given an array containing only three categories, usually represented by `0`, `1`, and `2`, reorder the array in place so equal values are grouped in sorted category order. The function should use constant extra space and should not rely on a general-purpose sort. The final array should contain exactly the same values as the input, only rearranged.
 
 ## Examples
 

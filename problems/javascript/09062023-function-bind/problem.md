@@ -10,7 +10,7 @@ solvedAt: "2023-06-09"
 
 # Problems
 
-Implement function binding with a fixed `this` value and optional preset arguments.
+Implement function binding. Given a function and a target context, return a new function that calls the original with `this` fixed to that context. Preset arguments supplied during binding should be placed before arguments supplied at call time. The wrapper should preserve the original function's result.
 
 ## Examples
 

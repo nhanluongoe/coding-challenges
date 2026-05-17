@@ -10,7 +10,7 @@ solvedAt: "2022-05-14"
 
 # Problems
 
-Reverse an array of characters in place.
+Given an array of characters, reverse the characters in place. The function should mutate the input array rather than allocating and returning a separate reversed array. Swap matching positions from the ends toward the center until the whole array is reversed. Empty and single-character arrays should remain valid.
 
 ## Examples
 

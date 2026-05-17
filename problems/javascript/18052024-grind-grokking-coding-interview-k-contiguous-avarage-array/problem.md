@@ -10,7 +10,7 @@ solvedAt: "2024-05-18"
 
 # Problems
 
-Return the average for every contiguous subarray of size `k`.
+Given an array and a fixed window size `k`, compute the average value of every contiguous subarray of length `k`. Each window should slide one position at a time, so consecutive windows share most of their elements. Return the averages in the same order the windows appear. The input should have at least `k` values unless invalid input handling is part of the exercise.
 
 ## Examples
 

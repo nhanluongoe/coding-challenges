@@ -10,7 +10,7 @@ solvedAt: "2021-07-10"
 
 # Problems
 
-Generate Pascal's Triangle rows or return the requested row.
+Generate Pascal's Triangle data. For the full-triangle variant, return the first `numRows` rows where each row starts and ends with `1` and each interior value is the sum of the two values above it. For the row-specific variant, return only the row at the requested zero-based index. The output should use arrays of numbers in triangle order.
 
 ## Examples
 

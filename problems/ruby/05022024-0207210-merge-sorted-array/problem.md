@@ -10,7 +10,7 @@ solvedAt: "2024-02-05"
 
 # Problems
 
-Implement `def merge(nums1, m, nums2, n)` for the Merge Sorted Array challenge using the behavior implied by the existing solution and tests.
+Given two sorted integer arrays, merge the second array into the first so the first array contains all values in sorted order. The first array has enough trailing capacity to hold the second array's values, and `m` and `n` describe how many real values are present in each input. The merge should preserve duplicates and should not discard values from either array. Return or mutate the array according to the function contract.
 
 ## Examples
 

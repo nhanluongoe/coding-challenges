@@ -10,7 +10,7 @@ solvedAt: "2024-03-25"
 
 # Problems
 
-Implement `class AddTwoNumber` for the Add Two Numbers challenge using the behavior implied by the existing solution and tests.
+Given two non-empty linked lists representing non-negative integers in reverse digit order, add the two numbers and return the sum as a linked list in the same reverse order. Each node stores one digit. Carry values must propagate through the lists, and if one list is shorter, the remaining digits of the longer list still participate in the addition. A final carry should create a new node.
 
 ## Examples
 

@@ -10,7 +10,7 @@ solvedAt: "2024-07-02"
 
 # Problems
 
-Convert a callback-style function into one that returns a promise.
+Write a helper that converts a callback-based function into a promise-returning function. The wrapper should pass through the original arguments, preserve the intended `this` context when called as a method, and settle the returned promise from the callback result. Error-first callbacks should reject when the error argument is present and resolve with the successful value or values otherwise.
 
 ## Examples
 

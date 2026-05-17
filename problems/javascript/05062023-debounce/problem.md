@@ -10,7 +10,7 @@ solvedAt: "2023-06-05"
 
 # Problems
 
-Create a debounced function that delays execution until calls stop for the specified delay.
+Implement debouncing for a function. The returned wrapper may be called many times, but it should postpone running the original function until calls have stopped for the specified delay. Each new call before the delay expires cancels the previous scheduled run. When the function finally runs, it should use the latest arguments and the correct calling context.
 
 ## Examples
 

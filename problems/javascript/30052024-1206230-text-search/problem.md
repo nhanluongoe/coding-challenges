@@ -10,7 +10,7 @@ solvedAt: "2024-05-30"
 
 # Problems
 
-Search text records and return entries that match the requested query.
+Given a collection of text records and a search query, return the records that match the query according to the implementation's matching rules. Matching usually requires normalizing case and comparing query terms against searchable fields. The result should include only records that satisfy the query and should return an empty list when nothing matches.
 
 ## Examples
 

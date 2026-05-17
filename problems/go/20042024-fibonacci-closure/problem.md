@@ -10,7 +10,7 @@ solvedAt: "2024-04-20"
 
 # Problems
 
-Return a closure that yields the next Fibonacci number on each call.
+Return a closure that produces the next Fibonacci number each time it is called. The closure should keep the sequence state privately between calls. The first calls should produce the standard starting values, and every later call should advance the pair of previous values.
 
 ## Examples
 

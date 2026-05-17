@@ -10,7 +10,7 @@ solvedAt: "2022-05-24"
 
 # Problems
 
-Given a sorted array that has been rotated, find the index where the rotation starts.
+Given an alphabetically sorted array that has been rotated, find the index where the rotation begins, which is the smallest element in the array. The array consists of two sorted portions joined at the rotation point. Use comparisons to narrow the search rather than scanning every word. The behavior for an already sorted array should be explicit, commonly returning index `0`.
 
 ## Examples
 

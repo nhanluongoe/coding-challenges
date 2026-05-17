@@ -10,7 +10,7 @@ solvedAt: "2024-08-26"
 
 # Problems
 
-Insert a new interval into an existing sorted list of non-overlapping intervals and merge any overlaps.
+Given a sorted list of non-overlapping intervals and one new interval, insert the new interval into the correct position and merge any intervals that now overlap. Intervals that finish before the new interval should remain unchanged, intervals that overlap should be collapsed into one expanded interval, and intervals after the merged interval should be appended in order. The result should remain sorted and non-overlapping.
 
 ## Examples
 

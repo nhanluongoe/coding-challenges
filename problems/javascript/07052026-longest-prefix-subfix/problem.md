@@ -10,7 +10,7 @@ solvedAt: "2026-05-07"
 
 # Problems
 
-Given a string, return the longest proper prefix that is also a suffix. A proper prefix cannot be the entire string, and the matching suffix must end at the final character.
+Given a string, return the longest proper prefix that is also a suffix of the same string. A proper prefix cannot be the entire string, so the answer must be shorter than the input. The matching suffix must end at the final character. If no non-empty prefix also appears as a suffix, return an empty string.
 
 ## Examples
 

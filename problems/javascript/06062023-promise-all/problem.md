@@ -10,7 +10,7 @@ solvedAt: "2023-06-06"
 
 # Problems
 
-Implement `Promise.all`: resolve with ordered results when all inputs fulfill, or reject as soon as one input rejects.
+Implement a function with the behavior of `Promise.all`. It receives an iterable containing promises, thenables, or plain values. The returned promise must fulfill only after every input fulfills, preserving the original input order in the result array rather than the completion order. If any input rejects, the returned promise should reject with that first rejection reason. An empty iterable should resolve immediately with an empty array.
 
 ## Examples
 

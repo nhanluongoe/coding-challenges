@@ -10,7 +10,7 @@ solvedAt: "2021-06-28"
 
 # Problems
 
-Add one to a non-negative integer represented as an array of decimal digits.
+Given a non-negative integer represented as an array of decimal digits, add one to the number and return the resulting digit array. Each input element is one digit, and the most significant digit comes first. The solution must carry through trailing nines and grow the array when the number rolls over, such as `999` becoming `1000`.
 
 ## Examples
 

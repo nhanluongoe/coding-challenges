@@ -10,7 +10,7 @@ solvedAt: "2024-08-01"
 
 # Problems
 
-Implement `class SetMatrixZero` for the Set Matrix Zeroes challenge using the behavior implied by the existing solution and tests.
+Given a matrix, if any cell contains zero, set that cell's entire row and entire column to zero. All zeroing decisions should be based on the original matrix state, not on zeros introduced during the update. The result should be reflected in the matrix structure expected by the implementation, often by mutating the matrix in place.
 
 ## Examples
 

@@ -10,7 +10,7 @@ solvedAt: "2024-03-14"
 
 # Problems
 
-Find the largest sum among all contiguous subarrays of size `k`.
+Given an array and a fixed window size `k`, find the maximum sum among all contiguous subarrays of exactly that size. The selected subarray must contain `k` adjacent elements. The solution should update a running window sum as it moves through the array. Return the best sum found after every valid window has been considered.
 
 ## Examples
 

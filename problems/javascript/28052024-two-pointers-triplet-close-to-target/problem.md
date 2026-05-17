@@ -10,7 +10,7 @@ solvedAt: "2024-05-28"
 
 # Problems
 
-Implement `function searchTriplet(arr, target)` for the Triplet Sum Close to Target challenge using the behavior implied by the existing solution and tests.
+Given an array of integers and a target sum, find the sum of three distinct values whose total is closest to the target. The function should consider negative numbers, positive numbers, and duplicates. If an exact target sum exists, return it immediately because no closer result is possible. Otherwise return the closest sum after all viable triplets have been compared.
 
 ## Examples
 

@@ -10,7 +10,7 @@ solvedAt: "2024-01-04"
 
 # Problems
 
-Given eastbound and westbound cars in order, count all passing pairs subject to the required limit.
+Given an array where each value represents a car traveling east or west, count how many passing pairs occur. A passing pair is formed when an eastbound car appears before a westbound car. The count should be accumulated without enumerating every pair one by one. If the problem defines an upper limit for the count, return the specified overflow value when that limit is exceeded.
 
 ## Examples
 

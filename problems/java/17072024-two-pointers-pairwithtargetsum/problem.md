@@ -10,7 +10,7 @@ solvedAt: "2024-07-17"
 
 # Problems
 
-Given a sorted array and a target value, return the indices or values that form a pair whose sum equals the target.
+Given a sorted array of numbers and a target sum, find the pair of distinct entries that add up to the target. The sorted order is part of the contract and should be used to avoid checking every possible pair. Return the pair, its indices, or the format used by the existing solution. If no pair exists, return the problem's not-found result.
 
 ## Examples
 

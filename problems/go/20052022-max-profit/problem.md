@@ -10,7 +10,7 @@ solvedAt: "2022-05-20"
 
 # Problems
 
-Given daily prices, compute the best profit from buying before selling under the variant's transaction rule.
+Given a sequence of stock prices over time, compute the best profit allowed by the problem variant. For the single-transaction version, choose one buy time and one later sell time so profit is maximized. For the multiple-transaction version, capture every profitable rise while still respecting chronological order. The algorithm must not sell before buying and should define what to return when no profitable trade exists.
 
 ## Examples
 

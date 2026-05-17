@@ -10,7 +10,7 @@ solvedAt: "2024-02-24"
 
 # Problems
 
-Implement queue behavior, either directly or by using two stacks.
+Implement first-in, first-out queue behavior. Enqueue should add a value to the back, and dequeue should remove the oldest value from the front. For the two-stack variant, use stacks internally while preserving queue order externally. Define behavior for empty queues according to the implementation contract.
 
 ## Examples
 

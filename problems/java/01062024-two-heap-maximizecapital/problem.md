@@ -10,7 +10,7 @@ solvedAt: "2024-06-01"
 
 # Problems
 
-Implement `class MaximizeCapital` for the Maximize Capital challenge using the behavior implied by the existing solution and tests.
+Given project capital requirements, project profits, a maximum number of projects, and an initial capital amount, choose projects to maximize final capital. A project can only be selected when the available capital meets its requirement. After selecting a project, its profit is added to available capital and can unlock more projects. Return the highest capital reachable after selecting at most the allowed number of projects.
 
 ## Examples
 
