@@ -12,6 +12,12 @@ solvedAt: "2024-07-02"
 
 Implement promise resolution behavior for plain values, thenables, and existing promises.
 
+## Examples
+
+- `promiseResolve(3)` -> resolves to `3`.
+- `promiseResolve(Promise.resolve("ok"))` -> resolves to `"ok"`.
+- `promiseResolve({ then: resolve => resolve(5) })` -> resolves to `5`.
+
 # Solutions
 
 Return existing promises unchanged, assimilate thenables by calling `then`, and otherwise fulfill with the provided value.

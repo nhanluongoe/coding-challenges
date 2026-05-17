@@ -12,6 +12,12 @@ solvedAt: "2024-10-31"
 
 Decide or optimize a subset selection under capacity, target-sum, or equal-partition constraints.
 
+## Examples
+
+- Numbers `[1, 2, 3, 7]`, target `6` -> subset `[1, 2, 3]` exists.
+- Odd total sum for equal partition -> `false`.
+- Capacity `0` -> maximum profit `0`.
+
 # Solutions
 
 Use dynamic programming over items and reachable sums/capacities, carrying forward include/exclude decisions.

@@ -12,6 +12,12 @@ solvedAt: "2022-05-26"
 
 Sort numeric scores in descending order when the highest possible score is known.
 
+## Examples
+
+- Scores `[37, 89, 41, 65, 91, 53]`, max `100` -> `[91, 89, 65, 53, 41, 37]`.
+- `[]` -> `[]`.
+- `[100, 100, 0]` -> `[100, 100, 0]`.
+
 # Solutions
 
 Count occurrences of each score, then emit scores from highest to lowest according to their counts.

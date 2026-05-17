@@ -12,6 +12,12 @@ solvedAt: "2022-05-14"
 
 Reverse the order of words in a message while preserving the characters within each word.
 
+## Examples
+
+- `"cake pound steal"` -> `"steal pound cake"`.
+- `"hello"` -> `"hello"`.
+- Extra spaces should follow the variant's spacing rules.
+
 # Solutions
 
 Reverse the whole character array, then reverse each word range in place.

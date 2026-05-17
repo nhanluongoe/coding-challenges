@@ -12,6 +12,12 @@ solvedAt: "2022-05-20"
 
 Given daily prices, compute the best profit from buying before selling under the variant's transaction rule.
 
+## Examples
+
+- `[1, 5, 3, 6]` -> best single profit `5`.
+- `[7, 6, 4]` -> `0` or the least loss, depending on the variant.
+- `[5]` -> no profitable transaction.
+
 # Solutions
 
 Scan once, keeping the lowest earlier price and the best sell profit seen so far.

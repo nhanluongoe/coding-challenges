@@ -12,6 +12,12 @@ solvedAt: "2024-07-31"
 
 Traverse or validate a binary tree according to the requested order, balance, depth, path, symmetry, or BST rule.
 
+## Examples
+
+- `"ADOBECODEBANC"`, pattern `"ABC"` -> `"BANC"`.
+- Pattern longer than string -> `""`.
+- `"aa"`, pattern `"aa"` -> `"aa"`.
+
 # Solutions
 
 Use recursive depth-first traversal, returning the information each parent needs from its children.

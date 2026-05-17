@@ -12,6 +12,12 @@ solvedAt: "2023-06-10"
 
 Build a helper that composes class name values from strings, arrays, and objects.
 
+## Examples
+
+- `classNames("foo", "bar")` -> `"foo bar"`.
+- `classNames({ active: true, hidden: false })` -> `"active"`.
+- Falsy inputs such as `null` and `false` are ignored.
+
 # Solutions
 
 Flatten supported arguments, include strings directly, and include object keys whose values are truthy.

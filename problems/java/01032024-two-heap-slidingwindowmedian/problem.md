@@ -12,6 +12,12 @@ solvedAt: "2024-03-01"
 
 Maintain medians while values stream in or while a fixed-size window moves across an array.
 
+## Examples
+
+- Stream `[3, 1, 5]` -> medians `3`, `2`, `3` after each insertion.
+- Window `[1, 2]` -> median `1.5`.
+- Duplicate values should not disturb heap balance.
+
 # Solutions
 
 Keep a max-heap for the lower half and a min-heap for the upper half, rebalancing after inserts and removals.

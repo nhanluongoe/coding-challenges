@@ -12,6 +12,12 @@ solvedAt: "2024-10-14"
 
 Find the length of the longest substring with no repeated characters.
 
+## Examples
+
+- `"aabccbb"` -> `3` from `"abc"`.
+- `"aaaa"` -> `1`.
+- `""` -> `0`.
+
 # Solutions
 
 Use a sliding window with last-seen positions or counts, moving the left boundary past duplicates.

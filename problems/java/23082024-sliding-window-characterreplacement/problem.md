@@ -12,6 +12,12 @@ solvedAt: "2024-08-23"
 
 Find the longest window that can be made uniform by replacing at most `k` characters or zeros.
 
+## Examples
+
+- `"aabccbb"`, `k = 2` -> `5` after replacing two chars.
+- `[0, 1, 1, 0, 0, 0, 1]`, `k = 2` -> longest ones window after two flips.
+- `k = 0` -> longest already-uniform window.
+
 # Solutions
 
 Use a sliding window and keep the count of the dominant value; shrink when replacements needed exceed `k`.

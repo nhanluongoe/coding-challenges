@@ -12,6 +12,12 @@ solvedAt: "2023-06-12"
 
 Implement `Promise.any`: resolve with the first fulfilled value, or reject after every input rejects.
 
+## Examples
+
+- `promiseAny([Promise.resolve("ok")])` -> resolves to `"ok"`.
+- `promiseAny([Promise.reject("a"), Promise.resolve("b")])` -> resolves to `"b"`.
+- `promiseAny([])` -> rejects because no input can fulfill.
+
 # Solutions
 
 Wrap each input as a promise, resolve immediately on fulfillment, and collect rejection reasons until all inputs fail.

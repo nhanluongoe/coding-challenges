@@ -12,6 +12,12 @@ solvedAt: "2021-07-15"
 
 Determine whether the input can form or already is a palindrome under the problem's normalization rules.
 
+## Examples
+
+- `"A man, a plan, a canal: Panama"` -> `true` for normalized palindrome checks.
+- `"code"` -> `false` for palindrome-permutation checks.
+- `"civic"` -> `true`.
+
 # Solutions
 
 Normalize ignored characters, then compare characters from both ends.

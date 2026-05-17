@@ -12,6 +12,12 @@ solvedAt: "2023-06-06"
 
 Create a deep copy so nested objects and arrays no longer share references with the original.
 
+## Examples
+
+- `deepClone({ a: { b: 1 } })` -> equal object with a different nested reference.
+- `deepClone([1, [2]])` -> copied nested array.
+- Primitive values return as-is.
+
 # Solutions
 
 Recursively clone arrays and plain objects while returning primitive values directly.

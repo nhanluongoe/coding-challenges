@@ -12,6 +12,12 @@ solvedAt: "2023-06-12"
 
 Compare two values for deep structural equality.
 
+## Examples
+
+- `deepEqual({ a: 1 }, { a: 1 })` -> `true`.
+- `deepEqual([1, 2], [2, 1])` -> `false`.
+- `deepEqual(null, null)` -> `true`.
+
 # Solutions
 
 Check primitive equality first, then recursively compare arrays and object keys/values.

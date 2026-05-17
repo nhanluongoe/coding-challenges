@@ -12,6 +12,12 @@ solvedAt: "2022-05-14"
 
 Reverse an array of characters in place.
 
+## Examples
+
+- `["a", "b", "c"]` -> `["c", "b", "a"]`.
+- `[]` -> `[]`.
+- `["x"]` -> `["x"]`.
+
 # Solutions
 
 Swap characters from both ends while moving two pointers toward the center.

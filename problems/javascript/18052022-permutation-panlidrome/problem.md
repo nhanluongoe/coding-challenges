@@ -12,6 +12,12 @@ solvedAt: "2022-05-18"
 
 Generate every valid combination, subset, permutation, abbreviation, or parenthesized string requested by the input.
 
+## Examples
+
+- `[1, 2]` -> subsets `[[], [1], [2], [1, 2]]` for subset variants.
+- `"ab"` -> case permutations such as `"ab"`, `"aB"`, `"Ab"`, `"AB"` for letter-case variants.
+- `n = 1` for parentheses -> `["()"]`.
+
 # Solutions
 
 Use iterative breadth expansion or backtracking, adding choices one position at a time and pruning invalid states.

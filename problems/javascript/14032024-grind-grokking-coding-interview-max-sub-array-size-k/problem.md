@@ -12,6 +12,12 @@ solvedAt: "2024-03-14"
 
 Find the largest sum among all contiguous subarrays of size `k`.
 
+## Examples
+
+- `[2, 1, 5, 1, 3, 2]`, `k = 3` -> `9` from `[5, 1, 3]`.
+- `k = 1` -> maximum single value.
+- `k` equal to array length -> sum of the whole array.
+
 # Solutions
 
 Use a fixed-size sliding window and update the best sum as each new value enters and one old value leaves.

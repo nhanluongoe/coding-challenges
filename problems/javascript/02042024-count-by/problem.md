@@ -12,6 +12,12 @@ solvedAt: "2024-04-02"
 
 Group or count array items by a key produced from each item.
 
+## Examples
+
+- `countBy([6.1, 4.2, 6.3], Math.floor)` -> `{ 4: 1, 6: 2 }`.
+- `groupBy(["one", "two"], "length")`-style variants group both under length `3`.
+- Empty input -> `{}`.
+
 # Solutions
 
 Evaluate the iteratee for each item and store either a count or an array of items under that computed key.

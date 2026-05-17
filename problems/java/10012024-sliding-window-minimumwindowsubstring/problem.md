@@ -12,6 +12,12 @@ solvedAt: "2024-01-10"
 
 Find the shortest substring of a string that contains every required character from a pattern with the right multiplicities.
 
+## Examples
+
+- `"ADOBECODEBANC"`, pattern `"ABC"` -> `"BANC"`.
+- Pattern longer than string -> `""`.
+- `"aa"`, pattern `"aa"` -> `"aa"`.
+
 # Solutions
 
 Use a frequency map and sliding window, expanding until all requirements are met and shrinking to minimize the window.

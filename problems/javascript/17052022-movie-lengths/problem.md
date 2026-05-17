@@ -12,6 +12,12 @@ solvedAt: "2022-05-17"
 
 Determine whether two movie lengths exactly fill a flight length.
 
+## Examples
+
+- Movie lengths `[2, 4]`, flight `6` -> `true`.
+- `[2, 4]`, flight `1` -> `false`.
+- `[3, 3]`, flight `6` -> `true` only if two separate movies exist.
+
 # Solutions
 
 Scan lengths while storing complements in a set, returning true when the current length completes a pair.

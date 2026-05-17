@@ -12,6 +12,12 @@ solvedAt: "2024-07-02"
 
 Convert a callback-style function into one that returns a promise.
 
+## Examples
+
+- Callback returns `(null, 3)` -> wrapper resolves to `3`.
+- Callback returns `(error)` -> wrapper rejects with that error.
+- Calling with arguments preserves those arguments for the original function.
+
 # Solutions
 
 Return a wrapper that calls the original function and resolves or rejects from the callback's error-first result.

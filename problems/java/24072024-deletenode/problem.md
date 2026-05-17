@@ -12,6 +12,12 @@ solvedAt: "2024-07-24"
 
 Implement `class DeleteNode` for the Delete Node challenge using the behavior implied by the existing solution and tests.
 
+## Examples
+
+- List `1 -> 2 -> 3 -> 4`, delete node with value `2` -> `1 -> 3 -> 4`.
+- Deleting the head by reference copies the next node into the head.
+- Deleting the last node -> error for this implementation.
+
 # Solutions
 
 Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.

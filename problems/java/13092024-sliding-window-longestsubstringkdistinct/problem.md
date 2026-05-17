@@ -12,6 +12,12 @@ solvedAt: "2024-09-13"
 
 Find the longest substring containing no more than `k` distinct characters.
 
+## Examples
+
+- `"araaci"`, `k = 2` -> `4` from `"araa"`.
+- `k = 0` -> `0`.
+- String with fewer than `k` distinct chars -> whole string length.
+
 # Solutions
 
 Track character frequencies in a sliding window and shrink while the number of distinct characters exceeds `k`.

@@ -12,6 +12,12 @@ solvedAt: "2026-05-07"
 
 Given a string, return the longest proper prefix that is also a suffix. A proper prefix cannot be the entire string, and the matching suffix must end at the final character.
 
+## Examples
+
+- `"ababab"` -> `"abab"`.
+- `"level"` -> `"l"`.
+- `"abcd"` -> `""`.
+
 # Solutions
 
 Build the KMP prefix-length table while scanning the string once. The final table value gives the length of the longest prefix that also appears as a suffix, so return that leading slice.

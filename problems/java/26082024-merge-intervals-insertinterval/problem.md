@@ -12,6 +12,12 @@ solvedAt: "2024-08-26"
 
 Insert a new interval into an existing sorted list of non-overlapping intervals and merge any overlaps.
 
+## Examples
+
+- Intervals `[[1, 3], [6, 9]]`, new `[2, 5]` -> `[[1, 5], [6, 9]]`.
+- Intervals `[]`, new `[4, 8]` -> `[[4, 8]]`.
+- New interval after all intervals -> appended unchanged.
+
 # Solutions
 
 Copy intervals ending before the new interval, merge all overlapping intervals into it, then append the remaining intervals.

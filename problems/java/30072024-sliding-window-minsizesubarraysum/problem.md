@@ -12,6 +12,12 @@ solvedAt: "2024-07-30"
 
 Find the shortest contiguous subarray whose sum is at least the requested target.
 
+## Examples
+
+- `[2, 1, 5, 2, 3, 2]`, target `7` -> length `2` from `[5, 2]`.
+- `[1, 1, 1]`, target `5` -> `0` or no result.
+- `[10]`, target `8` -> length `1`.
+
 # Solutions
 
 Maintain a growing sliding-window sum and shrink from the left while the window still satisfies the target.

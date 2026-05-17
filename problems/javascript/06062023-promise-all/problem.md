@@ -12,6 +12,12 @@ solvedAt: "2023-06-06"
 
 Implement `Promise.all`: resolve with ordered results when all inputs fulfill, or reject as soon as one input rejects.
 
+## Examples
+
+- `promiseAll([])` -> resolves to `[]`.
+- `promiseAll([Promise.resolve(1), 2])` -> resolves to `[1, 2]`.
+- `promiseAll([Promise.reject("err")])` -> rejects with `"err"`.
+
 # Solutions
 
 Wrap each input with `Promise.resolve`, store each fulfillment by original index, count pending items, and reject on the first failure.

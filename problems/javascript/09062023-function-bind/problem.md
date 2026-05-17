@@ -12,6 +12,12 @@ solvedAt: "2023-06-09"
 
 Implement function binding with a fixed `this` value and optional preset arguments.
 
+## Examples
+
+- `fn.myBind(obj)()` -> runs `fn` with `this === obj`.
+- Preset arguments are passed before later call arguments.
+- Unbound method access no longer loses the chosen context.
+
 # Solutions
 
 Return a wrapper that calls the original function with the bound context and concatenated arguments.

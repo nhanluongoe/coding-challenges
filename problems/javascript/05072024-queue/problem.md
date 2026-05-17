@@ -12,6 +12,12 @@ solvedAt: "2024-07-05"
 
 Implement queue behavior, either directly or by using two stacks.
 
+## Examples
+
+- Enqueue `1`, enqueue `2`, dequeue -> `1`.
+- Dequeue again -> `2`.
+- Dequeue from empty queue -> `null`, `undefined`, or an error based on the API.
+
 # Solutions
 
 Maintain head and tail links so enqueue and dequeue are constant time.

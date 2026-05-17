@@ -12,6 +12,12 @@ solvedAt: "2024-11-20"
 
 Return all unique triplets whose values sum to zero.
 
+## Examples
+
+- `[-3, 0, 1, 2, -1, 1, -2]` -> triplets such as `[-3, 1, 2]` and `[-2, 0, 2]`.
+- `[1, 2, 3]` -> `[]`.
+- `[0, 0, 0]` -> `[[0, 0, 0]]`.
+
 # Solutions
 
 Sort the array, fix one value, then use two pointers while skipping duplicates.

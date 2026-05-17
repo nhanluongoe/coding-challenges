@@ -12,6 +12,12 @@ solvedAt: "2024-10-30"
 
 Given a positive integer, find the longest run of zeros surrounded by ones in its binary representation.
 
+## Examples
+
+- `9` (`1001`) -> `2`.
+- `15` (`1111`) -> `0`.
+- `20` (`10100`) -> `1` because trailing zeros do not close a gap.
+
 # Solutions
 
 Convert or scan bits, counting zeros only after the first one and resetting the best count at each closing one.

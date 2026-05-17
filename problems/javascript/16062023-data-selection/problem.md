@@ -12,6 +12,12 @@ solvedAt: "2023-06-16"
 
 Select and aggregate session data according to filtering and grouping options.
 
+## Examples
+
+- Filter with no matching sessions -> empty result.
+- Sessions in the same group -> combined under that group.
+- Missing optional fields -> handled without crashing.
+
 # Solutions
 
 Filter sessions by the requested criteria, group them when needed, and compute derived totals from the matching records.

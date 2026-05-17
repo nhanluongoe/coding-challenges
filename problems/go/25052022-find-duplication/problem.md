@@ -12,6 +12,12 @@ solvedAt: "2022-05-25"
 
 Find a repeated value in an array whose values are constrained to a known range.
 
+## Examples
+
+- `[1, 3, 4, 2, 2]` -> `2`.
+- `[1, 1]` -> `1`.
+- `[3, 1, 3, 4, 2]` -> `3`.
+
 # Solutions
 
 Use either a seen set or a cycle-detection/counting approach depending on the space constraint.

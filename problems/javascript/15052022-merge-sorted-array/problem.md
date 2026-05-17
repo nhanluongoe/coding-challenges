@@ -12,6 +12,12 @@ solvedAt: "2022-05-15"
 
 Implement `function mergeArrays(myArray, alicesArray)` for the Merge Sorted Array challenge using the behavior implied by the existing solution and tests.
 
+## Examples
+
+- `[3, 4, 6]` and `[1, 2, 5]` -> `[1, 2, 3, 4, 5, 6]`.
+- `[]` and `[]` -> `[]`.
+- `[1, 2]` and `[]` -> `[1, 2]`.
+
 # Solutions
 
 Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.

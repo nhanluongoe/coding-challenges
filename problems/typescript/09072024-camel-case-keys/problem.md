@@ -12,6 +12,12 @@ solvedAt: "2024-07-09"
 
 Implement `function camelCaseKeys(object: Object): Object` for the Camel Case Keys challenge using the behavior implied by the existing solution and tests.
 
+## Examples
+
+- `{ foo_bar: 1 }` -> `{ fooBar: 1 }`.
+- `{ "user-name": "Ada" }` -> `{ userName: "Ada" }`.
+- `{ nested_key: { child_key: true } }` -> nested keys are camel-cased as well if the implementation handles nested objects.
+
 # Solutions
 
 Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.

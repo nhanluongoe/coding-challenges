@@ -12,6 +12,12 @@ solvedAt: "2024-02-24"
 
 Find all contiguous subarrays whose product is less than a target value.
 
+## Examples
+
+- `[2, 5, 3, 10]`, target `30` -> subarrays such as `[2]`, `[5]`, `[2, 5]`, `[3]`, `[5, 3]`, `[10]`.
+- Target `1` -> no positive-product subarrays.
+- Single value below target -> that one-item subarray is valid.
+
 # Solutions
 
 Use a sliding window product, shrinking from the left whenever the product reaches or exceeds the target.

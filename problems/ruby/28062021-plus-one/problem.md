@@ -12,6 +12,12 @@ solvedAt: "2021-06-28"
 
 Add one to a non-negative integer represented as an array of decimal digits.
 
+## Examples
+
+- `[1, 2, 3]` -> `[1, 2, 4]`.
+- `[9]` -> `[1, 0]`.
+- `[9, 9, 9]` -> `[1, 0, 0, 0]`.
+
 # Solutions
 
 Process digits from right to left, carrying through trailing nines and prepending a new digit if needed.

@@ -12,6 +12,12 @@ solvedAt: "2021-07-16"
 
 Find the value that appears once when every other value appears twice.
 
+## Examples
+
+- `[2, 2, 1]` -> `1`.
+- `[4, 1, 2, 1, 2]` -> `4`.
+- `[0]` -> `0`.
+
 # Solutions
 
 XOR all values; duplicate pairs cancel out and the single value remains.

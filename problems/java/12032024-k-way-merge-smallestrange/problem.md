@@ -12,6 +12,12 @@ solvedAt: "2024-03-12"
 
 Combine or search across multiple sorted lists while preserving sorted order or coverage requirements.
 
+## Examples
+
+- `[[1, 4], [2, 5], [3, 6]]` -> merged order `[1, 2, 3, 4, 5, 6]` for merge variants.
+- One empty list -> no complete range across all lists.
+- Single list -> return that list or its smallest valid range.
+
 # Solutions
 
 Use a min-heap containing one current item from each list, advancing only the list that contributed the smallest item.

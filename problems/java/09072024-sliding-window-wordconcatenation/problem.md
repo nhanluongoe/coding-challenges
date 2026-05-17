@@ -12,6 +12,12 @@ solvedAt: "2024-07-09"
 
 Find starting indices of substrings formed by concatenating every word from a list exactly once.
 
+## Examples
+
+- `"catfoxcat"`, words `["cat", "fox"]` -> indices `[0, 3]`.
+- Repeated words must appear the required number of times.
+- No complete concatenation -> `[]`.
+
 # Solutions
 
 Slide over word-sized chunks and compare word frequencies inside each candidate window.

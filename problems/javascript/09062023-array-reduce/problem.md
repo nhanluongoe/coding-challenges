@@ -12,6 +12,12 @@ solvedAt: "2023-06-09"
 
 Implement array reduction with optional initial value.
 
+## Examples
+
+- `reduce([1, 2, 3], sum, 0)` -> `6`.
+- `reduce([1], sum)` -> `1`.
+- Empty array without an initial value -> error.
+
 # Solutions
 
 Choose the initial accumulator according to native semantics, then call the reducer for each remaining present element.

@@ -12,6 +12,12 @@ solvedAt: "2024-03-29"
 
 Implement `class BracketValidator` for the Bracket Validator challenge using the behavior implied by the existing solution and tests.
 
+## Examples
+
+- `"([]{[]})[]{{}()}"` -> `true`.
+- `"()"` -> `true`.
+- `"([)]"` -> `false`.
+
 # Solutions
 
 Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.

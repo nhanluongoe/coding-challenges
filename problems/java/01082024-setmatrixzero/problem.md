@@ -12,6 +12,12 @@ solvedAt: "2024-08-01"
 
 Implement `class SetMatrixZero` for the Set Matrix Zeroes challenge using the behavior implied by the existing solution and tests.
 
+## Examples
+
+- `[[1, 1, 1], [1, 0, 1], [1, 1, 1]]` -> `[[1, 0, 1], [0, 0, 0], [1, 0, 1]]`.
+- Matrix with no zero -> unchanged.
+- Zero in first row or first column -> that full row or column becomes zero.
+
 # Solutions
 
 Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.

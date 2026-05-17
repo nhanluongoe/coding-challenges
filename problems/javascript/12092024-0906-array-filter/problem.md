@@ -12,6 +12,12 @@ solvedAt: "2024-09-12"
 
 Implement array filtering with callback arguments matching the native API.
 
+## Examples
+
+- `filter([1, 2, 3], n => n > 1)` -> `[2, 3]`.
+- No values pass -> `[]`.
+- Empty array -> `[]`.
+
 # Solutions
 
 Iterate over present indexes, call the predicate with value, index, and array, and collect values whose predicate is truthy.

@@ -12,6 +12,12 @@ solvedAt: "2024-08-26"
 
 Implement `function makeSquare(arr)` for the Make Square challenge using the behavior implied by the existing solution and tests.
 
+## Examples
+
+- `[-2, -1, 0, 2, 3]` -> `[0, 1, 4, 4, 9]`.
+- `[-3, -1]` -> `[1, 9]`.
+- `[]` -> `[]`.
+
 # Solutions
 
 Follow the current implementation strategy, keeping the public function or class API intact and favoring a clear linear, logarithmic, or dynamic-programming approach as appropriate.

@@ -12,6 +12,12 @@ solvedAt: "2024-04-01"
 
 Find a repeated value in an array whose values are constrained to a known range.
 
+## Examples
+
+- `[1, 3, 4, 2, 2]` -> `2`.
+- `[1, 1]` -> `1`.
+- `[3, 1, 3, 4, 2]` -> `3`.
+
 # Solutions
 
 Place each value at its matching index with cyclic sort; the value that cannot be placed uniquely is the duplicate.

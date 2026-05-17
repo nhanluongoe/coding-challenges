@@ -12,6 +12,12 @@ solvedAt: "2024-07-01"
 
 Limit how many times a wrapped function may be executed.
 
+## Examples
+
+- Limit `2`: first two calls execute.
+- Third call after limit is reached -> ignored or returns the configured fallback.
+- Separate wrappers keep separate counters.
+
 # Solutions
 
 Keep an invocation counter in closure state and only call the original function while the count is below the limit.

@@ -12,6 +12,12 @@ solvedAt: "2022-05-03"
 
 Given an array of numbers and a target value, find two distinct elements whose sum equals the target.
 
+## Examples
+
+- `[2, 7, 11, 15]`, target `9` -> indices for `2 + 7`.
+- `[3, 3]`, target `6` -> the two different `3` positions.
+- `[]`, target `1` -> no pair found.
+
 # Solutions
 
 Track previously seen values in a hash map so each new value can be paired with its complement in constant expected time.

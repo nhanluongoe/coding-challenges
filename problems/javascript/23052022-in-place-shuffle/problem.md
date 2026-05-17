@@ -12,6 +12,12 @@ solvedAt: "2022-05-23"
 
 Randomly shuffle an array in place so every permutation is equally likely.
 
+## Examples
+
+- `[]` -> `[]`.
+- `[1]` -> `[1]`.
+- `[1, 2, 3]` -> any permutation containing exactly `1`, `2`, and `3`.
+
 # Solutions
 
 Use the Fisher-Yates algorithm: for each position, swap it with a uniformly random position from the remaining range.

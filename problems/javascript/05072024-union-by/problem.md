@@ -12,6 +12,12 @@ solvedAt: "2024-07-05"
 
 Implement set-style array operations using either an iteratee or comparator to decide equality.
 
+## Examples
+
+- `intersectionBy(Math.floor, [1.2, 2.4], [2.1, 3.2])` -> `[2.4]`.
+- `unionBy(Math.floor, [1.2], [1.4, 2.1])` -> values for keys `1` and `2`.
+- Any empty intersection input -> `[]`.
+
 # Solutions
 
 Track transformed keys or compare candidates across arrays while preserving the expected result order.

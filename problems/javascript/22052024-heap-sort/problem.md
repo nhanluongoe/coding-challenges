@@ -12,6 +12,12 @@ solvedAt: "2024-05-22"
 
 Sort an array in place using heap sort.
 
+## Examples
+
+- `[7, 2, 4, 3]` -> `[2, 3, 4, 7]`.
+- `[]` -> `[]`.
+- `[1, 1, 1]` -> `[1, 1, 1]`.
+
 # Solutions
 
 Build a max heap, repeatedly swap the root with the end of the unsorted range, and heapify the reduced heap.

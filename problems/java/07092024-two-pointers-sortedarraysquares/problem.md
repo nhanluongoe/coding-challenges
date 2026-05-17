@@ -12,6 +12,12 @@ solvedAt: "2024-09-07"
 
 Given a sorted array that may contain negatives, return the squares in sorted order.
 
+## Examples
+
+- `[-2, -1, 0, 2, 3]` -> `[0, 1, 4, 4, 9]`.
+- `[-3, -1]` -> `[1, 9]`.
+- `[0]` -> `[0]`.
+
 # Solutions
 
 Compare absolute values from both ends and fill the result from right to left.

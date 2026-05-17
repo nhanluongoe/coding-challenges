@@ -12,6 +12,12 @@ solvedAt: "2024-05-30"
 
 Search text records and return entries that match the requested query.
 
+## Examples
+
+- Query `"react"` -> records containing `react` after normalization.
+- Query with different case, such as `"React"`, should match the same normalized records.
+- No matching text -> `[]`.
+
 # Solutions
 
 Normalize searchable text and query terms, then filter records that satisfy the match rule.

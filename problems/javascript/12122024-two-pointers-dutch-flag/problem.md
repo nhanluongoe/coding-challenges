@@ -12,6 +12,12 @@ solvedAt: "2024-12-12"
 
 Sort an array containing only three categories, usually `0`, `1`, and `2`, in place.
 
+## Examples
+
+- `[1, 0, 2, 1, 0]` -> `[0, 0, 1, 1, 2]`.
+- `[2, 2, 0]` -> `[0, 2, 2]`.
+- `[]` -> `[]`.
+
 # Solutions
 
 Use low, current, and high pointers to partition zeros left, twos right, and ones in the middle.
