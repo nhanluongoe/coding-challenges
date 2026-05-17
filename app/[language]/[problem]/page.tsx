@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import { codeToHtml } from "shiki";
+import ProblemRevealPanels from "@/components/ProblemRevealPanels";
 import {
   getLanguageName,
   getLanguages,
@@ -100,41 +99,12 @@ export default async function ProblemPage({ params }: ProblemPageProps) {
           </h1>
         </header>
 
-        <section className="grid min-w-0 flex-1 gap-4 xl:grid-cols-[minmax(320px,0.78fr)_minmax(0,1.42fr)]">
-          <article className="min-w-0 rounded-lg border border-(--color-border-strong) bg-(--color-background-surface) p-5 shadow-(--shadow-card) sm:p-6">
-            <div className="mb-5 border-b border-(--color-border-subtle) pb-4">
-              <h2 className="text-2xl font-black tracking-normal">
-                Requirement
-              </h2>
-            </div>
-            <div className="markdown-content">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {detail.markdown}
-              </ReactMarkdown>
-            </div>
-          </article>
-
-          <article className="min-w-0 overflow-hidden rounded-lg border border-(--color-dark-800) bg-(--color-dark-900) shadow-(--shadow-code)">
-            <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 px-5 py-4">
-              <div className="min-w-0">
-                <h2 className="text-2xl font-black tracking-normal text-white">
-                  Solution
-                </h2>
-                <p className="mt-1 break-all text-sm font-bold text-(--color-dark-muted)">
-                  {detail.solution}
-                </p>
-              </div>
-              <span className="shrink-0 rounded-full bg-white/10 px-3 py-1 text-xs font-black uppercase text-(--color-dark-text)">
-                {detail.codeLanguageLabel}
-              </span>
-            </div>
-            <div
-              className="solution-code max-h-[78vh] overflow-auto"
-              // biome-ignore lint/security/noDangerouslySetInnerHtml: Shiki generates highlighted HTML from local repository source files.
-              dangerouslySetInnerHTML={{ __html: highlightedCode }}
-            />
-          </article>
-        </section>
+        <ProblemRevealPanels
+          markdown={detail.markdown}
+          highlightedCode={highlightedCode}
+          solution={detail.solution}
+          codeLanguageLabel={detail.codeLanguageLabel}
+        />
       </div>
     </main>
   );
