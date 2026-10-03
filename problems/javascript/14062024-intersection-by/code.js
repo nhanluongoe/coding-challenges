@@ -34,12 +34,12 @@ export default function intersectionBy(iteratee, ...arrays) {
   // Map with iteratee
   const mappedArrays = arrays.map((arr) => arr.map(iteratee));
   let intersectedValues = mappedArrays[0].filter((value) =>
-    mappedArrays.every((arr) => arr.includes(value))
+    mappedArrays.every((arr) => arr.includes(value)),
   );
 
   // Remove duplicated values
   intersectedValues = intersectedValues.filter(
-    (val, idx, self) => idx === self.indexOf(val)
+    (val, idx, self) => idx === self.indexOf(val),
   );
 
   // Revert back to original values

@@ -3,7 +3,10 @@ import maxDepth from "./code";
 
 describe("maxDepth", () => {
   it("finds the longest root-to-leaf path", () => {
-    const tree = { left: { left: null, right: null }, right: { left: { left: null, right: null }, right: null } };
+    const tree = {
+      left: { left: null, right: null },
+      right: { left: { left: null, right: null }, right: null },
+    };
     expect(maxDepth(tree)).toBe(3);
   });
 

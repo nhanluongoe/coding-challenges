@@ -13,34 +13,34 @@
  */
 
 const isSymmetric = (root) => {
-  if (!root) return true
+  if (!root) return true;
 
-  const leftSide = rootLeftRightTraversal(root.left)
-  const rightSide = rootRightLeftTraversal(root.right)
+  const leftSide = rootLeftRightTraversal(root.left);
+  const rightSide = rootRightLeftTraversal(root.right);
 
-  return isArrayEqual(leftSide, rightSide)
-}
+  return isArrayEqual(leftSide, rightSide);
+};
 
 const rootLeftRightTraversal = (root) => {
-  if (!root) return [root]
+  if (!root) return [root];
 
   return [root.val]
     .concat(rootLeftRightTraversal(root.left))
-    .concat(rootLeftRightTraversal(root.right))
-}
+    .concat(rootLeftRightTraversal(root.right));
+};
 
 const rootRightLeftTraversal = (root) => {
-  if (!root) return [root]
+  if (!root) return [root];
 
   return [root.val]
     .concat(rootRightLeftTraversal(root.right))
-    .concat(rootRightLeftTraversal(root.left))
-}
+    .concat(rootRightLeftTraversal(root.left));
+};
 
 const isArrayEqual = (arr1, arr2) => {
   return (
     arr1.length === arr2.length && arr1.every((val, idx) => val === arr2[idx])
-  )
-}
+  );
+};
 
-export default isSymmetric
+export default isSymmetric;

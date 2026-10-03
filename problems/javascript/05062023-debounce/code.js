@@ -1,10 +1,10 @@
 // Implement a debounce function
 
 export default function debounce(fn, delay) {
-  let timeoutId
+  let timeoutId;
 
   return function (...args) {
-    clearTimeout(timeoutId)
-    timeoutId = setTimeout(() => fn.apply(this, args), delay)
-  }
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), delay);
+  };
 }

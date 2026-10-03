@@ -12,6 +12,8 @@ describe("passing cars", () => {
   });
 
   it("returns -1 above one billion pairs", () => {
-    expect(solution([...Array(50_000).fill(0), ...Array(50_000).fill(1)])).toBe(-1);
+    expect(solution([...Array(50_000).fill(0), ...Array(50_000).fill(1)])).toBe(
+      -1,
+    );
   });
 });

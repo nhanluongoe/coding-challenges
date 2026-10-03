@@ -1,8 +1,8 @@
 // Definition for a binary tree node.
 export function TreeNode(val, left, right) {
-  this.val = val === undefined ? 0 : val
-  this.left = left === undefined ? null : left
-  this.right = right === undefined ? null : right
+  this.val = val === undefined ? 0 : val;
+  this.left = left === undefined ? null : left;
+  this.right = right === undefined ? null : right;
 }
 
 /**
@@ -13,11 +13,11 @@ export function TreeNode(val, left, right) {
  */
 
 const inorderTraversal = (root) => {
-  if (!root) return []
+  if (!root) return [];
 
   return inorderTraversal(root.left)
     .concat(root.val)
-    .concat(inorderTraversal(root.right))
-}
+    .concat(inorderTraversal(root.right));
+};
 
-export default inorderTraversal
+export default inorderTraversal;

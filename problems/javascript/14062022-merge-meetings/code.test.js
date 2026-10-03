@@ -18,6 +18,11 @@ describe("mergeRanges", () => {
 
   it("handles empty and contained ranges", () => {
     expect(mergeRanges([])).toEqual([]);
-    expect(mergeRanges([{ startTime: 1, endTime: 8 }, { startTime: 2, endTime: 3 }])).toEqual([{ startTime: 1, endTime: 8 }]);
+    expect(
+      mergeRanges([
+        { startTime: 1, endTime: 8 },
+        { startTime: 2, endTime: 3 },
+      ]),
+    ).toEqual([{ startTime: 1, endTime: 8 }]);
   });
 });

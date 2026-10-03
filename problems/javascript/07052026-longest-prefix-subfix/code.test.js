@@ -3,7 +3,11 @@ import longestPrefixSuffix from "./code";
 
 describe("longestPrefixSuffix", () => {
   it.each([
-    ["ababab", "abab"], ["level", "l"], ["abcd", ""], ["aaaa", "aaa"], ["", ""],
+    ["ababab", "abab"],
+    ["level", "l"],
+    ["abcd", ""],
+    ["aaaa", "aaa"],
+    ["", ""],
   ])("finds the border of %s", (input, expected) => {
     expect(longestPrefixSuffix(input)).toBe(expected);
   });

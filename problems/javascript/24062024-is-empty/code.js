@@ -3,7 +3,7 @@ export default function isEmpty(value) {
     return true;
   }
 
-  if (Array.isArray(value) || typeof value === 'string') {
+  if (Array.isArray(value) || typeof value === "string") {
     return value.length === 0;
   }
 

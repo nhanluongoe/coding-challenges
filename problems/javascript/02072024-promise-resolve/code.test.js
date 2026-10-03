@@ -2,7 +2,12 @@ import { describe, expect, it } from "vitest";
 import promiseResolve from "./code";
 
 describe("promiseResolve", () => {
-  it.each([42, null, undefined, "value"])('resolves the value "%s"', async (value) => {
+  it.each([
+    42,
+    null,
+    undefined,
+    "value",
+  ])('resolves the value "%s"', async (value) => {
     await expect(promiseResolve(value)).resolves.toBe(value);
   });
 
@@ -12,6 +17,8 @@ describe("promiseResolve", () => {
   });
 
   it("assimilates thenables", async () => {
-    await expect(promiseResolve({ then: (resolve) => resolve(42) })).resolves.toBe(42);
+    await expect(
+      promiseResolve({ then: (resolve) => resolve(42) }),
+    ).resolves.toBe(42);
   });
 });

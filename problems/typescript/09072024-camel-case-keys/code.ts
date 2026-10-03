@@ -3,7 +3,7 @@ export default function camelCaseKeys(object: Object): Object {
     return object.map(camelCaseKeys);
   }
 
-  if (typeof object !== 'object' || object === null) {
+  if (typeof object !== "object" || object === null) {
     return object;
   }
 
@@ -17,12 +17,12 @@ export default function camelCaseKeys(object: Object): Object {
 
 function toCamelCase(input: string): string {
   const result = input
-    .split('_')
+    .split("_")
     .map((word, index) => {
       if (index === 0) return word.toLowerCase();
       return capitalize(word);
     })
-    .join('');
+    .join("");
   return result;
 }
 

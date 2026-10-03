@@ -8,10 +8,9 @@ export default function promiseAny(iterable) {
     if (iterable.length === 0) {
       reject(new AggregateError([]));
     }
-    
+
     let pending = iterable.length;
     const errors = new Array(iterable.length);
-
 
     iterable.forEach((item, index) => {
       Promise.resolve(item)
@@ -21,7 +20,7 @@ export default function promiseAny(iterable) {
         })
         .catch((err) => {
           // store the err to return an array of errors later
-          errors[index] = err
+          errors[index] = err;
           pending -= 1;
 
           if (pending === 0) {

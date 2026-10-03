@@ -6,21 +6,21 @@
  * @return {number[]}
  */
 const twoSum = (numbers, target) => {
-  const ans = []
+  const ans = [];
 
-  let rest
+  let rest;
   numbers.some(function (num, index) {
-    rest = target - num
+    rest = target - num;
 
     if (numbers.slice(index + 1).includes(rest)) {
-      ans.push(index + 1)
-      ans.push(numbers.slice(index + 1).indexOf(rest) + index + 2)
+      ans.push(index + 1);
+      ans.push(numbers.slice(index + 1).indexOf(rest) + index + 2);
 
-      return true
+      return true;
     }
-  })
+  });
 
-  return ans
-}
+  return ans;
+};
 
-export default twoSum
+export default twoSum;

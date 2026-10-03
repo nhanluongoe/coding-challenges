@@ -9,7 +9,7 @@ const lengthOfLastWord = (s) => {
       .split(/\s+/)
       .filter((word) => word)
       .slice(-1)[0]?.length || 0
-  )
-}
+  );
+};
 
-export default lengthOfLastWord
+export default lengthOfLastWord;

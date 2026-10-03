@@ -6,15 +6,15 @@
  */
 
 const maxProfit = (prices) => {
-  let minPrice = Infinity
-  let maxDiff = 0
+  let minPrice = Infinity;
+  let maxDiff = 0;
 
   for (let i = 0; i < prices.length; i += 1) {
-    maxDiff = Math.max(maxDiff, prices[i] - minPrice)
-    minPrice = Math.min(minPrice, prices[i])
+    maxDiff = Math.max(maxDiff, prices[i] - minPrice);
+    minPrice = Math.min(minPrice, prices[i]);
   }
 
-  return maxDiff
-}
+  return maxDiff;
+};
 
-export default maxProfit
+export default maxProfit;

@@ -3,13 +3,20 @@ import promisify, { enhancedPromisify } from "./code";
 
 describe("promisify", () => {
   it("resolves callback results and preserves this", async () => {
-    const object = { base: 2, add(value, callback) { callback(null, this.base + value); } };
+    const object = {
+      base: 2,
+      add(value, callback) {
+        callback(null, this.base + value);
+      },
+    };
     object.addAsync = promisify(object.add);
     await expect(object.addAsync(3)).resolves.toBe(5);
   });
 
   it("rejects callback errors", async () => {
-    await expect(promisify((callback) => callback("failed"))()).rejects.toBe("failed");
+    await expect(promisify((callback) => callback("failed"))()).rejects.toBe(
+      "failed",
+    );
   });
 
   it("uses a custom implementation when available", () => {

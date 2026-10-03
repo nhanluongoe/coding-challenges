@@ -10,7 +10,9 @@ describe("getIntersectionNode", () => {
   });
 
   it("returns null for disjoint or empty lists", () => {
-    expect(getIntersectionNode({ val: 1, next: null }, { val: 1, next: null })).toBeNull();
+    expect(
+      getIntersectionNode({ val: 1, next: null }, { val: 1, next: null }),
+    ).toBeNull();
     expect(getIntersectionNode(null, null)).toBeNull();
   });
 });

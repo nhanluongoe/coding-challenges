@@ -14,11 +14,11 @@
  */
 
 const preorderTraversal = (root) => {
-  if (!root) return []
+  if (!root) return [];
 
   return [root.val]
     .concat(preorderTraversal(root.left))
-    .concat(preorderTraversal(root.right))
-}
+    .concat(preorderTraversal(root.right));
+};
 
-export default preorderTraversal
+export default preorderTraversal;

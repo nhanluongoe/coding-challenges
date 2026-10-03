@@ -13,7 +13,7 @@
  */
 export default function listFormat(items, options) {
   if (!items || items.length === 0) {
-    return '';
+    return "";
   }
 
   if (items.length === 1) {
@@ -36,14 +36,14 @@ export default function listFormat(items, options) {
     options.length < clonedItems.length
   ) {
     const remaining = clonedItems.length - options.length;
-    const firstPart = clonedItems.slice(0, options.length).join(', ');
-    const secondPart = `${remaining} other${remaining > 1 ? 's' : ''}`;
+    const firstPart = clonedItems.slice(0, options.length).join(", ");
+    const secondPart = `${remaining} other${remaining > 1 ? "s" : ""}`;
 
-    return [firstPart, secondPart].join(' and ');
+    return [firstPart, secondPart].join(" and ");
   }
 
-  const firstPart = clonedItems.slice(0, clonedItems.length - 1).join(', ');
+  const firstPart = clonedItems.slice(0, clonedItems.length - 1).join(", ");
   const secondPart = clonedItems[clonedItems.length - 1];
 
-  return [firstPart, secondPart].join(' and ');
+  return [firstPart, secondPart].join(" and ");
 }

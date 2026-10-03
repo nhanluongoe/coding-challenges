@@ -14,21 +14,21 @@
  * @return {ListNode}
  */
 const getIntersectionNode = (headA, headB) => {
-  const visitedNodeA = []
+  const visitedNodeA = [];
 
-  let traveller = headA
+  let traveller = headA;
   while (traveller) {
-    visitedNodeA.push(traveller)
-    traveller = traveller.next
+    visitedNodeA.push(traveller);
+    traveller = traveller.next;
   }
 
-  traveller = headB
+  traveller = headB;
   while (traveller) {
-    if (visitedNodeA.includes(traveller)) return traveller
-    traveller = traveller.next
+    if (visitedNodeA.includes(traveller)) return traveller;
+    traveller = traveller.next;
   }
 
-  return null
-}
+  return null;
+};
 
-export default getIntersectionNode
+export default getIntersectionNode;

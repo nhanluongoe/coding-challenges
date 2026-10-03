@@ -9,7 +9,7 @@ export default function solution(N: number): number {
   let oneIndex = 0;
 
   for (let i = 0; i < binaryN.length; i++) {
-    if (binaryN[i] === '1') {
+    if (binaryN[i] === "1") {
       maxGap = Math.max(maxGap, i - oneIndex - 1);
       oneIndex = i;
     }

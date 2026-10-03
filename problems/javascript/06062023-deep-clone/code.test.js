@@ -10,7 +10,13 @@ describe("deepClone", () => {
     expect(original).toEqual({ user: { roles: ["admin"] } });
   });
 
-  it.each([null, undefined, 1, "value", true])("returns primitive %s", (value) => {
+  it.each([
+    null,
+    undefined,
+    1,
+    "value",
+    true,
+  ])("returns primitive %s", (value) => {
     expect(deepClone(value)).toBe(value);
   });
 });

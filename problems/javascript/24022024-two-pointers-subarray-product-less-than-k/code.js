@@ -5,13 +5,13 @@
 export default function findSubarrays(arr, target) {
   if (target <= 1) return [];
 
-  const subarrays = []
+  const subarrays = [];
   let product = 1;
   let left = 0;
 
   for (let right = 0; right < arr.length; right++) {
     product *= arr[right];
-    while(product >= target && left <= right) {
+    while (product >= target && left <= right) {
       product /= arr[left++];
     }
     const temp = [];

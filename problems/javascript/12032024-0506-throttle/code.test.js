@@ -17,7 +17,12 @@ describe("throttle", () => {
   });
 
   it("preserves this", () => {
-    const object = { value: 2, run: throttle(function (n) { this.value += n; }, 10) };
+    const object = {
+      value: 2,
+      run: throttle(function (n) {
+        this.value += n;
+      }, 10),
+    };
     object.run(3);
     expect(object.value).toBe(5);
   });

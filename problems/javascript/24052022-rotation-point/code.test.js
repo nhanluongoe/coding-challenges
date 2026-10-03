@@ -8,5 +8,6 @@ describe("findRotationPoint", () => {
     [["apple", "banana", "carrot"], 0],
     [["only"], 0],
     [[], 0],
-  ])("finds %#", (words, expected) => expect(findRotationPoint(words)).toBe(expected));
+  ])("finds %#", (words, expected) =>
+    expect(findRotationPoint(words)).toBe(expected));
 });

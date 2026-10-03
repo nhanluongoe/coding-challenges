@@ -7,7 +7,7 @@ export default function promiseResolve(value) {
     return value;
   }
 
-  if (value != null && typeof value.then === 'function') {
+  if (value != null && typeof value.then === "function") {
     return new Promise(value.then.bind(value));
   }
 

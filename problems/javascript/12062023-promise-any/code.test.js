@@ -3,11 +3,16 @@ import promiseAny from "./code";
 
 describe("promiseAny", () => {
   it("resolves with the first fulfillment", async () => {
-    await expect(promiseAny([Promise.reject("no"), Promise.resolve("yes")])).resolves.toBe("yes");
+    await expect(
+      promiseAny([Promise.reject("no"), Promise.resolve("yes")]),
+    ).resolves.toBe("yes");
   });
 
   it("returns ordered errors when every input rejects", async () => {
-    const result = promiseAny([Promise.reject("first"), Promise.reject("second")]);
+    const result = promiseAny([
+      Promise.reject("first"),
+      Promise.reject("second"),
+    ]);
     await expect(result).rejects.toMatchObject({ errors: ["first", "second"] });
   });
 

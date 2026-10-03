@@ -17,7 +17,12 @@ describe("debounce", () => {
 
   it("preserves this", () => {
     vi.useFakeTimers();
-    const object = { value: 1, add: debounce(function (n) { this.value += n; }, 10) };
+    const object = {
+      value: 1,
+      add: debounce(function (n) {
+        this.value += n;
+      }, 10),
+    };
     object.add(2);
     vi.advanceTimersByTime(10);
     expect(object.value).toBe(3);

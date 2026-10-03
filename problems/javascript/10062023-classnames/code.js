@@ -6,12 +6,12 @@
 export default function classNames(...args) {
   const classes = [];
 
-  args.forEach(arg => {
+  args.forEach((arg) => {
     if (!arg) {
       return;
     }
 
-    if (typeof arg === 'string' || typeof arg === 'number') {
+    if (typeof arg === "string" || typeof arg === "number") {
       classes.push(arg);
       return;
     }
@@ -22,14 +22,14 @@ export default function classNames(...args) {
       return;
     }
 
-    if (typeof arg === 'object') {
+    if (typeof arg === "object") {
       for (const [key, val] of Object.entries(arg)) {
         if (val) {
           classes.push(key);
         }
       }
-    } 
-  })
+    }
+  });
 
-  return classes.join(' ');
+  return classes.join(" ");
 }

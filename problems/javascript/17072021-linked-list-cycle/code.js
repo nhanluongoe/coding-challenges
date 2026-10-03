@@ -14,17 +14,17 @@
  */
 
 const hasCycle = (head) => {
-  let travellerOne = head
-  let travellerTwo = head
+  let travellerOne = head;
+  let travellerTwo = head;
 
   while (travellerOne && travellerTwo && travellerTwo.next) {
-    travellerOne = travellerOne.next
-    travellerTwo = travellerTwo.next.next
+    travellerOne = travellerOne.next;
+    travellerTwo = travellerTwo.next.next;
 
-    if (travellerOne === travellerTwo) return true
+    if (travellerOne === travellerTwo) return true;
   }
 
-  return false
-}
+  return false;
+};
 
-export default hasCycle
+export default hasCycle;

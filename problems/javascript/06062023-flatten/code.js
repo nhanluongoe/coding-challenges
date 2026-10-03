@@ -11,9 +11,9 @@ export function flatten(value) {
 
   while (copy.length) {
     const item = copy.shift();
-    
+
     if (Array.isArray(item)) {
-      copy.unshift(...item)
+      copy.unshift(...item);
     } else {
       res.push(item);
     }
@@ -25,17 +25,20 @@ export function flatten(value) {
 export function flatten2(value) {
   // Second solution: Iterative using some()
   let copy = value.slice();
-  
-  while(copy.some(Array.isArray)) {
-    copy = [].concat(...copy)
+
+  while (copy.some(Array.isArray)) {
+    copy = [].concat(...copy);
   }
-  
+
   return copy;
 }
 
 export function flatten3(value) {
   // Thid solution: Using reduce()
-  return value.reduce((arr, elem) => arr.concat(Array.isArray(elem) ? flatten3(elem) : elem), []);
+  return value.reduce(
+    (arr, elem) => arr.concat(Array.isArray(elem) ? flatten3(elem) : elem),
+    [],
+  );
 }
 
 export default flatten;

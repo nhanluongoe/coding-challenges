@@ -6,24 +6,24 @@
  */
 
 const getRow = (rowIndex) => {
-  const res = []
-  let prevRow
+  const res = [];
+  let prevRow;
 
-  const numRows = rowIndex + 1
+  const numRows = rowIndex + 1;
   for (let i = 1; i <= numRows; i++) {
-    const curRow = new Array(i).fill(1)
+    const curRow = new Array(i).fill(1);
 
     if (prevRow) {
       for (let j = 1; j < i - 1; j++) {
-        curRow[j] = prevRow[j - 1] + prevRow[j]
+        curRow[j] = prevRow[j - 1] + prevRow[j];
       }
     }
 
-    prevRow = curRow
-    res.push(curRow)
+    prevRow = curRow;
+    res.push(curRow);
   }
 
-  return res[rowIndex]
-}
+  return res[rowIndex];
+};
 
-export default getRow
+export default getRow;

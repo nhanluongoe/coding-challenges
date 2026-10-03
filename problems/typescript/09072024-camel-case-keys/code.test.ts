@@ -17,7 +17,7 @@ describe("camelCaseKeys", () => {
           first_name: "Ada",
           contact_methods: [{ phone_number: "123" }],
         },
-      })
+      }),
     ).toEqual({
       userProfile: {
         firstName: "Ada",

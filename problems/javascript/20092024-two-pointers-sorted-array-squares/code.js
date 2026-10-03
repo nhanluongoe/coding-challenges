@@ -10,8 +10,8 @@ export default function sortArraySquares(arr) {
   const resultArray = new Array(arr.length);
 
   while (left <= right) {
-    const leftSquare = arr[left] * arr[left]
-    const rightSquare = arr[right] * arr[right]
+    const leftSquare = arr[left] * arr[left];
+    const rightSquare = arr[right] * arr[right];
 
     if (leftSquare >= rightSquare) {
       resultArray[higherSquareIndex--] = leftSquare;

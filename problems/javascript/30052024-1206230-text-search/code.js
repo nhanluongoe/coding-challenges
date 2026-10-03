@@ -4,7 +4,7 @@
  * @return {string}
  */
 export default function textSearch(string, query) {
-  if (string.trim() === '' || query.trim() === '') {
+  if (string.trim() === "" || query.trim() === "") {
     return string;
   }
 
@@ -21,18 +21,18 @@ export default function textSearch(string, query) {
   }
 
   // Phase 2: insert <b> and </b> tag
-  let highlightString = '';
+  let highlightString = "";
   for (let i = 0; i < boldChars.length; i++) {
     const shouldAddOpenTag = boldChars[i] === 1 && boldChars[i - 1] !== 1;
     const shouldAddCloseTag = boldChars[i] === 1 && boldChars[i + 1] !== 1;
 
     let char = string[i];
     if (shouldAddOpenTag) {
-      char = '<b>' + char;
+      char = "<b>" + char;
     }
 
     if (shouldAddCloseTag) {
-      char = char + '</b>';
+      char = char + "</b>";
     }
 
     highlightString += char;

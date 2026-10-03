@@ -6,7 +6,12 @@ function list(...values) {
 }
 
 describe("findMiddleOfLinkedList", () => {
-  it.each([[[1], 1], [[1, 2, 3, 4, 5], 3], [[1, 2, 3, 4, 5, 6], 4], [[], undefined]])("finds %#", (values, expected) => {
+  it.each([
+    [[1], 1],
+    [[1, 2, 3, 4, 5], 3],
+    [[1, 2, 3, 4, 5, 6], 4],
+    [[], undefined],
+  ])("finds %#", (values, expected) => {
     expect(findMiddle(list(...values))).toBe(expected);
   });
 });

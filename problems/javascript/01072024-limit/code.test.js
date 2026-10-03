@@ -12,7 +12,12 @@ describe("limit", () => {
   });
 
   it("preserves this", () => {
-    const object = { multiplier: 3, run: limit(function (n) { return this.multiplier * n; }, 1) };
+    const object = {
+      multiplier: 3,
+      run: limit(function (n) {
+        return this.multiplier * n;
+      }, 1),
+    };
     expect(object.run(4)).toBe(12);
   });
 });

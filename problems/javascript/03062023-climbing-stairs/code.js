@@ -1,5 +1,5 @@
 export default function climbStairs(n) {
-  const dp = []
+  const dp = [];
 
   // base case
   dp[n] = 0;
@@ -13,7 +13,6 @@ export default function climbStairs(n) {
 
   return dp[0];
 }
-
 
 /*
  * Explaination

@@ -6,7 +6,9 @@ describe("highestProductOf3", () => {
     [[1, 2, 3, 4], 24],
     [[-10, 1, 3, 2, -10], 300],
     [[-5, -1, -3, -2], -6],
-  ])("calculates %#", (values, expected) => expect(highestProductOf3(values)).toBe(expected));
+  ])("calculates %#", (values, expected) =>
+    expect(highestProductOf3(values)).toBe(expected));
 
-  it("requires three values", () => expect(() => highestProductOf3([1, 2])).toThrow());
+  it("requires three values", () =>
+    expect(() => highestProductOf3([1, 2])).toThrow());
 });

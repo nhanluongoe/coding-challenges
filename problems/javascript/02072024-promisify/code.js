@@ -18,8 +18,8 @@ export function promisify(func) {
 
 export function enhancedPromisify(func) {
   // Allow to override return value
-  if (func[Symbol.for('util.promisify.custom')]) {
-    return func[Symbol.for('util.promisify.custom')];
+  if (func[Symbol.for("util.promisify.custom")]) {
+    return func[Symbol.for("util.promisify.custom")];
   }
 
   return function (...args) {

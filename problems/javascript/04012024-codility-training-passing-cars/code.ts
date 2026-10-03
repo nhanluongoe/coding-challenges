@@ -8,23 +8,23 @@ export default function solution(A: number[]): number {
   let start = 0;
 
   for (let i = 0; i < A.length; i++) {
-      if (A[i] === 0) {
-          const onesLength = i - start - 1;
-          result += visitedZeros * onesLength;
-          if (result > 1e9) {
-              return - 1;
-          }
-          start = i;
-          visitedZeros += 1;
-      } 
-
-      if (A[i] === 1 && i === A.length - 1) {
-          const onesLength = i - start;
-          result += visitedZeros * onesLength;
-          if (result > 1e9) {
-              return -1;
-          }
+    if (A[i] === 0) {
+      const onesLength = i - start - 1;
+      result += visitedZeros * onesLength;
+      if (result > 1e9) {
+        return -1;
       }
+      start = i;
+      visitedZeros += 1;
+    }
+
+    if (A[i] === 1 && i === A.length - 1) {
+      const onesLength = i - start;
+      result += visitedZeros * onesLength;
+      if (result > 1e9) {
+        return -1;
+      }
+    }
   }
 
   return result;

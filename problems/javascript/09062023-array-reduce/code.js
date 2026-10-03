@@ -14,7 +14,7 @@ Array.prototype.myReduce = function (callbackFn, initialValue) {
   }
 
   if (startIndex === len && noInitialValue) {
-    throw new TypeError('Reduce of an empty array with no initial value');
+    throw new TypeError("Reduce of an empty array with no initial value");
   }
 
   let result = noInitialValue ? this[startIndex++] : initialValue;

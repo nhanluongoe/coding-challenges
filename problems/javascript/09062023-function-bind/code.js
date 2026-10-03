@@ -5,8 +5,8 @@
 Function.prototype.myBind = function (thisArg, ...boundArgs) {
   const originalMethod = this;
 
-  if (typeof originalMethod !== 'function') {
-    throw new TypeError('myBind must be called on a function');
+  if (typeof originalMethod !== "function") {
+    throw new TypeError("myBind must be called on a function");
   }
 
   return function (...args) {

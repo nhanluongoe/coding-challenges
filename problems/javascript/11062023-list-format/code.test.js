@@ -14,7 +14,9 @@ describe("listFormat", () => {
 
   it("supports sorting, uniqueness, and limits without mutating input", () => {
     const items = ["Tim", "Bob", "Tim", "Ada"];
-    expect(listFormat(items, { sorted: true, unique: true, length: 2 })).toBe("Ada, Bob and 1 other");
+    expect(listFormat(items, { sorted: true, unique: true, length: 2 })).toBe(
+      "Ada, Bob and 1 other",
+    );
     expect(items).toEqual(["Tim", "Bob", "Tim", "Ada"]);
   });
 });

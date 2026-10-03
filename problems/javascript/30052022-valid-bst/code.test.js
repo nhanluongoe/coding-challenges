@@ -18,5 +18,6 @@ describe("isBinarySearchTree", () => {
     expect(isBinarySearchTree(duplicate)).toBe(false);
   });
 
-  it("accepts an empty tree", () => expect(isBinarySearchTree(null)).toBe(true));
+  it("accepts an empty tree", () =>
+    expect(isBinarySearchTree(null)).toBe(true));
 });

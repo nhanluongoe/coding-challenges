@@ -12,7 +12,12 @@ describe("curry", () => {
   });
 
   it("preserves this on invocation", () => {
-    const object = { prefix: "x", run: curry(function (a, b) { return `${this.prefix}${a}${b}`; }) };
+    const object = {
+      prefix: "x",
+      run: curry(function (a, b) {
+        return `${this.prefix}${a}${b}`;
+      }),
+    };
     expect(object.run("a", "b")).toBe("xab");
   });
 });

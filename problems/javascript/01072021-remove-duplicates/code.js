@@ -3,34 +3,34 @@
  */
 export class ListNode {
   constructor(val) {
-    this.val = val
-    this.next = null
+    this.val = val;
+    this.next = null;
   }
 }
 
 export class SinglyLinkedList {
   constructor() {
-    this.head = null
-    this.tail = null
+    this.head = null;
+    this.tail = null;
   }
 
   push(val) {
-    let newNode = new ListNode(val)
+    let newNode = new ListNode(val);
 
     if (!this.head) {
-      this.head = newNode
-      this.tail = this.head
+      this.head = newNode;
+      this.tail = this.head;
     } else {
-      this.tail.next = newNode
-      this.tail = this.tail.next
+      this.tail.next = newNode;
+      this.tail = this.tail.next;
     }
   }
 
   print() {
-    let walker = this.head
+    let walker = this.head;
     while (walker) {
-      console.log(walker.val)
-      walker = walker.next
+      console.log(walker.val);
+      walker = walker.next;
     }
   }
 }
@@ -43,18 +43,18 @@ export class SinglyLinkedList {
  */
 
 const deleteDuplicates = (head) => {
-  let firstWalker = head
+  let firstWalker = head;
 
   while (firstWalker) {
-    let secondWalker = firstWalker
+    let secondWalker = firstWalker;
     while (secondWalker.val === secondWalker.next?.val) {
-      secondWalker = secondWalker.next
+      secondWalker = secondWalker.next;
     }
-    firstWalker.next = secondWalker.next
-    firstWalker = firstWalker.next
+    firstWalker.next = secondWalker.next;
+    firstWalker = firstWalker.next;
   }
 
-  return head
-}
+  return head;
+};
 
-export default deleteDuplicates
+export default deleteDuplicates;

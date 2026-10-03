@@ -25,7 +25,7 @@ export default function deepEqual(valueA, valueB) {
     return false;
   }
 
-  if (typeof valueA === 'object' && typeof valueB === 'object') {
+  if (typeof valueA === "object" && typeof valueB === "object") {
     if (valueA === null || valueB === null) return valueA === valueB;
 
     const keysA = Object.keys(valueA);
@@ -33,7 +33,8 @@ export default function deepEqual(valueA, valueB) {
     if (keysA.length !== keysB.length) return false;
 
     return keysA.every(
-      (key) => Object.hasOwn(valueB, key) && deepEqual(valueA[key], valueB[key]),
+      (key) =>
+        Object.hasOwn(valueB, key) && deepEqual(valueA[key], valueB[key]),
     );
   }
 

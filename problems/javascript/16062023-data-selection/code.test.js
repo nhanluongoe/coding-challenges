@@ -11,7 +11,9 @@ const sessions = [
 describe("selectData", () => {
   it("filters by zero-valued user, duration, and equipment", () => {
     expect(selectData(sessions, { user: 0 })).toEqual([sessions[0]]);
-    expect(selectData(sessions, { minDuration: 150, equipment: ["bike"] })).toEqual([sessions[3]]);
+    expect(
+      selectData(sessions, { minDuration: 150, equipment: ["bike"] }),
+    ).toEqual([sessions[3]]);
   });
 
   it("merges sessions before filtering", () => {

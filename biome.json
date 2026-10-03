@@ -13,7 +13,6 @@
       "!.next",
       "!out",
       "!coverage",
-      "!problems",
       "!*.lock",
       "!package-lock.json"
     ]

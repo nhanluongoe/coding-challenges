@@ -7,9 +7,9 @@ export default function throttle(fn, delay) {
 
     fn.apply(this, args);
     wait = true;
-    
+
     setTimeout(() => {
       wait = false;
-    }, delay)
-  }
+    }, delay);
+  };
 }

@@ -16,18 +16,18 @@ export default function promiseAll(iterable) {
     iterable.forEach((item, index) => {
       Promise.resolve(item).then(
         (value) => {
-          result[index] = value
-          unresolved--
+          result[index] = value;
+          unresolved--;
 
           if (unresolved === 0) {
-            resolve(result)
+            resolve(result);
           }
         },
         (err) => {
-          reject(err)
-        }
-      )
-    })
+          reject(err);
+        },
+      );
+    });
 
     // Async/await version
     // iterable.forEach(async (item, index) => {
@@ -43,6 +43,5 @@ export default function promiseAll(iterable) {
     //     reject(err);
     //   }
     // });
-    
   });
 }
