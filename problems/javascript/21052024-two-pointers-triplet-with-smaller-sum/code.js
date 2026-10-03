@@ -1,7 +1,7 @@
-function searchTriplets(arr, target) {
+export default function searchTriplets(arr, target) {
   let result = 0;  
 
-  arr.sort();
+  arr = [...arr].sort((a, b) => a - b);
   for (let i = 0; i < arr.length-2; i++) {
     let left = i + 1; 
     let right = arr.length - 1;
@@ -18,6 +18,3 @@ function searchTriplets(arr, target) {
 
   return result;
 }
-
-console.log(searchTriplets([-1, 0, 2, 3], 3)) // [-1, 0, 3], [-1, 0, 2]
-console.log(searchTriplets([-1, 4, 2, 1, 3], 5)) // [-1, 1, 4], [-1, 1, 3], [-1, 1, 2], [-1, 2, 3]

@@ -3,7 +3,7 @@
  * Time complexity: O(n)
  * Space complexity: O(n)
  */
-function sortArraySquares(arr) {
+export default function sortArraySquares(arr) {
   let left = 0;
   let right = arr.length - 1;
   let higherSquareIndex = arr.length - 1;
@@ -24,6 +24,3 @@ function sortArraySquares(arr) {
 
   return resultArray;
 }
-
-console.log(sortArraySquares([-2, -1, 0, 2, 3]))
-console.log(sortArraySquares([-3, -1, 0, 1, 2 ]))

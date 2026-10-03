@@ -40,16 +40,3 @@ export default function textSearch(string, query) {
 
   return highlightString;
 }
-
-textSearch('The Quick Brown Fox Jumps Over The Lazy Dog', 'fox');
-// 'The Quick Brown <b>Fox</b> Jumps Over The Lazy Dog'
-textSearch('The hardworking Dog overtakes the lazy dog', 'dog');
-// 'The hardworking <b>Dog</b> overtakes the lazy <b>dog</b>'
-
-console.log(textSearch('aaaa', 'aa'));
-// Correct: '<b>aaaa</b>'
-// Wrong: '<b>aa</b><b>aa</b>'
-
-textSearch('aaa', 'aa');
-// '<b>aa</b>a'
-// This is because the second character cannot be used as a match again.

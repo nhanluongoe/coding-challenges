@@ -1,7 +1,7 @@
 // you can write to stdout for debugging purposes, e.g.
 // console.log('this is a debug message');
 
-function solution(A: number[]): number {
+export default function solution(A: number[]): number {
   // Implement your solution here
   let result = 0;
   let visitedZeros = 0;

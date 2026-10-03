@@ -22,3 +22,5 @@ const twoSum = (numbers, target) => {
 
   return ans
 }
+
+export default twoSum

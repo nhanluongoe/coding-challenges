@@ -6,14 +6,18 @@
  */
 Array.prototype.myReduce = function (callbackFn, initialValue) {
   const len = this.length;
-  const noInitialValue = initialValue === undefined;
+  const noInitialValue = arguments.length < 2;
 
-  if (len === 0 && noInitialValue) {
+  let startIndex = 0;
+  if (noInitialValue) {
+    while (startIndex < len && !Object.hasOwn(this, startIndex)) startIndex++;
+  }
+
+  if (startIndex === len && noInitialValue) {
     throw new TypeError('Reduce of an empty array with no initial value');
   }
 
-  let result = noInitialValue ? this[0] : initialValue;
-  const startIndex = noInitialValue ? 1 : 0;
+  let result = noInitialValue ? this[startIndex++] : initialValue;
 
   for (let i = startIndex; i < len; i++) {
     const item = this[i];
@@ -25,7 +29,4 @@ Array.prototype.myReduce = function (callbackFn, initialValue) {
   return result;
 };
 
-console.log([1, 2].myReduce((a, b) => a + b, 0)); // 3
-console.log([1, 2, 3].myReduce((a, b) => a + b)); // 6
-console.log([1, 2, 3].myReduce((a, b, i) => a + b + i)); // 9
-console.log([1, 2, 3].myReduce((a, b, i, arr) => a + b + arr[i])); // 11
+export default Array.prototype.myReduce;

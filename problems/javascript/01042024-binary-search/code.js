@@ -14,8 +14,3 @@ export default function binarySearch(arr, target) {
   }
   return -1;
 }
-
-console.log(binarySearch([1, 2, 3, 6, 9, 11], 6)); // 3
-console.log(binarySearch([1, 2, 3, 12, 16, 14], 5)); // -1
-console.log(binarySearch([1, 2, 3, 10, 11, 20], 20)); // 5
-console.log(binarySearch([1, 2, 3, 10, 11, 20], 9)); // -1

@@ -1,4 +1,8 @@
 export default function chunkArray(array, size = 1) {
+  if (!Number.isInteger(size) || size < 1) {
+    throw new RangeError("size must be a positive integer");
+  }
+
   let count = 0;
   const chunks = [];
   while (count < array.length) {
@@ -8,7 +12,3 @@ export default function chunkArray(array, size = 1) {
   }
   return chunks;
 }
-
-chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 3); // [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11]]
-chunkArray([], 3); // []
-chunkArray([1], 3); // [[1]]

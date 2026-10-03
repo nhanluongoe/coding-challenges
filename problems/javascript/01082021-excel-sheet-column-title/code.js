@@ -19,4 +19,4 @@ const convertToTitle = (columnNumber) => {
   return ans
 }
 
-console.log(convertToTitle(701))
+export default convertToTitle

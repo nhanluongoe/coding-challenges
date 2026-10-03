@@ -1,7 +1,7 @@
 // you can write to stdout for debugging purposes, e.g.
 // console.log('this is a debug message');
 
-function solution(N: number): number {
+export default function solution(N: number): number {
   // Implement your solution here
   const binaryN = N.toString(2);
 

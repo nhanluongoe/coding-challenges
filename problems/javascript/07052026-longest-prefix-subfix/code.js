@@ -1,4 +1,4 @@
-function longestPrefixSuffix(input) {
+export default function longestPrefixSuffix(input) {
   if (input.length < 2) return "";
 
   const prefixLengths = new Array(input.length).fill(0);
@@ -19,7 +19,3 @@ function longestPrefixSuffix(input) {
 
   return input.slice(0, prefixLengths[input.length - 1]);
 }
-
-console.log(longestPrefixSuffix("ababab")); // "abab"
-console.log(longestPrefixSuffix("level")); // "l"
-console.log(longestPrefixSuffix("abcd")); // ""

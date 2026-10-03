@@ -26,7 +26,7 @@
 // }
 
 // Refactor
-function intersectionBy(iteratee, ...arrays) {
+export default function intersectionBy(iteratee, ...arrays) {
   if (arrays.length === 0) {
     return [];
   }
@@ -48,9 +48,3 @@ function intersectionBy(iteratee, ...arrays) {
     return arrays[0][index];
   });
 }
-
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
-const arr3 = [7, 8, 9];
-const iteratee = String;
-console.log(intersectionBy(iteratee, arr1, arr2, arr3));

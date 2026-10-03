@@ -12,6 +12,4 @@ const lengthOfLastWord = (s) => {
   )
 }
 
-console.log(lengthOfLastWord(' '))
-console.log(lengthOfLastWord(' hello world  '))
-console.log(lengthOfLastWord(' abc dee aaa   aaadddd'))
+export default lengthOfLastWord

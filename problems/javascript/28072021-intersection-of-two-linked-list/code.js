@@ -30,3 +30,5 @@ const getIntersectionNode = (headA, headB) => {
 
   return null
 }
+
+export default getIntersectionNode

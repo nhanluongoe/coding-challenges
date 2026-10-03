@@ -26,6 +26,4 @@ const getRow = (rowIndex) => {
   return res[rowIndex]
 }
 
-console.log(getRow(3))
-console.log(getRow(4))
-console.log(getRow(5))
+export default getRow

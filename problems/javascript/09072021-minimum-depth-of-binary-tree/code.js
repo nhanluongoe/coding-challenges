@@ -40,3 +40,6 @@ const betterMinDepth = (root) => {
 
   return 1 + Math.min(leftHeight, rightHeight)
 }
+
+export { betterMinDepth }
+export default minDepth

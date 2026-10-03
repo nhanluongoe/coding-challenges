@@ -2,7 +2,9 @@
  * Time complexity: O(n^3)
  * Space complexity: O(n) for temp array
  */
-function findSubarrays(arr, target) {
+export default function findSubarrays(arr, target) {
+  if (target <= 1) return [];
+
   const subarrays = []
   let product = 1;
   let left = 0;
@@ -20,6 +22,3 @@ function findSubarrays(arr, target) {
   }
   return subarrays;
 }
-
-console.log(findSubarrays([2, 5, 3, 10], 30))
-console.log(findSubarrays([8, 2, 6, 5], 50))

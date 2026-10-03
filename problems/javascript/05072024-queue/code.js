@@ -7,7 +7,7 @@ class Node {
   }
 }
 
-class Queue {
+export default class Queue {
   constructor() {
     this._head = new Node();
     this._tail = new Node();

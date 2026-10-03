@@ -19,23 +19,3 @@ export default function get(object, path, defaultValue) {
 
   return res;
 }
-
-// Test
-
-const john = {
-  profile: {
-    name: { firstName: 'John', lastName: 'Doe' },
-    age: 20,
-    gender: 'Male',
-  },
-};
-
-const jane = {
-  profile: {
-    age: 19,
-    gender: 'Female',
-  },
-};
-
-console.log(get(john, 'profile.name.firstName')); // 'John'
-console.log(get(jane, 'profile.name.firstName', 'unknown')); // 'unknown'

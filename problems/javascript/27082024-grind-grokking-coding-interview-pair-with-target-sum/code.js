@@ -3,11 +3,11 @@
  * Write a function to return the indices of the two numbers (i.e. the pair) such that they add up to the given target.
  */
 
-function pairWithTargetSum(arr, target) {
+export default function pairWithTargetSum(arr, target) {
   let left = 0;
   let right = arr.length - 1;
 
-  while (left <= right) {
+  while (left < right) {
     const pairSum = arr[left] + arr[right];
     if (pairSum > target) {
       right -= 1;
@@ -18,8 +18,5 @@ function pairWithTargetSum(arr, target) {
     }
   }
 
-  return 0; // the pair doesn't exist
+  return [-1, -1];
 }
-
-console.log(pairWithTargetSum([2, 5, 9, 11], 11));
-console.log(pairWithTargetSum([1, 2, 3, 4, 6], 6));

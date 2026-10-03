@@ -1,4 +1,4 @@
-function isEmpty(value) {
+export default function isEmpty(value) {
   if (value == null) {
     return true;
   }
@@ -13,10 +13,3 @@ function isEmpty(value) {
 
   return Object.keys(value).length === 0;
 }
-
-console.log(isEmpty(null)); // => true
-console.log(isEmpty(true)); // => true
-console.log(isEmpty(1)); // => true
-console.log(isEmpty([1, 2, 3])); // => false
-console.log(isEmpty({ a: 1 })); // => false
-

@@ -2,7 +2,7 @@
  * Given a sorted array, create a new array containing squares of all the number of the input array in the sorted order.
  */
 
-function makeSquare(arr) {
+export default function makeSquare(arr) {
   let left = 0;
   let right = arr.length - 1;
   const squares = Array(arr.length);
@@ -25,5 +25,3 @@ function makeSquare(arr) {
 
   return squares;
 }
-
-console.log(makeSquare([-2, -1, 0, 2, 3]));

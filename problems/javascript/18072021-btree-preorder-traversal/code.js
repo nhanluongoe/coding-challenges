@@ -20,3 +20,5 @@ const preorderTraversal = (root) => {
     .concat(preorderTraversal(root.left))
     .concat(preorderTraversal(root.right))
 }
+
+export default preorderTraversal

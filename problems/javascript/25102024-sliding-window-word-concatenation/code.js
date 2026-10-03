@@ -3,7 +3,9 @@
  * m is total numbers of words, l is the length of a word
  * Space complexity: O(m + n)
  */
-function findWordConcatenation(str, words) {
+export default function findWordConcatenation(str, words) {
+  if (words.length === 0) return []
+
   const wordFrequencyMap = new Map()
   words.forEach((word) =>
     wordFrequencyMap.set(word, (wordFrequencyMap.get(word) ?? 0) + 1)
@@ -29,6 +31,3 @@ function findWordConcatenation(str, words) {
 
   return resultIndices
 }
-
-console.log(findWordConcatenation('catfoxcat', ['cat', 'fox']))
-console.log(findWordConcatenation('catcatfoxfox', ['cat', 'fox']))

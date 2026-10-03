@@ -1,5 +1,5 @@
 // Definition for a binary tree node.
-function TreeNode(val, left, right) {
+export function TreeNode(val, left, right) {
   this.val = val === undefined ? 0 : val
   this.left = left === undefined ? null : left
   this.right = right === undefined ? null : right
@@ -13,24 +13,11 @@ function TreeNode(val, left, right) {
  */
 
 const inorderTraversal = (root) => {
-  let res = []
-
-  const memoFunc = (root) => {
-    if (root?.left) memoFunc(root.left)
-    res.push(root?.val)
-    if (root?.right) memoFunc(root.right)
-  }
-
-  memoFunc(root)
-
-  return res.filter((elem) => elem)
-}
-
-// Simpler method
-const inorderTraversal = (root) => {
   if (!root) return []
 
   return inorderTraversal(root.left)
     .concat(root.val)
     .concat(inorderTraversal(root.right))
 }
+
+export default inorderTraversal

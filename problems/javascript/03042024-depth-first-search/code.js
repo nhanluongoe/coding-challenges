@@ -22,14 +22,3 @@ export default function depthFirstSearch(graph, source) {
 
   return Array.from(visited);
 }
-
-// Test cases
-const graph = {
-  A: ['B', 'C'],
-  B: ['A', 'D', 'E'],
-  C: ['A', 'F'],
-  D: ['B'],
-  E: ['B', 'F'],
-  F: ['C', 'E'],
-};
-console.log(depthFirstSearch(graph, 'A')); // ['A', 'B', 'D', 'E', 'F', 'C']

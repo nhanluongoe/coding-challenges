@@ -3,7 +3,9 @@
  * Time complexity: O(n)
  * Space complexity: O(1)
  */
-function remove(arr) {
+export default function remove(arr) {
+  if (arr.length === 0) return 0;
+
   let nextNonDuplicate = 1;
 
   for (let i = 1; i < arr.length; i++) {
@@ -14,6 +16,3 @@ function remove(arr) {
 
   return nextNonDuplicate;
 }
-
-console.log(remove([2, 3, 3, 3, 6, 9, 9 ]))
-console.log(remove([2, 2, 2, 11 ]));

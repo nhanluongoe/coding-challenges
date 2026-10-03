@@ -25,7 +25,5 @@ const singleNumberBetter = (nums) => {
   return nums.reduce((memo, value) => memo ^ value)
 }
 
-console.log(singleNumber([2, 2, 1]))
-console.log(singleNumber([4, 1, 2, 1, 2]))
-console.log(singleNumberBetter([2, 2, 1]))
-console.log(singleNumberBetter([4, 1, 2, 1, 2]))
+export { singleNumberBetter }
+export default singleNumber

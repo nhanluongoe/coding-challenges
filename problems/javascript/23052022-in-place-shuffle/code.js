@@ -1,4 +1,4 @@
-function getRandom(floor, ceiling) {
+export function getRandom(floor, ceiling) {
   return Math.floor(Math.random() * (ceiling - floor + 1)) + floor
 }
 
@@ -7,7 +7,7 @@ function getRandom(floor, ceiling) {
  * Time complexity: O(n)
  * Space complexity: O(1)
  */
-function shuffle(array) {
+export function shuffle(array) {
   for (let i = 0; i < array.length - 1; i++) {
     const randomPickIndex = getRandom(i, array.length - 1)
     if (i !== randomPickIndex) {
@@ -23,33 +23,10 @@ function shuffle(array) {
  * Time complexity: O(n)
  * Space complexity: O(n)
  */
-function outPlaceShuffle(array) {
-  const occurrences = new Map()
-  const res = []
-
-  for (let i = 0; i < array.length; i++) {
-    const current = array[i]
-    if (!occurrences.has(current)) occurrences.set(current, 1)
-    else occurrences.set(current, occurrences.get(current) + 1)
-  }
-
-  const min = Math.min(...array)
-  const max = Math.max(...array)
-  for (let i = 0; i < array.length; i++) {
-    const random = getRandom(min, max)
-    if (occurrences.has(random) && occurrences.get(random) > 0) {
-      occurrences.set(random, occurrences.get(random) - 1)
-      res.push(random)
-    } else {
-      i--
-    }
-  }
-
-  return res
+export function outPlaceShuffle(array) {
+  const result = [...array]
+  shuffle(result)
+  return result
 }
 
-const sample = [1, 2, 3, 4, 5, 5]
-console.log('Initial array: ', sample)
-console.log('Out-place shuffled array: ', outPlaceShuffle(sample))
-shuffle(sample)
-console.log('In-place shuffled array: ', sample)
+export default shuffle

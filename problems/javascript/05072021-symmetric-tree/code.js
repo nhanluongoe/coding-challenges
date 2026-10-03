@@ -13,6 +13,8 @@
  */
 
 const isSymmetric = (root) => {
+  if (!root) return true
+
   const leftSide = rootLeftRightTraversal(root.left)
   const rightSide = rootRightLeftTraversal(root.right)
 
@@ -40,3 +42,5 @@ const isArrayEqual = (arr1, arr2) => {
     arr1.length === arr2.length && arr1.every((val, idx) => val === arr2[idx])
   )
 }
+
+export default isSymmetric

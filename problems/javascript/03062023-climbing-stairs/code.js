@@ -1,4 +1,4 @@
-function climbStairs(n) {
+export default function climbStairs(n) {
   const dp = []
 
   // base case
@@ -12,9 +12,7 @@ function climbStairs(n) {
   }
 
   return dp[0];
-};
-
-console.log(climbStairs(5));
+}
 
 
 /*

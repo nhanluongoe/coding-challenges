@@ -3,7 +3,7 @@
  * Time complexity: O(n)
  * Space complexity: O(1)
  */
-function search(arr, target) {
+export default function search(arr, target) {
   let left = 0
   let right = arr.length - 1
 
@@ -17,6 +17,3 @@ function search(arr, target) {
 
   return [-1, -1] // not found
 }
-
-console.log(search([2, 5, 9, 11], 11))
-console.log(search([1, 2, 3, 4, 6], 6))

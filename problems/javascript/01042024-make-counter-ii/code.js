@@ -7,9 +7,3 @@ export default function makeCounter(initialValue = 0) {
     reset: () => (value = initialValue),
   };
 }
-
-const counter = makeCounter(10);
-counter.increment();
-counter.get(); // 11
-counter.decrement();
-counter.get(); // 10

@@ -17,7 +17,7 @@ class Node {
   }
 }
 
-class Queue {
+export class Queue {
   constructor() {
     this.head = null;
     this.tail = null;
@@ -60,7 +60,7 @@ class Queue {
  * @param {string} source The source node to start traversal from. Has to be a valid node if graph is non-empty.
  * @return {Array<string>} A BFS-traversed order of nodes.
  */
-function breadthFirstSearch(graph, source) {
+export default function breadthFirstSearch(graph, source) {
   if (Object.keys(graph).length === 0) {
     return [];
   }
@@ -78,14 +78,3 @@ function breadthFirstSearch(graph, source) {
   }
   return Array.from(visited);
 }
-
-// Test cases
-const graph = {
-  A: ['B', 'C'],
-  B: ['A', 'D', 'E'],
-  C: ['A', 'F'],
-  D: ['B'],
-  E: ['B', 'F'],
-  F: ['C', 'E'],
-};
-console.log(breadthFirstSearch(graph, 'A')); // ['A', 'B', 'C', 'D', 'E', 'F']

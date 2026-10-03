@@ -2,7 +2,9 @@
  * Time complexity: O(n)
  * Space complexity: O(1)
  */
-function findSubString(string, pattern) {
+export default function findSubString(string, pattern) {
+  if (pattern.length === 0) return ''
+
   const charFreqMap = new Map()
   pattern
     .split('')
@@ -38,8 +40,3 @@ function findSubString(string, pattern) {
     ? 'no result'
     : string.substring(subStrStart, subStrStart + minLength)
 }
-
-console.log(findSubString('aabdec', 'abc'))
-console.log(findSubString('aabdec', 'abac'))
-console.log(findSubString('abdbca', 'abc'))
-console.log(findSubString('adcad', 'abc'))

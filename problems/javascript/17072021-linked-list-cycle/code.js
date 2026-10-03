@@ -26,3 +26,5 @@ const hasCycle = (head) => {
 
   return false
 }
+
+export default hasCycle

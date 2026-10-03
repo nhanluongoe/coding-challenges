@@ -1,6 +1,6 @@
 // Implement a function that performs a heap sort. The function should take in an array of integers and return an array with the integers sorted in ascending order. The input array is modified in-place.
 
-function heapSort(arr) {
+export default function heapSort(arr) {
   const size = arr.length;
 
   for (let i = Math.floor(size / 2) - 1; i >= 0; i--) {
@@ -33,12 +33,3 @@ function heapify(arr, size, parent) {
     heapify(arr, size, largest);
   }
 }
-
-const arr1 = [];
-heapSort(arr1);
-
-const arr2 = [7, 2, 4, 3, 1, 2];
-heapSort(arr2);
-
-const arr3 = [1, 1, 1, 1, 1];
-heapSort(arr3);

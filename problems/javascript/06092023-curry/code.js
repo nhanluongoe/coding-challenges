@@ -8,19 +8,8 @@ export default function curry(func) {
       return func.apply(this, args);
     }
 
-    return function (nextArg) {
-      return curried.apply(this, nextArg ? [...args, nextArg] : args);
+    return function (...nextArgs) {
+      return curried.apply(this, [...args, ...nextArgs]);
     };
   };
 }
-
-function multiplyThree(a, b, c) {
-  return a * b * c;
-}
-
-const curriedMultiplyThree = curry(multiplyThree);
-console.log(curriedMultiplyThree(4)(5)()(6)); // 120
-
-const containsFour = curriedMultiplyThree(4);
-const containsFourMulFive = containsFour(5);
-console.log(containsFourMulFive(6)); // 120

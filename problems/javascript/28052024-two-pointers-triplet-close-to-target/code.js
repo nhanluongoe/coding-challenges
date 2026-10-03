@@ -3,9 +3,9 @@
  * Time complexity: O(n*logn + n^2) => O(n^2)
  * Space complexity: O(n) required for sorting
  */
-function searchTriplet(arr, target) {
-  let minDiff = Number.MAX_SAFE_INTEGER
-  arr.sort()
+export default function searchTriplet(arr, target) {
+  let closestDifference = Infinity
+  arr = [...arr].sort((a, b) => a - b)
 
   for (let i = 0; i < arr.length - 2; i++) {
     let left = i + 1
@@ -14,18 +14,20 @@ function searchTriplet(arr, target) {
     while (left < right) {
       const targetDiff = target - (arr[i] + arr[left] + arr[right])
 
-      if (targetDiff === 0) return target - targetDiff
+      if (targetDiff === 0) return target
 
-      if (Math.abs(targetDiff) < minDiff) minDiff = Math.abs(targetDiff)
+      if (
+        Math.abs(targetDiff) < Math.abs(closestDifference) ||
+        (Math.abs(targetDiff) === Math.abs(closestDifference) &&
+          targetDiff > closestDifference)
+      ) {
+        closestDifference = targetDiff
+      }
 
       if (targetDiff < 0) right--
       else left++
     }
   }
 
-  return target - minDiff
+  return target - closestDifference
 }
-
-console.log(searchTriplet([-2, 0, 1, 2], 2)) // -2, 1, 2 => 1
-console.log(searchTriplet([-3, -1, 1, 2], 1)) // -3, 1, 2 => 0
-console.log(searchTriplet([1, 0, 1, 1], 100)) // 1, 1, 1 => 3

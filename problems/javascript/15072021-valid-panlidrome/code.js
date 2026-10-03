@@ -15,5 +15,4 @@ const isPalindrome = (s) => {
   return filteredStr === reverseStr(filteredStr)
 }
 
-console.log(isPalindrome('A man, a plan, a canal: Panama'))
-console.log(isPalindrome("This is absolutely not a palindrome, isn't it?"))
+export default isPalindrome

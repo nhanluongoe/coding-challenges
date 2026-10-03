@@ -1,14 +1,14 @@
 /**
  * Singly linked list definition
  */
-class ListNode {
+export class ListNode {
   constructor(val) {
     this.val = val
     this.next = null
   }
 }
 
-class SinglyLinkedList {
+export class SinglyLinkedList {
   constructor() {
     this.head = null
     this.tail = null
@@ -57,11 +57,4 @@ const deleteDuplicates = (head) => {
   return head
 }
 
-const list = new SinglyLinkedList()
-
-const values = [1, 1, 1, 2, 2, 3, 3, 3, 4, 5, 5]
-values.forEach((num) => list.push(num))
-
-deleteDuplicates(list.head)
-
-list.print()
+export default deleteDuplicates

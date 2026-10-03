@@ -31,27 +31,3 @@ export default function promiseAny(iterable) {
     });
   });
 }
-
-promiseAny([2])
-  .then((val) => console.log(val))
-  .catch((err) => console.log(err));
-
-const p0 = new Promise((_, reject) => {
-  setTimeout(() => {
-    reject(1);
-  }, 200);
-});
-const p1 = new Promise((_, reject) => {
-  setTimeout(() => {
-    reject(2);
-  }, 100);
-});
-const p2 = new Promise((_, reject) => {
-  setTimeout(() => {
-    reject(3);
-  }, 10);
-});
-
-promiseAny([p0, p1, p2])
-  .then((val) => val)
-  .catch((err) => console.log(err));

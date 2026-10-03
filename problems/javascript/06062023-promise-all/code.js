@@ -46,15 +46,3 @@ export default function promiseAll(iterable) {
     
   });
 }
-
-// Test
-
-const p0 = new Promise((resolve) => {
-  setTimeout(() => {
-    resolve(2);
-  }, 10);
-});
-const p1 = Promise.resolve(3);
-const p2 = 4;
-
-promiseAll([p0, p1, p2]).then((res) => console.log('res: ', res));

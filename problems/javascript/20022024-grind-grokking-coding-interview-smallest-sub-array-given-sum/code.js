@@ -5,7 +5,7 @@
  * Explanation: Smallest subarrays with a sum greater than or equal to '8' are [3, 4, 1] or [1, 1, 6].
  */
 
-function smallestSubArrayGivenSum(arr, sum) {
+export default function smallestSubArrayGivenSum(arr, sum) {
   let start = 0;
   let minLength = Infinity;
   let windowSum = 0;
@@ -25,12 +25,6 @@ function smallestSubArrayGivenSum(arr, sum) {
 
   return minLength;
 }
-
-const arr = [3, 4, 1, 1, 6];
-const sum = 8;
-
-console.log(smallestSubArrayGivenSum(arr, sum));
-console.log(smallestSubArrayGivenSum([2, 1, 5, 2, 8], 7));
 
 /**
  * 3 4 1 1 6

@@ -4,7 +4,7 @@
  * @return {Array}
  */
 
-function flatten(value) {
+export function flatten(value) {
   // First solution: Iterative
   const res = [];
   const copy = value.slice();
@@ -22,9 +22,7 @@ function flatten(value) {
   return res;
 }
 
-console.log(flatten([1, [2, [3, [4, [5]]]]])); // [1, 2, 3, 4, 5]
-
-function flatten2(value) {
+export function flatten2(value) {
   // Second solution: Iterative using some()
   let copy = value.slice();
   
@@ -35,11 +33,9 @@ function flatten2(value) {
   return copy;
 }
 
-console.log(flatten2([1, [2, [3, [4, [5]]]]])); // [1, 2, 3, 4, 5]
-
-function flatten3(value) {
+export function flatten3(value) {
   // Thid solution: Using reduce()
   return value.reduce((arr, elem) => arr.concat(Array.isArray(elem) ? flatten3(elem) : elem), []);
 }
 
-console.log(flatten3([1, [2, [3, [4, [5]]]]])); // [1, 2, 3, 4, 5]
+export default flatten;

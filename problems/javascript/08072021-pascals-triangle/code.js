@@ -25,6 +25,4 @@ const generate = (numRows) => {
   return res
 }
 
-console.log(generate(3))
-console.log(generate(4))
-console.log(generate(5))
+export default generate

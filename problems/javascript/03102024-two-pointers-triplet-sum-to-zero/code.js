@@ -2,10 +2,10 @@
  * Time complexity: O(n*logn + n^2) => O(n^2)
  * Space complexity: O(n) required for sorting
  */
-function searchTriplets(arr) {
+export default function searchTriplets(arr) {
   const triplets = []
 
-  arr.sort()
+  arr = [...arr].sort((a, b) => a - b)
   for (let i = 0; i < arr.length - 2; i++) {
     if (i > 0 && arr[i] === arr[i - 1]) continue
 
@@ -28,6 +28,3 @@ function searchTriplets(arr) {
 
   return triplets
 }
-
-console.log(searchTriplets([-3, 0, 1, 2, -1, 1, -2]))
-console.log(searchTriplets([-5, 2, -1, -2, 3]))

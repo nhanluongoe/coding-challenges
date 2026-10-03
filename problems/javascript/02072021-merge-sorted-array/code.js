@@ -16,11 +16,4 @@ const merge = (nums1, m, nums2, n) => {
   nums1.sort((a, b) => a - b)
 }
 
-const nums1 = [1, 2, 3, 0, 0, 0]
-const nums2 = [2, 5, 6]
-const m = 3
-const n = 3
-
-merge(nums1, m, nums2, n)
-
-console.log(nums1)
+export default merge

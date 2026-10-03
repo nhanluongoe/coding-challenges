@@ -2,15 +2,17 @@
  * Given an array of positive numbers and a positive number ‘k’, find the maximum sum of any contiguous subarray of size ‘k’.
  */
 
-function maxSumSubArrayOfSizeK(arr, k) {
+export default function maxSumSubArrayOfSizeK(arr, k) {
+  if (!Number.isInteger(k) || k < 1 || k > arr.length) return 0;
+
   let start = 0;
   let windowSum = 0;
   let maxSum = -Infinity;
 
   for (let end = 0; end < arr.length; end++) {
     windowSum += arr[end];
-    maxSum = Math.max(maxSum, windowSum);
     if (end >= k - 1) {
+      maxSum = Math.max(maxSum, windowSum);
       windowSum -= arr[start];
       start += 1;
     }
@@ -18,9 +20,3 @@ function maxSumSubArrayOfSizeK(arr, k) {
 
   return maxSum;
 }
-
-const array = [2, 1, 3, 5, 7, 1, -8, 2, 5];
-const k = 3;
-
-console.log(maxSumSubArrayOfSizeK(array, k));
-console.log(maxSumSubArrayOfSizeK([2, 1, 5, 1, 3, 2], 3));
