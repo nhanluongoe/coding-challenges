@@ -88,4 +88,8 @@ describe("LRUCache", () => {
 
     expect(cache.put(1, 100)).toBeUndefined();
   });
+
+  it.each([0, -1, 1.5])("rejects an invalid capacity: %s", (capacity) => {
+    expect(() => new LRUCache(capacity)).toThrow(RangeError);
+  });
 });
