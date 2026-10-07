@@ -6,11 +6,19 @@ export class ListNode {
 }
 
 export default function findLinkedListMidpoint(head: ListNode): ListNode {
-  let slow = head;
-  let fast = head;
-  while (fast != null && fast.next != null) {
-    slow = slow.next;
+  let midpoint = head;
+  let fast: ListNode | null = head;
+
+  while (fast !== null && fast.next !== null) {
+    const nextMidpoint = midpoint.next;
+
+    if (nextMidpoint === null) {
+      throw Error("Linked list error");
+    }
+
+    midpoint = nextMidpoint;
     fast = fast.next.next;
   }
-  return slow;
+
+  return midpoint;
 }
