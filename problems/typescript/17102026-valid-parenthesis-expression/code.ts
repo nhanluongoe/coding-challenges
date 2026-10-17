@@ -1,5 +1,4 @@
 export default function isValidParenthesisExpression(s: string): boolean {
-  // TODO: Implement this function.
   const parenthesisMap = new Map();
   parenthesisMap.set("(", ")");
   parenthesisMap.set("[", "]");
